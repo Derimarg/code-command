@@ -1,20 +1,23 @@
 {
-  "name": "new",
+  "name": "new-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Derimarg/new.git"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Derimarg/new/issues"
+  "dependencies": {
+    "if-env": "^1.0.4"
   },
-  "homepage": "https://github.com/Derimarg/new#readme"
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
 }
