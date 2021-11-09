@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
   Nav,
@@ -44,20 +45,34 @@ export default function Navbar() {
               <NavIcon />
               NEW APP
             </NavLogo>
-            <MobileIcon onClick={handleClick}></MobileIcon>
-            <NavMenu>
+            <MobileIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">Home</NavLinks>
+                <NavLinks to="/" onClick={closeMobileMenu}>
+                  Home
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/" onClick={closeMobileMenu}>
+                  Services
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/" onClick={closeMobileMenu}>
+                  Products
+                </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to="/login">
-                    <Button primary>LOGING</Button>
+                    <Button primary>Login</Button>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to="/login">
-                    <Button fontBig primary>
-                      LOGING
+                    <Button fontBig primary onClick={closeMobileMenu}>
+                      Login
                     </Button>
                   </NavBtnLink>
                 )}
