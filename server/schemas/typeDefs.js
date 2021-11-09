@@ -1,4 +1,4 @@
-const { glp } = require("apollo-server-express");
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -6,7 +6,6 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
   }
 
   type Auth {
@@ -16,7 +15,6 @@ const typeDefs = gql`
 
   type Query {
       user: User
-      order(_id: ID!): Order
   }
 
   type Mutation {
@@ -26,7 +24,6 @@ const typeDefs = gql`
           email: String!
           password: String!
       ): Auth
-      addOrder(): Order
       updateUser(
           firstName:  String
           lastName: String

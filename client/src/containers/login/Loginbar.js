@@ -101,7 +101,7 @@ const Container = styled.div`
     margin-top: 2rem;
 
     span {
-      color: #ff8d8d;
+      color: #0099ff;
       cursor: pointer;
     }
   }

@@ -9,10 +9,12 @@ export default function Main() {
   return (
     <Router>
       <GlobalStyle />
-      <Navbar />
       <Switch>
-        <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
+        <>
+          <Navbar />
+          <Route path="/" exact component={Home} />
+        </>
       </Switch>
     </Router>
   );
