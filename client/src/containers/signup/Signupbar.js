@@ -1,37 +1,10 @@
-import React, { useState } from "react";
-import { useMutation } from "@apollo/react-hooks";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/opencart-brands.svg";
 import Input from "./Input";
-import { LOGIN } from "../../utils/mutations";
-import Auth from "../../utils/auth";
 
-const Loginbar = (props) => {
-  const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error }] = useMutation(LOGIN);
-
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
-      });
-      const token = mutationResponse.data.login.token;
-      Auth.login(token);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
+const Signupbar = () => {
   return (
     <Container>
       <LogoWrapper>
@@ -42,26 +15,37 @@ const Loginbar = (props) => {
           New <span>App</span>
         </h3>
       </LogoWrapper>
-      <Form onSubmit={handleFormSubmit}>
-        <h3>Login</h3>
-        <Input type="email" placeholder="Email" onchange={handleChange} />
-        <Input type="password" placeholder="Password" onchange={handleChange} />
-        {error ? (
-          <div>
-            <p>The provided credentials are incorrect</p>
-          </div>
-        ) : null}
-        <button>Login</button>
+      <Form>
+        <h3>Sign Up</h3>
+        <Input placeholder="Full Name" />
+        <Input type="email" placeholder="Email" />
+        <Input type="password" placeholder="Password" />
+        <Input type="password" placeholder="Confrim Password" />
+        <button>Sign Up</button>
+      </Form>
+      <div>
+        <Terms>
+          By signing up, I agree to the Privacy Policy <br /> and Terms of
+          Service
+        </Terms>
         <h4>
-          Don't have an account?
-          <Link to="/signup">
-            <span>Register</span>
+          Already have an account?
+          <Link to="/login">
+            <span>Sign In</span>
           </Link>
         </h4>
-      </Form>
+      </div>
     </Container>
   );
 };
+
+const Terms = styled.p`
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 10px;
+  color: #808080;
+  font-weight: 300;
+`;
 
 const Form = styled.form`
   width: 100%;
@@ -144,4 +128,4 @@ const Container = styled.div`
   }
 `;
 
-export default Loginbar;
+export default Signupbar;
