@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/react-hooks";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/opencart-brands.svg";
 import Input from "./Input";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
-const Signupbar = () => {
+const Signupbar = (props) => {
+  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [addUser] = useMutation(ADD_USER);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
   return (
     <Container>
       <LogoWrapper>
@@ -15,13 +43,13 @@ const Signupbar = () => {
           New <span>App</span>
         </h3>
       </LogoWrapper>
-      <Form>
+      <Form onSubmit={handleFormSubmit}>
         <h3>Sign Up</h3>
-        <Input placeholder="Full Name" />
-        <Input type="email" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
-        <Input type="password" placeholder="Confrim Password" />
-        <button>Sign Up</button>
+        <Input placeholder="First Name" onChange={handleChange} />
+        <Input placeholder="Last Name" onChange={handleChange} />
+        <Input type="email" placeholder="Email" onChange={handleChange} />
+        <Input type="password" placeholder="Password" onChange={handleChange} />
+        <button type="submit">Sign Up</button>
       </Form>
       <div>
         <Terms>

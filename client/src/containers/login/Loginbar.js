@@ -44,14 +44,14 @@ const Loginbar = (props) => {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Login</h3>
-        <Input type="email" placeholder="Email" onchange={handleChange} />
-        <Input type="password" placeholder="Password" onchange={handleChange} />
+        <Input type="email" placeholder="Email" onChange={handleChange} />
+        <Input type="password" placeholder="Password" onChange={handleChange} />
         {error ? (
           <div>
             <p>The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <button>Login</button>
+        <button type="submit">Login</button>
         <h4>
           Don't have an account?
           <Link to="/signup">
