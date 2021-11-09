@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../pages/HomePage/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
-import { Navbar } from "../components";
+import { Navbar, Footer } from "../components";
 
 export default function Main() {
   return (
@@ -18,6 +18,7 @@ export default function Main() {
           <Route path="/" exact component={Home} />
         </>
       </Switch>
+      <Footer />
     </Router>
   );
 }
