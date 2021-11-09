@@ -14,6 +14,7 @@ import {
   NavBtnLink,
 } from "./Navbar.elements";
 import { Button } from "../../globalStyles";
+// import "./navbar.css";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -39,7 +40,7 @@ export default function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav>
+        <Nav id="mainNav">
           <NavbarContainer>
             <NavLogo to="/" onclick={closeMobileMenu}>
               <NavIcon />
