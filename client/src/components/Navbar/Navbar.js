@@ -49,12 +49,6 @@ export default function Navbar() {
               <NavItem>
                 <NavLinks to="/">Home</NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks to="/">Something</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/">Something</NavLinks>
-              </NavItem>
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to="/login">
