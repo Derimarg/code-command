@@ -1,9 +1,12 @@
 import styled from "styled-components";
-import { FaOpencart } from 'react-icons/fa';
+import { FaOpencart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+// background-color: #101522; dark blue
+// background-color: #1D1D1D; matte black
+
 export const FooterContainer = styled.div`
-  background-color: #101522;
+  background-color: #1d1d1d;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;

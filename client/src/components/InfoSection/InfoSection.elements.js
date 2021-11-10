@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
+// background: ${({ lightBg }) => (lightBg ? "#fff" : "#101522")}; dark blue
+// background: ${({ lightBg }) => (lightBg ? "#fff" : "#1D1D1D")}; matte black
+
 export const InfoSec = styled.div`
   color: #fff;
   padding: 160px 0;
-  background: ${({ lightBg }) => (lightBg ? "#fff" : "#101522")};
+  background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
 `;
 
 export const InfoRow = styled.div`

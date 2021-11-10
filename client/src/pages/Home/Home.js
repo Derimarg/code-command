@@ -5,7 +5,7 @@ import {
   homeObjThree,
   homeObjFour,
 } from "../../containers/home/Data";
-import { InfoSec } from "../../components/InfoSection/InfoSection.elements";
+// import { InfoSec } from "../../components/InfoSection/InfoSection.elements";
 import { InfoSection } from "../../components";
 
 export default function Home(lightBg) {
@@ -15,7 +15,7 @@ export default function Home(lightBg) {
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjTwo} />
-      <InfoSec lightBg={lightBg} />
+      {/* <InfoSec lightBg={lightBg} /> */}
     </>
   );
 }
