@@ -10,6 +10,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import { Navbar, Footer } from "../components";
+import Products from "../pages/Products/Products";
 
 // You can use the last <Route> in a <Switch> as a kind of
 // "fallback" route, to catch 404 errors.
@@ -30,6 +31,7 @@ export default function Main() {
         <>
           <Navbar />
           <Route path="/" exact component={Home} />
+          <Route path="/products" exact component={Products} />
           {/* <Route component={NotFound} /> */}
           <Footer />
         </>

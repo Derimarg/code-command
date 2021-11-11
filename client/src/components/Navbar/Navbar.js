@@ -60,7 +60,7 @@ export default function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/" onClick={closeMobileMenu}>
+                <NavLinks to="/products" onClick={closeMobileMenu}>
                   Products
                 </NavLinks>
               </NavItem>
