@@ -80,10 +80,11 @@ export default function Footer() {
         <SocialMediaWrap>
           <SocialLogo to="/">
             <SocialIcon />
-            NEW APP
+            code app
           </SocialLogo>
           <WebsiteRights>
-            NEW APP &copy; {new Date().getFullYear()}
+            Learn to code interactively &copy; code app{" "}
+            {new Date().getFullYear()} | All rights reserved.
           </WebsiteRights>
           <SocialIcons>
             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
