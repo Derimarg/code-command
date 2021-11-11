@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalStyle from "../globalStyles";
+import ScrollToTop from "../components/ScrollTop";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +12,7 @@ import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import { Navbar, Footer } from "../components";
 import Products from "../pages/Products/Products";
+import Services from "../pages/Services/Services";
 
 // You can use the last <Route> in a <Switch> as a kind of
 // "fallback" route, to catch 404 errors.
@@ -25,12 +27,15 @@ export default function Main() {
   return (
     <Router>
       <GlobalStyle />
+      <ScrollToTop />
+
       <Switch>
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
         <>
           <Navbar />
           <Route path="/" exact component={Home} />
+          <Route path="/services" component={Services} />
           <Route path="/courses" exact component={Products} />
           {/* <Route component={NotFound} /> */}
           <Footer />

@@ -43,7 +43,7 @@ export default function Navbar() {
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon />
-              NEW APP
+              Code app
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -55,7 +55,7 @@ export default function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/" onClick={closeMobileMenu}>
+                <NavLinks to="/services" onClick={closeMobileMenu}>
                   Services
                 </NavLinks>
               </NavItem>
