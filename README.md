@@ -11,25 +11,25 @@
 <br />
 <p align="center">
 
-<h3 align="center" id="new">New app</h3>
+<h3 align="center" id="code-command">Code Command</h3>
 
 <p align="center">
-New app description.
+Code Command description.
 <br />
 <a href="#how-to-download"><strong>Explore the docs »</strong></a>
 <br />
 <br />
 <a href="#example">View Demo</a>
 .
-<a href="https://github.com/Derimarg/new/issues">Report Bug</a>
+<a href="https://github.com/Derimarg/code-command/issues">Report Bug</a>
 ·
-<a href="https://github.com/Derimarg/new/issues">Request Feature</a>
+<a href="https://github.com/Derimarg/code-command/issues">Request Feature</a>
 </p>
 </p>
 <br />
 <br />
 
-> Link web page: https://dg-new.herokuapp.com/
+> Link web page: https://dg-code-command.herokuapp.com/
 
 <details open="open">
 <summary>Table of Contents</summary>
@@ -51,7 +51,7 @@ New app description.
 
 ## Description
 
-Working on an New app.
+Working on an Coding app.
 
 <br/>
 
@@ -60,7 +60,7 @@ Working on an New app.
 <br/>
 <br/>
 
-![Demo](./assets/img/new-demo.gif)
+![Demo](./assets/img/code-command-demo.gif)
 
 <br/>
 <br/>
@@ -84,7 +84,7 @@ Working on an New app.
 - <p><a href="https://www.mongodb.com/">MongoDB</a></p>
 - <p><a href="https://www.heroku.com/">Heroku</a></p>
 
-[Back To Top](#new)
+[Back To Top](#code-command)
 
 ---
 
@@ -97,7 +97,7 @@ Working on an New app.
 - Use the follow command at your terminal, **git clone** (Create a working copy at your local repository):
 
   ```
-  git clone git@github.com:Derimarg/new.git
+  git clone git@github.com:Derimarg/code-command.git
   ```
 
 - After cloned the repository, create your own repository, copy the files to your repository and type in your terminal the follow commands.
@@ -120,7 +120,7 @@ Before of using this application, is require to install dependencies, run the fo
 npm install
 ```
 
-[Back To Top](#new)
+[Back To Top](#code-command)
 
 ---
 
@@ -155,9 +155,9 @@ Will deploy app to heroku
 
 ## Roadmap
 
-See the [open issues](https://github.com/Derimarg/new/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Derimarg/code-command/issues) for a list of proposed features (and known issues).
 
-[Back To Top](#new)
+[Back To Top](#code-command)
 
 ---
 
@@ -180,9 +180,9 @@ For additional help or questions about collaboration, contact me at: derimargray
 - GitHub - [Derimarg](https://github.com/Derimarg/)
 - Twitter - [Derimar Gray](https://twitter.com/DerimarGray)
 - Linkedin - [Derimar Gray](https://www.linkedin.com/in/derimar-gray-676275132/)
-- Project Repository Link: https://github.com/Derimarg/new
+- Project Repository Link: https://github.com/Derimarg/code-command
 
-[Back To Top](#new)
+[Back To Top](#code-command)
 
 ---
 
@@ -190,7 +190,7 @@ For additional help or questions about collaboration, contact me at: derimargray
 
 MIT License
 
-Copyright (c) 2021 Derimar Gray
+Copyright (c) 2021 Audry Ford, Derimar Gray, Robert Atalla, George Mendoza
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -198,16 +198,16 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[repo-size]: https://img.shields.io/github/repo-size/Derimarg/new?style=for-the-badge
-[github-language]: https://img.shields.io/github/languages/top/Derimarg/new?color=yellow&style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Derimarg/new.svg?style=for-the-badge
-[contributors-url]: https://github.com/Derimarg/new/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Derimarg/new.svg?color=9cf&style=for-the-badge
-[forks-url]: https://github.com/Derimarg/new/network/members
-[stars-shield]: https://img.shields.io/github/stars/Derimarg/new.svg?color=blueviolet&style=for-the-badge
-[stars-url]: https://github.com/Derimarg/new/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Derimarg/new.svg?style=for-the-badge
-[issues-url]: https://github.com/Derimarg/new/issues
+[repo-size]: https://img.shields.io/github/repo-size/Derimarg/code-command?style=for-the-badge
+[github-language]: https://img.shields.io/github/languages/top/Derimarg/code-command?color=yellow&style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Derimarg/code-command.svg?style=for-the-badge
+[contributors-url]: https://github.com/Derimarg/code-command/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Derimarg/code-command.svg?color=9cf&style=for-the-badge
+[forks-url]: https://github.com/Derimarg/code-command/network/members
+[stars-shield]: https://img.shields.io/github/stars/Derimarg/code-command.svg?color=blueviolet&style=for-the-badge
+[stars-url]: https://github.com/Derimarg/code-command/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Derimarg/code-command.svg?style=for-the-badge
+[issues-url]: https://github.com/Derimarg/code-command/issues
 [license-shield]: https://img.shields.io/static/v1?label=license&message=MIT&color=yellowgreen.svg&style=for-the-badge
 [twitter-shield]: https://img.shields.io/badge/-Twitter-red.svg?&logo=twitter&style=for-the-badge&color=9cf
 [twitter-url]: https://twitter.com/DerimarGray
