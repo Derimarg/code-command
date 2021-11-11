@@ -2,11 +2,18 @@ import styled from "styled-components";
 
 // background: #150f0f;
 export const ProductsContainer = styled.div`
-  /* width: 100vw; */
+  width: 100vw;
   min-height: 100vh;
   padding: 5rem calc((100vw - 1300px) / 2);
   background: #fff;
   color: black;
+`;
+
+export const ProductsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
 `;
 
 export const ProductWrapper = styled.div`
@@ -32,7 +39,15 @@ export const ProductImg = styled.img`
 export const ProductsHeading = styled.h1`
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;
-  margin-bottom: 5rem;
+`;
+
+export const ProductsDesc = styled.h3`
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: normal;
+  text-align: center;
+  color: #d9d9d9;
+  margin: 1rem;
+  line-height: 24px;
 `;
 
 export const ProductTitle = styled.h2`
@@ -67,7 +82,7 @@ export const ProductButton = styled.button`
   transition: 0.2 ease-out;
 
   &:hover {
-    background: #ffc500;
+    background: #0467fb;
     transition: 0.2s ease-out;
     cursor: pointer;
     color: #000;

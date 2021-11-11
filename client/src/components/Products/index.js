@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
-  ProductsContainer,
+  // ProductsContainer,
+  ProductsWrapper,
   ProductWrapper,
   ProductsHeading,
+  ProductsDesc,
   ProductTitle,
   ProductCard,
   ProductImg,
@@ -11,11 +14,31 @@ import {
   ProductPrice,
   ProductButton,
 } from "./ProductsElements";
+import { InfoSec2 } from "../../components/InfoSection/InfoSection.elements";
 
-const Products = ({ heading, data }) => {
+import { Button } from "../../globalStyles";
+
+const Products = ({
+  heading,
+  description,
+  data,
+  primary,
+  buttonLabel,
+  lightBg,
+}) => {
   return (
-    <ProductsContainer>
-      <ProductsHeading>{heading}</ProductsHeading>
+    <>
+      <InfoSec2 lightBg={lightBg}>
+        <ProductsHeading>{heading}</ProductsHeading>
+        <ProductsDesc>{description}</ProductsDesc>
+        <Link to="/">
+          <Button fontBig primary={primary}>
+            {buttonLabel}
+          </Button>
+        </Link>
+      </InfoSec2>
+      {/* <ProductsContainer> */}
+      <ProductsWrapper></ProductsWrapper>
       <ProductWrapper>
         {data.map((product, index) => {
           return (
@@ -31,7 +54,8 @@ const Products = ({ heading, data }) => {
           );
         })}
       </ProductWrapper>
-    </ProductsContainer>
+      {/* </ProductsContainer> */}
+    </>
   );
 };
 

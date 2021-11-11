@@ -60,19 +60,29 @@ export default function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
+                <NavLinks to="/contact" onClick={closeMobileMenu}>
+                  Contact Us
+                </NavLinks>
+              </NavItem>
+              <NavItem>
                 <NavLinks to="/products" onClick={closeMobileMenu}>
-                  Products
+                  Courses
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/login" onClick={closeMobileMenu}>
+                  Login
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/login">
-                    <Button primary>Login</Button>
+                  <NavBtnLink to="/signup">
+                    <Button primary>Sign Up</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/login">
+                  <NavBtnLink to="/signup">
                     <Button fontBig primary onClick={closeMobileMenu}>
-                      Login
+                      Sign Up
                     </Button>
                   </NavBtnLink>
                 )}
