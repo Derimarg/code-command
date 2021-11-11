@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { FaOpencart } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
@@ -36,7 +37,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
 `;
 
-export const NavIcon = styled(FaOpencart)`
+export const NavIcon = styled(FaCode)`
   margin-right: 0.5rem;
 `;
 

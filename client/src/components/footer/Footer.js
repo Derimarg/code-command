@@ -80,7 +80,7 @@ export default function Footer() {
         <SocialMediaWrap>
           <SocialLogo to="/">
             <SocialIcon />
-            code app
+            CC
           </SocialLogo>
           <WebsiteRights>
             Learn to code interactively &copy; code app{" "}
