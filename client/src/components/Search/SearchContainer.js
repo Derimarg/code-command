@@ -9,6 +9,8 @@ import searchIcon from "../../assets/img/search.svg";
 //     padding: ${({ big }) => (big ? "10px 0px" : "40px 200px")};
 
 const Container = styled.div`
+  display: flex;
+  align-items: center;
   padding-right: 200px;
   @media screen and (max-width: 960px) {
     width: 100%;

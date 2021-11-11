@@ -33,7 +33,7 @@ export const ProductImg = styled.img`
   height: 300px;
   min-width: 300px;
   max-width: 100%;
-  box-shadow: 8px 8px #0467fb;
+  box-shadow: 4px 4px #0467fb;
 `;
 
 export const ProductsHeading = styled.h1`
