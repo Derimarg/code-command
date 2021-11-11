@@ -36,7 +36,7 @@ const Loginbar = (props) => {
     <Container>
       <LogoWrapper>
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
         </Link>
         <h3>
           New <span>App</span>
@@ -44,8 +44,20 @@ const Loginbar = (props) => {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Login</h3>
-        <Input type="email" placeholder="Email" onChange={handleChange} />
-        <Input type="password" placeholder="Password" onChange={handleChange} />
+        <Input
+          name="email"
+          type="email"
+          placeholder="Email"
+          id="email"
+          onChange={handleChange}
+        />
+        <Input
+          name="password"
+          type="password"
+          placeholder="Password"
+          id="pwd"
+          onChange={handleChange}
+        />
         {error ? (
           <div>
             <p>The provided credentials are incorrect</p>
