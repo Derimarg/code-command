@@ -31,7 +31,7 @@ export default function Main() {
         <>
           <Navbar />
           <Route path="/" exact component={Home} />
-          <Route path="/products" exact component={Products} />
+          <Route path="/courses" exact component={Products} />
           {/* <Route component={NotFound} /> */}
           <Footer />
         </>
