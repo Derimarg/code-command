@@ -12,10 +12,12 @@ import {
   NavItem,
   NavItemBtn,
   NavLinks,
+  // NavCart,
   NavBtnLink,
 } from "./Navbar.elements";
 import { Button } from "../../globalStyles";
 import Auth from "../../utils/auth";
+// import Cartbar from "../../containers/cart/Cartbar";
 // import { CheckoutMenu } from "../../components/Sidebar/SidebarElements";
 // import Sidebar from "../../components/Sidebar/Index";
 
@@ -109,8 +111,12 @@ export default function Navbar() {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/" onClick={closeMobileMenu}>
-              <NavIconCart />
+            <NavLinks
+              to="/checkout"
+              onClick={(closeMobileMenu, toggle)}
+              toggle={toggle}
+            >
+              <NavIconCart onClick={toggle} toggle={toggle} />
             </NavLinks>
           </NavItem>
           <NavItem>
@@ -147,12 +153,7 @@ export default function Navbar() {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu
-              onClick={handleClick}
-              click={click}
-              isOpen={isOpen}
-              toggle={toggle}
-            >
+            <NavMenu onClick={handleClick} click={click}>
               {showNavigation()}
             </NavMenu>
             {/* <CheckoutMenu isOpen={isOpen} toggle={toggle}>
@@ -160,6 +161,7 @@ export default function Navbar() {
             </CheckoutMenu> */}
           </NavbarContainer>
         </Nav>
+        {/* <Cartbar /> */}
       </IconContext.Provider>
     </>
   );

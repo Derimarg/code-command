@@ -18,6 +18,8 @@ import { InfoSec2 } from "../../components/InfoSection/InfoSection.elements";
 import { Button } from "../../globalStyles";
 import SearchContainer from "../Search/SearchContainer";
 import { FooterSubscription } from "../Footer/Footer.elements";
+import Announcement from "../../components/Announcement/Announcement";
+
 const Products = ({
   heading,
   description,
@@ -28,6 +30,7 @@ const Products = ({
 }) => {
   return (
     <>
+      <Announcement />
       <InfoSec2 lightBg={lightBg}>
         <ProductsHeading>{heading}</ProductsHeading>
         <ProductsDesc>{description}</ProductsDesc>

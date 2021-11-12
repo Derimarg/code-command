@@ -10,14 +10,15 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 import GlobalStyle from "./globalStyles";
 import ScrollToTop from "./components/ScrollTop";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import { Navbar, Footer } from "./components";
 import Products from "./pages/Products/Products";
 import Services from "./pages/Services/Services";
-import { Provider } from "react-redux";
-import store from "./utils/store";
+import Checkout from "./pages/Checkout/Checkout";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -48,10 +49,12 @@ function App() {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/services" component={Services} />
                 <Route exact path="/courses" component={Products} />
+                <Route exact path="/checkout" component={Checkout} />
                 <Route exact path="/success" />
                 <Route exact path="/orderHistory" />
                 <Route exact path="/products/:id" />
                 {/* <Route component={NotFound} /> */}
+
                 <Footer />
               </>
             </Switch>
