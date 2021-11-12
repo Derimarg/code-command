@@ -18,6 +18,7 @@ import { InfoSec2 } from "../../components/InfoSection/InfoSection.elements";
 import { Button } from "../../globalStyles";
 import SearchContainer from "../Search/SearchContainer";
 import { FooterSubscription } from "../Footer/Footer.elements";
+
 const Products = ({
   heading,
   description,
