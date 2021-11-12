@@ -25,15 +25,25 @@ export const ProductWrapper = styled.div`
 
 export const ProductCard = styled.div`
   margin: 0 2rem;
-  line-height: 2;
+  line-height: 1;
   width: 300px;
+  background-color: #f2f2f2;
+  margin-bottom:2rem;
+  color black;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  &:hover {
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+    color: #1c2237;
+  }
 `;
 
 export const ProductImg = styled.img`
   height: 300px;
   min-width: 300px;
   max-width: 100%;
-  box-shadow: 4px 4px #0467fb;
+  padding: 5px;
 `;
 
 export const ProductsHeading = styled.h1`
@@ -60,11 +70,13 @@ export const ProductInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 0;
   padding: 2rem;
   text-align: center;
 `;
 
 export const ProductDesc = styled.p`
+  margin-top: 1rem;
   margin-bottom: 1rem;
 `;
 
@@ -77,6 +89,7 @@ export const ProductButton = styled.button`
   font-size: 1rem;
   padding: 1rem 4rem;
   border: none;
+  border-radius: 8px;
   background: #4b59f7;
   color: #fff;
   transition: 0.2 ease-out;
