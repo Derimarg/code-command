@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaOpencart } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // background-color: #101522; dark blue
@@ -147,7 +147,7 @@ export const SocialLogo = styled(Link)`
   margin-bottom: 16px;
 `;
 
-export const SocialIcon = styled(FaOpencart)`
+export const SocialIcon = styled(FaCode)`
   margin-right: 10px;
 `;
 

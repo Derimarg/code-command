@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../assets/opencart-brands.svg";
+import logo from "../../assets/code-solid.svg";
 import Input from "./Input";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-const Signupbar = (props) => {
+function Signupbar(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
@@ -15,12 +15,13 @@ const Signupbar = (props) => {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
-        email: formState.email,
-        password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        email: formState.email,
+        password: formState.password,
       },
     });
+
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
@@ -37,18 +38,42 @@ const Signupbar = (props) => {
     <Container>
       <LogoWrapper>
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo brand" />
         </Link>
         <h3>
-          New <span>App</span>
+          Code <span>Command</span>
         </h3>
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Sign Up</h3>
-        <Input placeholder="First Name" onChange={handleChange} />
-        <Input placeholder="Last Name" onChange={handleChange} />
-        <Input type="email" placeholder="Email" onChange={handleChange} />
-        <Input type="password" placeholder="Password" onChange={handleChange} />
+        <Input
+          placeholder="First Name"
+          name="firstName"
+          type="firstName"
+          id="firstName"
+          onChange={handleChange}
+        />
+        <Input
+          placeholder="Last Name"
+          name="lastName"
+          type="lastName"
+          id="lastName"
+          onChange={handleChange}
+        />
+        <Input
+          name="email"
+          type="email"
+          id="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <Input
+          name="password"
+          type="password"
+          id="pwd"
+          placeholder="Password"
+          onChange={handleChange}
+        />
         <button type="submit">Sign Up</button>
       </Form>
       <div>
@@ -65,7 +90,7 @@ const Signupbar = (props) => {
       </div>
     </Container>
   );
-};
+}
 
 const Terms = styled.p`
   padding: 0 1rem;
@@ -109,6 +134,7 @@ const Form = styled.form`
 const LogoWrapper = styled.div`
   img {
     height: 4rem;
+    margin-left: 2rem;
   }
 
   h3 {

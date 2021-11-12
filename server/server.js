@@ -26,7 +26,7 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// serve up static assets
+// Serve up static assets
 app.use("/images", express.static(path.join(__dirname, "../client/images")));
 
 if (process.env.NODE_ENV === "production") {
@@ -40,7 +40,6 @@ app.get("*", (req, res) => {
 db.once("open", () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
-
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });

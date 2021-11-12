@@ -6,6 +6,7 @@ import {
   NavbarContainer,
   NavLogo,
   NavIcon,
+  NavIconCart,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -15,6 +16,8 @@ import {
 } from "./Navbar.elements";
 import { Button } from "../../globalStyles";
 import Auth from "../../utils/auth";
+// import { CheckoutMenu } from "../../components/Sidebar/SidebarElements";
+// import Sidebar from "../../components/Sidebar/Index";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -36,6 +39,12 @@ export default function Navbar() {
   }, []);
 
   window.addEventListener("resize", showButton);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -95,6 +104,16 @@ export default function Navbar() {
             </NavLinks>
           </NavItem>
           <NavItem>
+            <NavLinks to="/orderHistory" onClick={closeMobileMenu}>
+              Order History
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="/" onClick={closeMobileMenu}>
+              <NavIconCart />
+            </NavLinks>
+          </NavItem>
+          <NavItem>
             <NavLinks to="/login" onClick={closeMobileMenu}>
               Login
             </NavLinks>
@@ -128,9 +147,17 @@ export default function Navbar() {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
+            <NavMenu
+              onClick={handleClick}
+              click={click}
+              isOpen={isOpen}
+              toggle={toggle}
+            >
               {showNavigation()}
             </NavMenu>
+            {/* <CheckoutMenu isOpen={isOpen} toggle={toggle}>
+              <Sidebar />
+            </CheckoutMenu> */}
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
