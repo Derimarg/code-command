@@ -7,7 +7,7 @@ export function pluralize(name, count) {
 
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
-    const request = window.indexedDB.open("new-app", 1);
+    const request = window.indexedDB.open("code-command", 1);
     let db, tx, store;
     request.onupgradeneeded = function (e) {
       const db = request.result;
