@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../assets/opencart-brands.svg";
+import logo from "../../assets/code-solid.svg";
 import Input from "./Input";
 import { LOGIN } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-const Loginbar = (props) => {
+function Loginbar(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -39,11 +39,12 @@ const Loginbar = (props) => {
           <img src={logo} alt="logo" />
         </Link>
         <h3>
-          New <span>App</span>
+          Code <span>Command</span>
         </h3>
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Login</h3>
+
         <Input
           name="email"
           type="email"
@@ -51,6 +52,7 @@ const Loginbar = (props) => {
           id="email"
           onChange={handleChange}
         />
+
         <Input
           name="password"
           type="password"
@@ -73,7 +75,7 @@ const Loginbar = (props) => {
       </Form>
     </Container>
   );
-};
+}
 
 const Form = styled.form`
   width: 100%;
@@ -109,6 +111,7 @@ const Form = styled.form`
 const LogoWrapper = styled.div`
   img {
     height: 4rem;
+    margin-left: 2rem;
   }
 
   h3 {

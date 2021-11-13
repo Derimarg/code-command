@@ -1,7 +1,6 @@
-import React from "react";
+import React from "react"; //  useEffect // useState,
 import { Link } from "react-router-dom";
 import {
-  // ProductsContainer,
   ProductWrapper,
   ProductsHeading,
   ProductsDesc,
@@ -12,22 +11,33 @@ import {
   ProductDesc,
   ProductPrice,
   ProductButton,
-} from "./ProductsElements";
-import { InfoSec2 } from "../../components/InfoSection/InfoSection.elements";
+} from "../Products/ProductsElements";
 
+// import { GiRock } from "react-icons/gi";
+import { InfoSec2 } from "../InfoSection/InfoSection.elements";
 import { Button } from "../../globalStyles";
 import SearchContainer from "../Search/SearchContainer";
 import { FooterSubscription } from "../Footer/Footer.elements";
-import Announcement from "../../components/Announcement/Announcement";
+import Announcement from "../Announcement/Announcement";
+import Auth from "../../utils/auth";
 
-const Products = ({
+export default function CoursesSection({
   heading,
   description,
   data,
   primary,
   buttonLabel,
   lightBg,
-}) => {
+}) {
+  // const [button, setButtom] = useState(true);
+  // const showButton = () => {
+  //   if (Auth.loggedIn) {
+  //     setButtom(true);
+  //   } else {
+  //     setButtom(false);
+  //   }
+  // };
+
   return (
     <>
       <Announcement />
@@ -40,7 +50,6 @@ const Products = ({
           </Button>
         </Link>
       </InfoSec2>
-      {/* <ProductsContainer> */}
       <FooterSubscription>
         <SearchContainer />
       </FooterSubscription>
@@ -53,15 +62,19 @@ const Products = ({
                 <ProductTitle>{product.name}</ProductTitle>
                 <ProductDesc>{product.desc}</ProductDesc>
                 <ProductPrice>{product.price}</ProductPrice>
-                <ProductButton>{product.button}</ProductButton>
+                {/* <ProductButton>{product.button}</ProductButton> */}
+
+                {/* {button ? null : (
+                  <ProductButton>{product.button}</ProductButton>
+                )} */}
+                {Auth.loggedIn ? null : (
+                  <ProductButton>{product.button}</ProductButton>
+                )}
               </ProductInfo>
             </ProductCard>
           );
         })}
       </ProductWrapper>
-      {/* </ProductsContainer> */}
     </>
   );
-};
-
-export default Products;
+}

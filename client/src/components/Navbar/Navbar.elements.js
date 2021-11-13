@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaCartPlus } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
@@ -41,6 +41,10 @@ export const NavIcon = styled(FaCode)`
   margin-right: 0.5rem;
 `;
 
+export const NavIconCart = styled(FaCartPlus)`
+  margin-right: 0.5rem;
+`;
+
 export const MobileIcon = styled.div`
   display: none;
 
@@ -65,6 +69,7 @@ export const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 300px;
     height: 90vh;
     position: absolute;
     top: 80px;
@@ -103,6 +108,31 @@ export const NavItemBtn = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+
+  &:hover {
+    color: #4b59f7;
+  }
+
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavCart = styled.div`
   color: #fff;
   display: flex;
   align-items: center;
