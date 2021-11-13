@@ -14,16 +14,47 @@ import {
   ProductAmount,
   ProductPrice,
 } from "../../components/Checkout/CheckoutElements";
-
+import { useDispatch } from "react-redux";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const removeItem = (item) => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: item._id,
+    });
+
+    idbPromise("cart", "delete", { ...item });
+  };
+
+  const onChange = (e) => {
+    const value = e.target.value;
+    if (value === "0") {
+      dispatch({
+        type: REMOVE_FROM_CART,
+        _id: item._id,
+      });
+      idbPromise("cart", "delete", { ...item });
+    } else {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: item._id,
+        purchaseQuantity: parseInt(value),
+      });
+      idbPromise("cart", "put", { ...item, purchaseQuantity: parseInt(value) });
+    }
+  };
+
   return (
     <Product>
       <ProductDetail>
-        <Image src="https://via.placeholder.com/50X50" />
+        <Image src={`/images/${item.image}`} alt="" />
         <Details>
           <ProductName>
-            <b>Product:</b> Full Stack Develoment
+            <b>Product:</b> {item.name}
           </ProductName>
           <ProductId>
             <b>ID:</b> 93813718293
@@ -38,9 +69,15 @@ const CartItem = ({ item }) => {
         <ProductAmountContainer>
           <FaPlus />
           <ProductAmount>1</ProductAmount>
-          <FaMinus />
+          <input
+            type="number"
+            placeholder="1"
+            value={item.purchaseQuantity}
+            onChange={onChange}
+          />
+          <FaMinus onClick={() => removeItem(item)} />
         </ProductAmountContainer>
-        <ProductPrice>$ 500</ProductPrice>
+        <ProductPrice>{item.price}</ProductPrice>
       </PriceDetail>
     </Product>
   );
