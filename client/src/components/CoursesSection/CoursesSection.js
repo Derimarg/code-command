@@ -1,7 +1,4 @@
-import React, {
-  useState,
-  //  useEffect
-} from "react";
+import React from "react"; //  useEffect // useState,
 import { Link } from "react-router-dom";
 import {
   ProductWrapper,
@@ -32,29 +29,14 @@ export default function CoursesSection({
   buttonLabel,
   lightBg,
 }) {
-  // function ShowButtom(data) {
-  //   if (Auth.loggedIn()) {
-  //     return (
-
-  //      {data.map((product, index) => {return()} )
-
+  // const [button, setButtom] = useState(true);
+  // const showButton = () => {
+  //   if (Auth.loggedIn) {
+  //     setButtom(true);
   //   } else {
-  //     return null;
+  //     setButtom(false);
   //   }
-  // }
-
-  const [button, setButtom] = useState(true);
-  const showButton = () => {
-    if (Auth.loggedIn) {
-      setButtom(true);
-    } else {
-      setButtom(false);
-    }
-  };
-
-  // useEffect(() => {
-  //   showButton();
-  // }, []);
+  // };
 
   return (
     <>
@@ -82,7 +64,10 @@ export default function CoursesSection({
                 <ProductPrice>{product.price}</ProductPrice>
                 {/* <ProductButton>{product.button}</ProductButton> */}
 
-                {button ? null : (
+                {/* {button ? null : (
+                  <ProductButton>{product.button}</ProductButton>
+                )} */}
+                {Auth.loggedIn ? null : (
                   <ProductButton>{product.button}</ProductButton>
                 )}
               </ProductInfo>
