@@ -9,7 +9,7 @@ import {
 import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
-// import Cartbar from "../../containers/cart/Cartbar";
+import Cartbar from "../../containers/cart/Cartbar";
 
 export default function Home(lightBg) {
   function ShowHomePage() {
@@ -27,7 +27,7 @@ export default function Home(lightBg) {
           <InfoSection {...homeObjThree} />
           <Pricing />
           <InfoSection {...homeObjTwo} />
-          {/* <Cartbar /> */}
+          <Cartbar />
           {/* <InfoSec lightBg={lightBg} /> */}
         </>
       );

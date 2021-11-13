@@ -203,6 +203,24 @@ export const MsgContainer = styled.div`
   }
 `;
 
+export const CartContainer = styled.div`
+  position: fixed;
+  top: 14%;
+  right: 2%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #4b59f7;
+  border-radius: 50%;
+  padding: 0.25rem;
+  width: 40px;
+  height: 40px;
+`;
+
+export const CartImg = styled.img`
+  width: 50px;
+  margin-right: 1rem;
+`;
+
 // border-radius: 4
 // px
 // ;

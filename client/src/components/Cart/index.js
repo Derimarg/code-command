@@ -4,6 +4,7 @@ import { productData } from '../Products';
 import Auth from '../../utils/auth';
 import { TOGGLE_CART } from '../../utils/actions';
 
+
 const Cart = () => {
 
     function toggleCart() {
