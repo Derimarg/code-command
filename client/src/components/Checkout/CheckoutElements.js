@@ -184,13 +184,25 @@ export const Button2 = styled.button`
 
 export const CheckLink = styled(Link)`
   color: #fff;
-  justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
 `;
+
+export const MsgContainer = styled.div`
+  width: 100%;
+  min-height: 50vh;
+  background: #fff;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  color: black;
+
+  h3 {
+    text-align: center;
+  }
+`;
+
 // border-radius: 4
 // px
 // ;

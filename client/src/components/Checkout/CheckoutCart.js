@@ -11,29 +11,16 @@ import {
   Top,
   TopButton,
   TopTexts,
-  // TopText,
   Bottom,
   Button2,
   Info,
-  // Product,
-  // ProductDetail,
-  // Image,
-  // Details,
-  // ProductName,
-  // ProductId,
-  // ProductColor,
-  // ProductSize,
-  // PriceDetail,
-  // ProductAmount,
-  // ProductAmountContainer,
-  // ProductPrice,
-  // Hr,
   Summary,
-  MobileSummary,
+  // MobileSummary,
   SummaryTitle,
   SummaryItemText,
   SummaryItem,
   SummaryItemPrice,
+  MsgContainer,
 } from "./CheckoutElements";
 import CartItem from "../CartItem";
 // import { Button } from "../../globalStyles";
@@ -159,104 +146,44 @@ const Cart = () => {
                 </Summary>
               </>
             ) : (
-              <>
+              <MsgContainer>
                 <h3>You haven't added anything to your cart yet!</h3>
-                <MobileSummary>
-                  <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-                  <SummaryItem>
-                    <SummaryItemText>Subtotal</SummaryItemText>
-                    <SummaryItemPrice>$ 80</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryItemText>TAXES</SummaryItemText>
-                    <SummaryItemPrice>$ 5.90</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryItemText>Course Discount</SummaryItemText>
-                    <SummaryItemPrice>$ -5.90</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem type="total">
-                    <SummaryItemText>Total</SummaryItemText>
-                    <SummaryItemPrice>$ 80</SummaryItemPrice>
-                  </SummaryItem>
-                  {Auth.loggedIn() ? (
-                    <Button2>CHECKOUT NOW</Button2>
-                  ) : (
-                    <>
-                      <CheckLink to="/login">
-                        <Button2>CHECKOUT NOW</Button2>
-                      </CheckLink>
-                    </>
-                  )}
-                </MobileSummary>
-              </>
+              </MsgContainer>
             )}
           </Info>
-
-          <Summary>
-            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-            <SummaryItem>
-              <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
-            </SummaryItem>
-            <SummaryItem>
-              <SummaryItemText>TAXES</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
-            </SummaryItem>
-            <SummaryItem>
-              <SummaryItemText>Course Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
-            </SummaryItem>
-            <SummaryItem type="total">
-              <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
-            </SummaryItem>
-            {Auth.loggedIn() ? (
-              <Button2>CHECKOUT NOW</Button2>
-            ) : (
-              <>
-                <CheckLink to="/login">
-                  <Button2>CHECKOUT NOW</Button2>
-                </CheckLink>
-              </>
-            )}
-          </Summary>
         </Bottom>
-        {/* <Bottom>
-          <Info>
-            <CartItem />
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src="https://via.placeholder.com/50X50" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> JavaScript
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 93813718293
-                  </ProductId>
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Courses:</b> 1
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <FaPlus />
-                  <ProductAmount>1</ProductAmount>
-                  <FaMinus />
-                </ProductAmountContainer>
-                <ProductPrice>$ 30</ProductPrice>
-              </PriceDetail>
-            </Product>
-          </Info>
-          
-        </Bottom> */}
       </Wrapper>
     </Container>
   );
 };
 
 export default Cart;
+
+/* <MobileSummary>
+  <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+  <SummaryItem>
+    <SummaryItemText>Subtotal</SummaryItemText>
+    <SummaryItemPrice>$ 80</SummaryItemPrice>
+  </SummaryItem>
+  <SummaryItem>
+    <SummaryItemText>TAXES</SummaryItemText>
+    <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+  </SummaryItem>
+  <SummaryItem>
+    <SummaryItemText>Course Discount</SummaryItemText>
+    <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+  </SummaryItem>
+  <SummaryItem type="total">
+    <SummaryItemText>Total</SummaryItemText>
+    <SummaryItemPrice>$ 80</SummaryItemPrice>
+  </SummaryItem>
+  {Auth.loggedIn() ? (
+    <Button2>CHECKOUT NOW</Button2>
+  ) : (
+    <>
+      <CheckLink to="/login">
+        <Button2>CHECKOUT NOW</Button2>
+      </CheckLink>
+    </>
+  )}
+</MobileSummary>; */
