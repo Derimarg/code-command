@@ -67,8 +67,17 @@ export default function CoursesSection({
                 {/* {button ? null : (
                   <ProductButton>{product.button}</ProductButton>
                 )} */}
-                {Auth.loggedIn ? null : (
+                {/* {Auth.loggedIn ? null : (
                   <ProductButton>{product.button}</ProductButton>
+                )} */}
+                {Auth.loggedIn() ? (
+                  <ProductButton>{product.button}</ProductButton>
+                ) : (
+                  <>
+                    <Link to="/login">
+                      <ProductButton>{product.button}</ProductButton>
+                    </Link>
+                  </>
                 )}
               </ProductInfo>
             </ProductCard>

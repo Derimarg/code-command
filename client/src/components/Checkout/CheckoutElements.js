@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../../responsive";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div``;
 
@@ -165,7 +166,7 @@ export const SummaryItemPrice = styled.span``;
 export const Button2 = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #0467FB;
+  background-color: #0467fb;
   color: white;
   font-weight: bold;
   border: none;
@@ -181,7 +182,15 @@ export const Button2 = styled.button`
   }
 `;
 
-
+export const CheckLink = styled(Link)`
+  color: #fff;
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+`;
 // border-radius: 4
 // px
 // ;
