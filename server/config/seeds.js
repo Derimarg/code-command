@@ -53,7 +53,7 @@ db.once("open", async () => {
       name: "name 5",
       category: categories[1]._id,
       description: "description 5",
-      image: "wooden-spoons.jpg",
+      image: "https://via.placeholder.com/300X400",
       price: 14.99,
       quantity: 100,
     },
