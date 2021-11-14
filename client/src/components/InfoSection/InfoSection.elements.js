@@ -8,6 +8,16 @@ export const InfoSec = styled.div`
   padding: 160px 0;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
 `;
+export const InfoSec2 = styled.div`
+  color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
+  padding: 60px 0;
+  margin-bottom: 1rem;
+
+  background: ${({ lightBg }) => (lightBg ? "#fff" : "#1d1d1d")};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export const InfoRow = styled.div`
   display: flex;
