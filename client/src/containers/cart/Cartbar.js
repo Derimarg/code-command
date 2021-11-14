@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { Container } from "../../globalStyles";
@@ -11,8 +11,13 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 // import { idbPromise } from "../../utils/helpers";
 import { FaTimes } from "react-icons/fa";
-import { CartContainer } from "../../components/Checkout/CheckoutElements";
+import {
+  CartContainer,
+  IconWrap,
+  CartIcon,
+} from "../../components/Checkout/CheckoutElements";
 import CartItems from "../../components/CartItems/CartItems";
+// import OutsideClick from "../../settings";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -34,12 +39,18 @@ function Cartbar() {
     dispatch({ type: TOGGLE_CART });
   }
 
+  // const boxRef = useRef(null);
+  // const boxOutsideClick = OutsideClick(boxRef);
+
   if (!state.cartOpen) {
     return (
-      <CartContainer onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
+      <CartContainer
+        // ref={boxRef}
+        onClick={toggleCart}
+      >
+        <IconWrap role="img" aria-label="trash">
+          <CartIcon />
+        </IconWrap>
       </CartContainer>
     );
   }
@@ -47,7 +58,7 @@ function Cartbar() {
   return (
     <CartBody>
       <CartHeaderWraper>
-        <CartHeader>Shopping Bag</CartHeader>
+        <CartHeader>Bag</CartHeader>
         <CartHeaderItem>
           <CloseItem>
             <CloseIcon onClick={toggleCart} />
@@ -76,7 +87,7 @@ function Cartbar() {
 const CartBody = styled.div`
   position: fixed;
   top: 10%;
-  right: 0;
+  right: 0%;
   min-width: 30%;
   max-width: 40%;
   max-height: 60%;
@@ -86,8 +97,14 @@ const CartBody = styled.div`
   border-bottom-left-radius: 0.5rem;
   backdrop-filter: blur(35px);
   background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   transition: all 0.5s ease;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const CartTitle = styled.h2`
@@ -119,19 +136,21 @@ const CartTitle = styled.h2`
 export const CartHeaderWraper = styled(Container)`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  padding: 0.1rem;
+  height: 60px;
   color: black;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #d9d9d9;
   ${Container}
 `;
 
 export const CartHeader = styled.div`
-  justify-self: flex-start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 export const CartHeaderItem = styled.div`
   border-bottom: 2px solid transparent;
@@ -164,6 +183,11 @@ const CloseIcon = styled(FaTimes)`
   font-size: 1.5rem;
   cursor: pointer;
   color: black;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+    margin-left: 3.5rem;
+  }
 `;
 
 const Checkout = styled.button`
@@ -178,7 +202,20 @@ const CartItem = styled.div`
 `;
 
 const BtnLink = styled(Link)`
-  text-docoration: none;
+  text-align: center;
+
+  &:hover {
+    color: blue;
+  }
+
+  span {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const BtnCheckout = styled.button`

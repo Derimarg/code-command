@@ -21,8 +21,8 @@ export const Input = styled.input`
   margin: 0 0.5rem 1rem 0;
 `;
 export const CartTitle = styled.h2`
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 `;
 
 export const TrashIcon = styled(FaTrash)`

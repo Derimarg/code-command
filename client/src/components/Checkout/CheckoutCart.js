@@ -87,15 +87,15 @@ const Cart = () => {
     });
   }
 
-  if (!state.cartOpen) {
-    return (
-      <CartContainer onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
-      </CartContainer>
-    );
-  }
+  // if (!state.cartOpen) {
+  //   return (
+  //     <CartContainer onClick={toggleCart}>
+  //       <span role="img" aria-label="trash">
+  //         🛒
+  //       </span>
+  //     </CartContainer>
+  //   );
+  // }
 
   return (
     <Container>

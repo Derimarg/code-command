@@ -35,6 +35,16 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
+
+  span {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    span {
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export const NavIcon = styled(FaCode)`
@@ -59,6 +69,16 @@ export const MobileIcon = styled.div`
   }
 `;
 
+export const MobCartLink = styled.div`
+  display: none;
+
+  @media screen and (max-width: 780px) {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+`;
+
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
@@ -73,7 +93,7 @@ export const NavMenu = styled.ul`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    right: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: #101522;

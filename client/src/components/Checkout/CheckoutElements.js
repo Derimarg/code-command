@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
+import { mobile, mobile2 } from "../../responsive";
 import { Link } from "react-router-dom";
+import { FaCartPlus } from "react-icons/fa";
 
 export const Container = styled.div``;
 
@@ -209,30 +210,28 @@ export const CartContainer = styled.div`
   right: 2%;
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: #4b59f7;
+  background-color: #0467fb;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  padding: 0.25rem;
+  padding: 0.5rem;
   width: 40px;
   height: 40px;
+
+  &:hover {
+    background-color: #4b59f7;
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+  }
+  ${mobile2({ display: "none" })}
 `;
 
+export const IconWrap = styled.span``;
+
+export const CartIcon = styled(FaCartPlus)`
+  color: #d9d9d9;
+  font-size: 1.5rem;
+`;
 export const CartImg = styled.img`
   width: 50px;
   margin-right: 1rem;
 `;
-
-// border-radius: 4
-// px
-// ;
-//     background: #4B59F7;
-//     white-space: nowrap;
-//     padding: 10
-// px
-//  20
-// px
-// ;
-//     color: #fff;
-//     font-size: 16px;
-//     outline: none;
-//     border: none;
-//     cursor: pointer;

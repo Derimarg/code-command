@@ -16,20 +16,12 @@ const CartItems = () => {
         <Img src="https://via.placeholder.com/300X400" alt="" />
       </div>
       <CartInfo>
-        <CartTitle>title: JavaScript</CartTitle>
-        <div>Price: $20.00</div>
+        <CartTitle>JavaScript</CartTitle>
+        <span>$20.00</span>
         <div>
           <span>Qty:</span>
-          <Input
-            type="number"
-            placeholder="1"
-            // onChange={onChange}
-          />
-          <span
-            role="img"
-            aria-label="trash"
-            // onClick={() => removeFromCart(item)}
-          >
+          <Input type="number" placeholder="1" />
+          <span role="img" aria-label="trash">
             <TrashIcon />
           </span>
         </div>
