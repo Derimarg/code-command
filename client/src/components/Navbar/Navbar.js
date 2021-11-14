@@ -8,18 +8,15 @@ import {
   NavIcon,
   NavIconCart,
   MobileIcon,
+  MobCartLink,
   NavMenu,
   NavItem,
   NavItemBtn,
   NavLinks,
-  // NavCart,
   NavBtnLink,
 } from "./Navbar.elements";
 import { Button } from "../../globalStyles";
 import Auth from "../../utils/auth";
-// import Cartbar from "../../containers/cart/Cartbar";
-// import { CheckoutMenu } from "../../components/Sidebar/SidebarElements";
-// import Sidebar from "../../components/Sidebar/Index";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -42,12 +39,6 @@ export default function Navbar() {
 
   window.addEventListener("resize", showButton);
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
@@ -69,7 +60,7 @@ export default function Navbar() {
           </NavItem>
           <NavItemBtn>
             {button ? (
-              <NavBtnLink to="/"onClick={() => Auth.logout()}>
+              <NavBtnLink to="/" onClick={() => Auth.logout()}>
                 <Button primary>LOGOUT</Button>
               </NavBtnLink>
             ) : (
@@ -110,15 +101,14 @@ export default function Navbar() {
               Order History
             </NavLinks>
           </NavItem>
-          <NavItem>
-            <NavLinks
-              to="/checkout"
-              onClick={(closeMobileMenu, toggle)}
-              toggle={toggle}
-            >
-              <NavIconCart onClick={toggle} toggle={toggle} />
-            </NavLinks>
-          </NavItem>
+          <MobCartLink>
+            <NavItem>
+              <NavLinks to="/checkout">
+                <NavIconCart />
+              </NavLinks>
+            </NavItem>
+          </MobCartLink>
+
           <NavItem>
             <NavLinks to="/login" onClick={closeMobileMenu}>
               Login
@@ -156,12 +146,8 @@ export default function Navbar() {
             <NavMenu onClick={handleClick} click={click}>
               {showNavigation()}
             </NavMenu>
-            {/* <CheckoutMenu isOpen={isOpen} toggle={toggle}>
-              <Sidebar />
-            </CheckoutMenu> */}
           </NavbarContainer>
         </Nav>
-        {/* <Cartbar /> */}
       </IconContext.Provider>
     </>
   );

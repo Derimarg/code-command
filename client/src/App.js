@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  // useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
@@ -19,6 +14,7 @@ import { Navbar, Footer } from "./components";
 import Courses from "./pages/Courses/Courses";
 import Services from "./pages/Services/Services";
 import Checkout from "./pages/Checkout/Checkout";
+import Cartbar from "./containers/cart/Cartbar";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -54,6 +50,7 @@ function App() {
                 <Route exact path="/orderHistory" />
                 <Route exact path="/products/:id" />
                 {/* <Route component={NotFound} /> */}
+                <Cartbar />
 
                 <Footer />
               </>
