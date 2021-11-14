@@ -77,20 +77,22 @@ const CartBody = styled.div`
   position: fixed;
   top: 10%;
   right: 0;
-  min-width: 20%;
-  max-width: 30%;
+  min-width: 30%;
+  max-width: 40%;
   max-height: 60%;
-  background-color: #fff;
   overflow: auto;
   padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 0.5rem;
+  backdrop-filter: blur(35px);
   background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  transition: all 0.5s ease;
 `;
 
 const CartTitle = styled.h2`
   font-size: 1.5rem;
-  border-botton: 1px solid gray;
+  border-bottom: 1px solid #bfbfbf;
   padding-bottom: 0.5rem;
   margin: 1rem 0;
 `;
