@@ -41,3 +41,10 @@ export const Searchbar = styled.div`
     }
   }
 `;
+
+export const FilterContainer = styled.div`
+background-color: #fff;
+`
+export const Filter = styled.div`
+color: black;
+`

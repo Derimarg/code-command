@@ -7,27 +7,46 @@ import Input from "./Input";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-function Signupbar(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+function Signupbar() {
+  const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
+    // try {
+    //   const { data } = await addUser({
+    //     variables: {
+    //       firstName: formState.firstName,
+    //       lastName: formState.lastName,
+    //       email: formState.email,
+    //       password: formState.password,
+    //     },
+        
+    //   });
+    //   console.log({data});
+    //   const token = data.addUser.token;
+    //   Auth.login(token);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+console.log(formState);
     const mutationResponse = await addUser({
       variables: {
-        firstName: formState.firstName,
-        lastName: formState.lastName,
         email: formState.email,
         password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
       },
     });
-
+    console.log();
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(event.target);
     setFormState({
       ...formState,
       [name]: value,

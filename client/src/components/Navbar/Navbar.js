@@ -69,7 +69,7 @@ export default function Navbar() {
           </NavItem>
           <NavItemBtn>
             {button ? (
-              <NavBtnLink to="/">
+              <NavBtnLink to="/"onClick={() => Auth.logout()}>
                 <Button primary>LOGOUT</Button>
               </NavBtnLink>
             ) : (
