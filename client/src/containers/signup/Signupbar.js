@@ -8,7 +8,12 @@ import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
 function Signupbar() {
-  const [formState, setFormState] = useState({ firstName: "", lastName: "", email: "", password: "" });
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -22,7 +27,7 @@ function Signupbar() {
     //       email: formState.email,
     //       password: formState.password,
     //     },
-        
+
     //   });
     //   console.log({data});
     //   const token = data.addUser.token;
@@ -30,7 +35,7 @@ function Signupbar() {
     // } catch (error) {
     //   console.log(error);
     // }
-console.log(formState);
+    console.log(formState);
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -181,6 +186,7 @@ const Container = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 900px) {
+    min-width: 300px;
     width: 100vw;
     position: absolute;
     padding: 0;

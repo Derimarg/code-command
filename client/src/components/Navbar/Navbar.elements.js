@@ -35,6 +35,16 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
+
+  span {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    span {
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export const NavIcon = styled(FaCode)`
@@ -64,8 +74,8 @@ export const MobCartLink = styled.div`
 
   @media screen and (max-width: 780px) {
     display: block;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
   }
 `;
 

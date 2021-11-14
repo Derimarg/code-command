@@ -139,6 +139,7 @@ const Container = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 900px) {
+    min-width:300px;
     width: 100vw;
     position: absolute;
     padding: 0;

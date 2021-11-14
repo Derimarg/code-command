@@ -58,7 +58,7 @@ function Cartbar() {
   return (
     <CartBody>
       <CartHeaderWraper>
-        <CartHeader>Shopping Bag</CartHeader>
+        <CartHeader>Bag</CartHeader>
         <CartHeaderItem>
           <CloseItem>
             <CloseIcon onClick={toggleCart} />
@@ -87,7 +87,7 @@ function Cartbar() {
 const CartBody = styled.div`
   position: fixed;
   top: 10%;
-  right: 0;
+  right: 0%;
   min-width: 30%;
   max-width: 40%;
   max-height: 60%;
@@ -97,8 +97,14 @@ const CartBody = styled.div`
   border-bottom-left-radius: 0.5rem;
   backdrop-filter: blur(35px);
   background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   transition: all 0.5s ease;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const CartTitle = styled.h2`
@@ -142,7 +148,7 @@ export const CartHeader = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 300px) {
+  @media screen and (max-width: 500px) {
     font-size: 1rem;
   }
 `;
@@ -177,6 +183,11 @@ const CloseIcon = styled(FaTimes)`
   font-size: 1.5rem;
   cursor: pointer;
   color: black;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+    margin-left: 3.5rem;
+  }
 `;
 
 const Checkout = styled.button`

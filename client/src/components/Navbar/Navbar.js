@@ -138,7 +138,7 @@ export default function Navbar() {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
-              <NavIcon /> Code Command
+              <NavIcon /> <span>Code Command</span>
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
