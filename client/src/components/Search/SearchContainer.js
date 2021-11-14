@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Searchbar } from "./SearchElements";
+import { Searchbar, FilterContainer, Filter } from "./SearchElements";
 import searchIcon from "../../assets/img/search.svg";
+import { QUERY_CATEGORIES } from "../../utils/queries";
+
 
 // width: 100%;
 //     display: flex;
@@ -33,10 +35,37 @@ const Container = styled.div`
 `;
 
 function SearchContainer() {
+  const categories = [
+    {
+      name: "HTML"
+    },
+    {
+      name: "CSS"
+    },
+    {
+      name: "JavaScript"
+    },
+    {
+      name: "MongoDB"
+    },
+    {
+      name: "Bonus Content"
+    }
+  ]
   return (
     <div className="App">
       <Container>
         <div className="row">
+          {/* <FilterContainer >
+          
+            {categories.map((category) => (
+
+              <Filter >
+                {category.name}
+              </Filter>
+            ))}
+
+          </FilterContainer> */}
           <Searchbar>
             <img src={searchIcon} alt="searchIcon" />
             <input

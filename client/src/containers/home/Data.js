@@ -7,7 +7,7 @@ export const homeObjOne = {
   topLine: "Coding Online",
   headline: "Learn Programming Interactively",
   description:
-    "BUild projects, practice and learn to code from scratch without leaving your browser.",
+    "Build projects, practice and learn to code from scratch without leaving your browser.",
   buttonLabel: "Get Started",
   imgStart: "",
   img: require("../../assets/img/svg-001.svg").default,
@@ -24,7 +24,7 @@ export const homeObjTwo = {
   topLine: "We got your back",
   headline: "Never learn alone.",
   description:
-    "The best part about learning with friends is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
+    "The best part about learning with friends, is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
   buttonLabel: "Join our social media",
   imgStart: "",
   img: require("../../assets/img/svg-00001.svg").default,
@@ -41,7 +41,7 @@ export const homeObjThree = {
   topLine: "Zarah Fashut",
   headline: "Full Stack Developer",
   description:
-    "I've tried several coding bootcamps but the quality and structural approach to be a fullstack developer has never been clearer until I joined code app. Doing the practice on labs, I am now confident in my coding ability. Joining code app has been one of my best life decisions.",
+    "I've tried several coding bootcamps but the quality and structural approach to be a fullstack developer has never been clearer until I joined Code Command. Doing the practice on labs, I am now confident in my coding ability. Joining Code Command has been one of my best life decisions.",
   buttonLabel: "View Case",
   imgStart: "start",
   img: require("../../assets/img/avatar-svgrepo-com.svg").default,
