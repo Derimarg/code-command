@@ -19,7 +19,7 @@ export default function Courses() {
           heading={a.heading}
           description={a.desc}
           buttonLabel={a.buttonLabel}
-          data={productData}
+          data2={productData}
         />
       ))}
     </>
