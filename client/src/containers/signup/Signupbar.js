@@ -3,39 +3,16 @@ import { useMutation } from "@apollo/react-hooks";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/code-solid.svg";
-import Input from "./Input";
+import { InputContainer, StyledInput, Status } from "./Input";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-function Signupbar() {
-  const [formState, setFormState] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
+function Signupbar(props) {
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    // try {
-    //   const { data } = await addUser({
-    //     variables: {
-    //       firstName: formState.firstName,
-    //       lastName: formState.lastName,
-    //       email: formState.email,
-    //       password: formState.password,
-    //     },
-
-    //   });
-    //   console.log({data});
-    //   const token = data.addUser.token;
-    //   Auth.login(token);
-    // } catch (error) {
-    //   console.log(error);
-    // }
-    console.log(formState);
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -44,14 +21,12 @@ function Signupbar() {
         lastName: formState.lastName,
       },
     });
-    console.log();
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target);
     setFormState({
       ...formState,
       [name]: value,
@@ -70,34 +45,46 @@ function Signupbar() {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Sign Up</h3>
-        <Input
-          placeholder="First Name"
-          name="firstName"
-          type="firstName"
-          id="firstName"
-          onChange={handleChange}
-        />
-        <Input
-          placeholder="Last Name"
-          name="lastName"
-          type="lastName"
-          id="lastName"
-          onChange={handleChange}
-        />
-        <Input
-          name="email"
-          type="email"
-          id="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />
-        <Input
-          name="password"
-          type="password"
-          id="pwd"
-          placeholder="Password"
-          onChange={handleChange}
-        />
+        <InputContainer>
+          <StyledInput
+            placeholder="First Name"
+            name="firstName"
+            type="firstName"
+            id="firstName"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
+        <InputContainer>
+          <StyledInput
+            placeholder="Last Name"
+            name="lastName"
+            type="lastName"
+            id="lastName"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
+        <InputContainer>
+          <StyledInput
+            name="email"
+            type="email"
+            id="email"
+            placeholder="Email"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
+        <InputContainer>
+          <StyledInput
+            name="password"
+            type="password"
+            id="pwd"
+            placeholder="Password"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
         <button type="submit">Sign Up</button>
       </Form>
       <div>
