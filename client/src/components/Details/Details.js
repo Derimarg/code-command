@@ -12,7 +12,6 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 
 export default function Details() {
-
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -53,7 +52,6 @@ export default function Details() {
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
-
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: id,
@@ -64,9 +62,7 @@ export default function Details() {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
-
     } else {
-
       dispatch({
         type: ADD_TO_CART,
         product: { ...currentProduct, purchaseQuantity: 1 },
