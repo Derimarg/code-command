@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { useSelector, useDispatch } from "react-redux";
+import { Container, Button } from "../../globalStyles";
+
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -10,8 +12,31 @@ import {
 } from "../../utils/actions";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
+import {
+  InfoSec,
+  InfoRow,
+  InfoColumn,
+  TextWrapper,
+  TopLine,
+  Heading,
+  Subtitle,
+  ImgWrapper,
+  ProfileWraper,
+  Img,
+} from "../InfoSection/InfoSection.elements";
 
-export default function Details() {
+export default function Details(
+  primary,
+  lightBg,
+  lightTopLine,
+  lightTopLine2,
+  lightText,
+  lightTextDesc,
+  buttonAdd,
+  buttonRemove,
+  imgStart,
+  start
+) {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -83,29 +108,57 @@ export default function Details() {
   return (
     <>
       {currentProduct && cart ? (
-        <div>
-          <Link to="/">Return</Link>
+        <>
+          <InfoSec lightBg={lightBg}>
+            <Container>
+              <InfoRow imgStart={imgStart}>
+                <InfoColumn>
+                  <TextWrapper>
+                    <TopLine lightTopLine={lightTopLine}>
+                      {currentProduct.name}
+                    </TopLine>
+                    <Heading lightText={lightText}></Heading>
+                    <Subtitle lightTextDesc={lightTextDesc}>
+                      {currentProduct.description}
+                    </Subtitle>
+                    <ProfileWraper
+                      lightTopLine2={lightTopLine2}
+                    ></ProfileWraper>
 
-          <h2>{currentProduct.name}</h2>
+                    <p>
+                      <strong>Price:</strong>${currentProduct.price}{" "}
+                    </p>
 
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
-        </div>
+                    <>
+                      <Button big fontBig primary={primary} onClick={addToCart}>
+                        {buttonAdd}
+                      </Button>
+                      <Button
+                        big
+                        fontBig
+                        primary={primary}
+                        disabled={
+                          !cart.find((p) => p._id === currentProduct._id)
+                        }
+                        onClick={removeFromCart}
+                      >
+                        {buttonRemove}
+                      </Button>
+                    </>
+                  </TextWrapper>
+                </InfoColumn>
+                <InfoColumn>
+                  <ImgWrapper start={start}>
+                    <Img
+                      src="https://via.placeholder.com/200X300"
+                      alt={currentProduct.name}
+                    />
+                  </ImgWrapper>
+                </InfoColumn>
+              </InfoRow>
+            </Container>
+          </InfoSec>
+        </>
       ) : null}
       {/* // add image loading */}
       {loading ? <img src="" alt="loading" /> : null}
