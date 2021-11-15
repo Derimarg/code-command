@@ -1,17 +1,17 @@
-import React, { useEffect,
+import React, {
+  useEffect,
   // useRef
-   } from "react";
+} from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
 import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/react-hooks";
-import { useSelector, useDipatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { QUERY_CHECKOUT } from "../../utils/queries";
-// import { idbPromise } from "../../utils/helpers";
+import { idbPromise } from "../../utils/helpers";
 import { FaTimes } from "react-icons/fa";
 import {
   CartContainer,
@@ -24,6 +24,7 @@ import CartItems from "../../components/CartItems/CartItems";
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 function Cartbar() {
+  
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -37,8 +38,41 @@ function Cartbar() {
     }
   }, [data]);
 
+  useEffect(() => {
+    async function getCart() {
+      const cart = await idbPromise("cart", "get");
+      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+    }
+
+    if (!state.cart.length) {
+      getCart();
+    }
+  }, [state.cart.length, dispatch]);
+
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
+  }
+
+  function calculateTotal() {
+    let sum = 0;
+    state.cart.forEach((item) => {
+      sum += item.price * item.purchaseQuantity;
+    });
+    return sum.toFixed(2);
+  }
+
+  function submitCheckout() {
+    const productIds = [];
+
+    state.cart.forEach((item) => {
+      for (let i = 0; i < item.purchaseQuantity; i++) {
+        productIds.push(item._id);
+      }
+    });
+
+    getCheckout({
+      variables: { products: productIds },
+    });
   }
 
   // const boxRef = useRef(null);
@@ -67,20 +101,28 @@ function Cartbar() {
           </CloseItem>
         </CartHeaderItem>
       </CartHeaderWraper>
-      <CartItems />
+      {state.cart.length ? (
+        <div>
+          {state.cart.map((item) => (
+            <CartItems key={item._id} item={item} />
+          ))}
 
-      {Auth.loggedIn() ? (
-        <BtnCheckout
-        //  onClick={submitCheckout}
-        >
-          CHECKOUT NOW
-        </BtnCheckout>
+          <div>
+            <strong>Total: ${calculateTotal()}</strong>
+
+            {Auth.loggedIn() ? (
+              <BtnCheckout onClick={submitCheckout}>Checkout</BtnCheckout>
+            ) : (
+              <>
+                <BtnLink to="/login">
+                  <span>(log in to check out)</span>
+                </BtnLink>
+              </>
+            )}
+          </div>
+        </div>
       ) : (
-        <>
-          <BtnLink to="/login">
-            <span>(log in to check out)</span>
-          </BtnLink>
-        </>
+        <h3>You haven't added anything to your cart yet!</h3>
       )}
     </CartBody>
   );
@@ -165,7 +207,6 @@ const CloseIcon = styled(FaTimes)`
     margin-left: 3.5rem;
   }
 `;
-
 
 const BtnLink = styled(Link)`
   text-align: center;

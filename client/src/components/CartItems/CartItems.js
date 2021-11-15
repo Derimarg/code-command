@@ -8,7 +8,10 @@ import {
   TrashIcon,
 } from "./ItemsElement";
 
-const CartItems = () => {
+import { useDispatch } from "react-redux";
+
+
+const CartItems = ({ item }) => {
   return (
     // style here later
     <CartWrap>
