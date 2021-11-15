@@ -62,7 +62,7 @@ function Loginbar(props) {
         />
         {error ? (
           <div>
-            <p>The provided credentials are incorrect</p>
+            <p>The credentials you provided are incorrect, please try again</p>
           </div>
         ) : null}
         <button type="submit">Login</button>

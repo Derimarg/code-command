@@ -59,6 +59,19 @@ export const ImgWrapper = styled.div`
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
 `;
 
+export const Role = styled.h3`
+color: black
+`;
+
+export const ProfileWraper = styled.div`
+  color: ${({ lightTopLine2 }) => (lightTopLine2 ? "#f2f2f2" : "#737373")};
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+`;
+
 export const TopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : "#4B59F7")};
   font-size: 18px;

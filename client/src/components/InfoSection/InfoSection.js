@@ -10,7 +10,9 @@ import {
   Heading,
   Subtitle,
   ImgWrapper,
+  ProfileWraper,
   Img,
+  Role
 } from "./InfoSection.elements";
 
 function InfoSection({
@@ -18,6 +20,7 @@ function InfoSection({
   lightBg,
   topLine,
   lightTopLine,
+  lightTopLine2,
   lightText,
   lightTextDesc,
   headline,
@@ -27,6 +30,8 @@ function InfoSection({
   alt,
   imgStart,
   start,
+  role,
+  location
 }) {
   return (
     <>
@@ -36,8 +41,11 @@ function InfoSection({
             <InfoColumn>
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                <ProfileWraper lightTopLine2={lightTopLine2}>{role}</ProfileWraper>
+                <ProfileWraper lightTopLine2={lightTopLine2}>{location}</ProfileWraper>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+
                 <Link to="/signup">
                   <Button big fontBig primary={primary}>
                     {buttonLabel}
@@ -48,6 +56,7 @@ function InfoSection({
             <InfoColumn>
               <ImgWrapper start={start}>
                 <Img src={img} alt={alt} />
+                
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>

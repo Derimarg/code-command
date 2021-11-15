@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect,
+  // useRef
+   } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { Container } from "../../globalStyles";
@@ -107,32 +109,6 @@ const CartBody = styled.div`
   }
 `;
 
-const CartTitle = styled.h2`
-  font-size: 1.5rem;
-  border-bottom: 1px solid #bfbfbf;
-  padding-bottom: 0.5rem;
-  margin: 1rem 0;
-`;
-
-// min-width: 400px;
-//   backdrop-filter: blur(35px);
-//   background-color: rgba(255, 255, 255, 0.8);
-//   height: 100%;
-//   display: block;
-//   position: absolute;
-//   align-items: center;
-//   list-style: none;
-//   text-align: center;
-//   flex-direction: column;
-//   width: 100%;
-//   max-width: 200px;
-//   height: 90vh;
-//   top: 80px;
-//   right: 0px;
-//   opacity: 1;
-//   transition: all 0.5s ease;
-//   box-shadow: 0px 0px red, 0em 0 0.9em gray;
-
 export const CartHeaderWraper = styled(Container)`
   display: flex;
   justify-content: space-between;
@@ -190,16 +166,6 @@ const CloseIcon = styled(FaTimes)`
   }
 `;
 
-const Checkout = styled.button`
-background-color; black;
-width: 10rem;
-`;
-
-const CartItem = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
 
 const BtnLink = styled(Link)`
   text-align: center;

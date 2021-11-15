@@ -23,7 +23,7 @@ db.once("open", async () => {
       image: "logo192.png",
       category: categories[0]._id,
       price: 2.99,
-      quantity: 500,
+      quantity: 40,
     },
     {
       name: "name 2",

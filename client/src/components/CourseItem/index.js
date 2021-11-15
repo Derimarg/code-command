@@ -53,7 +53,7 @@ export default function CourseItem(item) {
         <ProductTitle>{name}</ProductTitle>
         <ProductDesc>Description</ProductDesc>
         <ProductDesc>
-          {quantity} {pluralize("course", quantity)} in stock
+          {quantity} {pluralize("course", quantity)} places available
         </ProductDesc>
         <ProductPrice>${price}</ProductPrice>
         <ProductButton onClick={addToCart}>Add to cart</ProductButton>

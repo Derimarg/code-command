@@ -60,19 +60,13 @@ export default function Footer() {
           </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
-          <FooterLinkItems>
-            <FooterLinkTitle>Videos</FooterLinkTitle>
-            <FooterLink to="/">Submit Video</FooterLink>
-            <FooterLink to="/">Ambassadors</FooterLink>
-            <FooterLink to="/">Agency</FooterLink>
-            <FooterLink to="/">Influencer</FooterLink>
-          </FooterLinkItems>
+          
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to="/">Instagram</FooterLink>
-            <FooterLink to="/">Facebook</FooterLink>
-            <FooterLink to="/">Youtube</FooterLink>
-            <FooterLink to="/">Twitter</FooterLink>
+            <FooterLink to="/">Slack</FooterLink>
+            <FooterLink to="/">Discord</FooterLink>
+            <FooterLink to="/">Stack Overflow</FooterLink>
+            <FooterLink to="/">Github</FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>

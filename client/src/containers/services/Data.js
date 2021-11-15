@@ -5,7 +5,7 @@ export const homeObjOne = {
   topLine: "Exclusive Access",
   headline: "Unlimited Transactions with zero fees",
   description:
-    "Get access to our exclusive diamond card that allows you to  send unlimited transactions without getting charged any fees",
+    "Get access to our exclusive diamond card that allows you to send unlimited transactions without getting charged any fees",
   buttonLabel: "Get Started",
   imgStart: "",
   img: require("../../assets/img/avatar-svgrepo-com.svg").default,
