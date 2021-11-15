@@ -3,9 +3,10 @@ import { useMutation } from "@apollo/react-hooks";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/code-solid.svg";
-import Input from "./Input";
+// import Input from "./Input";
 import { LOGIN } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { InputContainer, StyledInput, Status } from "./Input";
 
 function Loginbar(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -44,26 +45,32 @@ function Loginbar(props) {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Login</h3>
-
-        <Input
-          name="email"
-          type="email"
-          placeholder="Email"
-          id="email"
-          onChange={handleChange}
-        />
-
-        <Input
-          name="password"
-          type="password"
-          placeholder="Password"
-          id="pwd"
-          onChange={handleChange}
-        />
+        <InputContainer>
+          <StyledInput
+            placeholder="Email"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
+        <InputContainer>
+          <StyledInput
+            placeholder="Password"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+          <Status />
+        </InputContainer>
         {error ? (
-          <div>
-            <p>The credentials you provided are incorrect, please try again</p>
-          </div>
+          <>
+            <ErrorMsg>
+              The credentials you provided are incorrect, please try again
+            </ErrorMsg>
+          </>
         ) : null}
         <button type="submit">Login</button>
         <h4>
@@ -139,7 +146,7 @@ const Container = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 900px) {
-    min-width:300px;
+    min-width: 300px;
     width: 100vw;
     position: absolute;
     padding: 0;
@@ -158,6 +165,10 @@ const Container = styled.div`
       padding-left: 0.5rem;
     }
   }
+`;
+
+const ErrorMsg = styled.p`
+  color: red;
 `;
 
 export default Loginbar;

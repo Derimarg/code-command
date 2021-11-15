@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Input = ({ type, placeholder }) => {
   return (
-    <Container>
+    <InputContainer>
       <StyledInput
         placeholder={placeholder && placeholder}
         type={type ? type : "text"}
@@ -11,11 +11,11 @@ const Input = ({ type, placeholder }) => {
         autocomplete="off"
       />
       <Status />
-    </Container>
+    </InputContainer>
   );
 };
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   width: 80%;
   max-width: 350px;
   min-width: 250px;
@@ -33,13 +33,13 @@ const StyledInput = styled.input`
   }
 `;
 
-const Container = styled.div`
+export const InputContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const Status = styled.div`
+export const Status = styled.div`
   height: 10px;
   width: 10px;
   background: #9d9d9d;
