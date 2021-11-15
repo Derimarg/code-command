@@ -63,6 +63,7 @@ export const ProductsDesc = styled.h3`
 export const ProductTitle = styled.h2`
   font-weight: 400;
   font-size: 1.5rem;
+  color: #071292;
 `;
 
 export const ProductInfo = styled.div`

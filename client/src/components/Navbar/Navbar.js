@@ -53,11 +53,6 @@ export default function Navbar() {
               Order History
             </NavLinks>
           </NavItem>
-          <NavItem>
-            <NavLinks to="/courses" onClick={closeMobileMenu}>
-              Courses
-            </NavLinks>
-          </NavItem>
           <NavItemBtn>
             {button ? (
               <NavBtnLink to="/" onClick={() => Auth.logout()}>
@@ -96,14 +91,9 @@ export default function Navbar() {
               Courses
             </NavLinks>
           </NavItem>
-          <NavItem>
-            <NavLinks to="/orderHistory" onClick={closeMobileMenu}>
-              Order History
-            </NavLinks>
-          </NavItem>
           <MobCartLink>
             <NavItem>
-              <NavLinks to="/checkout">
+              <NavLinks to="/checkout" onClick={closeMobileMenu}>
                 <NavIconCart />
               </NavLinks>
             </NavItem>
