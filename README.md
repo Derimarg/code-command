@@ -100,7 +100,7 @@ Working on an Coding app.
   git clone git@github.com:Derimarg/code-command.git
   ```
 
-- After cloned the repository, create your own repository, copy the files to your repository and type in your terminal the follow commands.
+- After cloning the repository, create your own repository, copy the files to your repository and type the following commands in your terminal.
 
   ```
   git status
@@ -114,7 +114,7 @@ Working on an Coding app.
 
 ## Prerequisites
 
-Before of using this application, is require to install dependencies, run the following command in your terminal:
+Before using this application, you must install dependencies by running the following command in your terminal at the root of the application:
 
 ```
 npm install
@@ -126,7 +126,7 @@ npm install
 
 ## Usage
 
-This is a open source program, feel free to use it, contact me to request features.
+This is an open source program, feel free to use it, contact me to request features.
 
 ```js script
  "scripts": {
@@ -213,5 +213,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [twitter-url]: https://twitter.com/DerimarGray
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/derimar-gray-676275132/
-
-test
