@@ -5,6 +5,12 @@ export function pluralize(name, count) {
   return name + "s";
 }
 
+export function removeHyphensAndCapitalize(string) {
+  return string
+    .replace(/-/g, " ")
+    .replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
+}
+
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     const request = window.indexedDB.open("command-app", 1);
