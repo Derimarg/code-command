@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { useSelector, useDispatch } from "react-redux";
-import { Container, Button } from "../../globalStyles";
+import { Container } from "../../globalStyles";
 
 import {
   REMOVE_FROM_CART,
@@ -21,22 +21,22 @@ import {
   Heading,
   Subtitle,
   ImgWrapper,
-  ProfileWraper,
   Img,
 } from "../InfoSection/InfoSection.elements";
 
-export default function Details(
+import { ButtonDetail } from "../../containers/details/Details.Elements";
+
+export default function Details({
   primary,
   lightBg,
   lightTopLine,
-  lightTopLine2,
   lightText,
   lightTextDesc,
   buttonAdd,
   buttonRemove,
   imgStart,
-  start
-) {
+  start,
+}) {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -121,19 +121,23 @@ export default function Details(
                     <Subtitle lightTextDesc={lightTextDesc}>
                       {currentProduct.description}
                     </Subtitle>
-                    <ProfileWraper
-                      lightTopLine2={lightTopLine2}
-                    ></ProfileWraper>
-
+                    <Subtitle lightTextDesc={lightTextDesc}>
+                      <strong>Price: </strong>${currentProduct.price}
+                    </Subtitle>
                     <p>
                       <strong>Price:</strong>${currentProduct.price}{" "}
                     </p>
 
                     <>
-                      <Button big fontBig primary={primary} onClick={addToCart}>
+                      <ButtonDetail
+                        big
+                        fontBig
+                        primary={primary}
+                        onClick={addToCart}
+                      >
                         {buttonAdd}
-                      </Button>
-                      <Button
+                      </ButtonDetail>
+                      <ButtonDetail
                         big
                         fontBig
                         primary={primary}
@@ -143,14 +147,14 @@ export default function Details(
                         onClick={removeFromCart}
                       >
                         {buttonRemove}
-                      </Button>
+                      </ButtonDetail>
                     </>
                   </TextWrapper>
                 </InfoColumn>
                 <InfoColumn>
                   <ImgWrapper start={start}>
                     <Img
-                      src="https://via.placeholder.com/200X300"
+                      src={`/images/${currentProduct.image}`}
                       alt={currentProduct.name}
                     />
                   </ImgWrapper>

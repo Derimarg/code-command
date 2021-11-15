@@ -1,6 +1,3 @@
-//  added Karen Humphreys testimonial to homeObjectThree, inserted title and location fields on lines 48-49
-//  (does not display - needs to be added somewhere else too)
-
 export const homeObjOne = {
   primary: false,
   lightBg: true,
@@ -85,12 +82,11 @@ export const homeObjFive = {
 };
 
 export const homeObjSix = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
-  lightTopLine2: false,
-  lightText: false,
-  lightTextDesc: true,
+  lightText: true,
+  lightTextDesc: false,
   buttonAdd: "Add Course",
   buttonRemove: "Delete Course",
   imgStart: "start",

@@ -12,7 +12,6 @@ import {
   ImgWrapper,
   ProfileWraper,
   Img,
-  Role
 } from "./InfoSection.elements";
 
 function InfoSection({
