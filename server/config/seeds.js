@@ -5,9 +5,9 @@ db.once("open", async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: "Category 1" },
-    { name: "Category 2" },
-    { name: "Category 3" },
+    { name: "Full Stack Development" },
+    { name: "Computer sciences" },
+    { name: "JS" },
     { name: "Category 4" },
     { name: "Category 5" },
   ]);
@@ -20,7 +20,7 @@ db.once("open", async () => {
     {
       name: "name 1",
       description: "description 1",
-      image: "https://via.placeholder.com/300X400",
+      image: "logo192.png",
       category: categories[0]._id,
       price: 2.99,
       quantity: 500,
