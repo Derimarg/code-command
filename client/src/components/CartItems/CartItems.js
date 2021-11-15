@@ -45,8 +45,7 @@ const CartItems = ({ item }) => {
     <CartWrap>
       <div>
         <Img
-          //update image src to src={`/images/${item.image}`} for real images
-          src={item.image} //only works for placeholder images
+          src={`/images/${item.image}`}
           alt={removeHyphensAndCapitalize(item.name)}
         />
       </div>
