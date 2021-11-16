@@ -32,7 +32,11 @@ export const InfoRow2 = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const InfoColumn = styled.div`
