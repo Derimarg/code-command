@@ -18,13 +18,7 @@ export default function HistorySection() {
 
   if (data) {
     user = data.user;
-    console.log(user);
   }
-  const noData = () => {
-    <h3>You have not orders</h3>
-  }
-
- 
 
   return (
     <>
@@ -41,9 +35,9 @@ export default function HistorySection() {
               </span>
             </h2>
             {user.orders.length===0 ? (
-              <Container>
-                <h2>You have no orders</h2>
-              </Container> 
+              <MsgContainer>
+                <h2>You haven't purchased any products yet!</h2>
+              </MsgContainer> 
             ): null}
 
             {user.orders.map((order) => (
