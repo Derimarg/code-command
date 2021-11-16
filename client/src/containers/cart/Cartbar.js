@@ -19,12 +19,10 @@ import {
   CartIcon,
 } from "../../components/Checkout/CheckoutElements";
 import CartItems from "../../components/CartItems/CartItems";
-// import OutsideClick from "../../settings";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 function Cartbar() {
-  
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -75,15 +73,9 @@ function Cartbar() {
     });
   }
 
-  // const boxRef = useRef(null);
-  // const boxOutsideClick = OutsideClick(boxRef);
-
   if (!state.cartOpen) {
     return (
-      <CartContainer
-        // ref={boxRef}
-        onClick={toggleCart}
-      >
+      <CartContainer onClick={toggleCart}>
         <IconWrap role="img" aria-label="trash">
           <CartIcon />
         </IconWrap>
@@ -238,34 +230,3 @@ const BtnCheckout = styled.button`
 `;
 
 export default Cartbar;
-
-{
-  /* <CartContainer>
-      <CartHeaderWraper>
-        <CartHeader>Shopping Bag</CartHeader>
-        <CartHeaderItem>
-          <CloseItem>
-            <CloseIcon onClick={toggleCart} />
-          </CloseItem>
-        </CartHeaderItem>
-      </CartHeaderWraper>
-      <CartItem />
-      <CartItem>Total: $20</CartItem>
-      <CartItem>Total: $20</CartItem>
-      <CartItem>Total: $20</CartItem>
-
-      {Auth.loggedIn() ? (
-        <BtnCheckout
-        //  onClick={submitCheckout}
-        >
-          CHECKOUT NOW
-        </BtnCheckout>
-      ) : (
-        <>
-          <BtnLink to="/login">
-            <span>(log in to check out)</span>
-          </BtnLink>
-        </>
-      )} */
-}
-// </CartContainer>
