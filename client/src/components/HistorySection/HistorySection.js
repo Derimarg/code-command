@@ -53,10 +53,13 @@ export default function HistorySection() {
               </ItemWrapper>
             ))}
           </>
-        ) : null}
-        <MsgContainer>
-            <h3>You haven't added any products yet!</h3>
-          </MsgContainer>
+        ) : (
+          <>
+            <MsgContainer>
+              <h3>You haven't added any products yet!</h3>
+            </MsgContainer>
+          </>
+        )}
       </HistoryContainer>
     </>
   );
