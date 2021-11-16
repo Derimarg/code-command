@@ -11,7 +11,7 @@ export const homeObjOne = {
   buttonLabel: "Get Started",
   imgStart: "",
   img: "/images/svg-001.svg",
-  alt: "Credit Card",
+  alt: "",
   start: "",
 };
 
@@ -66,7 +66,7 @@ export const homeObjFour = {
   buttonLabel: "Sign Up Now",
   imgStart: "start",
   img: "/images/svg-03.svg",
-  alt: "Vault",
+  alt: "",
   start: "true",
 };
 
