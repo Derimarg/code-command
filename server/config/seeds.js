@@ -101,7 +101,7 @@ db.once("open", async () => {
     {
       name: "Beginners guide to Tails and TOR",
       category: categories[5]._id,
-      description: "Beginners guide to Tails and TOR COMPLETETHIS",
+      description: "For penitration testing experts interested in adding to their ethical hacking arsenal, we will explain the features and benefits of using the Tails Linux distribution in conjunction with the TOR network to create a totally secure testing environment. We will teach you how to use applications like Aircrack-ng, Hydra, and Hashcat in conjunction with Tails and TOR to compromise most conventional network security measures.",
       image: "tails.svg",
       price: 327.27,
       quantity: 100,
