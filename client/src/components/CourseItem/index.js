@@ -46,7 +46,7 @@ export default function CourseItem(item) {
   return (
     <ProductCard>
       <Link to={`/products/${_id}`}>
-        <ProductImg src={image} alt={name} />
+        <ProductImg src={`/images/${image}`} alt={name} />
       </Link>
 
       <ProductInfo>
