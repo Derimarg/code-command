@@ -10,7 +10,7 @@ export const homeObjOne = {
     "Build projects, practice and learn to code from scratch without leaving your browser.",
   buttonLabel: "Get Started",
   imgStart: "",
-  img: require("../../assets/img/svg-001.svg").default,
+  img: "/images/svg-001.svg",
   alt: "Credit Card",
   start: "",
 };
@@ -27,7 +27,7 @@ export const homeObjTwo = {
     "The best part about learning with friends, is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
   buttonLabel: "Join our social media",
   imgStart: "",
-  img: require("../../assets/img/svg-00001.svg").default,
+  img: "/images/svg-00001.svg",
   alt: "Vault",
   start: "",
 };
@@ -47,7 +47,7 @@ export const homeObjThree = {
   location: "Santa Clara, CA",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: require("../../assets/img/karen.jpg").default,
+  img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
 };
@@ -65,7 +65,7 @@ export const homeObjFour = {
     "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
   buttonLabel: "Sign Up Now",
   imgStart: "start",
-  img: require("../../assets/img/svg-03.svg").default,
+  img: "/images/svg-03.svg",
   alt: "Vault",
   start: "true",
 };
