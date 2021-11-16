@@ -61,7 +61,7 @@ db.once("open", async () => {
     {
       name: "Python",
       category: categories[2]._id,
-      description: "Python - COMPLETETHIS",
+      description: "Python is a popular, all purpose, versatile programming language that's usage is steadily increasing. We will show you how to use Python for web development, data analysis, automation, and even build chat bots!",
       image: "pythonlogo.png",
       price: 399.99,
       quantity: 30,
