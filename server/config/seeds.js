@@ -45,7 +45,7 @@ db.once("open", async () => {
     {
       name: "Computer Science",
       category: categories[1]._id,
-      description: "State, heap, regex etc COMPLETETHIS",
+      description: "To be a successful programmer, understanding how, where, and why computer memory is allocated is critical. This course will teach you the priciples of memory allocation, state, and how the stack and heap functions. You will also learn about various sorting algorithms and when to use them, as well as how and when to use regular expressions (regex).",
       image: "computerscience.jpg",
       price: 249.99,
       quantity: 50,
