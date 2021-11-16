@@ -1,10 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.x",
-    "npm": "6.x"
-  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -16,15 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^3.5.0",
-    "bcrypt": "^5.0.1",
+    "apollo-server-express": "^2.25.2",
+    "bcrypt": "^4.0.1",
     "express": "^4.17.1",
-    "graphql": "^16.0.1",
+    "graphql": "^15.7.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.13",
-    "stripe": "^8.188.0"
+    "mongoose": "^5.9.7",
+    "stripe": "^8.67.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.2"
   }
 }
