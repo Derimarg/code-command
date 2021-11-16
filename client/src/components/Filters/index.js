@@ -42,9 +42,11 @@ export default function Filters() {
       currentCategory: id,
     });
   };
+
   return (
     <FilterContainer>
-      <h2>Select a Filter:</h2>
+      <h2>Select a Category:</h2>
+
       {categories.map((item) => (
         <Button
           key={item._id}

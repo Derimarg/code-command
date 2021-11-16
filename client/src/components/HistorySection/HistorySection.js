@@ -9,6 +9,7 @@ import {
   ItemInfo,
   Img,
 } from "./History.Elements";
+import { MsgContainer } from "../Products/ProductsElements";
 
 export default function HistorySection() {
   const { data } = useQuery(QUERY_USER);
@@ -26,7 +27,7 @@ export default function HistorySection() {
         {user ? (
           <>
             <h2>
-              Order History for, 
+              Order History for,
               <span>
                 {user.firstName} {user.lastName}
               </span>
@@ -52,7 +53,13 @@ export default function HistorySection() {
               </ItemWrapper>
             ))}
           </>
-        ) : null}
+        ) : (
+          <>
+            <MsgContainer>
+              <h3>You haven't added any products yet!</h3>
+            </MsgContainer>
+          </>
+        )}
       </HistoryContainer>
     </>
   );

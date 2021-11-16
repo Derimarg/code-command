@@ -102,3 +102,11 @@ export const ProductButton = styled.button`
     color: #000;
   }
 `;
+
+export const MsgContainer = styled.div`
+  height: 70vh;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+`;
