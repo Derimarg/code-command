@@ -19,17 +19,17 @@ db.once("open", async () => {
 
   const products = await Product.insertMany([
     {
-      name: "HTML / CSS / JavaScript",
-      description: "description 1",
-      image: "karen.jpg",
+      name: "HTML / CSS / JavaScript / Bootstrap",
+      description: "COMPLETETHIS",
+      image: "big3.png",
       category: categories[0]._id,
       price: 598.87,
       quantity: 40,
     },
     {
       name: "Node.js / SQL / MongoDB",
-      description: "description 2",
-      image: "karen.jpg",
+      description: "COMPLETETHIS",
+      image: "sqlmongoo.png",
       category: categories[0]._id,
       price: 598.87,
       quantity: 500,
@@ -37,7 +37,7 @@ db.once("open", async () => {
     {
       name: "MVC / PWA / MERN",
       category: categories[0]._id,
-      description: "description 3",
+      description: "COMPLETETHIS",
       image: "mern.png",
       price: 598.87,
       quantity: 20,
