@@ -83,9 +83,9 @@ db.once("open", async () => {
       quantity: 100,
     },
     {
-      name: "Bonus Courses",
+      name: "name 9",
       category: categories[5]._id,
-      description: "Get special access to ALL THREE bonus courses taught by world-class instructor, Aaron Jewell! Courses include: 'Copy and Paste Like a Pro', 'Trade Offs', and our best seller, 'W3 Schools – Your Key to Success'",
+      description: "description 9",
       image: "logo512.png",
       price: 1.99,
       quantity: 1000,
@@ -93,7 +93,7 @@ db.once("open", async () => {
     {
       name: "Bonus Courses",
       category: categories[5]._id,
-      description: "Copy and Paste Like a Pro",
+      description: "Get special access to BOTH bonus courses taught by world-class instructor, Aaron Jewell! Courses include: 'Copy and Paste Like a Pro' and our best seller, 'W3 Schools – Your Key to Success'",
       image: "logo512.png",
       price: 2.99,
       quantity: 1000,
@@ -101,7 +101,7 @@ db.once("open", async () => {
     {
       name: "Bonus Courses",
       category: categories[5]._id,
-      description: "Trade Offs",
+      description: "Copy and Paste Like a Pro",
       image: "logo512.png",
       price: 7.99,
       quantity: 100,
