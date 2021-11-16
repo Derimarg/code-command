@@ -77,7 +77,7 @@ db.once("open", async () => {
     {
       name: "Cybersecurity",
       category: categories[3]._id,
-      description: "Cybersecurity COMPLETETHIS",
+      description: "Cybersecurity experts are in high demand. We will equip you with the tools and knowledge to compete in this growing field. In this course you will learn Microsoft security, Linux security, computer networking, cloud security, cyber infrastructure technology, ethical hacking, digital forensics, incident response and threat hunting. At the end of the course you will get the opportunity to compete against other students for cyber supremacy in a real time attack and defense simulation!",
       image: "cybersecurity.jpg",
       price: 329.85,
       quantity: 100,
