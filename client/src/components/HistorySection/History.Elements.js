@@ -56,3 +56,8 @@ export const ItemInfo = styled.div`
 export const Img = styled.img`
   max-width: 100%;
 `;
+
+export const Container = styled.div`
+  height: 100vh;
+  text-align: center
+`;
