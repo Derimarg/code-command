@@ -36,7 +36,7 @@ db.once("open", async () => {
     },
     {
       name: "name 3",
-      category: categories[1]._id,
+      category: categories[0]._id,
       description: "description 3",
       image: "logo512.png",
       price: 7.99,
@@ -84,7 +84,7 @@ db.once("open", async () => {
     },
     {
       name: "name 9",
-      category: categories[5]._id,
+      category: categories[4]._id,
       description: "description 9",
       image: "logo512.png",
       price: 1.99,
