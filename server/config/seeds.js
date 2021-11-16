@@ -51,9 +51,9 @@ db.once("open", async () => {
       quantity: 50,
     },
     {
-      name: "Computer Science",
+      name: "Beginners guide to C++ and machine code compiling",
       category: categories[1]._id,
-      description: "Beginners guide to C++ and machine code compiling",
+      description: "This challenging course will teach you how to write complex algorithims and programs in C++. You will also learn how to write C++ code that can be compiled into machine code that control devices like a Raspberry-Pi and ATtiny85",
       image: "cpluslogo.svg",
       price: 249.99,
       quantity: 100,
