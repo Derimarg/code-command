@@ -18,6 +18,7 @@ import Cartbar from "./containers/cart/Cartbar";
 import Detail from "./pages/Detail/Detail";
 import Contact from "./pages/Contact/Contact";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
+import Success from "./pages/Success/Success";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -50,7 +51,7 @@ function App() {
                 <Route exact path="/courses" component={Courses} />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/checkout" component={Checkout} />
-                <Route exact path="/success" />
+                <Route exact path="/success" component={Success}/>
                 <Route exact path="/orderHistory" component={OrderHistory} />
                 <Route exact path="/products/:id" component={Detail} />
                 {/* <Route component={NotFound} /> */}
