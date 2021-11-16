@@ -85,7 +85,7 @@ db.once("open", async () => {
     {
       name: "Digital Marketing",
       category: categories[4]._id,
-      description: "Modern Guide to Digital Marketing COMPLETETHIS",
+      description: "You will learn how to create and launch a successful marketing strategy, including business planning, user acquisition, digital advertising, content development, user retention and search engine optimization. You will also gain experience using popular tools like Google Analytics, Google Ads, and WordPress.",
       image: "digitalmarketing.jpg",
       price: 499.99,
       quantity: 1000,
