@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  // useState
+} from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -31,9 +34,12 @@ import { idbPromise } from "../../utils/helpers";
 import {
   //  TOGGLE_CART,
   ADD_MULTIPLE_TO_CART,
-  TOGGLE_CART,
+  // TOGGLE_CART,
 } from "../../utils/actions";
-import { CheckLink, CartContainer } from "./CheckoutElements";
+import {
+  CheckLink,
+  // CartContainer
+} from "./CheckoutElements";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -61,9 +67,9 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
+  // function toggleCart() {
+  //   dispatch({ type: TOGGLE_CART });
+  // }
 
   function calculateTotal() {
     let sum = 0;

@@ -14,7 +14,7 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import {
   InfoSec,
-  InfoRow,
+  InfoRow2,
   InfoColumn,
   TextWrapper,
   TopLine,
@@ -111,7 +111,7 @@ export default function Details({
         <>
           <InfoSec lightBg={lightBg}>
             <Container>
-              <InfoRow imgStart={imgStart}>
+              <InfoRow2 imgStart={imgStart}>
                 <InfoColumn>
                   <TextWrapper>
                     <TopLine lightTopLine={lightTopLine}>
@@ -159,7 +159,7 @@ export default function Details({
                     />
                   </ImgWrapper>
                 </InfoColumn>
-              </InfoRow>
+              </InfoRow2>
             </Container>
           </InfoSec>
         </>

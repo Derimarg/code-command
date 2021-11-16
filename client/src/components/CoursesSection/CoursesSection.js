@@ -4,23 +4,13 @@ import {
   ProductWrapper,
   ProductsHeading,
   ProductsDesc,
-  // ProductTitle,
-  // ProductCard,
-  // ProductImg,
-  // ProductInfo,
-  // ProductDesc,
-  // ProductPrice,
-  // ProductButton,
+  MsgContainer,
 } from "../Products/ProductsElements";
 import CourseItem from "../CourseItem/index";
-
-// import { GiRock } from "react-icons/gi";
 import { InfoSec2 } from "../InfoSection/InfoSection.elements";
 import { Button } from "../../globalStyles";
-// import SearchContainer from "../Search/SearchContainer";
 import { FooterSubscription } from "../Footer/Footer.elements";
 import Announcement from "../Announcement/Announcement";
-// import Auth from "../../utils/auth";
 import { useSelector, useDispatch } from "react-redux";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/react-hooks";
@@ -103,55 +93,12 @@ export default function CoursesSection({
             ))}
           </>
         ) : (
-          <h3>You haven't added any products yet!</h3>
+          <MsgContainer>
+            <h3>You haven't added any products yet!</h3>
+          </MsgContainer>
         )}
         {loading ? <img src="" alt="loading" /> : null}
       </ProductWrapper>
     </>
   );
 }
-
-// <Announcement />
-//       <InfoSec2 lightBg={lightBg}>
-//         <ProductsHeading>{heading}</ProductsHeading>
-//         <ProductsDesc>{description}</ProductsDesc>
-//         <Link to="/">
-//           <Button fontBig primary={primary}>
-//             {buttonLabel}
-//           </Button>
-//         </Link>
-//       </InfoSec2>
-//       <FooterSubscription>
-//         <SearchContainer />
-//       </FooterSubscription>
-//       <ProductWrapper>
-//         {data2.map((product, index) => {
-//           return (
-//             <ProductCard key={index}>
-//               <ProductImg src={product.img} alt={product.alt} />
-//               <ProductInfo>
-//                 <ProductTitle>{product.name}</ProductTitle>
-//                 <ProductDesc>{product.desc}</ProductDesc>
-//                 <ProductPrice>{product.price}</ProductPrice>
-//                 {/* <ProductButton>{product.button}</ProductButton> */}
-
-//                 {/* {button ? null : (
-//                   <ProductButton>{product.button}</ProductButton>
-//                 )} */}
-//                 {/* {Auth.loggedIn ? null : (
-//                   <ProductButton>{product.button}</ProductButton>
-//                 )} */}
-//                 {Auth.loggedIn() ? (
-//                   <ProductButton>{product.button}</ProductButton>
-//                 ) : (
-//                   <>
-//                     <Link to="/login">
-//                       <ProductButton>{product.button}</ProductButton>
-//                     </Link>
-//                   </>
-//                 )}
-//               </ProductInfo>
-//             </ProductCard>
-//           );
-//         })}
-//       </ProductWrapper>
