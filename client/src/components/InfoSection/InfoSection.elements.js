@@ -27,6 +27,14 @@ export const InfoRow = styled.div`
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
 `;
 
+export const InfoRow2 = styled.div`
+  display: flex;
+  margin: 0 -15px -15px -15px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column-reverse;
+`;
+
 export const InfoColumn = styled.div`
   margin-bottom: 15px;
   padding-right: 15px;
