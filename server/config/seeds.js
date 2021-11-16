@@ -102,7 +102,7 @@ db.once("open", async () => {
       name: "Bonus Courses",
       category: categories[5]._id,
       description: "Copy and Paste Like a Pro",
-      image: "logo512.png",
+      image: "../../assets/img/karen.jpg",
       price: 7.99,
       quantity: 100,
     },
