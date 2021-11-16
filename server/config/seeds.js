@@ -77,7 +77,7 @@ db.once("open", async () => {
     {
       name: "Cybersecurity",
       category: categories[3]._id,
-      description: "Cybersecurity experts are in high demand. We will equip you with the tools and knowledge to compete in this growing field. In this course you will learn Microsoft security, Linux security, computer networking, cloud security, cyber infrastructure technology, ethical hacking, digital forensics, incident response and threat hunting. At the end of the course you will get the opportunity to compete against other students for cyber supremacy in a real time attack and defense simulation!",
+      description: "Cybersecurity experts are in high demand. We will equip you with the tools and knowledge to compete in this growing field. In this course you will learn Microsoft security, Linux security, computer networking, cloud security, cyber infrastructure technology, ethical hacking, digital forensics, incident response and threat hunting. At the end of the course you will even have the opportunity to compete against other students for cyber supremacy in a real time attack and defense simulation!",
       image: "cybersecurity.jpg",
       price: 329.85,
       quantity: 100,
@@ -93,7 +93,7 @@ db.once("open", async () => {
     {
       name: "Introduction to Linux",
       category: categories[5]._id,
-      description: "Linux is a stable efficient, and secure open source operating system that is favored by many developers. Linux is used in many applications ranging from servers to mainframes, even automobiles! In this course we will focus on Linux Ubuntu, but by the end of the course you will learn everything you need to know to navigate any version.",
+      description: "Linux is a stable efficient, and secure open source operating system that is favored by many developers. Linux is used in many applications ranging from servers to mainframes, even automobiles! In this course we will focus on Linux Ubuntu, but by the end of the course you will learn everything you need to know to navigate any Linux version.",
       image: "linuxlogo.png",
       price: 195.49,
       quantity: 1000,
@@ -109,7 +109,7 @@ db.once("open", async () => {
     {
       name: "Introduction to Docker with Kubernetes",
       category: categories[5]._id,
-      description: "No previous Docker experience is needed, we will teach you everything! By the end of the course you will know how to: Build a CI + CD pipeline from scratch, Use the Docker CLI to inspect and debug running containers, Learn the purpose and theory of Kubernetes by building a complex application",
+      description: "No previous Docker experience is needed, we will teach you everything! By the end of the course you will know how to: Build a CI + CD pipeline from scratch, Use the Docker CLI to inspect and debug running containers, and learn the purpose and theory of Kubernetes by building a complex application",
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
