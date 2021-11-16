@@ -69,7 +69,7 @@ db.once("open", async () => {
     {
       name: "Python - Machine Learning",
       category: categories[2]._id,
-      description: "Machine learning COMPLETETHIS",
+      description: "Data-driven decision makers are in high demand, this course will teach to how to become one. You will begin learning the basics of data science, and by the end of the course you will be able to create models that can automate data processes, recognize patterns, and even make autonomous decisions.",
       image: "pythonML.jpg",
       price: 199.99,
       quantity: 30,
