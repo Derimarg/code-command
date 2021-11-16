@@ -9,10 +9,7 @@ import {
   ItemInfo,
   Img,
 } from "./History.Elements";
-<<<<<<< HEAD
-=======
 import { MsgContainer } from "../Products/ProductsElements";
->>>>>>> c67bc9059fc8ae06c42ec98d537782a4f3b14411
 
 export default function HistorySection() {
   const { data } = useQuery(QUERY_USER);
@@ -30,11 +27,7 @@ export default function HistorySection() {
         {user ? (
           <>
             <h2>
-<<<<<<< HEAD
-              Order History for, 
-=======
               Order History for,
->>>>>>> c67bc9059fc8ae06c42ec98d537782a4f3b14411
               <span>
                 {user.firstName} {user.lastName}
               </span>
@@ -60,9 +53,6 @@ export default function HistorySection() {
               </ItemWrapper>
             ))}
           </>
-<<<<<<< HEAD
-        ) : null}
-=======
         ) : (
           <>
             <MsgContainer>
@@ -70,7 +60,6 @@ export default function HistorySection() {
             </MsgContainer>
           </>
         )}
->>>>>>> c67bc9059fc8ae06c42ec98d537782a4f3b14411
       </HistoryContainer>
     </>
   );
