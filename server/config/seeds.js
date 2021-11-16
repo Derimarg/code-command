@@ -109,7 +109,7 @@ db.once("open", async () => {
     {
       name: "Introduction to Docker with Kubernetes",
       category: categories[5]._id,
-      description: "Introduction to Docker with Kubernetes COMPLETETHIS",
+      description: "No previous Docker experience is needed, we will teach you everything! By the end of the course you will know how to: Build a CI + CD pipeline from scratch, Use the Docker CLI to inspect and debug running containers, Learn the purpose and theory of Kubernetes by building a complex application",
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
