@@ -93,7 +93,7 @@ db.once("open", async () => {
     {
       name: "Introduction to Linux",
       category: categories[5]._id,
-      description: "Introduction to Linux COMPLETETHIS",
+      description: "Linux is a stable efficient, and secure open source operating system that is favored by many developers. Linux is used in many applications ranging from servers to mainframes, even automobiles! In this course we will focus on Linux Ubuntu, but by the end of the course you will learn everything you need to know to navigate any version.",
       image: "linuxlogo.png",
       price: 195.49,
       quantity: 1000,
