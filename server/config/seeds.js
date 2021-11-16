@@ -83,10 +83,10 @@ db.once("open", async () => {
       quantity: 100,
     },
     {
-      name: "name 9",
+      name: "Digital Marketing",
       category: categories[4]._id,
-      description: "description 9",
-      image: "karen.jpg",
+      description: "Modern Guide to Digital Marketing",
+      image: "digitalmarketing.jpg",
       price: 1.99,
       quantity: 1000,
     },
