@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { css } from "styled-components";
 
 export const ButtonDetail = styled.button`
   border-radius: 4px;
