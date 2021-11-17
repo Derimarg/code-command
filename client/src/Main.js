@@ -1,0 +1,334 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
+import { ApolloProvider } from "@apollo/react-hooks";
+import ApolloClient from "apollo-boost";
+import GlobalStyle from "./globalStyles";
+import ScrollToTop from "./components/ScrollTop";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import Splash from "./pages/Splash/Splash";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
+import { Navbar, Footer } from "./components";
+import Courses from "./pages/Courses/Courses";
+import Services from "./pages/Services/Services";
+import Checkout from "./pages/Checkout/Checkout";
+import Cartbar from "./containers/cart/Cartbar";
+import Detail from "./pages/Detail/Detail";
+import Contact from "./pages/Contact/Contact";
+import OrderHistory from "./pages/OrderHistory/OrderHistory";
+import Success from "./pages/Success/Success";
+import NotFound from "./pages/NotFound/NotFound";
+import { settings } from "./settings.js";
+
+const client = new ApolloClient({
+  request: (operation) => {
+    const token = localStorage.getItem("id_token");
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : "",
+      },
+    });
+  },
+  uri: "/graphql",
+});
+
+const Body = withRouter(({ location }) => {
+  function Splash(propss) {
+    if (settings.isSplash) {
+      return (
+        <div>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Splash
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/login"
+              render={(props) => (
+                <Login
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/signup"
+              render={(props) => (
+                <Signup
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/services"
+              render={(props) => (
+                <Services
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/courses"
+              render={(props) => (
+                <Courses
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/contact"
+              render={(props) => (
+                <Contact
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/checkout"
+              render={(props) => (
+                <Checkout
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/success"
+              render={(props) => (
+                <Success
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/orderHistory"
+              render={(props) => (
+                <OrderHistory
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/products/:id"
+              render={(props) => (
+                <Detail
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              render={(props) => (
+                <NotFound
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+          </Switch>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Home
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/login"
+              render={(props) => (
+                <Login
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/signup"
+              render={(props) => (
+                <Signup
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/services"
+              render={(props) => (
+                <Services
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/courses"
+              render={(props) => (
+                <Courses
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/contact"
+              render={(props) => (
+                <Contact
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/checkout"
+              render={(props) => (
+                <Checkout
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/success"
+              render={(props) => (
+                <Success
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/orderHistory"
+              render={(props) => (
+                <OrderHistory
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/products/:id"
+              render={(props) => (
+                <Detail
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+            <Route
+              render={(props) => (
+                <NotFound
+                  {...props}
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              )}
+            />
+          </Switch>
+        </div>
+      );
+    }
+  }
+
+  return (
+    <div>
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Navbar />
+      )}
+
+      {Splash()}
+
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Cartbar />
+      )}
+
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Footer />
+      )}
+    </div>
+  );
+});
+
+function Main() {
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Provider store={store}>
+            <GlobalStyle />
+            <ScrollToTop />
+            <Body />
+          </Provider>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
+}
+
+export default Main;

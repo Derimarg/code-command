@@ -27,7 +27,10 @@
     "atomize": "^1.0.28",
     "@material-ui/icons": "^4.11.2",
     "emailjs": "^3.6.0",
-    "emailjs-com": "^3.2.0"
+    "emailjs-com": "^3.2.0",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7",
+    "baseui": "^9.109.0"
   },
   "scripts": {
     "start": "react-scripts start",
