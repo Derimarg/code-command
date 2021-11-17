@@ -13,13 +13,7 @@
     "apollo-boost": "^0.4.7",
     "apollo-link-context": "^1.0.20",
     "atomize": "^1.0.28",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     "baseui": "^9.109.0",
->>>>>>> upstream/develop
->>>>>>> 8e5e5048112812695f60b0b141e17e68e7d0f12f
     "emailjs": "^3.6.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^5.3.0",
@@ -30,10 +24,7 @@
     "react-awesome-loaders": "^0.1.37",
     "react-cursor-custom": "^1.2.4",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e5e5048112812695f60b0b141e17e68e7d0f12f
+
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-reveal": "^1.2.2",
@@ -41,10 +32,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.1.2",
-    "styled-components": "^5.3.3"
-<<<<<<< HEAD
-=======
-=======
+    "styled-components": "^5.3.3",
     "react-ga": "^3.3.0",
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
@@ -55,9 +43,8 @@
     "styled-components": "^5.3.3",
     "styletron-engine-atomic": "^1.4.6",
     "styletron-react": "^5.2.7"
->>>>>>> upstream/develop
->>>>>>> 8e5e5048112812695f60b0b141e17e68e7d0f12f
   },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
