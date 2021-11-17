@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-import { BrowserRouter as Router, Route, Switch, withRouter  } from "react-router-dom";
-// import { withRouter } from "react-router";
-=======
 import React, { useState, useEffect } from "react";
->>>>>>> upstream/develop
 import "./App.css";
 import Main from "./Main";
 import { ThemeProvider } from "styled-components";
