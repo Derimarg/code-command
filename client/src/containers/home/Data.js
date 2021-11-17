@@ -1,3 +1,5 @@
+import pic from "../../assets/img/svg-00001.svg";
+
 export const homeObjOne = {
   primary: false,
   lightBg: true,
@@ -27,7 +29,7 @@ export const homeObjTwo = {
     "The best part about learning with friends, is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
   buttonLabel: "Join our social media",
   imgStart: "",
-  img: "/images/svg-00001.svg",
+  img: pic,
   alt: "Vault",
   start: "",
 };
