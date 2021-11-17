@@ -25,6 +25,7 @@ function Pricing() {
         <PricingWrapper>
           <PricingHeading>Our Services</PricingHeading>
           <PricingContainer>
+            {/* map */}
             <PricingCard to="/sign-up">
               <PricingCardInfo>
                 <PricingCardIcon>
