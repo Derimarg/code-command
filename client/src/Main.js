@@ -26,6 +26,7 @@ import Success from "./pages/Success/Success";
 import NotFound from "./pages/NotFound/NotFound";
 import { settings } from "./settings.js";
 import Load from "./pages/Load/Load";
+import PrivacyPage from "./pages/Privacy/Privacy";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -185,6 +186,17 @@ const Body = withRouter(({ location }, propss) => {
             path="/load"
             render={(props) => (
               <Load
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
+            <Route
+            exact
+            path="/privacy"
+            render={(props) => (
+              <PrivacyPage
                 {...props}
                 theme={propss.theme}
                 setTheme={propss.setTheme}
