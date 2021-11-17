@@ -1,6 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
+// import { withRouter } from "react-router";
 import "./App.css";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
@@ -54,9 +59,9 @@ const Main = withRouter(({ location }) => {
         <Route component={NotFound} />
       </Switch>
 
-      {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "" && (
-        <Cartbar />
-      )}
+      {location.pathname !== "/login" &&
+        location.pathname !== "/signup" &&
+        location.pathname !== "" && <Cartbar />}
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Footer />
       )}
