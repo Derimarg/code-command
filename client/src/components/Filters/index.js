@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
 // import { useStoreContext } from "../../utils/GlobalState";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,7 +10,10 @@ import { QUERY_CATEGORIES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import { FilterContainer, Button } from "./Filters.Elements";
 
+
+
 export default function Filters() {
+
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const { categories } = state;
@@ -19,6 +22,7 @@ export default function Filters() {
 
   useEffect(() => {
     if (categoryData) {
+      console.log(categoryData.categories[0].name === 'Home');
       dispatch({
         type: UPDATE_CATEGORIES,
         categories: categoryData.categories,
@@ -33,7 +37,7 @@ export default function Filters() {
           categories: categories,
         });
       });
-    }
+    } 
   }, [categoryData, loading, dispatch]);
 
   const handleClick = (id) => {
@@ -42,11 +46,15 @@ export default function Filters() {
       currentCategory: id,
     });
   };
-
+  
   return (
     <FilterContainer>
-      <h2>Select a Category:</h2>
-
+      <h2>Select a Filter:</h2>
+      <Button key={'reset'} 
+        onClick={() => window.location.reload(false)}
+      >
+        Home
+      </Button>
       {categories.map((item) => (
         <Button
           key={item._id}

@@ -1,3 +1,6 @@
+import pic1 from "../../assets/img/svg-1.svg";
+import pic2 from "../../assets/img/avatar-svgrepo-com.svg";
+
 export const homeObjOne = {
   lightBg: false,
   lightText: true,
@@ -8,7 +11,7 @@ export const homeObjOne = {
     "Get access to our exclusive diamond card that allows you to send unlimited transactions without getting charged any fees",
   buttonLabel: "Get Started",
   imgStart: "",
-  img: require("../../assets/img/avatar-svgrepo-com.svg").default,
+  img: pic2,
   alt: "Credit Card",
 };
 
@@ -36,7 +39,7 @@ export const homeObjThree = {
     "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
   buttonLabel: "Start Now",
   imgStart: "start",
-  img: require("../../assets/img/svg-1.svg").default,
+  img: pic1,
   alt: "Vault",
 };
 
