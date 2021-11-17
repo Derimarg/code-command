@@ -27,7 +27,7 @@ db.once("open", async () => {
       quantity: 40,
     },
     {
-      name: "Node.js / SQL / MongoDB",
+      name: "SQL / MongoDB",
       description: "We live in a data driven world. As a full stack developer, you will need to build back end databases that can manage and serve data on demand. This course will teach you how to build robust back ends using relational database languages like SQL and MongoDB, as well as the differences between the two and in which situations each should be used.",
       image: "sqlmongoo.png",
       category: categories[0]._id,
