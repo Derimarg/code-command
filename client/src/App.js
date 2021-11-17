@@ -5,7 +5,6 @@ import {
   Switch,
   withRouter,
 } from "react-router-dom";
-// import { withRouter } from "react-router";
 import "./App.css";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
