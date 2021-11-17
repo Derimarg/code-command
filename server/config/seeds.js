@@ -37,7 +37,7 @@ db.once("open", async () => {
     {
       name: "MVC / PWA / MERN",
       category: categories[0]._id,
-      description: "COMPLETETHIS",
+      description: "The file count in modern websites can number in the thousands, and users' performance expectations continue to increase. As a successful programmer, you will need experience using methods and frameworks that can organize complex file structures while being able to deliver high quality user experience - This is where the Model, View, Controller pattern, Progressive Web Application, and MERN (MongoDB, Express, React, Node) stack come in. We will show you how to build several full stack social media style applications using all of these technologies. While extremely challenging, this experience will define your status as a legitimate full stack web developer!",
       image: "mern.png",
       price: 598.87,
       quantity: 20,
