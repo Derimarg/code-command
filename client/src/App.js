@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+import React from "react";
+>>>>>>> Stashed changes
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Main from "./Main";

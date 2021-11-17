@@ -17,6 +17,7 @@ import { useQuery } from "@apollo/react-hooks";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
+import Load from "../Load/index";
 
 export default function CoursesSection({
   heading,
@@ -39,16 +40,19 @@ export default function CoursesSection({
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
+
       data.products.forEach((product) => {
         idbPromise("products", "put", product);
       });
     } else if (!loading) {
-      idbPromise("products", "get").then((products) => {
-        dispatch({
-          type: UPDATE_PRODUCTS,
-          products: products,
+      setTimeout(() => {
+        idbPromise("products", "get").then((products) => {
+          dispatch({
+            type: UPDATE_PRODUCTS,
+            products: products,
+          });
         });
-      });
+      }, 5000);
     }
   }, [data, loading, dispatch]);
 
@@ -75,7 +79,6 @@ export default function CoursesSection({
         </Link>
       </InfoSec2>
       <FooterSubscription>
-        {/* <SearchContainer /> */}
         <Filters />
       </FooterSubscription>
       <ProductWrapper>
@@ -97,7 +100,7 @@ export default function CoursesSection({
             <h3>You haven't added any products yet!</h3>
           </MsgContainer>
         )}
-        {loading ? <img src="" alt="loading" /> : null}
+        {loading ? <Load /> : null}
       </ProductWrapper>
     </>
   );

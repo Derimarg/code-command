@@ -14,7 +14,13 @@ import store from "./utils/store";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import { Navbar, Footer } from "./components";
+import {
+  // Navbar,
+  Footer,
+} from "./components";
+
+import NavContainer from "./containers/navbar/NavContainer.js";
+
 import Courses from "./pages/Courses/Courses";
 import Services from "./pages/Services/Services";
 import Checkout from "./pages/Checkout/Checkout";
@@ -43,9 +49,12 @@ const Body = withRouter(({ location }, propss) => {
   if (settings.isSplash) {
     return (
       <div>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
-          <Navbar />
-        )}
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/splash" && (
+            // ((props) => (
+            //   <NavContainer theme={props.theme} setTheme={props.setTheme} />
+            // ))
+            <NavContainer />
+          )}
         <Switch>
           <Route
             exact
@@ -204,7 +213,6 @@ const Body = withRouter(({ location }, propss) => {
         {location.pathname !== "/login" && location.pathname !== "/signup" && (
           <Cartbar />
         )}
-
         {location.pathname !== "/login" && location.pathname !== "/signup" && (
           <Footer />
         )}
@@ -214,7 +222,7 @@ const Body = withRouter(({ location }, propss) => {
     return (
       <div>
         {location.pathname !== "/login" && location.pathname !== "/signup" && (
-          <Navbar />
+          <NavContainer />
         )}
         <Switch>
           <Route
@@ -349,7 +357,7 @@ const Body = withRouter(({ location }, propss) => {
   }
 });
 
-function Main() {
+function Main(props) {
   return (
     <ApolloProvider client={client}>
       <Router basename="/">
@@ -357,7 +365,7 @@ function Main() {
           <Provider store={store}>
             <GlobalStyle />
             <ScrollToTop />
-            <Body />
+            <Body {...props} theme={props.theme} setTheme={props.setTheme} />
           </Provider>
         </div>
       </Router>

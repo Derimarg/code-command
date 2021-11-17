@@ -13,6 +13,7 @@ import {
   ProfileWraper,
   Img,
 } from "./InfoSection.elements";
+import { Fade } from "react-reveal";
 
 function InfoSection({
   primary,
@@ -30,7 +31,7 @@ function InfoSection({
   imgStart,
   start,
   role,
-  location
+  location,
 }) {
   return (
     <>
@@ -38,19 +39,27 @@ function InfoSection({
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
-              <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <ProfileWraper lightTopLine2={lightTopLine2}>{role}</ProfileWraper>
-                <ProfileWraper lightTopLine2={lightTopLine2}>{location}</ProfileWraper>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+              <Fade right>
+                <TextWrapper>
+                  <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                  <ProfileWraper lightTopLine2={lightTopLine2}>
+                    {role}
+                  </ProfileWraper>
+                  <ProfileWraper lightTopLine2={lightTopLine2}>
+                    {location}
+                  </ProfileWraper>
+                  <Heading lightText={lightText}>{headline}</Heading>
+                  <Subtitle lightTextDesc={lightTextDesc}>
+                    {description}
+                  </Subtitle>
 
-                <Link to="/signup">
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
-              </TextWrapper>
+                  <Link to="/signup">
+                    <Button big fontBig primary={primary}>
+                      {buttonLabel}
+                    </Button>
+                  </Link>
+                </TextWrapper>
+              </Fade>
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper start={start}>
