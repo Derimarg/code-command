@@ -20,7 +20,7 @@ db.once("open", async () => {
   const products = await Product.insertMany([
     {
       name: "HTML / CSS / JavaScript / Bootstrap",
-      description: "COMPLETETHIS",
+      description: "If you think of a web application like a car, the frame would be HTML, the body panels and wheels would be CSS, and the engine would be JavaScript. By themselves, each offers very little utility, but together they are powerful. As an aspiring web developer you will need to master each of these languages, and this course will show you how. We will even introduce you to the Bootstrap library that will help simplify the development process and take your applications to the next level!",
       image: "big3.png",
       category: categories[0]._id,
       price: 598.87,
