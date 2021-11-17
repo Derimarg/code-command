@@ -28,7 +28,7 @@ db.once("open", async () => {
     },
     {
       name: "SQL / MongoDB",
-      description: "We live in a data driven world. As a full stack developer, you will need to build back end databases that can manage and serve data on demand. This course will teach you how to build robust back ends using relational database languages like SQL and MongoDB, as well as the differences between the two and in which situations each should be used.",
+      description: "We live in a data driven world. As a full stack developer, you will need to build back end databases that can manage and serve data on demand. This course will teach you how to build robust back ends using relational database languages like SQL and MongoDB, as well as show you the differences between the two and in which situations each should be used.",
       image: "sqlmongoo.png",
       category: categories[0]._id,
       price: 598.87,
@@ -53,7 +53,7 @@ db.once("open", async () => {
     {
       name: "Beginners guide to C++ and machine code compiling",
       category: categories[1]._id,
-      description: "This challenging course will teach you how to write complex algorithims and programs in C++. You will also learn how to write C++ code that can be compiled into machine code that will control devices like Raspberry Pi and ATtiny85.",
+      description: "This challenging course will teach you how to write complex algorithims and programs in C++. You will also learn how to write C++ code that can be compiled into machine code that will control devices like the Raspberry Pi and ATtiny85.",
       image: "cpluslogo.svg",
       price: 249.99,
       quantity: 100,
