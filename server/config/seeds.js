@@ -114,40 +114,7 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
-    },
-    // subscriptions
-    {
-      name: "Full Stack Subscription",
-      category: categories[6]._id,
-      description: "Gain access to all Full Stack Web Application Development courses for a low monthly cost.",
-      image: "big3.png",
-      price: 89.99,
-      quantity: 600,
-    },
-    {
-      name: "Computer Science Subscription",
-      category: categories[6]._id,
-      description: "Gain access to all of the Computer Science courses for a low monthly cost.",
-      image: "computerscience.jpg",
-      price: 79.99,
-      quantity: 600,
-    },
-    {
-      name: "Python Subscription",
-      category: categories[6]._id,
-      description: "Gain access to all of the Python courses for a low monthly cost.",
-      image: "pythonlogo.png",
-      price: 89.99,
-      quantity: 600,
-    },
-    {
-      name: "Bonus Courses Subscription",
-      category: categories[6]._id,
-      description: "Gain access to all of the Bonus courses for a low monthly cost.",
-      image: "dockerlogo.svg",
-      price: 99.99,
-      quantity: 600,
-    },
+    }
   ]);
 
   console.log("products seeded");

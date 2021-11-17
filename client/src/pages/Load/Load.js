@@ -20,13 +20,20 @@ function AnimatedLoad(props) {
 
 function Load(props) {
   const [redirect, setRedirect] = useState(false);
-  setTimeout(() => setRedirect(true), 1500);
+  setTimeout(() => setRedirect(true), 1000);
+
+  // const Loading = withRouter({location}) => {
+
+  //   const { route } = location.pathname;
+  //   if (route === "/courses") {
+  //     return ()
+  //   }
+
+  // }
 
   return redirect ? (
     <Redirect to="/home" />
   ) : (
-    // <AnimatedLoad theme={props.theme} />
-
     <AnimatedLoad theme={props.theme} />
   );
 }
