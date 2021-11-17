@@ -7,3 +7,4 @@ export { default as CourseItem } from "./CourseItem/index";
 export { default as Filters } from "./Filters/index";
 export { default as Details } from "./Details/Details";
 export { default as ContactSection } from "./ContactSection/ContactSection";
+export { default as Load } from "./Load/index";
