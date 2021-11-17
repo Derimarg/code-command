@@ -11,6 +11,7 @@ db.once("open", async () => {
     { name: "Cybersecurity" },
     { name: "Digital Marketing" },
     { name: "Bonus Courses" },
+    { name: "Subscription" }
   ]);
 
   console.log("categories seeded");
@@ -112,6 +113,39 @@ db.once("open", async () => {
       description: "No previous Docker experience is needed, we will teach you everything! By the end of the course you will know how to: Build a CI + CD pipeline from scratch, Use the Docker CLI to inspect and debug running containers, and learn the purpose and theory of Kubernetes by building a complex application",
       image: "dockerlogo.svg",
       price: 249.99,
+      quantity: 600,
+    },
+    // subscriptions
+    {
+      name: "Full Stack Subscription",
+      category: categories[6]._id,
+      description: "Gain access to all Full Stack Web Application Development courses for a low monthly cost.",
+      image: "big3.png",
+      price: 89.99,
+      quantity: 600,
+    },
+    {
+      name: "Computer Science Subscription",
+      category: categories[6]._id,
+      description: "Gain access to all of the Computer Science courses for a low monthly cost.",
+      image: "computerscience.jpg",
+      price: 79.99,
+      quantity: 600,
+    },
+    {
+      name: "Python Subscription",
+      category: categories[6]._id,
+      description: "Gain access to all of the Python courses for a low monthly cost.",
+      image: "pythonlogo.png",
+      price: 89.99,
+      quantity: 600,
+    },
+    {
+      name: "Bonus Courses Subscription",
+      category: categories[6]._id,
+      description: "Gain access to all of the Bonus courses for a low monthly cost.",
+      image: "dockerlogo.svg",
+      price: 99.99,
       quantity: 600,
     },
   ]);
