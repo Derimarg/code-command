@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Splash.css";
+import "./Load.css";
 import { Redirect } from "react-router-dom";
 
-function AnimatedSplash(props) {
+function AnimatedLoad(props) {
   return (
     <div className="logo_wrapper">
       <div className="loading">
@@ -18,15 +18,17 @@ function AnimatedSplash(props) {
   );
 }
 
-function Splash(props) {
+function Load(props) {
   const [redirect, setRedirect] = useState(false);
-  setTimeout(() => setRedirect(true), 2000);
+  setTimeout(() => setRedirect(true), 1500);
 
   return redirect ? (
-    <Redirect to="/" />
+    <Redirect to="/home" />
   ) : (
-    <AnimatedSplash theme={props.theme} />
+    // <AnimatedLoad theme={props.theme} />
+
+    <AnimatedLoad theme={props.theme} />
   );
 }
 
-export default Splash;
+export default Load;
