@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const TemplateContainer = styled.div`
+    padding: 160px 0;
+    background: ${({lightBg})=>(lightBg ? "#fff" : "202A45")}
+`;
+
 export const Container = styled.div`
     height: 700,
     clear: "both",
@@ -13,7 +18,7 @@ export const Container = styled.div`
     h2 {
         font-family: "Rubik", sans-serif;
         font-weight: 500;
-        margin: 5px 0;
+        margin: 2rem;
         line-height: 1.25;
         text-align: Center;
         font-weight: bold;
@@ -33,3 +38,4 @@ export const Container = styled.div`
         margin: 20px 0;
     }
 `;
+

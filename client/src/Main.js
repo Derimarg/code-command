@@ -14,7 +14,13 @@ import store from "./utils/store";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
-import { Navbar, Footer } from "./components";
+import {
+  // Navbar,
+  Footer,
+} from "./components";
+
+import NavContainer from "./containers/navbar/NavContainer.js";
+
 import Courses from "./pages/Courses/Courses";
 import Services from "./pages/Services/Services";
 import Checkout from "./pages/Checkout/Checkout";
@@ -27,6 +33,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import { settings } from "./settings.js";
 import Load from "./pages/Load/Load";
 import PrivacyPage from "./pages/Privacy/Privacy";
+import Cookies from "./pages/Cookies/Cookies";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -44,9 +51,12 @@ const Body = withRouter(({ location }, propss) => {
   if (settings.isSplash) {
     return (
       <div>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
-          <Navbar />
-        )}
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/splash" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
+            // ((props) => (
+            //   <NavContainer theme={props.theme} setTheme={props.setTheme} />
+            // ))
+            <NavContainer />
+          )}
         <Switch>
           <Route
             exact
@@ -204,6 +214,17 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
           <Route
+            exact
+            path="/cookies"
+            render={(props) => (
+              <Cookies
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
+          <Route
             render={(props) => (
               <NotFound
                 {...props}
@@ -213,11 +234,10 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Cartbar />
         )}
-
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Footer />
         )}
       </div>
@@ -225,8 +245,8 @@ const Body = withRouter(({ location }, propss) => {
   } else {
     return (
       <div>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
-          <Navbar />
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
+          <NavContainer />
         )}
         <Switch>
           <Route
@@ -339,6 +359,28 @@ const Body = withRouter(({ location }, propss) => {
               />
             )}
           />
+           <Route
+            exact
+            path="/policy"
+            render={(props) => (
+              <PrivacyPage
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
+           <Route
+            exact
+            path="/cookies"
+            render={(props) => (
+              <Cookies
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
           <Route
             render={(props) => (
               <NotFound
@@ -349,11 +391,11 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Cartbar />
         )}
 
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Footer />
         )}
       </div>
@@ -361,7 +403,7 @@ const Body = withRouter(({ location }, propss) => {
   }
 });
 
-function Main() {
+function Main(props) {
   return (
     <ApolloProvider client={client}>
       <Router basename="/">
@@ -369,7 +411,7 @@ function Main() {
           <Provider store={store}>
             <GlobalStyle />
             <ScrollToTop />
-            <Body />
+            <Body {...props} theme={props.theme} setTheme={props.setTheme} />
           </Provider>
         </div>
       </Router>

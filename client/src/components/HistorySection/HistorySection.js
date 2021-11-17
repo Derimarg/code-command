@@ -7,8 +7,7 @@ import {
   ItemWrapper,
   ItemInfoWrapper,
   ItemInfo,
-  Img,
-  Container
+  Img
 } from "./History.Elements";
 import { MsgContainer } from "../Products/ProductsElements";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import {
     Container
-} from "./Privacy.elements";
+} from "../../containers/template/Template.elements";
 
-export default function Privacy() {
+export default function Template() {
     return(
         <Container>
             <h2>Privacy Page</h2>
