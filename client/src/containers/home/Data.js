@@ -94,3 +94,14 @@ export const homeObjSix = {
   imgStart: "start",
   start: "true",
 };
+
+
+export const PrivacyObj = {
+  primary: false,
+  lightBg: true,
+  lightTopTitle: false,
+  lightText: false,
+  lightTextDesc: false,
+    title: "Privacy Policy",
+    description: "Lorems ksdnfihbsfa bekhbc ebhbvlcqerhjfbvckshe "
+};

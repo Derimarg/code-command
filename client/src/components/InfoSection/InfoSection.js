@@ -20,6 +20,7 @@ function InfoSection({
   lightBg,
   topLine,
   lightTopLine,
+  lightTopTitle,
   lightTopLine2,
   lightText,
   lightTextDesc,
@@ -32,6 +33,7 @@ function InfoSection({
   start,
   role,
   location,
+  title
 }) {
   return (
     <>
@@ -41,7 +43,8 @@ function InfoSection({
             <InfoColumn>
               <Fade right>
                 <TextWrapper>
-                  <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                  <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>                  
+                  <TopLine lightTopTitle={lightTopTitle}>{title}</TopLine>
                   <ProfileWraper lightTopLine2={lightTopLine2}>
                     {role}
                   </ProfileWraper>

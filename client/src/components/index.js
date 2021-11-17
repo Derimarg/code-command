@@ -1,5 +1,6 @@
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as InfoSection } from "./InfoSection/InfoSection";
+export { default as TemplateSection } from "./TemplateSection/TemplateSection";
 export { default as Pricing } from "./Pricing/Pricing";
 export { default as Footer } from "./Footer/index";
 export { default as CartItems } from "./CartItems/CartItems";
