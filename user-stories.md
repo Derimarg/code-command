@@ -31,13 +31,21 @@ THEN I am authenticated and then to the courses page
 ## AUTHENTICATION
 GIVEN I am an authenticated user
 WHEN I log-in with my email and password
+<<<<<<< HEAD
+THEN I am authenticated and taken to the homepage which now displays courses/my courses
+=======
 THEN I am authenticated and taken to the homepage which now displays courses
+>>>>>>> c67bc9059fc8ae06c42ec98d537782a4f3b14411
 WHEN I click on the cart button
 THEN I see my products in the cart or an empty cart
 WHEN I click on the checkout button
 THEN I am redirected to the checkout page
 WHEN I am done with my purchases
+<<<<<<< HEAD
+THEN I am redirected to the homepage which will now show my recently added courses
+=======
 THEN I am redirected to the success page to go back to homepage
+>>>>>>> c67bc9059fc8ae06c42ec98d537782a4f3b14411
 WHEN I view my purchased course
 THEN I will be able to watch the videos and complete the practices on my own 
 WHEN I click on the log-out button

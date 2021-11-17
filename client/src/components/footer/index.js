@@ -60,13 +60,12 @@ export default function Footer() {
           </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
-          
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
             <FooterLink to="/">Slack</FooterLink>
             <FooterLink to="/">Discord</FooterLink>
             <FooterLink to="/">Stack Overflow</FooterLink>
-            <FooterLink to="/">Github</FooterLink>
+            <FooterLink href="">Github</FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
