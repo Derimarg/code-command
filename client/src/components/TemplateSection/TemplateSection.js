@@ -1,59 +1,52 @@
 import React from "react";
-import { Container, TemplateContainer } from "./Template.elements"
+// import { Link } from "react-router-dom";
+import {
+  Container,
+  Heading,
+  LastUpdate,
+  Title,
+  Paragraph,
+} from "./Template.elements";
 
-export default function TemplateSection( primary,
-    lightBg,
-    lightTopTitle,
-    title,
-    description) {
-    return(
-        <TemplateContainer lightBg={lightBg} >
-            <Container>
-                <div>
-                    <h2 lightTopTitle={lightTopTitle}>{title}</h2>
-
-                    <h3>Section Title</h3>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p><p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p>
-
-                    <h3>Section Title</h3>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p><p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p>
-
-                    <h3>Section Title</h3>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p><p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-                    id est laborum.
-                    </p>
-                    
-                </div>
-            </Container>
-        </TemplateContainer>
-
-    )
+function InfoSection({
+  lightBg,
+  lastUpdate,
+  lightLastUpdate,
+  lightText,
+  lightText1,
+  lightText2,
+  lightTextDesc1,
+  lightTextDesc2,
+  lightTextDesc3,
+  lightTextDesc4,
+  lightTextDesc5,
+  lightTextDesc6,
+  headline,
+  title,
+  title2,
+  paragraph1,
+  paragraph2,
+  paragraph3,
+  paragraph4,
+  paragraph5,
+  paragraph6,
+}) {
+  return (
+    <>
+      <Container lightBg={lightBg}>
+        <Heading lightText={lightText}>{headline}</Heading>
+        <LastUpdate lightLastUpdate={lightLastUpdate}>{lastUpdate}</LastUpdate>
+        <Title lightText1={lightText1}>{title}</Title>
+        <Paragraph lightTextDesc1={lightTextDesc1}>{paragraph1}</Paragraph>
+        <Paragraph lightTextDesc2={lightTextDesc2}>{paragraph2}</Paragraph>
+        <Paragraph lightTextDesc3={lightTextDesc3}>{paragraph3}</Paragraph>
+        <Paragraph lightTextDesc4={lightTextDesc4}>{paragraph4}</Paragraph>
+        <Title lightText2={lightText2}>{title2}</Title>
+        <Paragraph lightTextDesc5={lightTextDesc5}>{paragraph5}</Paragraph>
+        <Paragraph lightTextDesc6={lightTextDesc6}>{paragraph6}</Paragraph>
+      </Container>
+    </>
+  );
 }
+
+export default InfoSection;

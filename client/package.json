@@ -23,7 +23,6 @@
     "graphql-tag": "^2.10.3",
     "jwt-decode": "^2.2.0",
     "react": "^16.13.1",
-    "react-awesome-loaders": "^0.1.37",
     "react-cursor-custom": "^1.2.4",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",

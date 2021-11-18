@@ -96,12 +96,3 @@ export const homeObjSix = {
 };
 
 
-export const PrivacyObj = {
-  primary: false,
-  lightBg: true,
-  lightTopTitle: false,
-  lightText: false,
-  lightTextDesc: false,
-    title: "Privacy Policy",
-    description: "Lorems ksdnfihbsfa bekhbc ebhbvlcqerhjfbvckshe "
-};
