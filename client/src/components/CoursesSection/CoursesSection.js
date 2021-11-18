@@ -7,7 +7,7 @@ import {
   MsgContainer,
 } from "../Products/ProductsElements";
 import CourseItem from "../CourseItem/index";
-import { InfoSec2 } from "../InfoSection/InfoSection.elements";
+import { InfoSec2, BtnLink } from "../InfoSection/InfoSection.elements";
 import { Button } from "../../globalStyles";
 import { FooterSubscription } from "../Footer/Footer.elements";
 import Announcement from "../Announcement/Announcement";
@@ -72,11 +72,11 @@ export default function CoursesSection({
       <InfoSec2 lightBg={lightBg}>
         <ProductsHeading>{heading}</ProductsHeading>
         <ProductsDesc>{description}</ProductsDesc>
-        <Link to="/">
+        <BtnLink to="/">
           <Button fontBig primary={primary}>
             {buttonLabel}
           </Button>
-        </Link>
+        </BtnLink>
       </InfoSec2>
       <FooterSubscription>
         <Filters />

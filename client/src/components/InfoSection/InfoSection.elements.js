@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // background: ${({ lightBg }) => (lightBg ? "#fff" : "#101522")}; dark blue
 // background: ${({ lightBg }) => (lightBg ? "#fff" : "#1D1D1D")}; matte black
@@ -18,6 +19,16 @@ export const InfoSec2 = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
+
+export const BtnLink = styled(Link)`
+font-size: 13px;
+text-align: center;
+@media screen and (max-width: 400px){
+width: 90%;
+font-size: 13px;
+text-align: center;
+}
+`; 
 
 export const InfoRow = styled.div`
   display: flex;
