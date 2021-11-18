@@ -6,6 +6,7 @@ import {
   LastUpdate,
   Title,
   Paragraph,
+  Address
 } from "./Template.elements";
 
 function InfoSection({
@@ -21,6 +22,9 @@ function InfoSection({
   lightTextDesc4,
   lightTextDesc5,
   lightTextDesc6,
+  lightTextDesc7,
+  lightTextDesc8,
+  lightTextDesc9,
   headline,
   title,
   title2,
@@ -30,6 +34,19 @@ function InfoSection({
   paragraph4,
   paragraph5,
   paragraph6,
+  paragraph7,
+  paragraph8,
+  paragraph9,
+  address1,
+  address2,
+  address3,
+  address4, 
+  title3,
+  paragraph10,
+  paragraph11,
+  title4,
+  paragraph15,
+  paragraph16,
 }) {
   return (
     <>
@@ -44,6 +61,16 @@ function InfoSection({
         <Title lightText2={lightText2}>{title2}</Title>
         <Paragraph lightTextDesc5={lightTextDesc5}>{paragraph5}</Paragraph>
         <Paragraph lightTextDesc6={lightTextDesc6}>{paragraph6}</Paragraph>
+        <Paragraph lightTextDesc7={lightTextDesc7}>{paragraph7}</Paragraph>
+        <Paragraph lightTextDesc8={lightTextDesc8}>{paragraph8}</Paragraph>
+        <Paragraph lightTextDesc9={lightTextDesc9}>{paragraph9}</Paragraph>
+        <Address lightTextDesc1={lightTextDesc1}>{address1}</Address>
+        <Address lightTextDesc1={lightTextDesc1}>{address2}</Address>
+        <Address lightTextDesc1={lightTextDesc1}>{address3}</Address>
+        <Address lightTextDesc1={lightTextDesc1}>{address4}</Address>
+        <Paragraph lightTextDesc1={lightTextDesc1}>{paragraph10}</Paragraph>
+        <Title lightText1={lightText1}>{title3}</Title>
+        <Paragraph lightTextDesc1={lightTextDesc1}>{paragraph11}</Paragraph>
       </Container>
     </>
   );
