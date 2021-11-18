@@ -82,4 +82,6 @@ export const templateObjCookies = {
   // paragraph6: "",
    // title2: "",
   // headline: "",
+
+  
 };
