@@ -11,6 +11,7 @@ db.once("open", async () => {
     { name: "Cybersecurity" },
     { name: "Digital Marketing" },
     { name: "Bonus Courses" },
+    { name: "Subscription" }
   ]);
 
   console.log("categories seeded");
@@ -113,7 +114,7 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
-    },
+    }
   ]);
 
   console.log("products seeded");
