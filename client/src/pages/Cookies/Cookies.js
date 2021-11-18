@@ -5,7 +5,7 @@ import { templateObjCookies } from "../../containers/template/TemplateData";
 export default function Privacy(lightBg) {
   return (
     <>
-      <TemplateSection {...templateObjCookies} />
+      <TemplateSection {...templateObjCookies}/>
     </>
   );
 }

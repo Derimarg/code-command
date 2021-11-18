@@ -57,3 +57,10 @@ export const Paragraph = styled.p`
   margin: 20px 0;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
 `;
+
+export const Address = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+`;
