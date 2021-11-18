@@ -10,6 +10,7 @@ import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
 import Carousel from "../../components/Carousel/Carousel";
+import ReviewSlide from "../../components/ReviewSlide/ReviewSlide";
 
 export default function Home(lightBg) {
   function ShowHomePage() {
@@ -24,6 +25,7 @@ export default function Home(lightBg) {
         <Fade top duration={2000} distance="80px">
           <>
             <Carousel />
+            <ReviewSlide />
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjFour} />
             <InfoSection {...homeObjThree} />

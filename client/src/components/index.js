@@ -10,3 +10,4 @@ export { default as Details } from "./Details/Details";
 export { default as ContactSection } from "./ContactSection/ContactSection";
 export { default as Load } from "./Load/index";
 export { default as Carousel } from "./Carousel/Carousel";
+export { default as ReviewSlide } from "./ReviewSlide/ReviewSlide";
