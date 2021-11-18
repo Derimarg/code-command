@@ -61,37 +61,35 @@ function Pricing() {
   ];
 
   return (
+    
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
-      <PricingSection>
-        <PricingWrapper>
-          {details.map((x) => (
-            <>
-              <PricingHeading>{x.header}</PricingHeading>
-              <PricingContainer>
-                {state.products
-                  .filter((product, index) => index > 11)
-                  .map((product) => (
-                    <PricingCard to={`/products/${product._id}`}>
-                      <PricingCardInfo>
-                        <PricingCardIcon>{product.image}</PricingCardIcon>
-                        <PricingCardPlan>{product.name}</PricingCardPlan>
-                        <PricingCardCost>
-                          {x.cash}
-                          {product.price}
-                        </PricingCardCost>
-                        <PricingCardLength>{x.period}</PricingCardLength>
-                        <PricingCardFeatures>
-                          <PricingCardFeature>{x.Desc}</PricingCardFeature>
-                        </PricingCardFeatures>
-                        <Button primary>{x.btnLabel}</Button>
-                      </PricingCardInfo>
-                    </PricingCard>
-                  ))}
-              </PricingContainer>
-            </>
-          ))}
+        {state.products.length > 12 ? (
+      <PricingSection >
+          <PricingWrapper>
+          <PricingHeading>Our Services</PricingHeading>
+          <PricingContainer>
+          {state.products.filter((product, index) => index > 11).map((product) => (
+              <PricingCard to={`/products/${product._id}`}>
+                <PricingCardInfo>
+                  <PricingCardIcon>
+                  <img src={product.image} alt={product.name} />
+                  </PricingCardIcon>
+                  <PricingCardPlan>{product.name}</PricingCardPlan>
+                  <PricingCardCost>${product.price}</PricingCardCost>
+                  <PricingCardLength>per month</PricingCardLength>
+                  <PricingCardFeatures>
+                    <PricingCardFeature>{product.short}</PricingCardFeature>
+                    <PricingCardFeature>One low monthly price</PricingCardFeature>
+                    <PricingCardFeature>{product.months} Month Program</PricingCardFeature>
+                  </PricingCardFeatures>
+                  <Button primary>View Details</Button>
+                </PricingCardInfo>
+              </PricingCard>
+            ))}
+          </PricingContainer>
         </PricingWrapper>
       </PricingSection>
+       ) : null}
     </IconContext.Provider>
   );
 }
