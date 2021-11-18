@@ -114,6 +114,30 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
+    },
+    {
+      name: "Subscription to Full Stack courses",
+      category: categories[6]._id,
+      description: "Unlock all courses in the Full Stack web development category for a low monthly price",
+      image: "dockerlogo.svg",
+      price: 89.99,
+      quantity: 600,
+    },
+    {
+      name: "Subscription to Computer Science courses",
+      category: categories[6]._id,
+      description: "Unlock all courses in the Computer Science category for a low monthly price",
+      image: "dockerlogo.svg",
+      price: 89.99,
+      quantity: 600
+    },
+    {
+      name: "Subscription to Python courses",
+      category: categories[6]._id,
+      description: "Unlock all courses in the Python category for a low monthly price",
+      image: "dockerlogo.svg",
+      price: 89.99,
+      quantity: 600
     }
   ]);
 
