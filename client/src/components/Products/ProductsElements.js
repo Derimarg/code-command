@@ -110,3 +110,17 @@ export const MsgContainer = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
 `;
+
+// export const coursesHeader = styled.div`
+// position: absolute;
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+// ;`
+
+export const buttonLabel = styled.div`
+position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+;`
