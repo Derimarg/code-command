@@ -118,24 +118,24 @@ db.once("open", async () => {
     {
       name: "Subscription to Full Stack courses",
       category: categories[6]._id,
-      description: "Unlock all courses in the Full Stack web development category for a low monthly price",
-      image: "dockerlogo.svg",
+      description: "Unlock all courses in the Full Stack web development category for a low monthly price. This includes the 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills.",
+      image: "big3.png",
       price: 89.99,
       quantity: 600,
     },
     {
       name: "Subscription to Computer Science courses",
       category: categories[6]._id,
-      description: "Unlock all courses in the Computer Science category for a low monthly price",
-      image: "dockerlogo.svg",
+      description: "Unlock all courses in the Computer Science category for a low monthly price. This includes both the 'Computer Science' course and the 'Beginners guide to C++ and machine code compiling' course. Ace the interview by showing off your new algorthm skills and techniques.",
+      image: "cpluslogo.svg",
       price: 89.99,
       quantity: 600
     },
     {
       name: "Subscription to Python courses",
       category: categories[6]._id,
-      description: "Unlock all courses in the Python category for a low monthly price",
-      image: "dockerlogo.svg",
+      description: "Unlock all courses in the Python category for a low monthly price. This includes the 'Python' course and the 'Python - Machine Learning' course. Learn how to use Python for web development, data analysis, automation, and even build chat bots!",
+      image: "pythonlogo.png",
       price: 89.99,
       quantity: 600
     }
