@@ -64,8 +64,8 @@ export const templateObjCookies = {
   lastUpdate: "Last Updated: November 20, 2021",
   headline: "Cookies",
   title: "ADVISEMENT",
-    paragraph1:
-      "The Code Command web application is created for educational purposes only. The application features may be functional, but the content is completely fabricated and offers little to no instructional value and is intended for demonstration purposes only. The content contained in this document is for demonstration purposes, and in no way intends to represent, convey, or enforce any legal covenants.",
+    
+    paragraph1:  "The Code Command web application is created for educational purposes only. The application features may be functional, but the content is completely fabricated and offers little to no instructional value and is intended for demonstration purposes only. The content contained in this document is for demonstration purposes, and in no way intends to represent, convey, or enforce any legal covenants.",
     paragraph2: `Code Command, Inc. and its affiliates and subsidiaries (collectively, "Code Command," "we," "our," or "us") are committed to protecting your privacy. We have prepared this Privacy Policy to describe our practices regarding the information processed by our products and any other Code Command products that link to this Privacy Policy (collectively "Products").`,
   title2: "DATA COLLECTED VIA TECHNOLOGY",
     paragraph5:

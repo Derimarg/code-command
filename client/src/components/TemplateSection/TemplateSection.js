@@ -6,7 +6,8 @@ import {
   LastUpdate,
   Title,
   Paragraph,
-  Address
+  Address,
+  StyledLink
 } from "./Template.elements";
 
 function InfoSection({
@@ -35,6 +36,7 @@ function InfoSection({
   paragraph5,
   paragraph6,
   paragraph7,
+  link,
   paragraph8,
   paragraph9,
   address1,
@@ -63,6 +65,7 @@ function InfoSection({
         <Paragraph lightTextDesc6={lightTextDesc6}>{paragraph6}</Paragraph>
         <Paragraph lightTextDesc7={lightTextDesc7}>{paragraph7}</Paragraph>
         <Paragraph lightTextDesc8={lightTextDesc8}>{paragraph8}</Paragraph>
+        <StyledLink target="_blank" href={link}>link</StyledLink>
         <Paragraph lightTextDesc9={lightTextDesc9}>{paragraph9}</Paragraph>
         <Address lightTextDesc1={lightTextDesc1}>{address1}</Address>
         <Address lightTextDesc1={lightTextDesc1}>{address2}</Address>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TemplateContainer = styled.div`
   padding: 160px 0;
@@ -63,4 +64,9 @@ export const Address = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 13px;
+`;
+
+export const StyledLink = styled.a`
+  color: Blue;
+  margin: 20px 0;
 `;
