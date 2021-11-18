@@ -50,46 +50,39 @@ function Pricing() {
     }
   }, [data, loading, dispatch]);
 
-  const details = [
-    {
-      header: "Our Services",
-      period: "per month",
-      cash: "$",
-      Desc: " Unlock all courses in this category, For one low monthly price. No contract required.",
-      btnLabel: "View Details",
-    },
-  ];
-
   return (
-    
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
-        {state.products.length > 12 ? (
-      <PricingSection >
+      {state.products.length > 12 ? (
+        <PricingSection>
           <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
-          <PricingContainer>
-          {state.products.filter((product, index) => index > 11).map((product) => (
-              <PricingCard to={`/products/${product._id}`}>
-                <PricingCardInfo>
-                  <PricingCardIcon>
-                  <img src={product.image} alt={product.name} />
-                  </PricingCardIcon>
-                  <PricingCardPlan>{product.name}</PricingCardPlan>
-                  <PricingCardCost>${product.price}</PricingCardCost>
-                  <PricingCardLength>per month</PricingCardLength>
-                  <PricingCardFeatures>
-                    <PricingCardFeature>{product.short}</PricingCardFeature>
-                    <PricingCardFeature>One low monthly price</PricingCardFeature>
-                    <PricingCardFeature>{product.months} Month Program</PricingCardFeature>
-                  </PricingCardFeatures>
-                  <Button primary>View Details</Button>
-                </PricingCardInfo>
-              </PricingCard>
-            ))}
-          </PricingContainer>
-        </PricingWrapper>
-      </PricingSection>
-       ) : null}
+            <PricingHeading>Our Services</PricingHeading>
+            <PricingContainer>
+              {state.products
+                .filter((product, index) => index > 11)
+                .map((product) => (
+                  <PricingCard to={`/products/${product._id}`}>
+                    <PricingCardInfo>
+                      <PricingCardIcon>
+                        <img src={product.image} alt={product.name} />
+                      </PricingCardIcon>
+                      <PricingCardPlan>{product.name}</PricingCardPlan>
+                      <PricingCardCost>${product.price}</PricingCardCost>
+                      <PricingCardLength>per month</PricingCardLength>
+                      <PricingCardFeatures>
+                        <PricingCardFeature>{product.short}</PricingCardFeature>
+                        <PricingCardFeature></PricingCardFeature>
+                        <PricingCardFeature>
+                          {product.months} Month Program
+                        </PricingCardFeature>
+                      </PricingCardFeatures>
+                      <Button primary>View Details</Button>
+                    </PricingCardInfo>
+                  </PricingCard>
+                ))}
+            </PricingContainer>
+          </PricingWrapper>
+        </PricingSection>
+      ) : null}
     </IconContext.Provider>
   );
 }
