@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 2500;
+const delay = 10000;
 
 export default function Slideshow() {
   const [index, setIndex] = React.useState(0);
@@ -48,6 +48,7 @@ export default function Slideshow() {
               setIndex(idx);
             }}
           ></div>
+          
         ))}
       </div>
     </div>
