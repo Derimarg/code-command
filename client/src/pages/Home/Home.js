@@ -9,8 +9,8 @@ import {
 import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
-import { SliderData } from "../../components/Carousel/SliderData";
-import ImageSlider from "../../components/Carousel/ImageSlider";
+import Carousel from "../../components/Carousel/Carousel";
+
 export default function Home(lightBg) {
   function ShowHomePage() {
     if (Auth.loggedIn()) {
@@ -23,7 +23,7 @@ export default function Home(lightBg) {
       return (
         <Fade top duration={2000} distance="80px">
           <>
-            <ImageSlider slides={SliderData} />
+            <Carousel />
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjFour} />
             <InfoSection {...homeObjThree} />
