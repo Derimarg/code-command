@@ -104,7 +104,7 @@ function Pricing() {
   );
 }
 export default Pricing;
-{/* <PricingCard to="/sign-up">
+/* <PricingCard to="/sign-up">
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
@@ -135,4 +135,4 @@ export default Pricing;
                 </PricingCardFeatures>
                 <Button primary>Choose Plan</Button>
               </PricingCardInfo>
-            </PricingCard> */}
+            </PricingCard> */

@@ -94,3 +94,5 @@ export const homeObjSix = {
   imgStart: "start",
   start: "true",
 };
+
+
