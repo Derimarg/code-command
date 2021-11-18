@@ -32,6 +32,8 @@ import Success from "./pages/Success/Success";
 import NotFound from "./pages/NotFound/NotFound";
 import { settings } from "./settings.js";
 import Load from "./pages/Load/Load";
+import PrivacyPage from "./pages/Privacy/Privacy";
+import Cookies from "./pages/Cookies/Cookies";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -49,7 +51,7 @@ const Body = withRouter(({ location }, propss) => {
   if (settings.isSplash) {
     return (
       <div>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/splash" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/splash" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
             // ((props) => (
             //   <NavContainer theme={props.theme} setTheme={props.setTheme} />
             // ))
@@ -200,6 +202,28 @@ const Body = withRouter(({ location }, propss) => {
               />
             )}
           />
+            <Route
+            exact
+            path="/privacy"
+            render={(props) => (
+              <PrivacyPage
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/cookies"
+            render={(props) => (
+              <Cookies
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
           <Route
             render={(props) => (
               <NotFound
@@ -210,10 +234,10 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Cartbar />
         )}
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Footer />
         )}
       </div>
@@ -221,7 +245,7 @@ const Body = withRouter(({ location }, propss) => {
   } else {
     return (
       <div>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <NavContainer />
         )}
         <Switch>
@@ -335,6 +359,28 @@ const Body = withRouter(({ location }, propss) => {
               />
             )}
           />
+           <Route
+            exact
+            path="/policy"
+            render={(props) => (
+              <PrivacyPage
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
+           <Route
+            exact
+            path="/cookies"
+            render={(props) => (
+              <Cookies
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
           <Route
             render={(props) => (
               <NotFound
@@ -345,11 +391,11 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Cartbar />
         )}
 
-        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        {location.pathname !== "/login" && location.pathname !== "/signup" && location.pathname !== "/privacy" && location.pathname !== "/cookies" && (
           <Footer />
         )}
       </div>

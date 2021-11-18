@@ -10,7 +10,6 @@ import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
 import Aos from "aos";
-// import "aos/dis/aos.css";
 
 export default function Home(lightBg) {
   function ShowHomePage() {
