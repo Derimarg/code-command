@@ -77,7 +77,7 @@ export default function Footer() {
           </SocialLogo>
           <WebsiteRights>
             Learn to code interactively &copy; code app{" "}
-            {new Date().getFullYear()} | All rights reserved.
+            {new Date().getFullYear()} | All rights reserved | 
           </WebsiteRights>
           <SocialIcons>
             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
