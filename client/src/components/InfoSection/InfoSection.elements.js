@@ -8,7 +8,8 @@ export const InfoSec = styled.div`
   color: #fff;
   padding: 160px 0;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
-`;
+  `;
+
 export const InfoSec2 = styled.div`
   color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
   padding: 60px 0;
@@ -18,6 +19,11 @@ export const InfoSec2 = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    width: 100%;
+  }
 `;
 
 export const BtnLink = styled(Link)`
@@ -28,6 +34,7 @@ width: 90%;
 font-size: 13px;
 text-align: center;
 }
+
 `; 
 
 export const InfoRow = styled.div`
@@ -36,6 +43,9 @@ export const InfoRow = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
+  
+  }
+  
 `;
 
 export const InfoRow2 = styled.div`
@@ -47,6 +57,11 @@ export const InfoRow2 = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
+  }
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    width: 100%;
   }
 `;
 
@@ -64,6 +79,12 @@ export const InfoColumn = styled.div`
     display: flex;
     justify-content: center;
   }
+
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    width: 100%;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -74,16 +95,24 @@ export const TextWrapper = styled.div`
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
   }
+
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    width: 100%;
+  }
 `;
 
 export const ImgWrapper = styled.div`
   max-width: 555px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+ 
 `;
 
 export const Role = styled.h3`
 color: black
+
 `;
 
 export const ProfileWraper = styled.div`
@@ -93,6 +122,7 @@ export const ProfileWraper = styled.div`
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
+  
 `;
 
 export const TopLine = styled.div`
@@ -102,6 +132,7 @@ export const TopLine = styled.div`
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
+ 
 `;
 
 export const Img = styled.img`
@@ -111,6 +142,13 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    width: 100%;
+  }
+ 
+  
 `;
 
 export const Heading = styled.h1`
@@ -119,6 +157,8 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
+  
+  
 `;
 
 export const Subtitle = styled.p`
@@ -127,4 +167,5 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
+ 
 `;

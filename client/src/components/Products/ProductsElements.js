@@ -7,6 +7,7 @@ export const ProductsContainer = styled.div`
   padding: 5rem calc((100vw - 1300px) / 2);
   background: #fff;
   color: black;
+  
 `;
 
 export const ProductsWrapper = styled.div`
@@ -14,6 +15,7 @@ export const ProductsWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 4rem;
+  
 `;
 
 export const ProductWrapper = styled.div`
@@ -21,6 +23,7 @@ export const ProductWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  
 `;
 
 export const ProductCard = styled.div`
@@ -49,6 +52,9 @@ export const ProductImg = styled.img`
 export const ProductsHeading = styled.h1`
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;
+  @media only screen and (max-width : 380px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ProductsDesc = styled.h3`
@@ -58,6 +64,7 @@ export const ProductsDesc = styled.h3`
   color: #d9d9d9;
   margin: 1rem;
   line-height: 24px;
+  
 `;
 
 export const ProductTitle = styled.h2`
