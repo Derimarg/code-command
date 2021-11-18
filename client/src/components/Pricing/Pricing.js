@@ -50,6 +50,16 @@ function Pricing() {
     }
   }, [data, loading, dispatch]);
 
+  const details = [
+    {
+      header: "Our Services",
+      period: "per month",
+      cash: "$",
+      Desc: " Unlock all courses in this category, For one low monthly price. No contract required.",
+      btnLabel: "View Details",
+    },
+  ];
+
   return (
     
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
