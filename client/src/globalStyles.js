@@ -44,6 +44,12 @@ export const Button = styled.button`
   @media screen and (max-width: 960px) {
     width: 100%;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+  }
 `;
 
 export default GlobalStyle;

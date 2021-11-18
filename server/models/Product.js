@@ -29,6 +29,14 @@ const productSchema = new Schema({
     ref: "Category",
     required: true,
   },
+  short: {
+    type: String,
+    required: false
+  },
+  months: {
+    type: Number,
+    required: false
+  }
 });
 
 const Product = mongoose.model("Product", productSchema);

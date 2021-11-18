@@ -9,6 +9,8 @@ export const QUERY_PRODUCTS = gql`
       price
       quantity
       image
+      months
+      short
       category {
         _id
       }
@@ -32,6 +34,8 @@ export const QUERY_ALL_PRODUCTS = gql`
       description
       price
       quantity
+      months
+      short
       category {
         name
       }

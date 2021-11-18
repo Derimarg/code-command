@@ -50,25 +50,37 @@ function Pricing() {
     }
   }, [data, loading, dispatch]);
 
+  const details = [
+    {
+      header: "Our Services",
+      period: "per month",
+      cash: "$",
+      Desc: " Unlock all courses in this category, For one low monthly price. No contract required.",
+      btnLabel: "View Details",
+    },
+  ];
+
   return (
+    
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
-      <PricingSection>
-        <PricingWrapper>
+        {state.products.length > 12 ? (
+      <PricingSection >
+          <PricingWrapper>
           <PricingHeading>Our Services</PricingHeading>
           <PricingContainer>
           {state.products.filter((product, index) => index > 11).map((product) => (
               <PricingCard to={`/products/${product._id}`}>
                 <PricingCardInfo>
                   <PricingCardIcon>
-                    {product.image}
+                  <img src={product.image} alt={product.name} />
                   </PricingCardIcon>
                   <PricingCardPlan>{product.name}</PricingCardPlan>
                   <PricingCardCost>${product.price}</PricingCardCost>
                   <PricingCardLength>per month</PricingCardLength>
                   <PricingCardFeatures>
-                    <PricingCardFeature>Unlock all courses in this cateogry,</PricingCardFeature>
-                    <PricingCardFeature>For one low monthly price.</PricingCardFeature>
-                    <PricingCardFeature>No contract required.</PricingCardFeature>
+                    <PricingCardFeature>{product.short}</PricingCardFeature>
+                    <PricingCardFeature>One low monthly price</PricingCardFeature>
+                    <PricingCardFeature>{product.months} Month Program</PricingCardFeature>
                   </PricingCardFeatures>
                   <Button primary>View Details</Button>
                 </PricingCardInfo>
@@ -77,6 +89,7 @@ function Pricing() {
           </PricingContainer>
         </PricingWrapper>
       </PricingSection>
+       ) : null}
     </IconContext.Provider>
   );
 }
