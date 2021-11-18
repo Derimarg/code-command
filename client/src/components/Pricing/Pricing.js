@@ -50,31 +50,46 @@ function Pricing() {
     }
   }, [data, loading, dispatch]);
 
+  const details = [
+    {
+      header: "Our Services",
+      period: "per month",
+      cash: "$",
+      Desc: " Unlock all courses in this category, For one low monthly price. No contract required.",
+      btnLabel: "View Details",
+    },
+  ];
+
   return (
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
       <PricingSection>
         <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
-          <PricingContainer>
-          {state.products.filter((product, index) => index > 11).map((product) => (
-              <PricingCard to={`/products/${product._id}`}>
-                <PricingCardInfo>
-                  <PricingCardIcon>
-                    {product.image}
-                  </PricingCardIcon>
-                  <PricingCardPlan>{product.name}</PricingCardPlan>
-                  <PricingCardCost>${product.price}</PricingCardCost>
-                  <PricingCardLength>per month</PricingCardLength>
-                  <PricingCardFeatures>
-                    <PricingCardFeature>Unlock all courses in this cateogry,</PricingCardFeature>
-                    <PricingCardFeature>For one low monthly price.</PricingCardFeature>
-                    <PricingCardFeature>No contract required.</PricingCardFeature>
-                  </PricingCardFeatures>
-                  <Button primary>View Details</Button>
-                </PricingCardInfo>
-              </PricingCard>
-            ))}
-          </PricingContainer>
+          {details.map((x) => (
+            <>
+              <PricingHeading>{x.header}</PricingHeading>
+              <PricingContainer>
+                {state.products
+                  .filter((product, index) => index > 11)
+                  .map((product) => (
+                    <PricingCard to={`/products/${product._id}`}>
+                      <PricingCardInfo>
+                        <PricingCardIcon>{product.image}</PricingCardIcon>
+                        <PricingCardPlan>{product.name}</PricingCardPlan>
+                        <PricingCardCost>
+                          {x.cash}
+                          {product.price}
+                        </PricingCardCost>
+                        <PricingCardLength>{x.period}</PricingCardLength>
+                        <PricingCardFeatures>
+                          <PricingCardFeature>{x.Desc}</PricingCardFeature>
+                        </PricingCardFeatures>
+                        <Button primary>{x.btnLabel}</Button>
+                      </PricingCardInfo>
+                    </PricingCard>
+                  ))}
+              </PricingContainer>
+            </>
+          ))}
         </PricingWrapper>
       </PricingSection>
     </IconContext.Provider>
