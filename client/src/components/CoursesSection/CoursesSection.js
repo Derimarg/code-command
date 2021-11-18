@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"; //  useEffect // useState,
+import React, { useEffect, useRef } from "react"; //  useEffect // useState,
 import { Link } from "react-router-dom";
 import {
   ProductWrapper,
@@ -18,6 +18,7 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
 import Load from "../Load/index";
+const delay = 5000;
 
 export default function CoursesSection({
   heading,
@@ -105,3 +106,12 @@ export default function CoursesSection({
     </>
   );
 }
+
+// timer (icon)
+// {
+
+//   icon
+// }
+// {{{
+
+// }}
