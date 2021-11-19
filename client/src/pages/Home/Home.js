@@ -3,13 +3,13 @@ import { Fade } from "react-reveal";
 import {
   homeObjOne,
   homeObjTwo,
-  homeObjThree,
+  // homeObjThree,
   homeObjFour,
 } from "../../containers/home/Data";
 import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
-import Carousel from "../../components/Carousel/Carousel";
+// import Carousel from "../../components/Carousel/Carousel";
 import ReviewSlide from "../../components/ReviewSlide/ReviewSlide";
 
 export default function Home(lightBg) {
@@ -24,11 +24,11 @@ export default function Home(lightBg) {
       return (
         <Fade top duration={2000} distance="80px">
           <>
-            <Carousel />
-            <ReviewSlide />
+            {/* <Carousel /> */}
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjFour} />
-            <InfoSection {...homeObjThree} />
+            {/* <InfoSection {...homeObjThree} /> */}
+            <ReviewSlide />
             <Pricing />
             <InfoSection {...homeObjTwo} />
           </>

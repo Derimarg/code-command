@@ -8,7 +8,6 @@
 }
 
 .slideshowSlider {
-  white-space: nowrap;
   transition: ease 3000ms;
 }
 
@@ -31,7 +30,6 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 15px 7px 0px;
-
   background-color: #c4c4c4;
 }
 

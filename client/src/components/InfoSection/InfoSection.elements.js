@@ -8,7 +8,14 @@ export const InfoSec = styled.div`
   color: #fff;
   padding: 160px 0;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
-  `;
+`;
+
+export const ReviewSec = styled.div`
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
+`;
 
 export const InfoSec2 = styled.div`
   color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
@@ -19,7 +26,7 @@ export const InfoSec2 = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media only screen and (max-width : 380px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin:auto;
     width: 100%;
@@ -27,15 +34,14 @@ export const InfoSec2 = styled.div`
 `;
 
 export const BtnLink = styled(Link)`
-font-size: 13px;
-text-align: center;
-@media screen and (max-width: 400px){
-width: 90%;
-font-size: 13px;
-text-align: center;
-}
-
-`; 
+  font-size: 13px;
+  text-align: center;
+  @media screen and (max-width: 400px) {
+    width: 90%;
+    font-size: 13px;
+    text-align: center;
+  }
+`;
 
 export const InfoRow = styled.div`
   display: flex;
@@ -58,7 +64,7 @@ export const InfoRow2 = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
-  @media only screen and (max-width : 380px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin-left: 10rem;
     width: 100%;
@@ -80,7 +86,7 @@ export const InfoColumn = styled.div`
     justify-content: center;
   }
 
-  @media only screen and (max-width : 380px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin-left: 10rem;
     width: 100%;
@@ -96,7 +102,7 @@ export const TextWrapper = styled.div`
     padding-bottom: 65px;
   }
 
-  @media only screen and (max-width : 380px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin-left: 10rem;
     width: 100%;
@@ -107,12 +113,10 @@ export const ImgWrapper = styled.div`
   max-width: 555px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
- 
 `;
 
 export const Role = styled.h3`
-color: black
-
+  color: black;
 `;
 
 export const ProfileWraper = styled.div`
@@ -122,7 +126,6 @@ export const ProfileWraper = styled.div`
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
-  
 `;
 
 export const TopLine = styled.div`
@@ -132,7 +135,6 @@ export const TopLine = styled.div`
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
- 
 `;
 
 export const Img = styled.img`
@@ -142,13 +144,11 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
-  @media only screen and (max-width : 380px) {
+  @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin-left: 10rem;
     width: 100%;
   }
- 
-  
 `;
 
 export const Heading = styled.h1`
@@ -157,8 +157,6 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
-  
-  
 `;
 
 export const Subtitle = styled.p`
@@ -167,5 +165,4 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
- 
 `;
