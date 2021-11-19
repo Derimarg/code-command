@@ -7,8 +7,11 @@ import {
   MsgContainer,
 } from "../Products/ProductsElements";
 import CourseItem from "../CourseItem/index";
-import { InfoSec2, BtnLink } from "../InfoSection/InfoSection.elements";
-import { Button } from "../../globalStyles";
+import {
+  InfoSec2,
+  // BtnLink
+} from "../InfoSection/InfoSection.elements";
+// import { Button } from "../../globalStyles";
 import { FooterSubscription } from "../Footer/Footer.elements";
 import Announcement from "../Announcement/Announcement";
 import { useSelector, useDispatch } from "react-redux";
@@ -46,13 +49,12 @@ export default function CoursesSection({
         idbPromise("products", "put", product);
       });
     } else if (!loading) {
-    
-        idbPromise("products", "get").then((products) => {
-          dispatch({
-            type: UPDATE_PRODUCTS,
-            products: products,
-          });
+      idbPromise("products", "get").then((products) => {
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: products,
         });
+      });
     }
   }, [data, loading, dispatch]);
 
@@ -72,11 +74,11 @@ export default function CoursesSection({
       <InfoSec2 lightBg={lightBg}>
         <ProductsHeading>{heading}</ProductsHeading>
         <ProductsDesc>{description}</ProductsDesc>
-        <BtnLink to="/products/61973ba56b5ceef4529c0137">
+        {/* <BtnLink to="/products/61973ba56b5ceef4529c0137">
           <Button fontBig primary={primary}>
             {buttonLabel}
           </Button>
-        </BtnLink>
+        </BtnLink> */}
       </InfoSec2>
       <FooterSubscription>
         <Filters />

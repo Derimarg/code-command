@@ -1,12 +1,13 @@
 import React from "react";
-import { Button } from "../../globalStyles";
+// import { Button } from "../../globalStyles";
+import { Link } from "react-router-dom";
 import {
   FooterContainer,
-  FooterSubscription,
-  FooterSubText,
-  FooterSubHeading,
-  Form,
-  FormInput,
+  // FooterSubscription,
+  // FooterSubText,
+  // FooterSubHeading,
+  // Form,
+  // FormInput,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinkItems,
@@ -29,7 +30,7 @@ import {
 export default function Footer() {
   return (
     <FooterContainer>
-      <FooterSubscription>
+      {/* <FooterSubscription>
         <FooterSubHeading>
           Join our exclusive membership to receive the latest news and trends
         </FooterSubHeading>
@@ -38,7 +39,7 @@ export default function Footer() {
           <FormInput name="email" type="email" placeholder="Your Email" />
           <Button fontBig>Subscribe</Button>
         </Form>
-      </FooterSubscription>
+      </FooterSubscription> */}
       <FooterLinksContainer>
         <FooterLinksWrapper>
           <FooterLinkItems>
@@ -96,7 +97,11 @@ export default function Footer() {
           <WebsiteRights>
             Learn to code interactively &copy; code app{" "}
             {new Date().getFullYear()}{" "}
-            <span style={{ fontSize: "20px" }}>|</span> All rights reserved.
+            <span style={{ fontSize: "18px" }}>|</span>{" "}
+            <Link to="privacy" style={{ color: "#4B59F7" }}>
+              {" "}
+              All rights reserved.
+            </Link>
           </WebsiteRights>
           <SocialIcons>
             <SocialIconLink
