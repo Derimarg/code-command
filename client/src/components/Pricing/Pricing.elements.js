@@ -83,6 +83,11 @@ export const PricingCardIcon = styled.div`
   margin: 24px 0;
 `;
 
+export const Img = styled.img`
+width: 100px;
+height: 100px;
+`
+
 export const PricingCardPlan = styled.h3`
   margin-bottom: 5px;
   font-size: 1.1rem;
@@ -94,7 +99,7 @@ export const PricingCardCost = styled.h4`
 
 export const PricingCardLength = styled.p`
   font-size: 14px;
-  margin-bottom: 24px;
+  margin-bottom: .5rem;
 `;
 
 export const PricingCardFeatures = styled.ul`

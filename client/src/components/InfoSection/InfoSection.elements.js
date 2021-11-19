@@ -8,7 +8,12 @@ export const InfoSec = styled.div`
   color: #fff;
   padding: 160px 0;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
+  @media only screen and (max-width: 380px) {
+    padding: 0;
+  }
   `;
+
+
 
 export const InfoSec2 = styled.div`
   color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
