@@ -72,8 +72,8 @@ export const review4 = {
   headline: "Found my dream job!",
   description:
     "Like many of my classmates, it was difficult finding a decent job right after college. Fortunately, Code Command gave me the skills and confidence to go land my dream job!",
-  role: "Application Developer, Apple, Inc",
-  location: "Software Engineer, Federal Reserve Bank",
+  role: "Software Engineer, Federal Reserve Bank",
+  location: "San Francisco, CA",
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/chet.jpg",
