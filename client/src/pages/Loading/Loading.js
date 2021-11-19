@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import Courses from "../../pages/Courses/Courses";
-import Services from "../../pages/Services/Services";
 import Checkout from "../../pages/Checkout/Checkout";
 import Contact from "../../pages/Contact/Contact";
 import OrderHistory from "../../pages/OrderHistory/OrderHistory";
@@ -38,12 +37,6 @@ const Pages = withRouter(({ location }) => {
       return (
         <>
           <Home />
-        </>
-      );
-    case "/services":
-      return (
-        <>
-          <Services />
         </>
       );
     case "/courses":
