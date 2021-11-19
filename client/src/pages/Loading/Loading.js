@@ -8,11 +8,13 @@ import OrderHistory from "../../pages/OrderHistory/OrderHistory";
 import Success from "../../pages/Success/Success";
 import PrivacyPage from "../../pages/Privacy/Privacy";
 import Cookies from "../../pages/Cookies/Cookies";
-import Terms from "../../pages/Terms/Terms"
+import Terms from "../../pages/Terms/Terms";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
 import NotFound from "../../pages/NotFound/NotFound";
+import Testimonials from "../../pages/Testimonials/Testimonials";
+
 import "./Load.css";
 
 function AnimatedLoad(props) {
@@ -108,8 +110,7 @@ const Pages = withRouter(({ location }) => {
     case "/testimonials":
       return (
         <>
-          <h2>Coming soon!</h2>
-          {/* <Testimonials /> */}
+          <Testimonials />
         </>
       );
 

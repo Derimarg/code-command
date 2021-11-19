@@ -43,19 +43,15 @@ export default function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink2 to="/sign-up">How it works</FooterLink2>
-            <FooterLink2 to="/testimonials">Testimonials</FooterLink2>
-            <FooterLink2 to="/">Careers</FooterLink2>
-            <FooterLink2 to="/">Investors</FooterLink2>
-            <FooterLink2 to="/">Terms of Service</FooterLink2>
+            <FooterLink to="/sign-up">Testimonials</FooterLink>
+            <FooterLink to="/">Privacy Policy</FooterLink>
+            <FooterLink to="/">Acceptable Use Policy</FooterLink>
+            <FooterLink to="/">Terms of Service</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink2 to="/contact">Contact</FooterLink2>
-            <FooterLink2 to="/">Support</FooterLink2>
-            <FooterLink2 to="/">Destinations</FooterLink2>
-            <FooterLink2 to="/">Sponsorships</FooterLink2>
-          </FooterLinkItems>
+            <FooterLink to="/">Contact</FooterLink>
+            </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
           <FooterLinkItems>

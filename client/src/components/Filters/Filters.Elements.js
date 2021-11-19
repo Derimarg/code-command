@@ -52,3 +52,7 @@ export const ButtonClear = styled.button`
     transition: all 0.3s ease-out;
   }
 `;
+
+export const filter = styled.filter`
+margin: 1rem;
+`;
