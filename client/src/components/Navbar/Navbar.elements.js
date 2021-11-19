@@ -98,6 +98,20 @@ export const NavMenu = styled.ul`
     transition: all 0.5s ease;
     background: #101522;
   }
+  @media screen and (max-width: 380px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: ${({ click }) => (click ? 0 : "-100%")};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #101522;
+  }
+
 `;
 
 export const NavItem = styled.li`
