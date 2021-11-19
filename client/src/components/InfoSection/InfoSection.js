@@ -33,7 +33,8 @@ function InfoSection({
   start,
   role,
   location,
-  title
+  title,
+  route,
 }) {
   return (
     <>
@@ -43,7 +44,7 @@ function InfoSection({
             <InfoColumn>
               <Fade right>
                 <TextWrapper>
-                  <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>                  
+                  <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                   <TopLine lightTopTitle={lightTopTitle}>{title}</TopLine>
                   <ProfileWraper lightTopLine2={lightTopLine2}>
                     {role}
@@ -56,7 +57,7 @@ function InfoSection({
                     {description}
                   </Subtitle>
 
-                  <Link to="/signup">
+                  <Link to={route}>
                     <Button big fontBig primary={primary}>
                       {buttonLabel}
                     </Button>

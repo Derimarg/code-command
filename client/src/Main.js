@@ -37,7 +37,6 @@ const Body = withRouter(({ location }, propss) => {
     { route: "/" },
     { route: "/login" },
     { route: "/signup" },
-    { route: "/services" },
     { route: "/courses" },
     { route: "/checkout" },
     { route: "/contact" },
@@ -46,6 +45,7 @@ const Body = withRouter(({ location }, propss) => {
     { route: "/privacy" },
     { route: "/cookies" },
     { route: "/terms" },
+    { route: "/testimonials" },
   ];
 
   if (settings.isSplash) {
@@ -56,7 +56,7 @@ const Body = withRouter(({ location }, propss) => {
           location.pathname !== "/splash" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && 
+          location.pathname !== "/cookies" &&
           location.pathname !== "/terms" && <NavContainer />}
         <Switch>
           {routesData.map((x) => (
@@ -102,7 +102,7 @@ const Body = withRouter(({ location }, propss) => {
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
           location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" &&  <Footer />}
+          location.pathname !== "/terms" && <Footer />}
       </div>
     );
   } else {
@@ -171,7 +171,7 @@ function Main(props) {
                 color: "#fff",
                 background: "#4B59F7",
                 fontSize: "24px",
-                borderRadius: "8px"
+                borderRadius: "8px",
               }}
               buttonText={"I understand!"}
               expires={150}

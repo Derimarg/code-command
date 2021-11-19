@@ -5,6 +5,8 @@ import {
   homeObjTwo,
   // homeObjThree,
   homeObjFour,
+  homeObj7,
+  homeObj8,
 } from "../../containers/home/Data";
 import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
@@ -26,11 +28,13 @@ export default function Home(lightBg) {
           <>
             {/* <Carousel /> */}
             <InfoSection {...homeObjOne} />
+            <Pricing />
             <InfoSection {...homeObjFour} />
             {/* <InfoSection {...homeObjThree} /> */}
             {/* <ReviewSlide /> */}
-            <Pricing />
+            <InfoSection {...homeObj7} />
             <InfoSection {...homeObjTwo} />
+            <InfoSection {...homeObj8} />
           </>
         </Fade>
       );

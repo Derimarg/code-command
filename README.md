@@ -10,11 +10,11 @@
 
 <br />
 <p align="center">
-
-<h3 align="center" id="code-command">Code Command</h3>
+<img src="./assets/img/code-logo.svg" alt="Logo" width="80" height="80"/>
+<h2 align="center" id="code-command"> Code Command</h2>
 
 <p align="center">
-Code Command description.
+As a web developer I want to continue learning through online courses, so that I can get a promotion / better job.
 <br />
 <a href="#how-to-download"><strong>Explore the docs »</strong></a>
 <br />
@@ -29,12 +29,12 @@ Code Command description.
 <br />
 <br />
 
-> Link web page: https://dg-code-command.herokuapp.com/
+> Link web page: https://code-command-team.herokuapp.com
 
 <details open="open">
 <summary>Table of Contents</summary>
 <ul>
-<li><a href="#description">Description</a></li>
+<li><a href="#use-story">User Story</a></li>
 <li><a href="#technologies">Technologies</a></li>
 <li><a href="#how-to-download">Download</a></li>
 <li><a href="#installation">Installation</a></li>
@@ -49,9 +49,86 @@ Code Command description.
 
 ---
 
-## Description
+## USER STORIES
 
-Working on an Coding app.
+### `MVP`
+
+AS A web developer
+I WANT to continue learning through online courses
+SO THAT I can get a promotion / better job:
+
+GIVEN a technology learning application:
+
+- WHEN I go to the homepage for the first time,
+  THEN I see information about how to get started, pricing, and a navigation menu.
+
+- WHEN I view the navigation menu,
+  THEN I see options for home, contact, courses, log-in and sign-up.
+
+- WHEN I view the courses page,
+  THEN I can view all or sort through courses by category.
+
+- WHEN I click on a course,
+  THEN I am taken to the course details page.
+
+- WHEN I click on the home button,
+  THEN I am taken to the home page.
+
+- WHEN I click on the contact button,
+  THEN I am taken to the contact page.
+
+- WHEN I click on the cart button,
+  THEN I see a cart modal pop up.
+
+- WHEN I decide to purchase a course,
+  THEN I will be required to sign-up or log-in.
+
+- WHEN I click on the log-in button,
+  THEN I am taken to the log-in page.
+
+- WHEN I click on the sign-up button,
+  THEN I am taken to the sign-up page.
+
+- WHEN I sign-up with my email, password, and name,
+  THEN I am authenticated and then to the courses page.
+
+### `AUTHENTICATION`
+
+GIVEN I am an authenticated user:
+
+- WHEN I log-in with my email and password,
+  THEN I am authenticated and taken to the homepage which now displays courses.
+
+- WHEN I click on the cart button,
+  THEN I see my products in the cart or an empty cart.
+
+- WHEN I click on the checkout button,
+  THEN I am redirected to the checkout page.
+
+- WHEN I am done with my purchases,
+  THEN I am redirected to the success page to go back to homepage.
+
+- WHEN I view my purchased course,
+  THEN I will be able to watch the videos and complete the practices on my own.
+
+- WHEN I click on the log-out button,
+  THEN I am taken to the home page.
+
+### `BONUS`
+
+GIVEN I am a user who has completed at least one course:
+
+- WHEN I complete a course,
+  THEN it will be saved to my completed courses and I earn points in the corresponding category.
+
+- WHEN I earn enough points in a category,
+  THEN I will earn a badge for that category.
+
+- WHEN I view my completed courses,
+  THEN I will see a list of all my completed courses.
+
+- WHEN I click on the badge,
+  THEN I will see a modal with the badge details.
 
 <br/>
 
@@ -60,7 +137,7 @@ Working on an Coding app.
 <br/>
 <br/>
 
-![Demo](./assets/img/code-command-demo.gif)
+![Demo](./assets/img/code-command.gif)
 
 <br/>
 <br/>
@@ -173,14 +250,25 @@ Contributions are part of this open source project. Any contributions you make a
 4. Push to the Branch (`git push origin feature/name-of-feature`)
 5. Open a Pull Request
 
+## Contributors
+
+Thanks goes to these wonderful people:
+
+<!-- CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+|                                                                    Audry Ford                                                                     |                                                                          George Gomez                                                                           |                                                                         Derimar Gray                                                                          |                                                                    Rob Atalla                                                                     |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
+|           <a href="https://github.com/audryf"> <img src="./assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>            |           <a href="https://github.com/georgedmendoza"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>           |             <a href="https://github.com/Derimarg"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>             |      <a href="https://github.com/ratalla816"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>      |
+| <a href="https://www.linkedin.com/in/audry-ford/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/george-mendoza-31289b171/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/derimar-gray-676275132/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/ratalla816/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> |
+|       <a href="mailto:audryford792@gmail.com"><img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>       |            <a href="mailto:Georgedmendoza13@gmail.com"><img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"></a>             |             <a href="mailto:derimargray@gmail.com"> <img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>             |       <a href="mailto:rob.atalla@gmail.com"> <img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>        |
+
 ## Questions
 
-For additional help or questions about collaboration, contact me at: derimargray@gmail.com
+For additional help or questions about collaboration, contact us at:
 
-- GitHub - [Derimarg](https://github.com/Derimarg/)
-- Twitter - [Derimar Gray](https://twitter.com/DerimarGray)
-- Linkedin - [Derimar Gray](https://www.linkedin.com/in/derimar-gray-676275132/)
 - Project Repository Link: https://github.com/Derimarg/code-command
+- Live application Link: https://code-command-team.herokuapp.com/
+- Video demo link:
 
 [Back To Top](#code-command)
 

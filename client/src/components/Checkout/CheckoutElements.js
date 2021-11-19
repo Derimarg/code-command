@@ -24,6 +24,7 @@ export const Top = styled.div`
 
 export const TopButton = styled.button`
   padding: 10px;
+  width: 100%;
   font-weight: 600;
   cursor: pointer;
   border: ${(props) => props.type === "filled" && "none"};
@@ -60,6 +61,11 @@ export const Product = styled.div`
 export const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+
+  @media screen and (max-width: 380px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Image = styled.img`

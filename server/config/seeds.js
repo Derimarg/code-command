@@ -27,6 +27,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 40,
+      includedCourses: 1
     },
     {
       name: "SQL / MongoDB",
@@ -36,6 +37,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 500,
+      includedCourses: 1
     },
     {
       name: "MVC / PWA / MERN",
@@ -45,6 +47,7 @@ db.once("open", async () => {
       image: "mern.png",
       price: 598.87,
       quantity: 20,
+      includedCourses: 1
     },
     {
       name: "Computer Science",
@@ -54,6 +57,7 @@ db.once("open", async () => {
       image: "computerscience.jpg",
       price: 249.99,
       quantity: 50,
+      includedCourses: 1
     },
     {
       name: "Beginners guide to C++ and machine code compiling",
@@ -63,6 +67,7 @@ db.once("open", async () => {
       image: "cpluslogo.svg",
       price: 249.99,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Python",
@@ -72,6 +77,7 @@ db.once("open", async () => {
       image: "pythonlogo.png",
       price: 399.99,
       quantity: 30,
+      includedCourses: 1
     },
     {
       name: "Python - Machine Learning",
@@ -81,6 +87,7 @@ db.once("open", async () => {
       image: "pythonML.jpg",
       price: 199.99,
       quantity: 30,
+      includedCourses: 1
     },
     {
       name: "Cybersecurity",
@@ -90,6 +97,7 @@ db.once("open", async () => {
       image: "cybersecurity.jpg",
       price: 329.85,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Digital Marketing",
@@ -99,6 +107,7 @@ db.once("open", async () => {
       image: "digitalmarketing.jpg",
       price: 499.99,
       quantity: 1000,
+      includedCourses: 1
     },
     {
       name: "Introduction to Linux",
@@ -108,15 +117,17 @@ db.once("open", async () => {
       image: "linuxlogo.png",
       price: 195.49,
       quantity: 1000,
+      includedCourses: 1
     },
     {
       name: "Beginners guide to Tails and TOR",
       category: categories[5]._id,
       description:
-        "For penitration testing experts interested in adding to their ethical hacking arsenal, we will explain the features and benefits of using the Tails Linux distribution in conjunction with the TOR network to create a totally secure testing environment. We will teach you how to use applications like Aircrack-ng, Hydra, and Hashcat in conjunction with Tails and TOR to compromise most conventional network security measures.",
+        "For penetration testing experts interested in adding to their ethical hacking arsenal, we will explain the features and benefits of using the Tails Linux distribution in conjunction with the TOR network to create a totally secure testing environment. We will teach you how to use applications like Aircrack-ng, Hydra, and Hashcat in conjunction with Tails and TOR to compromise most conventional network security measures.",
       image: "tails.svg",
       price: 327.27,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Introduction to Docker with Kubernetes",
@@ -126,39 +137,43 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
+      includedCourses: 1
     },
     {
       name: "Foundation",
       category: categories[6]._id,
-      description: "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills.",
+      description: "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills. Only 12 monthly payments of $39.99 each.",
       difficulty: "Beginners Learning Path",
       short: "HTML / CSS / JavaScript",
       months: 12,
       image: "foundation.svg",
       price: 39.99,
       quantity: 600,
+      includedCourses: 3
     },
     {
       name: "Engineer",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course.",
+      description: "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course. Only 12 monthly payments of $69.99 each.",
       difficulty: "Mid-Level Learning",
       short: "Python / C++",
       months: 12,
       image: "engineer.svg",
       price: 69.99,
-      quantity: 600
+      quantity: 600,
+      includedCourses: 4
     },
     {
       name: "Professional",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes.",
+      description: "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes. Only 12 monthly payments of $89.99 each.",
       difficulty: "Accelerated Learning",
       short: "Cybersecurity / Linux",
       months: 12,
       image: "professional.svg",
       price: 89.99,
       quantity: 600,
+      includedCourses: 5
     },
   ]);
 
