@@ -20,6 +20,7 @@ import {
   PricingCardLength,
   PricingCardFeatures,
   PricingCardFeature,
+  Img
 } from "./Pricing.elements";
 
 function Pricing() {
@@ -60,10 +61,10 @@ function Pricing() {
               {state.products
                 .filter((product, index) => index > 11)
                 .map((product) => (
-                  <PricingCard to={`/products/${product._id}`}>
+                  <PricingCard to={`/products/${product._id}`} key={product._id}>
                     <PricingCardInfo>
                       <PricingCardIcon>
-                        <img src={product.image} alt={product.name} />
+                        <Img src={`/images/${product.image}`} alt={product.name} />
                       </PricingCardIcon>
                       <PricingCardPlan>{product.name}</PricingCardPlan>
                       <PricingCardCost>${product.price}</PricingCardCost>

@@ -22,6 +22,8 @@ export const Container = styled.div`
     padding-right: 30px;
     padding-left: 30px;
   }
+
+
 `;
 
 export const ReviewContainer = styled.div`
@@ -62,6 +64,12 @@ export const Button = styled.button`
   }
 
   @media screen and (max-width: 400px) {
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 380px) {
     width: 100%;
     font-size: 13px;
     text-align: center;

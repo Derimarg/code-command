@@ -15,7 +15,13 @@ export const ReviewSec = styled.div`
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
-`;
+
+  @media only screen and (max-width: 380px) {
+    padding: 0;
+  }
+  `;
+
+
 
 export const InfoSec2 = styled.div`
   color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
