@@ -84,11 +84,6 @@ export default function Navbar() {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/services" onClick={closeMobileMenu}>
-              Services
-            </NavLinks>
-          </NavItem>
-          <NavItem>
             <NavLinks to="/contact" onClick={closeMobileMenu}>
               Contact Us
             </NavLinks>

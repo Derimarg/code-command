@@ -40,6 +40,10 @@ const productSchema = new Schema({
   difficulty: {
     type: String,
     required: false
+  },
+  includedCourses: {
+    type: Number,
+    required: false
   }
 });
 

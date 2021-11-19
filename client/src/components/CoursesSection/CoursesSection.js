@@ -72,7 +72,7 @@ export default function CoursesSection({
       <InfoSec2 lightBg={lightBg}>
         <ProductsHeading>{heading}</ProductsHeading>
         <ProductsDesc>{description}</ProductsDesc>
-        <BtnLink to="/">
+        <BtnLink to="/products/61973ba56b5ceef4529c0137">
           <Button fontBig primary={primary}>
             {buttonLabel}
           </Button>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { TrashIcon, Input } from "../../components/CartItems/ItemsElement"
 import {
   Product,
   ProductDetail,
@@ -7,11 +7,9 @@ import {
   Details,
   ProductName,
   ProductId,
-  ProductColor,
   ProductSize,
   PriceDetail,
   ProductAmountContainer,
-  ProductAmount,
   ProductPrice,
 } from "../../components/Checkout/CheckoutElements";
 import { useDispatch } from "react-redux";
@@ -29,7 +27,7 @@ const CartItem = ({ item }) => {
 
     idbPromise("cart", "delete", { ...item });
   };
-
+ 
   const onChange = (e) => {
     const value = e.target.value;
     if (value === "0") {
@@ -57,27 +55,30 @@ const CartItem = ({ item }) => {
             <b>Product:</b> {item.name}
           </ProductName>
           <ProductId>
-            <b>ID:</b> 93813718293
+            <b>ID:</b> {item._id}
           </ProductId>
-          <ProductColor color="black" />
           <ProductSize>
-            <b>Courses:</b> 5
+            {/* <b>Courses Included:</b> {item.includedCourses} */}
           </ProductSize>
         </Details>
       </ProductDetail>
       <PriceDetail>
         <ProductAmountContainer>
-          <FaPlus />
-          <ProductAmount>1</ProductAmount>
-          <input
+          {/* <FaPlus onClick={() => updateItem(item)}/> */}
+          <div>
+          <span>Qty:</span>
+          <Input
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
           />
-          <FaMinus onClick={() => removeItem(item)} />
+          <span role="img" aria-label="trash" onClick={() => removeItem(item)}>
+            <TrashIcon />
+          </span>
+        </div>
         </ProductAmountContainer>
-        <ProductPrice>{item.price}</ProductPrice>
+        <ProductPrice>${item.price}</ProductPrice>
       </PriceDetail>
     </Product>
   );

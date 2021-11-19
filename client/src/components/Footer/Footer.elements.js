@@ -113,7 +113,18 @@ export const FooterLinkTitle = styled.h2`
   margin-bottom: 16px;
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #0467fb;
+    transition: 0.3s ease-out;
+  }
+`;
+
+export const FooterLink2 = styled(Link)`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -175,8 +186,11 @@ export const SocialIconLink = styled.a`
 `;
 
 export const Discord = styled(FaDiscord)`
+  background: #fff;
   color: #5865f2;
   font-size: 2rem;
+  border-radius: 50%;
+  padding: 3px;
 `;
 
 export const Slack = styled(FaSlack)`
@@ -189,9 +203,14 @@ export const Slack = styled(FaSlack)`
 export const Github = styled(FaGithub)`
   color: #fff;
   font-size: 2rem;
+  border-radius: 50%;
 `;
 
 export const StackOverflow = styled(FaStackOverflow)`
+  background: #fff;
   color: #ef8236;
   font-size: 2rem;
+  border-radius: 50%;
+  padding: 3px;
+
 `;
