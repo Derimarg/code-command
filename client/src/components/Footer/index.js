@@ -43,7 +43,6 @@ export default function Footer() {
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
             <FooterLink to="/sign-up">Testimonials</FooterLink>
-            <FooterLink to="/">Who We Are</FooterLink>
             <FooterLink to="/">Privacy Policy</FooterLink>
             <FooterLink to="/">Acceptable Use Policy</FooterLink>
             <FooterLink to="/">Terms of Service</FooterLink>
@@ -51,10 +50,7 @@ export default function Footer() {
           <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
             <FooterLink to="/">Contact</FooterLink>
-            <FooterLink to="/">Support</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Sponsorships</FooterLink>
-          </FooterLinkItems>
+            </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
           <FooterLinkItems>
