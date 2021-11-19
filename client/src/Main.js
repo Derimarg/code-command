@@ -45,6 +45,7 @@ const Body = withRouter(({ location }, propss) => {
     { route: "/success" },
     { route: "/privacy" },
     { route: "/cookies" },
+    { route: "/terms" },
   ];
 
   if (settings.isSplash) {
@@ -55,7 +56,8 @@ const Body = withRouter(({ location }, propss) => {
           location.pathname !== "/splash" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <NavContainer />}
+          location.pathname !== "/cookies" && 
+          location.pathname !== "/terms" && <NavContainer />}
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -99,7 +101,8 @@ const Body = withRouter(({ location }, propss) => {
         {location.pathname !== "/login" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <Footer />}
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" &&  <Footer />}
       </div>
     );
   } else {
@@ -108,7 +111,8 @@ const Body = withRouter(({ location }, propss) => {
         {location.pathname !== "/login" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <NavContainer />}
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" && <NavContainer />}
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -137,12 +141,14 @@ const Body = withRouter(({ location }, propss) => {
         {location.pathname !== "/login" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <Cartbar />}
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" && <Cartbar />}
 
         {location.pathname !== "/login" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <Footer />}
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" && <Footer />}
       </div>
     );
   }
