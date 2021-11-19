@@ -15,6 +15,7 @@ export const homeObjOne = {
   img: "/images/svg-001.svg",
   alt: "",
   start: "",
+  route: "/signup",
 };
 
 export const homeObjTwo = {
@@ -32,6 +33,8 @@ export const homeObjTwo = {
   img: pic,
   alt: "Vault",
   start: "",
+
+  route: "/signup",
 };
 
 export const homeObjThree = {
@@ -52,6 +55,7 @@ export const homeObjThree = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
+  route: "/signup",
 };
 
 export const homeObjFour = {
@@ -70,6 +74,7 @@ export const homeObjFour = {
   img: "/images/svg-03.svg",
   alt: "",
   start: "true",
+  route: "/signup",
 };
 
 export const homeObjFive = {
@@ -81,6 +86,7 @@ export const homeObjFive = {
   topLine: "",
   headline: "",
   description: "",
+  route: "/signup",
 };
 
 export const homeObjSix = {
@@ -93,6 +99,7 @@ export const homeObjSix = {
   buttonRemove: "Delete Course",
   imgStart: "start",
   start: "true",
+  route: "/signup",
 };
 
 export const whoWeAreObj = {
@@ -102,8 +109,7 @@ export const whoWeAreObj = {
   lightText: false,
   lightTextDesc: false,
   topLine: "Secure Database",
-  headline:
-    "1",
+  headline: "1",
   description:
     "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
   buttonLabel: "Sign Up Now",
@@ -111,4 +117,5 @@ export const whoWeAreObj = {
   img: "/images/svg-03.svg",
   alt: "",
   start: "true",
+  route: "/signup",
 };

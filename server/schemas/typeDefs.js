@@ -17,6 +17,7 @@ const typeDefs = gql`
     short: String
     months: Int
     difficulty: String
+    includedCourses: Int
   }
 
   type Order {

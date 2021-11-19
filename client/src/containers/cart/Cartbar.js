@@ -76,7 +76,7 @@ function Cartbar() {
   if (!state.cartOpen) {
     return (
       <CartContainer onClick={toggleCart}>
-        <IconWrap role="img" aria-label="trash">
+        <IconWrap role="img" aria-label="cart">
           <CartIcon />
         </IconWrap>
       </CartContainer>
@@ -200,7 +200,7 @@ const CloseIcon = styled(FaTimes)`
   }
 `;
 
-const BtnLink = styled(Link)`
+export const BtnLink = styled(Link)`
   text-align: center;
 
   &:hover {
