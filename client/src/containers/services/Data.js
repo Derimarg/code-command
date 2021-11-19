@@ -13,6 +13,7 @@ export const homeObjOne = {
   imgStart: "",
   img: pic2,
   alt: "Credit Card",
+  rote: "/testimonials"
 };
 
 export const homeObjTwo = {
