@@ -5,7 +5,7 @@ export const review1 = {
   lightTopLine2: false,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Virgil 'The Penetrator' Smith", // change
+  topLine: "Virgil Smith", // change
   headline: "Code Command helped me get my dream job in my 80s!", // change
   //change
   description:
@@ -14,7 +14,7 @@ export const review1 = {
   location: "New Brunswick, NJ", // change
   buttonLabel: "Start your journey", //change
   imgStart: "start",
-  img: "/images/old-man.svg", // change
+  img: "/images/virgil.jpg", // change
   alt: "Profile",
   start: "true",
   routes: "testimonials",
@@ -35,7 +35,7 @@ export const review2 = {
   location: "Atlanta, GA",
   buttonLabel: "Start your journey",
   imgStart: "",
-  img: "/images/ted.svg",
+  img: "/images/ted.jpg",
   alt: "Profile",
   start: "",
   route: "/testimonials",
@@ -56,7 +56,7 @@ export const review3 = {
   location: "Overland Park, KS",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/heather.svg",
+  img: "/images/heather.jpg",
   alt: "Profile",
   start: "true",
   route: "/testimonials",
@@ -77,7 +77,7 @@ export const review4 = {
   location: "Software Engineer, Federal Reserve Bank",
   buttonLabel: "Start your journey",
   imgStart: "",
-  img: "/images/chet.svg",
+  img: "/images/chet.jpg",
   alt: "Profile",
   start: "",
   route: "/testimonials",
@@ -98,7 +98,7 @@ export const review5 = {
   location: "Palo Alto, CA",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/ashley.svg",
+  img: "/images/ashley.jpg",
   alt: "Profile",
   start: "true",
   route: "/testimonials",
@@ -119,7 +119,7 @@ export const review6 = {
   location: "Minneapolis, MN",
   buttonLabel: "Start your journey",
   imgStart: "",
-  img: "/images/jason.svg",
+  img: "/images/jason.jpg",
   alt: "Profile",
   start: "",
   route: "/testimonials",
@@ -140,7 +140,7 @@ export const review7 = {
   location: "Topeka, KS",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/magdy.svg",
+  img: "/images/magdy.jpg",
   alt: "Profile",
   start: "true",
   route: "/testimonials",
@@ -161,7 +161,7 @@ export const review8 = {
   location: "Orlando, FL",
   buttonLabel: "Start your journey",
   imgStart: "",
-  img: "/images/kristen.svg",
+  img: "/images/kristen.jpg",
   alt: "Profile",
   start: "",
   route: "/testimonials",
@@ -182,7 +182,7 @@ export const review9 = {
   location: "Oak Brook, IL",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/troy.svg",
+  img: "/images/troy.jpg",
   alt: "Profile",
   start: "true",
   route: "/testimonials",
@@ -203,7 +203,7 @@ export const review10 = {
   location: "Sheboygan, WI",
   buttonLabel: "Start your journey",
   imgStart: "",
-  img: "/images/anthony.svg",
+  img: "/images/anthony.jpg",
   alt: "Profile",
   start: "",
   route: "/testimonials",
