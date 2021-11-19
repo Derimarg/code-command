@@ -45,7 +45,6 @@ export default function Footer() {
             <FooterLinkTitle>About Us</FooterLinkTitle>
             <FooterLink2 to="/testimonials">Testimonials</FooterLink2>
             <FooterLink2 to="/privacy">Privacy Policy</FooterLink2>
-            <FooterLink2 to="/">Acceptable Use Policy</FooterLink2>
             <FooterLink2 to="/terms">Terms of Service</FooterLink2>
             <FooterLink2 to="/cookies">Cookies Policy</FooterLink2>
           </FooterLinkItems>
