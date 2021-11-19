@@ -37,7 +37,6 @@ const Body = withRouter(({ location }, propss) => {
     { route: "/" },
     { route: "/login" },
     { route: "/signup" },
-    { route: "/services" },
     { route: "/courses" },
     { route: "/checkout" },
     { route: "/contact" },
