@@ -8,6 +8,7 @@ import OrderHistory from "../../pages/OrderHistory/OrderHistory";
 import Success from "../../pages/Success/Success";
 import PrivacyPage from "../../pages/Privacy/Privacy";
 import Cookies from "../../pages/Cookies/Cookies";
+import Terms from "../../pages/Terms/Terms"
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
@@ -33,87 +34,90 @@ const Pages = withRouter(({ location }) => {
   switch (location.pathname) {
     case "/":
       return (
-        <div>
-          {" "}
+        <>
           <Home />
-        </div>
+        </>
       );
     case "/services":
       return (
-        <div>
-          {" "}
+        <>
           <Services />
-        </div>
+        </>
       );
     case "/courses":
       return (
-        <div>
-          {" "}
+        <>
           <Courses />
-        </div>
+        </>
       );
     case "/checkout":
       return (
-        <div>
-          {" "}
+        <>
           <Checkout />
-        </div>
+        </>
       );
     case "/contact":
       return (
-        <div>
-          {" "}
+        <>
           <Contact />
-        </div>
+        </>
       );
     case "/orderHistory":
       return (
-        <div>
-          {" "}
+        <>
           <OrderHistory />
-        </div>
+        </>
       );
     case "/success":
       return (
-        <div>
-          {" "}
+        <>
           <Success />
-        </div>
+        </>
       );
     case "/privacy":
       return (
-        <div>
-          {" "}
+        <>
           <PrivacyPage />
-        </div>
+        </>
       );
     case "/cookies":
       return (
+        <>
+          <Cookies />
+        </>
+      );
+    case "/terms":
+      return (
         <div>
           {" "}
-          <Cookies />
+          <Terms />
         </div>
       );
     case "/login":
       return (
-        <div>
-          {" "}
+        <>
           <Login />
-        </div>
+        </>
       );
     case "/signup":
       return (
-        <div>
-          {" "}
+        <>
           <Signup />
-        </div>
+        </>
       );
+    case "/testimonials":
+      return (
+        <>
+          <h2>Coming soon!</h2>
+          {/* <Testimonials /> */}
+        </>
+      );
+
     default:
       return (
-        <div>
-          {" "}
+        <>
           <NotFound />
-        </div>
+        </>
       );
   }
 });

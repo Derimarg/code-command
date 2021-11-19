@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button } from "../../globalStyles";
 import { QUERY_PRODUCTS } from "../../utils/queries";
-import { GiRock } from "react-icons/gi";
+// import { GiRock } from "react-icons/gi";
 import { IconContext } from "react-icons/lib";
 import { useSelector, useDispatch } from "react-redux";
 import { UPDATE_PRODUCTS } from "../../utils/actions";

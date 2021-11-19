@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { FaCode } from "react-icons/fa";
+import {
+  FaCode,
+  FaDiscord,
+  FaSlack,
+  FaGithub,
+  FaStackOverflow,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // background-color: #101522; dark blue
@@ -107,7 +113,18 @@ export const FooterLinkTitle = styled.h2`
   margin-bottom: 16px;
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #0467fb;
+    transition: 0.3s ease-out;
+  }
+`;
+
+export const FooterLink2 = styled(Link)`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -166,4 +183,34 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+`;
+
+export const Discord = styled(FaDiscord)`
+  background: #fff;
+  color: #5865f2;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 3px;
+`;
+
+export const Slack = styled(FaSlack)`
+  background: linear-gradient(-120deg, #3eb991, #6ecadc, #e9a820, #e01563);
+  color: #000;
+  border-radius: 50%;
+  font-size: 2rem;
+`;
+
+export const Github = styled(FaGithub)`
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+`;
+
+export const StackOverflow = styled(FaStackOverflow)`
+  background: #fff;
+  color: #ef8236;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 3px;
+
 `;
