@@ -8,6 +8,7 @@ import OrderHistory from "../../pages/OrderHistory/OrderHistory";
 import Success from "../../pages/Success/Success";
 import PrivacyPage from "../../pages/Privacy/Privacy";
 import Cookies from "../../pages/Cookies/Cookies";
+import Terms from "../../pages/Terms/Terms"
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
@@ -92,6 +93,13 @@ const Pages = withRouter(({ location }) => {
         <div>
           {" "}
           <Cookies />
+        </div>
+      );
+    case "/terms":
+      return (
+        <div>
+          {" "}
+          <Terms />
         </div>
       );
     case "/login":
