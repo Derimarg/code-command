@@ -172,3 +172,7 @@ export const Subtitle = styled.p`
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
 `;
+
+export const Filters = styled.div`
+margin: 1rem;
+`;

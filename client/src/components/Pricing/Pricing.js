@@ -70,8 +70,8 @@ function Pricing() {
                       <PricingCardCost>${product.price}</PricingCardCost>
                       <PricingCardLength>per month</PricingCardLength>
                       <PricingCardFeatures>
+                        <PricingCardFeature>{product.difficulty}</PricingCardFeature>
                         <PricingCardFeature>{product.short}</PricingCardFeature>
-                        <PricingCardFeature></PricingCardFeature>
                         <PricingCardFeature>
                           {product.months} Month Program
                         </PricingCardFeature>

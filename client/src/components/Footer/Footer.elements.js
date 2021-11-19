@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { FaCode } from "react-icons/fa";
+import {
+  FaCode,
+  FaDiscord,
+  FaSlack,
+  FaGithub,
+  FaStackOverflow,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // background-color: #101522; dark blue
@@ -166,4 +172,26 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+`;
+
+export const Discord = styled(FaDiscord)`
+  color: #5865f2;
+  font-size: 2rem;
+`;
+
+export const Slack = styled(FaSlack)`
+  background: linear-gradient(-120deg, #3eb991, #6ecadc, #e9a820, #e01563);
+  color: #000;
+  border-radius: 50%;
+  font-size: 2rem;
+`;
+
+export const Github = styled(FaGithub)`
+  color: #fff;
+  font-size: 2rem;
+`;
+
+export const StackOverflow = styled(FaStackOverflow)`
+  color: #ef8236;
+  font-size: 2rem;
 `;

@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -20,3 +22,9 @@ export const GlobalStyles = createGlobalStyle`
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }`;
+
+export const CookieLink = styled(Link)`
+  color: #4b59f7;
+  font-size: 1rem;
+  font-weight: bold;
+`;
