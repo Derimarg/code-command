@@ -142,7 +142,7 @@ db.once("open", async () => {
     {
       name: "Foundation",
       category: categories[6]._id,
-      description: "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills.",
+      description: "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills. Only 12 monthly payments of $39.99",
       difficulty: "Beginners Learning Path",
       short: "HTML / CSS / JavaScript",
       months: 12,
@@ -154,7 +154,7 @@ db.once("open", async () => {
     {
       name: "Engineer",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course.",
+      description: "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course. Only 12 monthly payments of $69.99",
       difficulty: "Mid-Level Learning",
       short: "Python / C++",
       months: 12,
@@ -166,7 +166,7 @@ db.once("open", async () => {
     {
       name: "Professional",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes.",
+      description: "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes. Only 12 monthly payments of $89.99",
       difficulty: "Accelerated Learning",
       short: "Cybersecurity / Linux",
       months: 12,
