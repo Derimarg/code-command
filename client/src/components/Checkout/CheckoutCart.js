@@ -2,6 +2,7 @@ import React, {
   useEffect,
   // useState
 } from "react";
+import { BtnLink } from "../../containers/cart/Cartbar";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -15,14 +16,7 @@ import {
   TopButton,
   TopTexts,
   Bottom,
-  Button2,
   Info,
-  Summary,
-  // MobileSummary,
-  SummaryTitle,
-  SummaryItemText,
-  SummaryItem,
-  SummaryItemPrice,
   MsgContainer,
 } from "./CheckoutElements";
 import CartItem from "../CartItem";
@@ -34,7 +28,6 @@ import { idbPromise } from "../../utils/helpers";
 import {
   //  TOGGLE_CART,
   ADD_MULTIPLE_TO_CART,
-  // TOGGLE_CART,
 } from "../../utils/actions";
 import {
   CheckLink,
@@ -109,58 +102,12 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <Link to="/">
-            <TopButton>CONTINUE SHOPPING</TopButton>
-          </Link>
-          <TopTexts>{/* <TopText>Shopping Bag(2)</TopText> */}</TopTexts>
-
-          {Auth.loggedIn() ? (
-            <TopButton type="filled">CHECKOUT NOW</TopButton>
-          ) : (
-            <>
-              <CheckLink to="/login">
-                <TopButton type="filled">CHECKOUT NOW</TopButton>
-              </CheckLink>
-            </>
-          )}
-        </Top>
-        <Bottom>
-          <Info>
+        <Info>
             {state.cart.length ? (
               <>
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
-
-                <Summary>
-                  <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-                  <SummaryItem>
-                    <SummaryItemText>Subtotal</SummaryItemText>
-                    <SummaryItemPrice>$ 80</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryItemText>TAXES</SummaryItemText>
-                    <SummaryItemPrice>$ 5.90</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryItemText>Course Discount</SummaryItemText>
-                    <SummaryItemPrice>$ -5.90</SummaryItemPrice>
-                  </SummaryItem>
-                  <SummaryItem type="total">
-                    <SummaryItemText>Total</SummaryItemText>
-                    <SummaryItemPrice>${calculateTotal()}</SummaryItemPrice>
-                  </SummaryItem>
-                  {Auth.loggedIn() ? (
-                    <Button2 onClick={submitCheckout}>CHECKOUT NOW</Button2>
-                  ) : (
-                    <>
-                      <CheckLink to="/login">
-                        <Button2>CHECKOUT NOW</Button2>
-                      </CheckLink>
-                      <span>(log in to check out)</span>
-                    </>
-                  )}
-                </Summary>
               </>
             ) : (
               <MsgContainer>
@@ -168,6 +115,22 @@ const Cart = () => {
               </MsgContainer>
             )}
           </Info>
+        </Top>
+        <Bottom>
+        <Link to="/">
+            <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
+          <TopTexts>{/* <TopText>Shopping Bag(2)</TopText> */}</TopTexts>
+
+          {Auth.loggedIn() ? (
+            <TopButton onClick={submitCheckout} type="filled">CHECKOUT NOW</TopButton>
+          ) : (
+            <>
+              <BtnLink to="/login">
+                  <span>(log in to check out)</span>
+                </BtnLink>
+            </>
+          )}
         </Bottom>
       </Wrapper>
     </Container>
