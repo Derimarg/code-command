@@ -13,7 +13,7 @@ export const homeObjOne = {
   imgStart: "",
   img: pic2,
   alt: "Credit Card",
-  rote: "/testimonials"
+  route: "/testimonials",
 };
 
 export const homeObjTwo = {
@@ -28,6 +28,7 @@ export const homeObjTwo = {
   imgStart: "",
   img: require("../../assets/img/svg-1.svg").default,
   alt: "Vault",
+  route: "/signup",
 };
 
 export const homeObjThree = {
@@ -42,6 +43,7 @@ export const homeObjThree = {
   imgStart: "start",
   img: pic1,
   alt: "Vault",
+  route: "/signup",
 };
 
 export const homeObjFour = {
@@ -56,4 +58,5 @@ export const homeObjFour = {
   imgStart: "start",
   img: require("../../assets/img/svg-1.svg").default,
   alt: "Vault",
+  route: "/signup",
 };

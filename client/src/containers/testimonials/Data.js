@@ -17,7 +17,7 @@ export const review1 = {
   img: "/images/karen.jpg", // change
   alt: "Profile",
   start: "true",
-  route: "testimonials",
+  routes: "testimonials",
 };
 
 export const review2 = {
@@ -38,7 +38,7 @@ export const review2 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review3 = {
@@ -59,7 +59,7 @@ export const review3 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review4 = {
@@ -80,7 +80,7 @@ export const review4 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review5 = {
@@ -101,7 +101,7 @@ export const review5 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review6 = {
@@ -122,7 +122,7 @@ export const review6 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review7 = {
@@ -143,7 +143,7 @@ export const review7 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review8 = {
@@ -164,7 +164,7 @@ export const review8 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review9 = {
@@ -185,7 +185,7 @@ export const review9 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "true",
-  route: "testimonials",
+  route: "/testimonials",
 };
 
 export const review10 = {
@@ -206,5 +206,5 @@ export const review10 = {
   img: "/images/karen.jpg",
   alt: "Profile",
   start: "",
-  route: "testimonials",
+  route: "/testimonials",
 };

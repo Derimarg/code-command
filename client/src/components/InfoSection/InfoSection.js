@@ -34,7 +34,7 @@ function InfoSection({
   role,
   location,
   title,
-  // route,
+  route,
 }) {
   return (
     <>
@@ -57,7 +57,7 @@ function InfoSection({
                     {description}
                   </Subtitle>
 
-                  <Link to="/testimonials">
+                  <Link to={route}>
                     <Button big fontBig primary={primary}>
                       {buttonLabel}
                     </Button>
