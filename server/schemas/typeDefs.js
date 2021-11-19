@@ -16,6 +16,7 @@ const typeDefs = gql`
     category: Category
     short: String
     months: Int
+    difficulty: String
   }
 
   type Order {
