@@ -53,6 +53,3 @@ export const ButtonClear = styled.button`
   }
 `;
 
-export const filter = styled.filter`
-margin: 1rem;
-`;
