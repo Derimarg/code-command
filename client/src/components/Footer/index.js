@@ -23,6 +23,7 @@ import {
   Slack,
   Github,
   StackOverflow,
+  FooterLink2,
 } from "./Footer.elements";
 
 export default function Footer() {
@@ -42,27 +43,47 @@ export default function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/sign-up">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
+            <FooterLink2 to="/sign-up">How it works</FooterLink2>
+            <FooterLink2 to="/testimonials">Testimonials</FooterLink2>
+            <FooterLink2 to="/">Careers</FooterLink2>
+            <FooterLink2 to="/">Investors</FooterLink2>
+            <FooterLink2 to="/">Terms of Service</FooterLink2>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink to="/">Contact</FooterLink>
-            <FooterLink to="/">Support</FooterLink>
-            <FooterLink to="/">Destinations</FooterLink>
-            <FooterLink to="/">Sponsorships</FooterLink>
+            <FooterLink2 to="/contact">Contact</FooterLink2>
+            <FooterLink2 to="/">Support</FooterLink2>
+            <FooterLink2 to="/">Destinations</FooterLink2>
+            <FooterLink2 to="/">Sponsorships</FooterLink2>
           </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to="/">Slack</FooterLink>
-            <FooterLink to="/">Discord</FooterLink>
-            <FooterLink to="/">Stack Overflow</FooterLink>
-            <FooterLink href="">Github</FooterLink>
+            <FooterLink href="" target="_blank" aria-label="Github">
+              Github
+            </FooterLink>
+            <FooterLink
+              href="http://kuvirtbofsfpt-che6386.slack.com/"
+              target="_blank"
+              aria-label="Slack"
+            >
+              Slack
+            </FooterLink>
+            <FooterLink
+              href="https://discord.gg/KVS3HdU3"
+              target="_blank"
+              aria-label="Discord"
+            >
+              Discord
+            </FooterLink>
+            <FooterLink
+              href="https://stackoverflow.com/users/17421889/code-command"
+              target="_blank"
+              aria-label="StackOverFlow"
+            >
+              Stack Overflow
+            </FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
@@ -74,20 +95,37 @@ export default function Footer() {
           </SocialLogo>
           <WebsiteRights>
             Learn to code interactively &copy; code app{" "}
-            {new Date().getFullYear()} | All rights reserved.
+            {new Date().getFullYear()}{" "}
+            <span style={{ fontSize: "20px" }}>|</span> All rights reserved.
           </WebsiteRights>
           <SocialIcons>
-            <SocialIconLink href="/" target="_blank" aria-label="Github">
+            <SocialIconLink
+              href="https://github.com/Derimarg/code-command"
+              target="_blank"
+              aria-label="Github"
+            >
               <Github />
             </SocialIconLink>
-            <SocialIconLink href="/" target="_blank" aria-label="StackOverFlow">
-              <StackOverflow />
-            </SocialIconLink>
-            <SocialIconLink href="/" target="_blank" aria-label="Slack">
+            <SocialIconLink
+              href="http://kuvirtbofsfpt-che6386.slack.com/"
+              target="_blank"
+              aria-label="Slack"
+            >
               <Slack />
             </SocialIconLink>
-            <SocialIconLink href="" target="_blank" aria-label="Discord">
+            <SocialIconLink
+              href="https://discord.gg/KVS3HdU3"
+              target="_blank"
+              aria-label="Discord"
+            >
               <Discord />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://stackoverflow.com/users/17421889/code-command"
+              target="_blank"
+              aria-label="StackOverFlow"
+            >
+              <StackOverflow />
             </SocialIconLink>
           </SocialIcons>
         </SocialMediaWrap>
