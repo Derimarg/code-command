@@ -36,6 +36,10 @@ const productSchema = new Schema({
   months: {
     type: Number,
     required: false
+  },
+  difficulty: {
+    type: String,
+    required: false
   }
 });
 
