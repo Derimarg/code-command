@@ -5,16 +5,15 @@ export const review1 = {
   lightTopLine2: false,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Virgil 'The Penetrator' Smith", // change
-  headline: "Code Command helped me get my dream job in my 80s!", // change
-  //change
+  topLine: "Virgil 'The Penetrator' Smith",
+  headline: "Code Command helped me get my dream job in my 80s!",
   description:
-  "At 82 years old, I found myself a broke widower working as a door greeter at Walmart. I felt hopeless. Then a great miracle happened, Code Command completely changed my life! Only six months after starting the course, I secured a high-paying engineering role at Google, and I earn a small fortune on the side selling my Red Team penetration skills to the highest bidder. Words cannot express how grateful I am for the Code Command team, their awesome website, and curriculum. Thanks to Code Command I have now have hope and a future! Thank you CC!!",
-  role: "Software Engineer, Google", //change
-  location: "New Brunswick, NJ", // change
-  buttonLabel: "Start your journey", //change
+    "At 82 years old, I found myself a broke widower working as a door greeter at Walmart. I felt hopeless. Then a great miracle happened, Code Command completely changed my life! Only six months after starting the course, I secured a high-paying engineering role at Google, and I earn a small fortune on the side selling my Red Team penetration skills to the highest bidder. Words cannot express how grateful I am for the Code Command team, their awesome website, and curriculum. Thanks to Code Command I have now have hope and a future! Thank you CC!!",
+  role: "Software Engineer, Google",
+  location: "New Brunswick, NJ",
+  buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/old-man.svg", // change
+  img: "/images/old-man.svg",
   alt: "Profile",
   start: "true",
   routes: "testimonials",

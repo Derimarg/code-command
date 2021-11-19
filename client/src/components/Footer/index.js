@@ -43,20 +43,24 @@ export default function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/sign-up">Testimonials</FooterLink>
-            <FooterLink to="/">Privacy Policy</FooterLink>
-            <FooterLink to="/">Acceptable Use Policy</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
+            <FooterLink2 to="/testimonials">Testimonials</FooterLink2>
+            <FooterLink2 to="/privacy">Privacy Policy</FooterLink2>
+            <FooterLink2 to="/terms">Terms of Service</FooterLink2>
+            <FooterLink2 to="/cookies">Cookies Policy</FooterLink2>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink to="/">Contact</FooterLink>
-            </FooterLinkItems>
+            <FooterLink2 to="/contact">Contact</FooterLink2>
+          </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink href="" target="_blank" aria-label="Github">
+            <FooterLink
+              href="https://github.com/Derimarg/code-command"
+              target="_blank"
+              aria-label="Github"
+            >
               Github
             </FooterLink>
             <FooterLink
