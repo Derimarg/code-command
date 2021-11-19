@@ -29,7 +29,7 @@ As a web developer I want to continue learning through online courses, so that I
 <br />
 <br />
 
-> Link web page: https://code-command-team.herokuapp.com/
+> Link web page: https://code-command-team.herokuapp.com
 
 <details open="open">
 <summary>Table of Contents</summary>
@@ -137,7 +137,7 @@ GIVEN I am a user who has completed at least one course:
 <br/>
 <br/>
 
-![Demo](./assets/img/code-command-demo.gif)
+![Demo](./assets/img/code-command.gif)
 
 <br/>
 <br/>
@@ -256,9 +256,9 @@ Thanks goes to these wonderful people:
 
 <!-- CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
-|                                                                     Audry Ford                                                                      |                                                                           George Gomez                                                                            |                                                                          Derimar Gray                                                                           |                                                                     Rob Atalla                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
-|        <a href="https://github.com/audryf"> <img src="./assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>        |           <a href="https://github.com/georgedmendoza"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>           |             <a href="https://github.com/Derimarg"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>             |      <a href="https://github.com/ratalla816"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>      |
+|                                                                    Audry Ford                                                                     |                                                                          George Gomez                                                                           |                                                                         Derimar Gray                                                                          |                                                                    Rob Atalla                                                                     |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
+|           <a href="https://github.com/audryf"> <img src="./assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>            |           <a href="https://github.com/georgedmendoza"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>           |             <a href="https://github.com/Derimarg"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>             |      <a href="https://github.com/ratalla816"> <img src="./public/assets/img/github-alt-brands.svg" width="20" height="30" alt="github"> </a>      |
 | <a href="https://www.linkedin.com/in/audry-ford/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/george-mendoza-31289b171/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/derimar-gray-676275132/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> | <a href="https://www.linkedin.com/in/ratalla816/"> <img src="./public/assets/img/linkedin-brands.svg" width="20" height="30" alt="linkedin"> </a> |
 |       <a href="mailto:audryford792@gmail.com"><img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>       |            <a href="mailto:Georgedmendoza13@gmail.com"><img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"></a>             |             <a href="mailto:derimargray@gmail.com"> <img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>             |       <a href="mailto:rob.atalla@gmail.com"> <img src="./public/assets/img/envelope-solid.svg" width="20" height="30" alt="envelope"> </a>        |
 
