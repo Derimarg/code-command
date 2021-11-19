@@ -5,19 +5,18 @@ export const review1 = {
   lightTopLine2: false,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Virgil Smith", // change
-  headline: "Code Command helped me get my dream job in my 80s!", // change
-  //change
+  topLine: "Virgil Smith",
+  headline: "Code Command helped me get my dream job in my 80s!",
   description:
     "At 82 years old, I found myself a broke widower working as a door greeter at Walmart. I felt hopeless. Then a great miracle happened, Code Command completely changed my life! Only six months after starting the course, I secured a high-paying engineering role at Google, and I earn a small fortune on the side selling my Red Team penetration skills to the highest bidder. Words cannot express how grateful I am for the Code Command team, their awesome website, and curriculum. Thanks to Code Command I have now have hope and a future! Thank you CC!!",
   role: "Software Engineer, Google",
   location: "New Brunswick, NJ",
   buttonLabel: "Start your journey",
   imgStart: "start",
-  img: "/images/virgil.jpg", // change
+  img: "/images/virgil.jpg",
   alt: "Profile",
   start: "true",
-  routes: "testimonials",
+  routes: "signup",
 };
 
 export const review2 = {
@@ -38,7 +37,7 @@ export const review2 = {
   img: "/images/ted.jpg",
   alt: "Profile",
   start: "",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review3 = {
@@ -59,7 +58,7 @@ export const review3 = {
   img: "/images/heather.jpg",
   alt: "Profile",
   start: "true",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review4 = {
@@ -80,7 +79,7 @@ export const review4 = {
   img: "/images/chet.jpg",
   alt: "Profile",
   start: "",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review5 = {
@@ -101,7 +100,7 @@ export const review5 = {
   img: "/images/ashley.jpg",
   alt: "Profile",
   start: "true",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review6 = {
@@ -122,7 +121,7 @@ export const review6 = {
   img: "/images/jason.jpg",
   alt: "Profile",
   start: "",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review7 = {
@@ -143,7 +142,7 @@ export const review7 = {
   img: "/images/magdy.jpg",
   alt: "Profile",
   start: "true",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review8 = {
@@ -164,7 +163,7 @@ export const review8 = {
   img: "/images/kristen.jpg",
   alt: "Profile",
   start: "",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review9 = {
@@ -185,7 +184,7 @@ export const review9 = {
   img: "/images/troy.jpg",
   alt: "Profile",
   start: "true",
-  route: "/testimonials",
+  route: "/signup",
 };
 
 export const review10 = {
@@ -206,5 +205,5 @@ export const review10 = {
   img: "/images/anthony.jpg",
   alt: "Profile",
   start: "",
-  route: "/testimonials",
+  route: "/signup",
 };
