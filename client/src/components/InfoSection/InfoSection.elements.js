@@ -21,7 +21,7 @@ export const InfoSec2 = styled.div`
   justify-content: center;
   @media only screen and (max-width : 380px) {
     font-size: 1.5rem;
-    margin-left: 2rem;
+    margin:auto;
     width: 100%;
   }
 `;
