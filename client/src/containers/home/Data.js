@@ -95,4 +95,20 @@ export const homeObjSix = {
   start: "true",
 };
 
-
+export const whoWeAreObj = {
+  primary: true,
+  lightBg: true,
+  lightTopLine: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: "Secure Database",
+  headline:
+    "1",
+  description:
+    "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
+  buttonLabel: "Sign Up Now",
+  imgStart: "start",
+  img: "/images/svg-03.svg",
+  alt: "",
+  start: "true",
+};
