@@ -18,7 +18,8 @@ import { settings } from "./settings.js";
 import Detail from "./pages/Detail/Detail";
 import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
-
+import CookieConsent from "react-cookie-consent";
+import { CookieLink } from "./Global";
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem("id_token");
@@ -70,16 +71,16 @@ const Body = withRouter(({ location }, propss) => {
             />
           ))}
           <Route
-              exact
-              path="/products/:id"
-              render={(props) => (
-                <Detail
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
+            exact
+            path="/products/:id"
+            render={(props) => (
+              <Detail
+                {...props}
+                theme={propss.theme}
+                setTheme={propss.setTheme}
+              />
+            )}
+          />
 
           <Route
             render={(props) => (
@@ -156,6 +157,23 @@ function Main(props) {
             <GlobalStyle />
             <ScrollToTop />
             <Body {...props} theme={props.theme} setTheme={props.setTheme} />
+            <CookieConsent
+              debug={true}
+              location="bottom"
+              style={{ background: "#101522", textAlign: "left" }}
+              buttonStyle={{
+                color: "#fff",
+                background: "#4B59F7",
+                fontSize: "24px",
+                borderRadius: "8px"
+              }}
+              buttonText={"I understand!"}
+              expires={150}
+              buttonClasses="btn btn-primary"
+            >
+              This site use cookies. See our{" "}
+              <CookieLink to="/cookies">privacy policy</CookieLink> for more.
+            </CookieConsent>
           </Provider>
         </div>
       </Router>

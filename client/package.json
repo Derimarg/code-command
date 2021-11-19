@@ -21,7 +21,9 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "jwt-decode": "^2.2.0",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
+    "react-cookie-consent": "^6.4.1",
     "react-cursor-custom": "^1.2.4",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",
@@ -34,8 +36,7 @@
     "redux": "^4.1.2",
     "styled-components": "^5.3.3",
     "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7",
-    "pure-react-carousel": "^1.27.6"
+    "styletron-react": "^5.2.7"
   },
   "scripts": {
     "start": "react-scripts start",
