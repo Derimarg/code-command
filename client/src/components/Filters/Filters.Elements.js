@@ -19,7 +19,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 4px;
+  margin: 5px 4px;
   background-color: teal;
   color: #fff;
   box-shadow: 2px 2px 2px 1px black;
@@ -53,6 +53,6 @@ export const ButtonClear = styled.button`
   }
 `;
 
-export const filter = styled.filter`
-margin: 1rem;
-`;
+// export const filter = styled.filter`
+// margin: 1rem;
+// `;

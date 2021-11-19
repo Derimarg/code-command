@@ -27,6 +27,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 40,
+      includedCourses: 1
     },
     {
       name: "SQL / MongoDB",
@@ -36,6 +37,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 500,
+      includedCourses: 1
     },
     {
       name: "MVC / PWA / MERN",
@@ -45,6 +47,7 @@ db.once("open", async () => {
       image: "mern.png",
       price: 598.87,
       quantity: 20,
+      includedCourses: 1
     },
     {
       name: "Computer Science",
@@ -54,6 +57,7 @@ db.once("open", async () => {
       image: "computerscience.jpg",
       price: 249.99,
       quantity: 50,
+      includedCourses: 1
     },
     {
       name: "Beginners guide to C++ and machine code compiling",
@@ -63,6 +67,7 @@ db.once("open", async () => {
       image: "cpluslogo.svg",
       price: 249.99,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Python",
@@ -72,6 +77,7 @@ db.once("open", async () => {
       image: "pythonlogo.png",
       price: 399.99,
       quantity: 30,
+      includedCourses: 1
     },
     {
       name: "Python - Machine Learning",
@@ -81,6 +87,7 @@ db.once("open", async () => {
       image: "pythonML.jpg",
       price: 199.99,
       quantity: 30,
+      includedCourses: 1
     },
     {
       name: "Cybersecurity",
@@ -90,6 +97,7 @@ db.once("open", async () => {
       image: "cybersecurity.jpg",
       price: 329.85,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Digital Marketing",
@@ -99,6 +107,7 @@ db.once("open", async () => {
       image: "digitalmarketing.jpg",
       price: 499.99,
       quantity: 1000,
+      includedCourses: 1
     },
     {
       name: "Introduction to Linux",
@@ -108,6 +117,7 @@ db.once("open", async () => {
       image: "linuxlogo.png",
       price: 195.49,
       quantity: 1000,
+      includedCourses: 1
     },
     {
       name: "Beginners guide to Tails and TOR",
@@ -117,6 +127,7 @@ db.once("open", async () => {
       image: "tails.svg",
       price: 327.27,
       quantity: 100,
+      includedCourses: 1
     },
     {
       name: "Introduction to Docker with Kubernetes",
@@ -126,6 +137,7 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
+      includedCourses: 1
     },
     {
       name: "Foundation",
@@ -137,6 +149,7 @@ db.once("open", async () => {
       image: "foundation.svg",
       price: 39.99,
       quantity: 600,
+      includedCourses: 3
     },
     {
       name: "Engineer",
@@ -147,7 +160,8 @@ db.once("open", async () => {
       months: 12,
       image: "engineer.svg",
       price: 69.99,
-      quantity: 600
+      quantity: 600,
+      includedCourses: 4
     },
     {
       name: "Professional",
@@ -159,6 +173,7 @@ db.once("open", async () => {
       image: "professional.svg",
       price: 89.99,
       quantity: 600,
+      includedCourses: 5
     },
   ]);
 
