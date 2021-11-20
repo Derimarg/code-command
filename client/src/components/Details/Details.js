@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { useSelector, useDispatch } from "react-redux";
 import { Container } from "../../globalStyles";
+import Load from "../Load/index";
 
 import {
   REMOVE_FROM_CART,
@@ -124,10 +125,6 @@ export default function Details({
                     <Subtitle lightTextDesc={lightTextDesc}>
                       <strong>Price: </strong>${currentProduct.price}
                     </Subtitle>
-                    <p>
-                      <strong>Price:</strong>${currentProduct.price}{" "}
-                    </p>
-
                     <>
                       <ButtonDetail
                         big
@@ -164,8 +161,7 @@ export default function Details({
           </InfoSec>
         </>
       ) : null}
-      {/* // add image loading */}
-      {loading ? <img src="" alt="loading" /> : null}
+      {loading ? <Load /> : null}
     </>
   );
 }

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"; //  useEffect // useState,
-// import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+
 import {
   ProductWrapper,
   ProductsHeading,
@@ -7,11 +7,7 @@ import {
   MsgContainer,
 } from "../Products/ProductsElements";
 import CourseItem from "../CourseItem/index";
-import {
-  InfoSec2,
-  // BtnLink
-} from "../InfoSection/InfoSection.elements";
-// import { Button } from "../../globalStyles";
+import { InfoSec2 } from "../InfoSection/InfoSection.elements";
 import { FooterSubscription } from "../Footer/Footer.elements";
 import Announcement from "../Announcement/Announcement";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,16 +17,8 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
 import Load from "../Load/index";
-// const delay = 5000;
 
-export default function CoursesSection({
-  heading,
-  description,
-  // data2,
-  primary,
-  buttonLabel,
-  lightBg,
-}) {
+export default function CoursesSection({ heading, description, lightBg }) {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -74,11 +62,6 @@ export default function CoursesSection({
       <InfoSec2 lightBg={lightBg}>
         <ProductsHeading>{heading}</ProductsHeading>
         <ProductsDesc>{description}</ProductsDesc>
-        {/* <BtnLink to="/products/61973ba56b5ceef4529c0137">
-          <Button fontBig primary={primary}>
-            {buttonLabel}
-          </Button>
-        </BtnLink> */}
       </InfoSec2>
       <FooterSubscription>
         <Filters />

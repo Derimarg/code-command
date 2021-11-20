@@ -27,7 +27,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 40,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "SQL / MongoDB",
@@ -37,7 +37,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 598.87,
       quantity: 500,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "MVC / PWA / MERN",
@@ -47,7 +47,7 @@ db.once("open", async () => {
       image: "mern.png",
       price: 598.87,
       quantity: 20,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Computer Science",
@@ -57,7 +57,7 @@ db.once("open", async () => {
       image: "computerscience.jpg",
       price: 249.99,
       quantity: 50,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Beginners guide to C++ and machine code compiling",
@@ -67,7 +67,7 @@ db.once("open", async () => {
       image: "cpluslogo.svg",
       price: 249.99,
       quantity: 100,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Python",
@@ -77,7 +77,7 @@ db.once("open", async () => {
       image: "pythonlogo.png",
       price: 399.99,
       quantity: 30,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Python - Machine Learning",
@@ -87,7 +87,7 @@ db.once("open", async () => {
       image: "pythonML.jpg",
       price: 199.99,
       quantity: 30,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Cybersecurity",
@@ -97,7 +97,7 @@ db.once("open", async () => {
       image: "cybersecurity.jpg",
       price: 329.85,
       quantity: 100,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Digital Marketing",
@@ -107,7 +107,7 @@ db.once("open", async () => {
       image: "digitalmarketing.jpg",
       price: 499.99,
       quantity: 1000,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Introduction to Linux",
@@ -117,7 +117,7 @@ db.once("open", async () => {
       image: "linuxlogo.png",
       price: 195.49,
       quantity: 1000,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Beginners guide to Tails and TOR",
@@ -127,7 +127,7 @@ db.once("open", async () => {
       image: "tails.svg",
       price: 327.27,
       quantity: 100,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Introduction to Docker with Kubernetes",
@@ -137,43 +137,46 @@ db.once("open", async () => {
       image: "dockerlogo.svg",
       price: 249.99,
       quantity: 600,
-      includedCourses: 1
+      includedCourses: 1,
     },
     {
       name: "Foundation",
       category: categories[6]._id,
-      description: "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills. Only 12 monthly payments of $39.99 each.",
+      description:
+        "This 12 month program includes all three of our most popular full stack courses, 'HTML / CSS / JavaScript / Bootstrap' course, the 'SQL / MongoDB' course, and the 'MVC / PWA / MERN' stack course. Stand out from the competition by gaining real world skills. Only 12 monthly payments of $39.99 each.",
       difficulty: "Beginners Learning Path",
       short: "HTML / CSS / JavaScript",
       months: 12,
       image: "foundation.svg",
       price: 39.99,
       quantity: 600,
-      includedCourses: 3
+      includedCourses: 3,
     },
     {
       name: "Engineer",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course. Only 12 monthly payments of $69.99 each.",
+      description:
+        "This 12 month program includes the 'Computer Science' course, the 'Beginners guide to C++ and machine code compiling' course, the 'Python' course, and the 'Python - Machine Learning' course. Only 12 monthly payments of $69.99 each.",
       difficulty: "Mid-Level Learning",
       short: "Python / C++",
       months: 12,
       image: "engineer.svg",
       price: 69.99,
       quantity: 600,
-      includedCourses: 4
+      includedCourses: 4,
     },
     {
       name: "Professional",
       category: categories[6]._id,
-      description: "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes. Only 12 monthly payments of $89.99 each.",
+      description:
+        "This 12 month program includes the 'Cybersecurity' course, the 'Digital Marketing' course, the 'Introduction to Linux' course, 'Beginners Guide to Tails and TOR', and 'Introduction to Docker with Kubernetes. Only 12 monthly payments of $89.99 each.",
       difficulty: "Accelerated Learning",
       short: "Cybersecurity / Linux",
       months: 12,
       image: "professional.svg",
       price: 89.99,
       quantity: 600,
-      includedCourses: 5
+      includedCourses: 5,
     },
   ]);
 
@@ -186,6 +189,17 @@ db.once("open", async () => {
     lastName: "Ford",
     email: "audryf@email.com",
     password: "password",
+    orders: [
+      {
+        products: [
+          products[5]._id,
+          products[3]._id,
+          products[1]._id,
+          products[4]._id,
+          products[6]._id,
+        ],
+      },
+    ],
   });
 
   await User.create({
@@ -196,10 +210,11 @@ db.once("open", async () => {
     orders: [
       {
         products: [
-          products[0]._id,
+          products[2]._id,
           products[0]._id,
           products[1]._id,
           products[4]._id,
+          products[6]._id,
         ],
       },
     ],
@@ -210,6 +225,18 @@ db.once("open", async () => {
     lastName: "Atalla",
     email: "roba@email.com",
     password: "password",
+    orders: [
+      {
+        products: [
+          products[1]._id,
+          products[2]._id,
+          products[3]._id,
+          products[4]._id,
+          products[5]._id,
+          products[6]._id,
+        ],
+      },
+    ],
   });
 
   await User.create({
@@ -217,6 +244,17 @@ db.once("open", async () => {
     lastName: "Mendoza",
     email: "georgem@email.com",
     password: "password",
+    orders: [
+      {
+        products: [
+          products[5]._id,
+          products[1]._id,
+          products[3]._id,
+          products[4]._id,
+          products[6]._id,
+        ],
+      },
+    ],
   });
 
   console.log("users seeded");
