@@ -10,9 +10,15 @@ import { settings } from "./settings.js";
 import Detail from "./pages/Detail/Detail";
 import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
-import { routesData, navbarObj, cartObj, footerObj } from "./routesData";
+import {
+  routesData,
+  navbarObj,
+  cartObj,
+  footerObj,
+  cookieObj,
+} from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
-import Cookies from "./components/Cookies/Cookies";
+
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem("id_token");
@@ -114,7 +120,7 @@ function Main(props) {
             <GlobalStyle />
             <ScrollToTop />
             <Body {...props} theme={props.theme} setTheme={props.setTheme} />
-            <Cookies />
+            <BarTemplate {...cookieObj} />
           </Provider>
         </div>
       </Router>
