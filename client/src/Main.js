@@ -2,14 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
-import GlobalStyle from "./globalStyles";
 import ScrollToTop from "./components/ScrollTop";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import { settings } from "./settings.js";
 import Detail from "./pages/Detail/Detail";
 import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
+import GlobalStyles from "./globalStyles";
 import {
   routesData,
   navbarObj,
@@ -31,95 +30,27 @@ const client = new ApolloClient({
   uri: "/graphql",
 });
 
-const Body = (propss) => {
-  if (settings.isSplash) {
-    return (
-      <>
-        <BarTemplate {...navbarObj} />
-        <Switch>
-          {routesData.map((x) => (
-            <Route
-              exact
-              path={x.route}
-              render={(props) => (
-                <Loading
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-          ))}
-          <Route
-            exact
-            path="/products/:id"
-            render={(props) => (
-              <Detail
-                {...props}
-                theme={propss.theme}
-                setTheme={propss.setTheme}
-              />
-            )}
-          />
-
-          <Route
-            render={(props) => (
-              <NotFound
-                {...props}
-                theme={propss.theme}
-                setTheme={propss.setTheme}
-              />
-            )}
-          />
-        </Switch>
-        <BarTemplate {...cartObj} />
-        <BarTemplate {...footerObj} />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Switch>
-          {routesData.map((x) => (
-            <Route
-              exact
-              path={x.route}
-              render={(props) => (
-                <Loading
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-          ))}
-
-          <Route
-            render={(props) => (
-              <NotFound
-                {...props}
-                theme={propss.theme}
-                setTheme={propss.setTheme}
-              />
-            )}
-          />
-        </Switch>
-        <BarTemplate {...cartObj} />
-        <BarTemplate {...footerObj} />
-      </>
-    );
-  }
-};
-
-function Main(props) {
+export default function Main() {
   return (
     <ApolloProvider client={client}>
       <Router basename="/">
         <div>
           <Provider store={store}>
-            <GlobalStyle />
+            <GlobalStyles />
             <ScrollToTop />
-            <Body {...props} theme={props.theme} setTheme={props.setTheme} />
+            <>
+              <BarTemplate {...navbarObj} />
+              <Switch>
+                {routesData.map((x) => (
+                  <Route exact path={x.route} component={Loading} />
+                ))}
+                <Route exact path="/products/:id" component={Detail} />
+
+                <Route component={NotFound} />
+              </Switch>
+              <BarTemplate {...cartObj} />
+              <BarTemplate {...footerObj} />
+            </>
             <BarTemplate {...cookieObj} />
           </Provider>
         </div>
@@ -127,4 +58,3 @@ function Main(props) {
     </ApolloProvider>
   );
 }
-export default Main;
