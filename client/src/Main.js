@@ -138,8 +138,7 @@ const Body = withRouter(({ location }, propss) => {
   } else {
     return (
       <>
-        {/* <Top /> */}
-
+        <Top />
         <Switch>
           {routesData.map((x) => (
             <Route
