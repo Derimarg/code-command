@@ -9,6 +9,5 @@ export { default as Filters } from "./Filters/index";
 export { default as Details } from "./Details/Details";
 export { default as ContactSection } from "./ContactSection/ContactSection";
 export { default as Load } from "./Load/index";
-export { default as Carousel } from "./Carousel/Carousel";
-export { default as ReviewSlide } from "./ReviewSlide/ReviewSlide";
 export { default as TestimonialsSection } from "./TestimonialsSection/TestimonialsSection";
+export { default as Cookies } from "./Cookies/Cookies";

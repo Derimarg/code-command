@@ -1,6 +1,4 @@
 import styled from "styled-components";
-
-// background: #150f0f;
 export const ProductsContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -117,42 +115,3 @@ export const MsgContainer = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
 `;
-
-// export const coursesHeader = styled.div`
-// position: absolute;
-//   width: 100%;
-//   display: flex;
-//   flex-wrap: wrap;
-//   media (max-width: 400px) {
-  
-//   }
-
-// ;`
-
-// export const buttonLabel = styled.div`
-// position: relative;
-//   width: 100%;
-//   display: flex;
-//   flex-wrap: wrap;
-// ;`
-
-// export const Btn = styled.a`
-// media (max-width: 400px) {
-// padding-left: 20px;
-// font-size: 15px;
-// }
-// ;`
-
-// export const h1 = styled.h1`
-// media (max-width: 400px) {
-// padding-left: 20px;
-// font-size: 15px;
-// }
-// ;`
-
-// export const h3 = styled.h1`
-// media (max-width: 400px) {
-//   padding-left: 20px;
-// font-size: 15px;
-// }
-// ;`

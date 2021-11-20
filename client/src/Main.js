@@ -1,25 +1,24 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  withRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 import GlobalStyle from "./globalStyles";
 import ScrollToTop from "./components/ScrollTop";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import { Footer } from "./components";
-import NavContainer from "./containers/navbar/NavContainer.js";
-import Cartbar from "./containers/cart/Cartbar";
 import { settings } from "./settings.js";
 import Detail from "./pages/Detail/Detail";
 import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
-import CookieConsent from "react-cookie-consent";
-import { CookieLink } from "./Global";
+import {
+  routesData,
+  navbarObj,
+  cartObj,
+  footerObj,
+  cookieObj,
+} from "./routesData";
+import { BarTemplate } from "./containers/bar/BarTemplate";
+
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem("id_token");
@@ -32,32 +31,11 @@ const client = new ApolloClient({
   uri: "/graphql",
 });
 
-const Body = withRouter(({ location }, propss) => {
-  const routesData = [
-    { route: "/" },
-    { route: "/login" },
-    { route: "/signup" },
-    { route: "/courses" },
-    { route: "/checkout" },
-    { route: "/contact" },
-    { route: "/orderHistory" },
-    { route: "/success" },
-    { route: "/privacy" },
-    { route: "/cookies" },
-    { route: "/terms" },
-    { route: "/testimonials" },
-  ];
-
+const Body = (propss) => {
   if (settings.isSplash) {
     return (
-      <div>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/splash" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <NavContainer />}
+      <>
+        <BarTemplate {...navbarObj} />
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -94,25 +72,13 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <Cartbar />}
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Footer />}
-      </div>
+        <BarTemplate {...cartObj} />
+        <BarTemplate {...footerObj} />
+      </>
     );
   } else {
     return (
-      <div>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <NavContainer />}
+      <>
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -138,21 +104,12 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Cartbar />}
-
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Footer />}
-      </div>
+        <BarTemplate {...cartObj} />
+        <BarTemplate {...footerObj} />
+      </>
     );
   }
-});
+};
 
 function Main(props) {
   return (
@@ -163,23 +120,7 @@ function Main(props) {
             <GlobalStyle />
             <ScrollToTop />
             <Body {...props} theme={props.theme} setTheme={props.setTheme} />
-            <CookieConsent
-              debug={true}
-              location="bottom"
-              style={{ background: "#101522", textAlign: "left" }}
-              buttonStyle={{
-                color: "#fff",
-                background: "#4B59F7",
-                fontSize: "24px",
-                borderRadius: "8px",
-              }}
-              buttonText={"I understand!"}
-              expires={150}
-              buttonClasses="btn btn-primary"
-            >
-              This site use cookies. See our{" "}
-              <CookieLink to="/cookies">privacy policy</CookieLink> for more.
-            </CookieConsent>
+            <BarTemplate {...cookieObj} />
           </Provider>
         </div>
       </Router>

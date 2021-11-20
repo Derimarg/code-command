@@ -20,6 +20,7 @@
 // }
 
 // Website related settings
+
 const settings = {
   isSplash: true, // Change this to true if you want to use the splash screen.
   isLoading: true, // if true will display a loading icon before each route

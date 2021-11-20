@@ -13,7 +13,7 @@ import {
   review10,
 } from "../../containers/testimonials/Data";
 
-function ServicesSec() {
+export default function ServicesSec() {
   return (
     <>
       <InfoSection {...review1} />
@@ -29,5 +29,3 @@ function ServicesSec() {
     </>
   );
 }
-
-export default ServicesSec;
