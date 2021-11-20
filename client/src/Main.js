@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
 import CookieConsent from "react-cookie-consent";
 import { CookieLink } from "./Global";
+import { routesData } from "./routesData";
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem("id_token");
@@ -33,31 +34,67 @@ const client = new ApolloClient({
 });
 
 const Body = withRouter(({ location }, propss) => {
-  const routesData = [
-    { route: "/" },
-    { route: "/login" },
-    { route: "/signup" },
-    { route: "/courses" },
-    { route: "/checkout" },
-    { route: "/contact" },
-    { route: "/orderHistory" },
-    { route: "/success" },
-    { route: "/privacy" },
-    { route: "/cookies" },
-    { route: "/terms" },
-    { route: "/testimonials" },
-  ];
+  // const element = [
+  //   { A: <NavContainer /> },
+  //   { B: <Cartbar /> },
+  //   { C: <Footer /> },
+  // ];
+  // function DoNotShow() {
+  //   return (
+  //     <>
+  //       {element.map(() => (
+  //         <>
+  //           {location.pathname !== "/login" &&
+  //             location.pathname !== "/signup" &&
+  //             location.pathname !== "/privacy" &&
+  //             location.pathname !== "/cookies" &&
+  //             location.pathname !== "/terms" && { element }}
+  //         </>
+  //       ))}
+  //     </>
+  //   );
+  // }
 
-  if (settings.isSplash) {
+  const Top = () => {
     return (
-      <div>
+      <>
         {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/splash" &&
           location.pathname !== "/signup" &&
           location.pathname !== "/privacy" &&
           location.pathname !== "/cookies" &&
           location.pathname !== "/terms" && <NavContainer />}
+      </>
+    );
+  };
+
+  const Medium = () => {
+    return (
+      <>
+        {location.pathname !== "/login" &&
+          location.pathname !== "/signup" &&
+          location.pathname !== "/privacy" &&
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" && <Cartbar />}
+      </>
+    );
+  };
+
+  const Bottom = () => {
+    return (
+      <>
+        {location.pathname !== "/login" &&
+          location.pathname !== "/signup" &&
+          location.pathname !== "/privacy" &&
+          location.pathname !== "/cookies" &&
+          location.pathname !== "/terms" && <Footer />}
+      </>
+    );
+  };
+
+  if (settings.isSplash) {
+    return (
+      <>
+        <Top />
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -94,25 +131,15 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" && <Cartbar />}
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Footer />}
-      </div>
+        <Medium />
+        <Bottom />
+      </>
     );
   } else {
     return (
-      <div>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <NavContainer />}
+      <>
+        {/* <Top /> */}
+
         <Switch>
           {routesData.map((x) => (
             <Route
@@ -138,18 +165,9 @@ const Body = withRouter(({ location }, propss) => {
             )}
           />
         </Switch>
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Cartbar />}
-
-        {location.pathname !== "/login" &&
-          location.pathname !== "/signup" &&
-          location.pathname !== "/privacy" &&
-          location.pathname !== "/cookies" &&
-          location.pathname !== "/terms" && <Footer />}
-      </div>
+        <Medium />
+        <Bottom />
+      </>
     );
   }
 });
