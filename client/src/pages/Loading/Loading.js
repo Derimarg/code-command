@@ -16,7 +16,7 @@ import Testimonials from "../../pages/Testimonials/Testimonials";
 
 import "./Load.css";
 
-function AnimatedLoad(props) {
+function AnimatedLoad() {
   return (
     <div className="logo_wrapper">
       <div className="loading">
@@ -84,7 +84,6 @@ const Pages = withRouter(({ location }) => {
     case "/terms":
       return (
         <div>
-          {" "}
           <Terms />
         </div>
       );
@@ -116,9 +115,9 @@ const Pages = withRouter(({ location }) => {
   }
 });
 
-export default function Loading(props) {
+export default function Loading() {
   const [redirect, setRedirect] = useState(false);
   setTimeout(() => setRedirect(true), 1000);
 
-  return redirect ? <Pages /> : <AnimatedLoad theme={props.theme} />;
+  return redirect ? <Pages /> : <AnimatedLoad />;
 }

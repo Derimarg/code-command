@@ -11,29 +11,25 @@ import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
 
-export default function Home(lightBg) {
-  function ShowHomePage() {
-    if (Auth.loggedIn()) {
-      return (
-        <>
-          <Courses />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <Fade top duration={2000} distance="80px">
-            <InfoSection {...homeObjOne} />
-          </Fade>
-          <Pricing />
-          <InfoSection {...homeObjFour} />
-          <InfoSection {...homeObj7} />
-          <InfoSection {...homeObjTwo} />
-          <InfoSection {...homeObj8} />
-        </>
-      );
-    }
+export default function Home(lightBg, props) {
+  if (Auth.loggedIn()) {
+    return (
+      <>
+        <Courses />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Fade top duration={2000} distance="80px">
+          <InfoSection {...homeObjOne} theme={props.theme} />
+        </Fade>
+        <Pricing theme={props.theme} />
+        <InfoSection {...homeObjFour} theme={props.theme} />
+        <InfoSection {...homeObj7} theme={props.theme} />
+        <InfoSection {...homeObjTwo} theme={props.theme} />
+        <InfoSection {...homeObj8} theme={props.theme} />
+      </>
+    );
   }
-
-  return <div>{ShowHomePage()}</div>;
 }
