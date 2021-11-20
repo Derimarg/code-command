@@ -2,14 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { QUERY_USER } from "../../utils/queries";
+import { HistoryContainer } from "./History.Elements";
 import {
-  HistoryContainer,
-  ItemWrapper,
-  ItemInfoWrapper,
-  ItemInfo,
-  Img
-} from "./History.Elements";
-import { MsgContainer } from "../Products/ProductsElements";
+  ProductWrapper,
+  ProductTitle,
+  ProductCard,
+  ProductImg,
+  ProductInfo,
+  ProductPrice,
+  MsgContainer,
+} from "../Products/ProductsElements";
 
 export default function HistorySection() {
   const { data } = useQuery(QUERY_USER);
@@ -22,44 +24,56 @@ export default function HistorySection() {
   return (
     <>
       <HistoryContainer>
-      <Link to="/">Start Shopping</Link>
+        <Link
+          to="/"
+          style={{
+            fontSize: "1.5rem",
+            color: "#009999",
+          }}
+        >
+          Start Shopping
+        </Link>
 
         {user ? (
-          
           <>
-            <h2>
+            <h2 style={{ margin: "2rem" }}>
               Order History for,
-              <span>
+              <span style={{ color: "#4B59F7" }}>
                 {user.firstName} {user.lastName}
               </span>
             </h2>
-            {user.orders.length===0 ? (
+            {user.orders.length === 0 ? (
               <MsgContainer>
                 <h2>You haven't purchased any products yet!</h2>
-              </MsgContainer> 
-            ): null}
+              </MsgContainer>
+            ) : null}
 
             {user.orders.map((order) => (
-            <ItemWrapper key={order._id}>
-              <h3>
-                {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-              </h3>
-              <ItemInfoWrapper>
-                {order.products.map(({ _id, image, name, price }, index) => (
-                  <ItemInfo key={index}>
-                    <Link to={`/products/${_id}`}>
-                      <Img alt={name} src={`/images/${image}`} />
-                      <p>{name}</p>
-                    </Link>
-                    <div>
-                      <span>${price}</span>
-                    </div>
-                  </ItemInfo>
-                ))}
-              </ItemInfoWrapper>
-            </ItemWrapper>
-          ))}
-           
+              <>
+                <h3 style={{ margin: "2rem" }}>
+                  {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
+                </h3>
+                <ProductWrapper key={order._id}>
+                  {order.products.map(({ _id, image, name, price }, index) => (
+                    <ProductCard key={index}>
+                      <Link to={`/products/${_id}`}>
+                        <ProductImg src={`/images/${image}`} alt={name} />
+                      </Link>
+
+                      <ProductInfo>
+                        <Link
+                          to={`/products/${_id}`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <ProductTitle>{name}</ProductTitle>
+                        </Link>
+                        <ProductPrice>${price}</ProductPrice>
+                      </ProductInfo>
+                    </ProductCard>
+                  ))}
+                </ProductWrapper>
+              </>
+            ))}
           </>
         ) : (
           <>
