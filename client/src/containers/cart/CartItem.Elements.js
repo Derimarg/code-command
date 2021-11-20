@@ -30,7 +30,7 @@ export const CartBody = styled.div`
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 0.5rem;
   backdrop-filter: blur(35px);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   opacity: 1;
@@ -47,7 +47,7 @@ export const CartHeaderWraper = styled(Container)`
   padding: 0.1rem;
   height: 60px;
   color: black;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #000;
   ${Container}
 `;
 

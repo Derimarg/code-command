@@ -103,10 +103,17 @@ export default function Cartbar() {
           ))}
 
           <div>
-            <strong>Total: ${calculateTotal()}</strong>
+            <span style={{ marginRight: "3rem" }}>
+              <strong>Total: ${calculateTotal()}</strong>
+            </span>
 
             {Auth.loggedIn() ? (
-              <BtnCheckout onClick={submitCheckout}>Checkout</BtnCheckout>
+              <BtnCheckout
+                
+                onClick={submitCheckout}
+              >
+                Checkout
+              </BtnCheckout>
             ) : (
               <>
                 <BtnLink to="/login">
