@@ -1,3 +1,8 @@
+import React from "react";
+import NavContainer from "./containers/navbar/NavContainer";
+import Cartbar from "./containers/cart/Cartbar";
+import { Footer } from "./components";
+
 export const routesData = [
   { route: "/" },
   { route: "/login" },
@@ -12,3 +17,7 @@ export const routesData = [
   { route: "/terms" },
   { route: "/testimonials" },
 ];
+
+export const navbarObj = { element: <NavContainer /> };
+export const cartObj = { element: <Cartbar /> };
+export const footerObj = { element: <Footer /> };
