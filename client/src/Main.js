@@ -18,6 +18,7 @@ import {
   topObj,
 } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
+import DotRing from "./components/DotRing/DotRing";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -39,6 +40,7 @@ export default function Main() {
           <Provider store={store}>
             <GlobalStyles />
             <ScrollToTop />
+            <DotRing />
             <>
               <BarTemplate {...navbarObj} />
               <Switch>

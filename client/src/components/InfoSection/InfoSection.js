@@ -15,38 +15,34 @@ import {
 } from "./InfoSection.elements";
 import { Fade } from "react-reveal";
 
-function InfoSection(
-  {
-    primary,
-    lightBg,
-    topLine,
-    lightTopLine,
-    lightTopTitle,
-    lightTopLine2,
-    lightText,
-    lightTextDesc,
-    headline,
-    description,
-    buttonLabel,
-    img,
-    alt,
-    imgStart,
-    start,
-    role,
-    location,
-    title,
-    route,
-  }
-) {
-
-
+function InfoSection({
+  primary,
+  lightBg,
+  topLine,
+  lightTopLine,
+  lightTopTitle,
+  lightTopLine2,
+  lightText,
+  lightTextDesc,
+  headline,
+  description,
+  buttonLabel,
+  img,
+  alt,
+  imgStart,
+  start,
+  role,
+  location,
+  title,
+  route,
+}) {
   return (
     <>
       <InfoSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
-              <Fade right>
+              <Fade right duration={2000} distance="80px">
                 <TextWrapper>
                   <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                   <TopLine lightTopTitle={lightTopTitle}>{title}</TopLine>

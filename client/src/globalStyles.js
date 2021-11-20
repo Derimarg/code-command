@@ -2,10 +2,14 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
+    cursor: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  &:hover {
+    // cursor: pointer;
+  }
  } 
 `;
 
@@ -22,8 +26,6 @@ export const Container = styled.div`
     padding-right: 30px;
     padding-left: 30px;
   }
-
-
 `;
 
 export const ReviewContainer = styled.div`

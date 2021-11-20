@@ -14,9 +14,10 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  // position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -38,6 +39,11 @@ export const NavLogo = styled(Link)`
 
   span {
     font-size: 2rem;
+  }
+
+  &:hover {
+    color: #4b59f7;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 960px) {
@@ -119,6 +125,8 @@ export const NavItem = styled.li`
 
   &:hover {
     border-bottom: 4px solid #4b59f7;
+    cursor: pointer;
+    color: #4b59f7;
   }
 
   @media screen and (max-width: 960px) {
@@ -150,6 +158,7 @@ export const NavLinks = styled(Link)`
 
   &:hover {
     color: #4b59f7;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 960px) {

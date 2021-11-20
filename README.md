@@ -167,7 +167,6 @@ GIVEN I am a user who has completed at least one course:
 - <p><a href="https://www.npmjs.com/package/react-ga">NPM React Ga</a></p>
 - <p><a href="https://www.npmjs.com/package/custom-cursor-react">NPM React Cursor Custom</a></p>
 - <p><a href="https://www.npmjs.com/package/react-cookie-consent">NPM React Cookie Consent</a></p>
-- <p><a href="https://www.npmjs.com/package/pure-react-carousel">NPM Pure React Carousel</a></p>
 - <p><a href="https://www.npmjs.com/package/graphql-tag">NPM GraphQL Tag</a></p>
 - <p><a href="https://www.npmjs.com/package/glamor">NPM Glamor</a></p>
 - <p><a href="https://www.npmjs.com/package/framer-motion">NPM Flamer Motion</a></p>
