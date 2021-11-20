@@ -15,6 +15,7 @@ import {
   cartObj,
   footerObj,
   cookieObj,
+  topObj,
 } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
 
@@ -52,6 +53,7 @@ export default function Main() {
               <BarTemplate {...footerObj} />
             </>
             <BarTemplate {...cookieObj} />
+            <BarTemplate {...topObj} />
           </Provider>
         </div>
       </Router>
