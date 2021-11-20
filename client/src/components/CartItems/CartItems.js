@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   CartWrap,
   Img,
@@ -44,13 +45,17 @@ const CartItems = ({ item }) => {
   return (
     <CartWrap>
       <div>
-        <Img
-          src={`/images/${item.image}`}
-          alt={removeHyphensAndCapitalize(item.name)}
-        />
+        <Link to="/checkout">
+          <Img
+            src={`/images/${item.image}`}
+            alt={removeHyphensAndCapitalize(item.name)}
+          />
+        </Link>
       </div>
       <CartInfo>
-        <CartTitle>{item.name}</CartTitle>
+        <Link to="/checkout">
+          <CartTitle>{item.name}</CartTitle>
+        </Link>
         <span>${item.price}</span>
         <div>
           <span>Qty:</span>

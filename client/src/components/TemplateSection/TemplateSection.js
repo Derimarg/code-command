@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import {
   Container,
   Heading,
@@ -7,10 +6,9 @@ import {
   Title,
   Paragraph,
   Address,
-  // StyledLink
 } from "./Template.elements";
 
-function InfoSection({
+export default function InfoSection({
   lightBg,
   lastUpdate,
   lightLastUpdate,
@@ -36,13 +34,12 @@ function InfoSection({
   paragraph5,
   paragraph6,
   paragraph7,
-  // link,
   paragraph8,
   paragraph9,
   address1,
   address2,
   address3,
-  address4, 
+  address4,
   title3,
   paragraph10,
   paragraph11,
@@ -101,5 +98,3 @@ function InfoSection({
     </>
   );
 }
-
-export default InfoSection;

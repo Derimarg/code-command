@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BtnLink } from "../../containers/cart/Cartbar";
+import { BtnLink } from "../../containers/cart/CartItem.Elements";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -13,9 +13,9 @@ import {
   Bottom,
   Info,
   MsgContainer,
+  ShopLink,
 } from "./CheckoutElements";
 import CartItem from "../CartItem";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Auth from "../../utils/auth";
 import { idbPromise } from "../../utils/helpers";
@@ -73,7 +73,9 @@ const Cart = () => {
     <Container>
       <Announcement />
       <Wrapper>
-        <Title>YOUR BAG</Title>
+        <Title>
+          <strong>YOUR BAG</strong>
+        </Title>
         <Top>
           <Info>
             {state.cart.length ? (
@@ -81,6 +83,9 @@ const Cart = () => {
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
+                <div style={{ margin: "2rem" }}>
+                  <strong>Total: ${calculateTotal()}</strong>
+                </div>
               </>
             ) : (
               <MsgContainer>
@@ -90,14 +95,16 @@ const Cart = () => {
           </Info>
         </Top>
         <Bottom>
-          <Link to="/">
+          <ShopLink to="/">
             <TopButton>CONTINUE SHOPPING</TopButton>
-          </Link>
+          </ShopLink>
 
           {Auth.loggedIn() ? (
-            <TopButton onClick={submitCheckout} type="filled">
-              CHECKOUT NOW
-            </TopButton>
+            <div style={{ with: "5rem", height: "auto" }}>
+              <TopButton onClick={submitCheckout} type="filled">
+                CHECKOUT NOW
+              </TopButton>
+            </div>
           ) : (
             <>
               <BtnLink to="/login">
