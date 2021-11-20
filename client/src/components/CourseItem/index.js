@@ -50,8 +50,9 @@ export default function CourseItem(item) {
       </Link>
 
       <ProductInfo>
-        <ProductTitle>{name}</ProductTitle>
-        <ProductDesc>Description</ProductDesc>
+        <Link to={`/products/${_id}`} style={{ textDecoration: "none" }}>
+          <ProductTitle>{name}</ProductTitle>
+        </Link>
         <ProductDesc>
           {quantity} {pluralize("course", quantity)} places available
         </ProductDesc>

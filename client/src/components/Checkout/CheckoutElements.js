@@ -198,6 +198,16 @@ export const CheckLink = styled(Link)`
   align-items: center;
 `;
 
+export const ShopLink = styled(Link)`
+  color: #fff;
+  margin-right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+`;
+
 export const MsgContainer = styled.div`
   width: 100%;
   min-height: 50vh;

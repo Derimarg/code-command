@@ -6,7 +6,6 @@ import {
   Image,
   Details,
   ProductName,
-  ProductId,
   ProductSize,
   PriceDetail,
   ProductAmountContainer,
@@ -54,17 +53,12 @@ const CartItem = ({ item }) => {
           <ProductName>
             <b>Product:</b> {item.name}
           </ProductName>
-          <ProductId>
-            <b>ID:</b> {item._id}
-          </ProductId>
           <ProductSize>
-            {/* <b>Courses Included:</b> {item.includedCourses} */}
           </ProductSize>
         </Details>
       </ProductDetail>
       <PriceDetail>
         <ProductAmountContainer>
-          {/* <FaPlus onClick={() => updateItem(item)}/> */}
           <div>
           <span>Qty:</span>
           <Input

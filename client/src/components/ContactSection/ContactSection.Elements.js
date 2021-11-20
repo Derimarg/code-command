@@ -93,15 +93,9 @@ export const StatusMsg = styled.div`
     background: #ffa689;
   }
   ${StyledTextarea}:invalid + & {
-    background: #70edb9;
-  }
-  ${StyledTextarea}:valid + & {
     background: #fe2f75;
   }
+  ${StyledTextarea}:valid + & {
+    background: #70edb9;
+  }
 `;
-
-// ${StyledTextarea}:invalid + & {
-//   background: #fe2f75;
-// }
-// ${StyledTextarea}:valid + & {
-//   background: #70edb9;

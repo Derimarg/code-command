@@ -1,12 +1,8 @@
-import React, {
-  useEffect,
-  // useState
-} from "react";
-import { BtnLink } from "../../containers/cart/Cartbar";
+import React, { useEffect } from "react";
+import { BtnLink } from "../../containers/cart/CartItem.Elements";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { QUERY_CHECKOUT } from "../../utils/queries";
-// import { FaPlus, FaMinus } from "react-icons/fa";
 import Announcement from "../../components/Announcement/Announcement";
 import {
   Container,
@@ -14,25 +10,16 @@ import {
   Title,
   Top,
   TopButton,
-  TopTexts,
   Bottom,
   Info,
   MsgContainer,
+  ShopLink,
 } from "./CheckoutElements";
 import CartItem from "../CartItem";
-// import { Button } from "../../globalStyles";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Auth from "../../utils/auth";
 import { idbPromise } from "../../utils/helpers";
-import {
-  //  TOGGLE_CART,
-  ADD_MULTIPLE_TO_CART,
-} from "../../utils/actions";
-import {
-  CheckLink,
-  // CartContainer
-} from "./CheckoutElements";
+import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -60,10 +47,6 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  // function toggleCart() {
-  //   dispatch({ type: TOGGLE_CART });
-  // }
-
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
@@ -86,28 +69,23 @@ const Cart = () => {
     });
   }
 
-  // if (!state.cartOpen) {
-  //   return (
-  //     <CartContainer onClick={toggleCart}>
-  //       <span role="img" aria-label="trash">
-  //         🛒
-  //       </span>
-  //     </CartContainer>
-  //   );
-  // }
-
   return (
     <Container>
       <Announcement />
       <Wrapper>
-        <Title>YOUR BAG</Title>
+        <Title>
+          <strong>YOUR BAG</strong>
+        </Title>
         <Top>
-        <Info>
+          <Info>
             {state.cart.length ? (
               <>
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
+                <div style={{ margin: "2rem" }}>
+                  <strong>Total: ${calculateTotal()}</strong>
+                </div>
               </>
             ) : (
               <MsgContainer>
@@ -117,18 +95,21 @@ const Cart = () => {
           </Info>
         </Top>
         <Bottom>
-        <Link to="/">
+          <ShopLink to="/">
             <TopButton>CONTINUE SHOPPING</TopButton>
-          </Link>
-          <TopTexts>{/* <TopText>Shopping Bag(2)</TopText> */}</TopTexts>
+          </ShopLink>
 
           {Auth.loggedIn() ? (
-            <TopButton onClick={submitCheckout} type="filled">CHECKOUT NOW</TopButton>
+            <div style={{ with: "5rem", height: "auto" }}>
+              <TopButton onClick={submitCheckout} type="filled">
+                CHECKOUT NOW
+              </TopButton>
+            </div>
           ) : (
             <>
               <BtnLink to="/login">
-                  <span>(log in to check out)</span>
-                </BtnLink>
+                <span>(log in to check out)</span>
+              </BtnLink>
             </>
           )}
         </Bottom>
@@ -138,32 +119,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-/* <MobileSummary>
-  <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-  <SummaryItem>
-    <SummaryItemText>Subtotal</SummaryItemText>
-    <SummaryItemPrice>$ 80</SummaryItemPrice>
-  </SummaryItem>
-  <SummaryItem>
-    <SummaryItemText>TAXES</SummaryItemText>
-    <SummaryItemPrice>$ 5.90</SummaryItemPrice>
-  </SummaryItem>
-  <SummaryItem>
-    <SummaryItemText>Course Discount</SummaryItemText>
-    <SummaryItemPrice>$ -5.90</SummaryItemPrice>
-  </SummaryItem>
-  <SummaryItem type="total">
-    <SummaryItemText>Total</SummaryItemText>
-    <SummaryItemPrice>$ 80</SummaryItemPrice>
-  </SummaryItem>
-  {Auth.loggedIn() ? (
-    <Button2>CHECKOUT NOW</Button2>
-  ) : (
-    <>
-      <CheckLink to="/login">
-        <Button2>CHECKOUT NOW</Button2>
-      </CheckLink>
-    </>
-  )}
-</MobileSummary>; */

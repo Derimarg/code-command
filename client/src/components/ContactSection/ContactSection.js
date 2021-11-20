@@ -85,6 +85,8 @@ export default function ContactSection() {
               id="name"
               defaultValue={name}
               onBlur={handleChange}
+              required
+              autocomplete="off"
             />
             <Status />
           </InputContainer>
@@ -96,6 +98,8 @@ export default function ContactSection() {
               id="subject"
               defaultValue={subject}
               onBlur={handleChange}
+              required
+              autocomplete="off"
             />
             <Status />
           </InputContainer>
@@ -107,6 +111,8 @@ export default function ContactSection() {
               id="email"
               defaultValue={email}
               onBlur={handleChange}
+              required
+              autocomplete="off"
             />
             <Status />
           </InputContainer>
@@ -118,6 +124,8 @@ export default function ContactSection() {
               id="message"
               defaultValue={message}
               onBlur={handleChange}
+              required
+              autocomplete="off"
               rows="5"
             />
             <StatusMsg />

@@ -3,7 +3,6 @@ import { Fade } from "react-reveal";
 import {
   homeObjOne,
   homeObjTwo,
-  // homeObjThree,
   homeObjFour,
   homeObj7,
   homeObj8,
@@ -11,8 +10,6 @@ import {
 import { InfoSection, Pricing } from "../../components";
 import Auth from "../../utils/auth";
 import Courses from "../../pages/Courses/Courses";
-// import Carousel from "../../components/Carousel/Carousel";
-// import ReviewSlide from "../../components/ReviewSlide/ReviewSlide";
 
 export default function Home(lightBg) {
   function ShowHomePage() {
@@ -24,19 +21,16 @@ export default function Home(lightBg) {
       );
     } else {
       return (
-        <Fade top duration={2000} distance="80px">
-          <>
-            {/* <Carousel /> */}
+        <>
+          <Fade top duration={2000} distance="80px">
             <InfoSection {...homeObjOne} />
-            <Pricing />
-            <InfoSection {...homeObjFour} />
-            {/* <InfoSection {...homeObjThree} /> */}
-            {/* <ReviewSlide /> */}
-            <InfoSection {...homeObj7} />
-            <InfoSection {...homeObjTwo} />
-            <InfoSection {...homeObj8} />
-          </>
-        </Fade>
+          </Fade>
+          <Pricing />
+          <InfoSection {...homeObjFour} />
+          <InfoSection {...homeObj7} />
+          <InfoSection {...homeObjTwo} />
+          <InfoSection {...homeObj8} />
+        </>
       );
     }
   }

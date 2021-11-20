@@ -19,10 +19,10 @@ import {
   PricingCardLength,
   PricingCardFeatures,
   PricingCardFeature,
-  Img
+  Img,
 } from "./Pricing.elements";
 
-function Pricing() {
+export default function Pricing() {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -60,16 +60,24 @@ function Pricing() {
               {state.products
                 .filter((product, index) => index > 11)
                 .map((product) => (
-                  <PricingCard to={`/products/${product._id}`} key={product._id}>
+                  <PricingCard
+                    to={`/products/${product._id}`}
+                    key={product._id}
+                  >
                     <PricingCardInfo>
                       <PricingCardIcon>
-                        <Img src={`/images/${product.image}`} alt={product.name} />
+                        <Img
+                          src={`/images/${product.image}`}
+                          alt={product.name}
+                        />
                       </PricingCardIcon>
                       <PricingCardPlan>{product.name}</PricingCardPlan>
                       <PricingCardCost>${product.price}</PricingCardCost>
                       <PricingCardLength>per month</PricingCardLength>
                       <PricingCardFeatures>
-                        <PricingCardFeature>{product.difficulty}</PricingCardFeature>
+                        <PricingCardFeature>
+                          {product.difficulty}
+                        </PricingCardFeature>
                         <PricingCardFeature>{product.short}</PricingCardFeature>
                         <PricingCardFeature>
                           {product.months} Month Program
@@ -86,4 +94,3 @@ function Pricing() {
     </IconContext.Provider>
   );
 }
-export default Pricing;
