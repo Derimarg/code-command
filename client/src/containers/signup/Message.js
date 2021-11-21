@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { MouseContext } from "../../context/mouse-context";
 
 const Message = () => {
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   return (
-    <Container>
+    <Container
+      onMouseEnter={() => cursorChangeHandler("hovered")}
+      onMouseLeave={() => cursorChangeHandler("")}
+    >
       <h1>
         Join The <br />
         Team

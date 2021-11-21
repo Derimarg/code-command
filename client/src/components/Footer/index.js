@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   FooterContainer,
@@ -17,10 +17,16 @@ import {
   FooterLink2,
 } from "./Footer.elements";
 import { iconsDB, aboutDB, socialDB } from "./Data";
+import { MouseContext } from "../../context/mouse-context";
 
 export default function Footer() {
+  const {cursorChangeHandler } = useContext(MouseContext);
+
   return (
-    <FooterContainer>
+    <FooterContainer
+      onMouseEnter={() => cursorChangeHandler("hovered")}
+      onMouseLeave={() => cursorChangeHandler("")}
+    >
       <FooterLinksContainer>
         <FooterLinksWrapper>
           {aboutDB.map((x) => (

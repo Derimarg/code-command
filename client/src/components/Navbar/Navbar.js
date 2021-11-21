@@ -20,7 +20,7 @@ import Auth from "../../utils/auth";
 import { MouseContext } from "../../context/mouse-context";
 
 export default function Navbar() {
-  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  const { cursorChangeHandler } = useContext(MouseContext);
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -46,18 +46,8 @@ export default function Navbar() {
     if (Auth.loggedIn()) {
       return (
         <>
-          <NavItem
-            onMouseEnter={() => cursorChangeHandler("hovered")}
-            onMouseLeave={() => cursorChangeHandler("")}
-          >
-            <NavLinks
-              to="/"
-              onClick={closeMobileMenu}
-              onMouseEnter={() => cursorChangeHandler("hovered")}
-              onMouseLeave={() => cursorChangeHandler("")}
-            >
-              Home
-            </NavLinks>
+          <NavItem>
+            <NavLinks to="/">Home</NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks to="/orderHistory" onClick={closeMobileMenu}>
@@ -138,7 +128,10 @@ export default function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav>
+        <Nav
+          onMouseEnter={() => cursorChangeHandler("hovered")}
+          onMouseLeave={() => cursorChangeHandler("")}
+        >
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon /> <span>Code Command</span>

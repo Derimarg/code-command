@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 import {
   ProductWrapper,
@@ -17,8 +17,11 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
 import Load from "../Load/index";
+import { MouseContext } from "../../context/mouse-context";
 
 export default function CoursesSection({ heading, description, lightBg }) {
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -58,11 +61,16 @@ export default function CoursesSection({ heading, description, lightBg }) {
 
   return (
     <>
-      <Announcement />
-      <InfoSec2 lightBg={lightBg}>
-        <ProductsHeading>{heading}</ProductsHeading>
-        <ProductsDesc>{description}</ProductsDesc>
-      </InfoSec2>
+      <div
+        onMouseEnter={() => cursorChangeHandler("hovered")}
+        onMouseLeave={() => cursorChangeHandler("")}
+      >
+        <Announcement />
+        <InfoSec2 lightBg={lightBg}>
+          <ProductsHeading>{heading}</ProductsHeading>
+          <ProductsDesc>{description}</ProductsDesc>
+        </InfoSec2>
+      </div>
       <FooterSubscription>
         <Filters />
       </FooterSubscription>
