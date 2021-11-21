@@ -183,6 +183,10 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+  &:hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease-out;
+  }
 `;
 
 export const Discord = styled(FaDiscord)`
@@ -191,6 +195,7 @@ export const Discord = styled(FaDiscord)`
   font-size: 2rem;
   border-radius: 50%;
   padding: 3px;
+  box-shadow: 1px 1px 10px 3px rgba(153,153,255,0.78)
 `;
 
 export const Slack = styled(FaSlack)`
@@ -198,12 +203,15 @@ export const Slack = styled(FaSlack)`
   color: #000;
   border-radius: 50%;
   font-size: 2rem;
+  box-shadow: 1px 1px 10px 3px rgba(110,202,220,0.78)
 `;
 
 export const Github = styled(FaGithub)`
   color: #fff;
   font-size: 2rem;
   border-radius: 50%;
+  box-shadow: 1px 1px 10px 3px rgba(217,217,217,0.78)
+
 `;
 
 export const StackOverflow = styled(FaStackOverflow)`
@@ -212,5 +220,7 @@ export const StackOverflow = styled(FaStackOverflow)`
   font-size: 2rem;
   border-radius: 50%;
   padding: 3px;
+  box-shadow: 1px 1px 10px 3px rgba(233,168,32,0.78)
+
 
 `;

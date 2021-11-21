@@ -43,7 +43,6 @@ export const NavLogo = styled(Link)`
 
   &:hover {
     color: #4b59f7;
-    cursor: pointer;
   }
 
   @media screen and (max-width: 960px) {
@@ -125,7 +124,6 @@ export const NavItem = styled.li`
 
   &:hover {
     border-bottom: 4px solid #4b59f7;
-    cursor: pointer;
     color: #4b59f7;
   }
 
@@ -158,7 +156,6 @@ export const NavLinks = styled(Link)`
 
   &:hover {
     color: #4b59f7;
-    cursor: pointer;
   }
 
   @media screen and (max-width: 960px) {
