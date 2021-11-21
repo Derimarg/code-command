@@ -22,4 +22,4 @@ export const routesData = [
 export const navbarObj = { element: <NavContainer /> };
 export const cartObj = { element: <Cartbar /> };
 export const footerObj = { element: <Footer /> };
-export const cookieObj = { element: <Cookies/> };
+export const cookieObj = { element: <Cookies /> };
