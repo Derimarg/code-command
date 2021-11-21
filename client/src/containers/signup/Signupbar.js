@@ -13,6 +13,7 @@ import {
 } from "./Input";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { signupObj } from "./Data";
 
 export default function Signupbar(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -52,54 +53,22 @@ export default function Signupbar(props) {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Sign Up</h3>
-        <InputContainer>
-          <StyledInput
-            placeholder="First Name"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
-        <InputContainer>
-          <StyledInput
-            placeholder="Last Name"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
-        <InputContainer>
-          <StyledInput
-            name="email"
-            type="email"
-            id="email"
-            placeholder="Email"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
-        <InputContainer>
-          <StyledInput
-            name="password"
-            type="password"
-            id="pwd"
-            placeholder="Password"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
+        <div>
+          {signupObj.map((x) => (
+            <InputContainer>
+              <StyledInput
+                placeholder={x.placeholder}
+                name={x.name}
+                type={x.type}
+                id={x.id}
+                onChange={handleChange}
+                required
+                autocomplete="off"
+              />
+              <Status />
+            </InputContainer>
+          ))}
+        </div>
         <button type="submit">Sign Up</button>
       </Form>
       <div>
