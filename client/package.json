@@ -28,7 +28,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.1.2",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "@monaco-editor/react": "^4.3.1",
+    "monaco-editor": "^0.29.1"
   },
   "scripts": {
     "start": "react-scripts start",
