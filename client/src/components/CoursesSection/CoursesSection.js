@@ -16,8 +16,8 @@ import { useQuery } from "@apollo/react-hooks";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
-import Load from "../Load/index";
 import { MouseContext } from "../../context/mouse-context";
+import AnimatedLoad from "../../pages/Loading/AnimatedLoad";
 
 export default function CoursesSection({ heading, description, lightBg }) {
   const { cursorChangeHandler } = useContext(MouseContext);
@@ -93,7 +93,7 @@ export default function CoursesSection({ heading, description, lightBg }) {
             <h3>You haven't added any products yet!</h3>
           </MsgContainer>
         )}
-        {loading ? <Load /> : null}
+        {loading ? <AnimatedLoad /> : null}
       </ProductWrapper>
     </>
   );
