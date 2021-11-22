@@ -23,6 +23,8 @@ export const LogoLink = styled(Link)`
 `;
 
 export const EditorTopPanel = styled.div`
+  height: 50vh;
+  display: flex;
   background-color: black;
 `;
 

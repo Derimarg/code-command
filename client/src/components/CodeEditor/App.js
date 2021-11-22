@@ -1,88 +1,64 @@
 import React, { useState, useEffect } from "react";
-import { initialHTML, initialCSS, initialJS } from "./InitialCode";
 import Editors from "./Editors";
-import {
-  EditorContainer,
-  EditorNav,
-  LogoLink,
-  EditorTopPanel,
-  EditorColumnResizer,
-  EditorOutputScreen,
-  EditorIframe,
-} from "./Editor.Elements";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import "./index.css";
+import Navbar from "../Navbar/Navbar";
 
-export function App() {
-  const [htmlValue, setHtml] = useState(initialHTML);
-  const [cssValue, setCSS] = useState(initialCSS);
-  const [jsValue, setJs] = useState(initialJS);
-  const [Code, setCode] = useState(`
-<html>
-<body>${htmlValue}</body>
-<style>${cssValue}</style>
-<script>${jsValue}</script>
-</html>`);
+function App() {
+  const [html, setHtml] = useLocalStorage("html", " ");
+  const [css, setCss] = useLocalStorage("css", " ");
+  const [js, setJs] = useLocalStorage("js", "");
+  const [code, setCode] = useState("");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCode(`
-      <html>
-      <body>${htmlValue}</body>
-      <style>${cssValue}</style>
-      <script>${jsValue}</script>
-      </html>`);
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
+      `);
     }, 250);
+
     return () => clearTimeout(timeout);
-  }, [htmlValue, cssValue, jsValue]);
+  }, [html, css, js]);
 
   return (
-    <EditorContainer>
-      <EditorNav>
-        <LogoLink to="/">Code Command Editor</LogoLink>
-      </EditorNav>
-      <center>
-        <EditorTopPanel>
-          <table>
-            <tbody>
-              <tr>
-                <Editors
-                  displayName="HTML"
-                  lang="html"
-                  value={htmlValue}
-                  setValue={setHtml}
-                />
-
-                <EditorColumnResizer className="columnResizer" />
-
-                <Editors
-                  displayName="CSS"
-                  lang="css"
-                  value={cssValue}
-                  setValue={setCSS}
-                />
-
-                <EditorColumnResizer className="columnResizer" />
-
-                <Editors
-                  displayName="Javascript"
-                  lang="javascript"
-                  value={jsValue}
-                  setValue={setJs}
-                />
-              </tr>
-            </tbody>
-          </table>
-        </EditorTopPanel>
-
-        <EditorOutputScreen>
-          <EditorIframe
-            srcDoc={Code}
-            title="output"
-            frameBorder="0"
-            sandbox="allow-scripts"
-            loading="lazy"
-          ></EditorIframe>
-        </EditorOutputScreen>
-      </center>
-    </EditorContainer>
+    <>
+      <Navbar />
+      <div className="pane top-pane">
+        <Editors
+          language="xml"
+          displayName="HTML"
+          value={html}
+          onChange={setHtml}
+        />
+        <Editors
+          language="css"
+          displayName="CSS"
+          value={css}
+          onChange={setCss}
+        />
+        <Editors
+          language="javascript"
+          displayName="JS"
+          value={js}
+          onChange={setJs}
+        />
+      </div>
+      <div className="pane">
+        <iframe
+          srcDoc={code}
+          title="output"
+          sandbox="allow-scripts"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+        />
+      </div>
+    </>
   );
 }
+
+export default App;
