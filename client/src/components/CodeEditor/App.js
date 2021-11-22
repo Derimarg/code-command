@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { initialHTML, initialCSS, initialJS } from "./InitialCode";
-import ColumnResizer from "react-column-resizer";
-import "./Editor.css";
 import Editors from "./Editors";
+import {
+  EditorContainer,
+  EditorNav,
+  LogoLink,
+  EditorTopPanel,
+  EditorColumnResizer,
+  EditorOutputScreen,
+  EditorIframe,
+} from "./Editor.Elements";
 
 export function App() {
   const [htmlValue, setHtml] = useState(initialHTML);
@@ -28,22 +35,12 @@ export function App() {
   }, [htmlValue, cssValue, jsValue]);
 
   return (
-    <div className="container">
-      <div
-        style={{
-          color: "white",
-          width: "100%",
-          height: "30px",
-          fontSize: "2rem",
-          margin: "2rem",
-        }}
-      >
-        <a className="link" href="/">
-          Code Command Editor
-        </a>
-      </div>
+    <EditorContainer>
+      <EditorNav>
+        <LogoLink to="/">Code Command Editor</LogoLink>
+      </EditorNav>
       <center>
-        <div className="pane top-pane">
+        <EditorTopPanel>
           <table>
             <tbody>
               <tr>
@@ -54,7 +51,7 @@ export function App() {
                   setValue={setHtml}
                 />
 
-                <ColumnResizer className="columnResizer resizer" minWidth={0} />
+                <EditorColumnResizer className="columnResizer" />
 
                 <Editors
                   displayName="CSS"
@@ -63,7 +60,7 @@ export function App() {
                   setValue={setCSS}
                 />
 
-                <ColumnResizer className="columnResizer resizer" minWidth={0} />
+                <EditorColumnResizer className="columnResizer" />
 
                 <Editors
                   displayName="Javascript"
@@ -74,20 +71,18 @@ export function App() {
               </tr>
             </tbody>
           </table>
-        </div>
+        </EditorTopPanel>
 
-        <div className="outputScreen">
-          <iframe
+        <EditorOutputScreen>
+          <EditorIframe
             srcDoc={Code}
             title="output"
-            width="100%"
-            height="100%"
             frameBorder="0"
             sandbox="allow-scripts"
             loading="lazy"
-          ></iframe>
-        </div>
+          ></EditorIframe>
+        </EditorOutputScreen>
       </center>
-    </div>
+    </EditorContainer>
   );
 }

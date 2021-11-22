@@ -1,6 +1,7 @@
 import React from "react";
 import Editor from "@monaco-editor/react";
 import EditorHeading from "./EditorHeading";
+import { EditorWrapper } from "./Editor.Elements";
 
 const Editors = (prop) => {
   const { value, lang, setValue, displayName } = prop;
@@ -10,10 +11,10 @@ const Editors = (prop) => {
 
   return (
     <td>
-      <div className="editor">
+      <EditorWrapper>
         <EditorHeading name={displayName} />
-      </div>
-      <div className="editor">
+      </EditorWrapper>
+      <EditorWrapper>
         <Editor
           width="100%"
           height="50vh"
@@ -22,7 +23,7 @@ const Editors = (prop) => {
           theme="vs-dark"
           onChange={handleEditorChange}
         />
-      </div>
+      </EditorWrapper>
     </td>
   );
 };

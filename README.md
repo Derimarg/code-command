@@ -173,7 +173,8 @@ GIVEN I am a user who has completed at least one course:
 - <p><a href="https://www.npmjs.com/package/apollo-boost">NPM Apollo Boost</a></p>
 - <p><a href="https://redux.js.org/">Redux</a></p>
 - <p><a href="https://www.mongodb.com/">MongoDB</a></p>
-- <p><a href="https://www.heroku.com/">Heroku</a></p>
+- <p><a href="https://www.npmjs.com/package/react-column-resizer">react-column-resizer</a></p>
+- <p><a href="https://www.npmjs.com/package/@monaco-editor/react">@monaco-editor/react
 
 [Back To Top](#code-command)
 
