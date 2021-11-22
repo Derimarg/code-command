@@ -1,9 +1,6 @@
 let initialHTML = `
-<!-- HTML -->
-
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,13 +9,12 @@ let initialHTML = `
 </head>
 
 <body>
-    <button>Welcome to CodeOne!</button>
+    <button>Welcome to Code Command!</button>
 </body>
 
 </html>`;
 
-let initialCSS = `/* CSS */
-
+let initialCSS = `
 button {
   animation: wiggle 2s linear infinite;
 }
@@ -30,24 +26,20 @@ body {
 
 button {
   position: absolute;
-  
   left : 42.5vw;
   top : 42%;
-  
   height: 5em;
   width: 15em;
-  
   background: #444;
   background: linear-gradient(top, #555, #333);
   border: none;
-  border-top: 3px solid white;
-  border-radius: 0 0 0.2em 0.2em;
+  border-radius: 4px;
   color: #fff;
   font-family: Helvetica, Arial, Sans-serif;
   font-size: 1em;
   transform-origin: 50% 5em;
 }`;
 
-let initialJS = `// JavaScript`;
+let initialJS = ``;
 
 export { initialHTML, initialCSS, initialJS };

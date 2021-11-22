@@ -1,5 +1,5 @@
 import React from "react";
-import EditorContainer from "../../components/CodeEditor/EditorContainer";
+import {App as EditorContainer} from "../../components/CodeEditor/App";
 
 export default function CodeEditor() {
   return <EditorContainer />;
