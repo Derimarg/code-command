@@ -54,6 +54,11 @@ export default function Navbar() {
               Order History
             </NavLinks>
           </NavItem>
+          <NavItem>
+            <NavLinks to="/codeEditor" onClick={closeMobileMenu}>
+              Code Editor
+            </NavLinks>
+          </NavItem>
           <MobCartLink>
             <NavItem>
               <NavLinks to="/checkout" onClick={closeMobileMenu}>
@@ -92,6 +97,11 @@ export default function Navbar() {
           <NavItem>
             <NavLinks to="/courses" onClick={closeMobileMenu}>
               Courses
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="/codeEditor" onClick={closeMobileMenu}>
+              Code Editor
             </NavLinks>
           </NavItem>
           <MobCartLink>

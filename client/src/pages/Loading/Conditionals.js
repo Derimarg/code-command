@@ -13,8 +13,7 @@ import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import NotFound from "../NotFound/NotFound";
 import Testimonials from "../Testimonials/Testimonials";
-
-
+import CodeEditor from "../CodeEditor/CodeEditor";
 
 const Pages = withRouter(({ location }) => {
   switch (location.pathname) {
@@ -42,7 +41,8 @@ const Pages = withRouter(({ location }) => {
       return <Signup />;
     case "/testimonials":
       return <Testimonials />;
-
+    case "/codeEditor":
+      return <CodeEditor />;
     default:
       return <NotFound />;
   }

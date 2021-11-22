@@ -17,6 +17,7 @@ export const routesData = [
   { route: "/cookies" },
   { route: "/terms" },
   { route: "/testimonials" },
+  { route: "/codeEditor" },
 ];
 
 export const navbarObj = { element: <NavContainer /> };
