@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
-    cursor: none;
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
