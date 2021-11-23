@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
@@ -17,11 +17,8 @@ import {
 } from "./Navbar.elements";
 import { Button } from "../../globalStyles";
 import Auth from "../../utils/auth";
-import { MouseContext } from "../../context/mouse-context";
 
 export default function Navbar() {
-  const { cursorChangeHandler } = useContext(MouseContext);
-
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -138,10 +135,7 @@ export default function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav
-          onMouseEnter={() => cursorChangeHandler("hovered")}
-          onMouseLeave={() => cursorChangeHandler("")}
-        >
+        <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon /> <span>Code Command</span>

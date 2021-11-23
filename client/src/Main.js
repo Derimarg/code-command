@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
-import ScrollToTop from "./components/ScrollTop";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 import Detail from "./pages/Detail/Detail";
@@ -17,7 +16,6 @@ import {
   cookieObj,
 } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
-import DotRing from "./components/DotRing/DotRing";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -38,8 +36,6 @@ export default function Main() {
         <div>
           <Provider store={store}>
             <GlobalStyles />
-            <ScrollToTop />
-            <DotRing />
             <BarTemplate {...navbarObj} />
             <Switch>
               {routesData.map((x) => (

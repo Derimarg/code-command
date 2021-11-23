@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 
 import {
   ProductWrapper,
@@ -16,12 +16,9 @@ import { useQuery } from "@apollo/react-hooks";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import Filters from "../Filters";
-import { MouseContext } from "../../context/mouse-context";
 import AnimatedLoad from "../../pages/Loading/AnimatedLoad";
 
 export default function CoursesSection({ heading, description, lightBg }) {
-  const { cursorChangeHandler } = useContext(MouseContext);
-
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -61,10 +58,7 @@ export default function CoursesSection({ heading, description, lightBg }) {
 
   return (
     <>
-      <div
-        onMouseEnter={() => cursorChangeHandler("hovered")}
-        onMouseLeave={() => cursorChangeHandler("")}
-      >
+      <div>
         <Announcement />
         <InfoSec2 lightBg={lightBg}>
           <ProductsHeading>{heading}</ProductsHeading>

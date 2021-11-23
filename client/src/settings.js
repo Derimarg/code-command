@@ -20,10 +20,3 @@
 // }
 
 // Website related settings
-
-const settings = {
-  useCustomCursor: true,
-  googleTrackingID: "UA-174238252-2",
-};
-
-export { settings };
