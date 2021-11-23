@@ -2,7 +2,7 @@ import pic from "../../assets/img/svg-00001.svg";
 import pic1 from "../../assets/img/svg-1.svg";
 
 export const homeObjOne = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightText: false,
@@ -106,7 +106,7 @@ export const homeObjSix = {
 };
 
 export const homeObj7 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -127,6 +127,7 @@ export const homeObj7 = {
 };
 
 export const homeObj8 = {
+  primary: true,
   lightBg: true,
   lightText: false,
   lightTextDesc: false,

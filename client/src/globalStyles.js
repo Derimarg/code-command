@@ -55,7 +55,7 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.3s ease-out;
     background: #fff;
-    background-color: ${({ primary }) => (primary ? "#0467FB" : "#4B59F7")};
+    background-color: ${({ primary }) => (primary ? "hsl(235, 85%, 62%)" : "#4B59F7")};
     transform: scale(1.06);
     transition: all 0.3s ease-out;
   }
