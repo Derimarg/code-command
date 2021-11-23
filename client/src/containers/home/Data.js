@@ -96,7 +96,7 @@ export const homeObjSix = {
   primary: true,
   lightBg: true,
   lightTopLine: false,
-  lightText: true,
+  lightText: false,
   lightTextDesc: false,
   buttonAdd: "Add Course",
   buttonRemove: "Delete Course",
