@@ -83,7 +83,7 @@ const Cart = () => {
                 {state.cart.map((item) => (
                   <CartItem key={item._id} item={item} />
                 ))}
-                <div style={{  }}>
+                <div>
                   <strong>Total: ${calculateTotal()}</strong>
                 </div>
               </>

@@ -23,12 +23,14 @@ export default function Footer() {
     <FooterContainer>
       <FooterLinksContainer>
         <FooterLinksWrapper>
-          {aboutDB.map((x) => (
+          {aboutDB.map((x, index) => (
             <>
-              <FooterLinkItems>
+              <FooterLinkItems key={index}>
                 <FooterLinkTitle>{x.title}</FooterLinkTitle>
-                {x.details.map((a) => (
-                  <FooterLink2 to={a.route}>{a.des}</FooterLink2>
+                {x.details.map((a, index) => (
+                  <FooterLink2 to={a.route} key={index}>
+                    {a.des}
+                  </FooterLink2>
                 ))}
                 <FooterLink2></FooterLink2>
               </FooterLinkItems>
@@ -38,8 +40,13 @@ export default function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>Social Media</FooterLinkTitle>
-            {socialDB.map((y) => (
-              <FooterLink href={y.href} target="_blank" aria-label={y.name}>
+            {socialDB.map((y, index) => (
+              <FooterLink
+                key={index}
+                href={y.href}
+                target="_blank"
+                aria-label={y.name}
+              >
                 {y.name}
               </FooterLink>
             ))}
@@ -61,8 +68,13 @@ export default function Footer() {
             </Link>
           </WebsiteRights>
           <SocialIcons>
-            {iconsDB.map((i) => (
-              <SocialIconLink href={i.href} target="_blank" aria-label={i.name}>
+            {iconsDB.map((i, index) => (
+              <SocialIconLink
+                key={index}
+                href={i.href}
+                target="_blank"
+                aria-label={i.name}
+              >
                 {i.element}
               </SocialIconLink>
             ))}
