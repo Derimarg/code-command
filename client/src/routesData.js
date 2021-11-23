@@ -11,13 +11,13 @@ export const routesData = [
   { route: "/courses" },
   { route: "/checkout" },
   { route: "/contact" },
-  { route: "/orderHistory" },
+  { route: "/order-history" },
   { route: "/success" },
   { route: "/privacy" },
   { route: "/cookies" },
   { route: "/terms" },
   { route: "/testimonials" },
-  { route: "/codeEditor" },
+  { route: "/code-editor" },
 ];
 
 export const navbarObj = { element: <NavContainer /> };
