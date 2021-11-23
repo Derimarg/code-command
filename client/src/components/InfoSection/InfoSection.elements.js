@@ -10,6 +10,11 @@ export const InfoSec = styled.div`
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#202a45")};
 `;
 
+export const InfoSecCart = styled.div`
+  color: #fff;
+  padding: 10px 0;
+`;
+
 export const ReviewSec = styled.div`
   color: #fff;
   padding-top: 2rem;
@@ -19,9 +24,7 @@ export const ReviewSec = styled.div`
   @media only screen and (max-width: 380px) {
     padding: 0;
   }
-  `;
-
-
+`;
 
 export const InfoSec2 = styled.div`
   color: ${({ lightBg }) => (lightBg ? "#202a45" : "#fff")};
@@ -34,7 +37,7 @@ export const InfoSec2 = styled.div`
   justify-content: center;
   @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
-    margin:auto;
+    margin: auto;
     width: 100%;
   }
 `;
@@ -121,6 +124,13 @@ export const ImgWrapper = styled.div`
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
 `;
 
+export const ImgWrapperCart = styled.div`
+  display: flex;
+  justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  box-shadow: rgb(38 57 77 / 32%) 10px 13px 17px -10px;
+  margin-bottom: 1rem;
+`;
+
 export const Role = styled.h3`
   color: black;
 `;
@@ -159,6 +169,21 @@ export const Img = styled.img`
   }
 `;
 
+export const ImgCart = styled.img`
+  padding-right: 0;
+  border: 0;
+  width: 200px;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 200px;
+  @media only screen and (max-width: 380px) {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    width: 100%;
+  }
+`;
+
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
@@ -176,5 +201,5 @@ export const Subtitle = styled.p`
 `;
 
 export const Filters = styled.div`
-margin: 1rem;
+  margin: 1rem;
 `;

@@ -1,21 +1,21 @@
 import React from "react";
-import { TrashIcon, Input } from "../../components/CartItems/ItemsElement"
+import { TrashIcon, Input } from "../../components/CartItems/ItemsElement";
+import { Container } from "../../globalStyles";
+
 import {
-  Product,
-  ProductDetail,
-  Image,
-  Details,
-  ProductName,
-  ProductSize,
-  PriceDetail,
-  ProductAmountContainer,
-  ProductPrice,
-} from "../../components/Checkout/CheckoutElements";
+  InfoSecCart,
+  InfoRow2,
+  InfoColumn,
+  TextWrapper,
+  Subtitle,
+  ImgWrapperCart,
+  ImgCart,
+} from "../InfoSection/InfoSection.elements";
 import { useDispatch } from "react-redux";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, primary, lightTextDesc, imgStart, start }) => {
   const dispatch = useDispatch();
 
   const removeItem = (item) => {
@@ -26,7 +26,7 @@ const CartItem = ({ item }) => {
 
     idbPromise("cart", "delete", { ...item });
   };
- 
+
   const onChange = (e) => {
     const value = e.target.value;
     if (value === "0") {
@@ -46,35 +46,44 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <Product>
-      <ProductDetail>
-        <Image src={`/images/${item.image}`} alt="" />
-        <Details>
-          <ProductName>
-            <b>Product:</b> {item.name}
-          </ProductName>
-          <ProductSize>
-          </ProductSize>
-        </Details>
-      </ProductDetail>
-      <PriceDetail>
-        <ProductAmountContainer>
-          <div>
-          <span>Qty:</span>
-          <Input
-            type="number"
-            placeholder="1"
-            value={item.purchaseQuantity}
-            onChange={onChange}
-          />
-          <span role="img" aria-label="trash" onClick={() => removeItem(item)}>
-            <TrashIcon />
-          </span>
-        </div>
-        </ProductAmountContainer>
-        <ProductPrice>${item.price}</ProductPrice>
-      </PriceDetail>
-    </Product>
+    <InfoSecCart>
+      <Container>
+        <InfoRow2 imgStart={imgStart}>
+          <InfoColumn>
+            <TextWrapper>
+              <Subtitle
+                style={{ fontWeight: "bold" }}
+                lightTextDesc={lightTextDesc}
+              >
+                {item.name}
+              </Subtitle>
+              <Subtitle lightTextDesc={lightTextDesc}>
+                <strong>Price: </strong>${item.price}
+              </Subtitle>
+              <>
+                <span style={{ color: "#000" }}>Qty: </span>
+                <Input
+                  type="number"
+                  placeholder="1"
+                  value={item.purchaseQuantity}
+                  onChange={onChange}
+                />
+                <span
+                  role="img"
+                  aria-label="trash"
+                  onClick={() => removeItem(item)}
+                >
+                  <TrashIcon />
+                </span>
+              </>
+            </TextWrapper>
+          </InfoColumn>
+          <ImgWrapperCart start={start}>
+            <ImgCart src={`/images/${item.image}`} alt="item details" />
+          </ImgWrapperCart>
+        </InfoRow2>
+      </Container>
+    </InfoSecCart>
   );
 };
 
