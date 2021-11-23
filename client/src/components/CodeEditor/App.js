@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Editors from "./Editors";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./index.css";
@@ -9,8 +9,10 @@ import {
   EditorPanel,
   EditorIframe,
 } from "./Editor.Elements";
+import { MouseContext } from "../../context/mouse-context";
 
 function App() {
+  const { cursorChangeHandler } = useContext(MouseContext);
   const [html, setHtml] = useLocalStorage("html", " ");
   const [css, setCss] = useLocalStorage("css", " ");
   const [js, setJs] = useLocalStorage("js", "");
@@ -31,7 +33,10 @@ function App() {
   }, [html, css, js]);
 
   return (
-    <EditorContainer>
+    <EditorContainer
+      onMouseEnter={() => cursorChangeHandler("hovered")}
+      onMouseLeave={() => cursorChangeHandler("")}
+    >
       <Navbar />
       <EditorTopPanel>
         <Editors
