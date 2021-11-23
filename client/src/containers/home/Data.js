@@ -6,7 +6,7 @@ export const homeObjOne = {
   lightBg: true,
   lightTopLine: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Coding Online",
   headline: "Learn Programming Interactively",
   description:
@@ -43,7 +43,7 @@ export const homeObjThree = {
   primary: false,
   lightBg: true,
   lightTopLine: false,
-  lightTopLine2: false,
+  lightTopLine2: true,
   lightText: false,
   lightTextDesc: true,
   topLine: "Karen Humphreys",
@@ -111,7 +111,7 @@ export const homeObj7 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Karen Humphreys",
   headline: "First class curriculum and first class support – bargain prices!",
   description:
