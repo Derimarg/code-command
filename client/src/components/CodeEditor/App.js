@@ -35,7 +35,7 @@ function App() {
       <Navbar />
       <EditorTopPanel>
         <Editors
-          language="html"
+          language="xml"
           displayName="HTML"
           value={html}
           onChange={setHtml}
