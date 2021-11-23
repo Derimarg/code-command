@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Button } from "../../globalStyles";
 import {
@@ -14,7 +14,6 @@ import {
   Img,
 } from "./InfoSection.elements";
 import { Fade } from "react-reveal";
-import { MouseContext } from "../../context/mouse-context";
 
 function InfoSection({
   primary,
@@ -36,16 +35,12 @@ function InfoSection({
   location,
   title,
   route,
-  hovered
 }) {
-  const { cursorChangeHandler } = useContext(MouseContext);
 
   return (
     <>
       <InfoSec
         lightBg={lightBg}
-        onMouseEnter={() => cursorChangeHandler(`${hovered}`)}
-        onMouseLeave={() => cursorChangeHandler("")}
       >
         <Container>
           <InfoRow imgStart={imgStart}>

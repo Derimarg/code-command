@@ -17,7 +17,6 @@ export const homeObjOne = {
   alt: "",
   start: "",
   route: "/signup",
-  hovered: "",
 };
 
 export const homeObjTwo = {
@@ -36,7 +35,6 @@ export const homeObjTwo = {
   alt: "Vault",
   start: "true",
   route: "/signup",
-  hovered: "hovered",
 };
 
 export const homeObjThree = {
@@ -77,7 +75,6 @@ export const homeObjFour = {
   alt: "",
   start: "true",
   route: "/signup",
-  hovered: "hovered",
 };
 
 export const homeObjFive = {
