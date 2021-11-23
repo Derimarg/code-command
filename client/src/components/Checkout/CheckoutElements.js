@@ -222,21 +222,22 @@ export const MsgContainer = styled.div`
 
 export const CartContainer = styled.div`
   position: fixed;
-  top: 14%;
+  top: 2%;
   right: 2%;
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: #0467fb;
+  background-color: #4b59f7;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
+  padding-left: 0.5rem;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease-out;
 
   &:hover {
     background-color: #4b59f7;
     transform: scale(1.09);
-    transition: all 0.3s ease-out;
   }
   ${mobile2({ display: "none" })}
 `;
