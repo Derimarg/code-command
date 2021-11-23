@@ -12,7 +12,7 @@ export default function Cookies() {
           color: "#fff",
           background: "#4B59F7",
           fontSize: "24px",
-          borderRadius: "8px",
+          borderRadius: "4px",
         }}
         buttonText={"I understand!"}
         expires={150}
