@@ -3,6 +3,12 @@ import Editors from "./Editors";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./index.css";
 import Navbar from "../Navbar/Navbar";
+import {
+  EditorContainer,
+  EditorTopPanel,
+  EditorPanel,
+  EditorIframe,
+} from "./Editor.Elements";
 
 function App() {
   const [html, setHtml] = useLocalStorage("html", " ");
@@ -25,11 +31,11 @@ function App() {
   }, [html, css, js]);
 
   return (
-    <>
+    <EditorContainer>
       <Navbar />
-      <div className="pane top-pane">
+      <EditorTopPanel>
         <Editors
-          language="xml"
+          language="html"
           displayName="HTML"
           value={html}
           onChange={setHtml}
@@ -46,18 +52,16 @@ function App() {
           value={js}
           onChange={setJs}
         />
-      </div>
-      <div className="pane">
-        <iframe
+      </EditorTopPanel>
+      <EditorPanel>
+        <EditorIframe
           srcDoc={code}
           title="output"
           sandbox="allow-scripts"
           frameBorder="0"
-          width="100%"
-          height="100%"
         />
-      </div>
-    </>
+      </EditorPanel>
+    </EditorContainer>
   );
 }
 

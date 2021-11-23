@@ -1,25 +1,28 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import ColumnResizer from "react-column-resizer";
+import { Controlled as ControlledEditor } from "react-codemirror2";
 
 export const EditorContainer = styled.div`
   background-color: #202020;
   overflow: hidden;
+  margin: 0;
 `;
 
-export const EditorNav = styled.div`
-  width: 100%;
-  height: 30px;
-  background-color: #1e1e1e;
-  justify-content: start !important;
-  font-size: 2rem;
-  margin: 2rem;
+export const EditorTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 `;
 
-export const LogoLink = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-  color: #fff;
+export const EditorCollapseButton = styled.button`
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 `;
 
 export const EditorTopPanel = styled.div`
@@ -28,31 +31,16 @@ export const EditorTopPanel = styled.div`
   background-color: black;
 `;
 
-export const EditorWrapper = styled.div`
-  width: 33vw;
-`;
-
-export const EditorHeading = styled.div`
-  background-color: #272727;
-  color: white;
-  padding: 0.3em;
-`;
-
-export const EditorColumnResizer = styled(ColumnResizer)`
-  background-color: #272727;
-  margin-top: 5vw;
-  width: 2vw;
-  min-width: 0;
-`;
-
-export const EditorOutputScreen = styled.div`
-  width: 100vw;
+export const EditorPanel = styled.div`
   height: 50vh;
-  border: 0px;
-  background-color: #20202000;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
   display: flex;
+`;
+
+export const EditorControlled = styled(ControlledEditor)`
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
 `;
 
 export const EditorIframe = styled.iframe`
