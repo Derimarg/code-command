@@ -105,6 +105,17 @@ export const StyledInput = styled.input`
   }
 `;
 
+export const ContactBtn = styled.button`
+  border: none;
+  margin-left: -1.5rem!important;
+  border-radius: 8px;
+  padding: 0 1rem;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+`;
 export const InputContainer = styled.div`
   display: flex;
   justify-content: center;

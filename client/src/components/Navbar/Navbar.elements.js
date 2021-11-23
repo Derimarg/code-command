@@ -42,7 +42,7 @@ export const NavLogo = styled(Link)`
   }
 
   &:hover {
-    color: #4b59f7;
+    color: #9ea5fa;
   }
 
   @media screen and (max-width: 960px) {
@@ -123,8 +123,8 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 4px solid #4b59f7;
-    color: #4b59f7;
+    border-bottom: 4px solid #9ea5fa;
+    color: #9ea5fa;
   }
 
   @media screen and (max-width: 960px) {
@@ -155,7 +155,7 @@ export const NavLinks = styled(Link)`
   height: 100%;
 
   &:hover {
-    color: #4b59f7;
+    color: #9ea5fa;
   }
 
   @media screen and (max-width: 960px) {
@@ -165,7 +165,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #9ea5fa;
       transition: all 0.3s ease;
     }
   }
@@ -180,7 +180,7 @@ export const NavCart = styled.div`
   height: 100%;
 
   &:hover {
-    color: #4b59f7;
+    color: #9ea5fa;
   }
 
   @media screen and (max-width: 960px) {
@@ -190,7 +190,7 @@ export const NavCart = styled.div`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #9ea5fa;
       transition: all 0.3s ease;
     }
   }

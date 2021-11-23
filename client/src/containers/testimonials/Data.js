@@ -1,5 +1,5 @@
 export const review1 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -20,7 +20,7 @@ export const review1 = {
 };
 
 export const review2 = {
-  primary: false,
+  primary: true,
   lightBg: false,
   lightTopLine: false,
   lightTopLine2: false,
@@ -41,7 +41,7 @@ export const review2 = {
 };
 
 export const review3 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -63,7 +63,7 @@ export const review3 = {
 };
 
 export const review4 = {
-  primary: false,
+  primary: true,
   lightBg: false,
   lightTopLine: false,
   lightTopLine2: false,
@@ -84,7 +84,7 @@ export const review4 = {
 };
 
 export const review5 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -105,7 +105,7 @@ export const review5 = {
 };
 
 export const review6 = {
-  primary: false,
+  primary: true,
   lightBg: false,
   lightTopLine: false,
   lightTopLine2: false,
@@ -126,7 +126,7 @@ export const review6 = {
 };
 
 export const review7 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -147,7 +147,7 @@ export const review7 = {
 };
 
 export const review8 = {
-  primary: false,
+  primary: true,
   lightBg: false,
   lightTopLine: false,
   lightTopLine2: false,
@@ -168,7 +168,7 @@ export const review8 = {
 };
 
 export const review9 = {
-  primary: false,
+  primary: true,
   lightBg: true,
   lightTopLine: false,
   lightTopLine2: false,
@@ -189,7 +189,7 @@ export const review9 = {
 };
 
 export const review10 = {
-  primary: false,
+  primary: true,
   lightBg: false,
   lightTopLine: false,
   lightTopLine2: false,

@@ -18,7 +18,6 @@ import {
 } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
 import DotRing from "./components/DotRing/DotRing";
-import Top from "./containers/topButton/Top";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -50,7 +49,6 @@ export default function Main() {
               <Route component={NotFound} />
             </Switch>
             <BarTemplate {...cartObj} />
-            <Top />
             <BarTemplate {...cookieObj} />
             <BarTemplate {...footerObj} />
           </Provider>

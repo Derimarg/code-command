@@ -74,11 +74,12 @@ export const ProductTitle = styled.h2`
 export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: center;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 0;
   padding: 2rem;
   text-align: center;
+  flex-grow: 1;
 `;
 
 export const ProductDesc = styled.p`
@@ -101,10 +102,8 @@ export const ProductButton = styled.button`
   transition: 0.2 ease-out;
 
   &:hover {
-    background: #0467fb;
-    transition: 0.2s ease-out;
+    background: #071292;
     cursor: pointer;
-    color: #000;
   }
 `;
 

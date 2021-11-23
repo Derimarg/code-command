@@ -10,6 +10,7 @@ import {
   InputContainer,
   StyledInput,
   Status,
+  ContactBtn,
 } from "../../containers/login/Input";
 import emailjs from "emailjs-com";
 import { validateEmail } from "../../utils/helpers";
@@ -135,9 +136,10 @@ export default function ContactSection() {
               <div>{errorMessage}</div>
             </div>
           )}
-
-          <button type="submit">Send Message</button>
-          <h4>
+          <InputContainer>
+            <ContactBtn type="submit">Send Message</ContactBtn>
+          </InputContainer>
+          <h4 style={{marginLeft: "-1.5rem"}}>
             New to Code Command?
             <Link to="/signup">
               <span>Register</span>
