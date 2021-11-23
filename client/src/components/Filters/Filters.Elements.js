@@ -20,15 +20,12 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   margin: 5px 4px;
-  background-color: teal;
+  padding: 7px;
+  background-color: hsl(204, 100%, 50%);
   color: #fff;
-  box-shadow: 2px 2px 2px 1px black;
 
   &:hover {
-    opacity: 0.8;
-    color: black;
-    transform: scale(1.06);
-    transition: all 0.3s ease-out;
+    background-color: hsl(204, 100%, 40%);
   }
 `;
 

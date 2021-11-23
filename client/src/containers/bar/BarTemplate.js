@@ -8,7 +8,7 @@ export const BarTemplate = withRouter(({ location, element }) => {
         location.pathname !== "/signup" &&
         location.pathname !== "/privacy" &&
         location.pathname !== "/cookies" &&
-        location.pathname !== "/codeEditor" &&
+        location.pathname !== "/code-editor" &&
         location.pathname !== "/terms" && <>{element}</>}
     </>
   );

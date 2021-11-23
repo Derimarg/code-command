@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Editors from "./Editors";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./index.css";
 import Navbar from "../Navbar/Navbar";
+import {
+  EditorContainer,
+  EditorTopPanel,
+  EditorPanel,
+  EditorIframe,
+} from "./Editor.Elements";
+import { MouseContext } from "../../context/mouse-context";
 
 function App() {
+  const { cursorChangeHandler } = useContext(MouseContext);
   const [html, setHtml] = useLocalStorage("html", " ");
   const [css, setCss] = useLocalStorage("css", " ");
   const [js, setJs] = useLocalStorage("js", "");
@@ -25,9 +33,12 @@ function App() {
   }, [html, css, js]);
 
   return (
-    <>
+    <EditorContainer
+      onMouseEnter={() => cursorChangeHandler("hovered")}
+      onMouseLeave={() => cursorChangeHandler("")}
+    >
       <Navbar />
-      <div className="pane top-pane">
+      <EditorTopPanel>
         <Editors
           language="xml"
           displayName="HTML"
@@ -46,18 +57,16 @@ function App() {
           value={js}
           onChange={setJs}
         />
-      </div>
-      <div className="pane">
-        <iframe
+      </EditorTopPanel>
+      <EditorPanel>
+        <EditorIframe
           srcDoc={code}
           title="output"
           sandbox="allow-scripts"
           frameBorder="0"
-          width="100%"
-          height="100%"
         />
-      </div>
-    </>
+      </EditorPanel>
+    </EditorContainer>
   );
 }
 

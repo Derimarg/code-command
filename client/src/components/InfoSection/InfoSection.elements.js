@@ -129,18 +129,20 @@ export const ProfileWraper = styled.div`
   color: ${({ lightTopLine2 }) => (lightTopLine2 ? "#f2f2f2" : "#737373")};
   font-size: 18px;
   line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
 `;
 
 export const TopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? "#a9b3c1" : "#4B59F7")};
   font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1em;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 `;
 
 export const Img = styled.img`
@@ -170,7 +172,7 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
+  color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1 " : " #404040")};
 `;
 
 export const Filters = styled.div`
