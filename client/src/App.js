@@ -36,18 +36,18 @@ export default function App() {
       <Router basename="/">
         <div>
           <Provider store={store}>
-            <GlobalStyles />
-            <BarTemplate {...navbarObj} />
-            <Switch>
-              {routesData.map((x, index) => (
-                <Route exact key={index} path={x.route} component={Loading} />
-              ))}
-              <Route exact path="/products/:id" component={Detail} />
-              <Route component={NotFound} />
-            </Switch>
-            <BarTemplate {...cartObj} />
-            <BarTemplate {...cookieObj} />
-            <BarTemplate {...footerObj} />
+              <GlobalStyles />
+              <BarTemplate {...navbarObj} />
+              <Switch>
+                {routesData.map((x, index) => (
+                  <Route exact key={index} path={x.route} component={Loading} />
+                ))}
+                <Route exact path="/products/:id" component={Detail} />
+                <Route component={NotFound} />
+              </Switch>
+              <BarTemplate {...cartObj} />
+              <BarTemplate {...cookieObj} />
+              <BarTemplate {...footerObj} />
           </Provider>
         </div>
       </Router>
