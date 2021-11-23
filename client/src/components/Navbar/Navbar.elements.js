@@ -4,9 +4,6 @@ import { FaCode, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
-// dark: #1D1D1D
-// blue: #101522
-// light shade: #202a45
 export const Nav = styled.nav`
   background: #101522;
   height: 80px;
@@ -16,8 +13,8 @@ export const Nav = styled.nav`
   font-size: 1.2rem;
   // position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  // z-index: 999;
+  // box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const NavbarContainer = styled(Container)`

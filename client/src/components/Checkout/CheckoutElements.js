@@ -222,7 +222,7 @@ export const MsgContainer = styled.div`
 
 export const CartContainer = styled.div`
   position: fixed;
-  top: 2%;
+  top: 14%;
   right: 2%;
   font-size: 1.5rem;
   cursor: pointer;
