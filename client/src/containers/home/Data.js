@@ -144,7 +144,7 @@ export const whoWeAreObj = {
   primary: true,
   lightBg: true,
   lightTopLine: true,
-  lightText: false,
+  lightText: true,
   lightTextDesc: false,
   topLine: "Secure Database",
   headline: "1",
