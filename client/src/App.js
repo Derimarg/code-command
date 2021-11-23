@@ -17,7 +17,6 @@ import {
   cookieObj,
 } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
-import { CookieConsentProvider } from "./hooks/CookieConsentContext";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -37,7 +36,6 @@ export default function App() {
       <Router basename="/">
         <div>
           <Provider store={store}>
-            <CookieConsentProvider>
               <GlobalStyles />
               <BarTemplate {...navbarObj} />
               <Switch>
@@ -50,7 +48,6 @@ export default function App() {
               <BarTemplate {...cartObj} />
               <BarTemplate {...cookieObj} />
               <BarTemplate {...footerObj} />
-            </CookieConsentProvider>
           </Provider>
         </div>
       </Router>
