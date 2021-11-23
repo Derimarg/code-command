@@ -68,8 +68,8 @@ export default function Signupbar(props) {
               <Status />
             </InputContainer>
           ))}
-        </div>
         <button type="submit">Sign Up</button>
+        </div>
       </Form>
       <div>
         <Terms>

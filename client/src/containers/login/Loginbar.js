@@ -51,38 +51,40 @@ function Loginbar(props) {
       </LogoWrapper>
       <Form onSubmit={handleFormSubmit}>
         <h3>Login</h3>
-        <InputContainer>
-          <StyledInput
-            placeholder="Email"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
-        <InputContainer>
-          <StyledInput
-            placeholder="Password"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-            required
-            autocomplete="off"
-          />
-          <Status />
-        </InputContainer>
-        {error ? (
-          <>
-            <ErrorMsg>
-              The credentials you provided are incorrect, please try again
-            </ErrorMsg>
-          </>
-        ) : null}
-        <button type="submit">Login</button>
+        <div>
+          <InputContainer>
+            <StyledInput
+              placeholder="Email"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+              required
+              autocomplete="off"
+            />
+            <Status />
+          </InputContainer>
+          <InputContainer>
+            <StyledInput
+              placeholder="Password"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+              required
+              autocomplete="off"
+            />
+            <Status />
+          </InputContainer>
+          {error ? (
+            <>
+              <ErrorMsg>
+                The credentials you provided are incorrect, please try again
+              </ErrorMsg>
+            </>
+          ) : null}
+          <button type="submit">Login</button>
+        </div>
         <h4>
           Don't have an account?
           <Link to="/signup">

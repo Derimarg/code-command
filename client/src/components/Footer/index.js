@@ -60,10 +60,10 @@ export default function Footer() {
             CC
           </SocialLogo>
           <WebsiteRights>
-            Learn to code interactively &copy; code app
+            Learn to code interactively &copy; code app{" "}
             {new Date().getFullYear()}{" "}
             <span style={{ fontSize: "18px" }}>|</span>
-            <Link to="privacy" style={{ color: "#4B59F7" }}>
+            <Link to="privacy" style={{ color: "#4B59F7", padding: "4px" }}>
               All rights reserved.
             </Link>
           </WebsiteRights>

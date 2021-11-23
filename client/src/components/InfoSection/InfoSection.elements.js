@@ -138,7 +138,7 @@ export const Role = styled.h3`
 export const ProfileWraper = styled.div`
   color: ${({ lightTopLine2 }) => (lightTopLine2 ? "#f2f2f2" : "#737373")};
   font-size: 18px;
-  line-height: 16px;
+  line-height: 12px;
   font-weight: 500;
   letter-spacing: 0.4px;
   margin-bottom: 8px;
