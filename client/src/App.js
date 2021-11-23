@@ -9,13 +9,7 @@ import Detail from "./pages/Detail/Detail";
 import NotFound from "./pages/NotFound/NotFound";
 import Loading from "./pages/Loading/Loading.js";
 import GlobalStyles from "./globalStyles";
-import {
-  routesData,
-  navbarObj,
-  cartObj,
-  footerObj,
-  cookieObj,
-} from "./routesData";
+import { routes, navbarObj, cartObj, footerObj, cookieObj } from "./routesData";
 import { BarTemplate } from "./containers/bar/BarTemplate";
 
 const client = new ApolloClient({
@@ -36,18 +30,18 @@ export default function App() {
       <Router basename="/">
         <div>
           <Provider store={store}>
-              <GlobalStyles />
-              <BarTemplate {...navbarObj} />
-              <Switch>
-                {routesData.map((x, index) => (
-                  <Route exact key={index} path={x.route} component={Loading} />
-                ))}
-                <Route exact path="/products/:id" component={Detail} />
-                <Route component={NotFound} />
-              </Switch>
-              <BarTemplate {...cartObj} />
-              <BarTemplate {...cookieObj} />
-              <BarTemplate {...footerObj} />
+            <GlobalStyles />
+            <BarTemplate {...navbarObj} />
+            <Switch>
+              {routes.map((x, index) => (
+                <Route exact key={index} path={x.path} component={Loading} />
+              ))}
+              <Route exact path="/products/:id" component={Detail} />
+              <Route component={NotFound} />
+            </Switch>
+            <BarTemplate {...cartObj} />
+            <BarTemplate {...cookieObj} />
+            <BarTemplate {...footerObj} />
           </Provider>
         </div>
       </Router>

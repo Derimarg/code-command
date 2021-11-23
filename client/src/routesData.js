@@ -4,20 +4,20 @@ import Cartbar from "./containers/cart/Cartbar";
 import { Footer } from "./components";
 import Cookies from "./components/Cookies/Cookies";
 
-export const routesData = [
-  { route: "/" },
-  { route: "/login" },
-  { route: "/signup" },
-  { route: "/courses" },
-  { route: "/checkout" },
-  { route: "/contact" },
-  { route: "/order-history" },
-  { route: "/success" },
-  { route: "/privacy" },
-  { route: "/cookies" },
-  { route: "/terms" },
-  { route: "/testimonials" },
-  { route: "/code-editor" },
+export const routes = [
+  { path: "/"},
+  { path: "/login" },
+  { path: "/signup" },
+  { path: "/courses" },
+  { path: "/checkout" },
+  { path: "/contact" },
+  { path: "/order-history" },
+  { path: "/success" },
+  { path: "/privacy" },
+  { path: "/cookies" },
+  { path: "/terms" },
+  { path: "/testimonials" },
+  { path: "/code-editor" },
 ];
 
 export const navbarObj = { element: <NavContainer /> };

@@ -121,7 +121,7 @@ export const FooterLink = styled.a`
   }
 `;
 
-export const FooterLink2 = styled(Link)`
+export const FooterLink2 = styled.a`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;

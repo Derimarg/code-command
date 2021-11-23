@@ -11,8 +11,8 @@ export default function Courses() {
 
   return (
     <>
-      {coursesHeader.map((a) => (
-        <CoursesSection heading={a.heading} description={a.desc} />
+      {coursesHeader.map((a, index) => (
+        <CoursesSection key={index} heading={a.heading} description={a.desc} />
       ))}
     </>
   );

@@ -60,6 +60,12 @@ export const InfoRow = styled.div`
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
   
   }
+
+  @media screen and (max-width: 768px) {
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  }
   
 `;
 
@@ -92,6 +98,7 @@ export const InfoColumn = styled.div`
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 

@@ -13,8 +13,9 @@ export default function Product() {
 
   return (
     <>
-      {coursesHeader.map((a) => (
+      {coursesHeader.map((a, index) => (
         <Products
+        key={index}
           heading={a.heading}
           description={a.desc}
           buttonLabel={a.buttonLabel}

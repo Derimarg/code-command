@@ -24,17 +24,17 @@ export default function Footer() {
       <FooterLinksContainer>
         <FooterLinksWrapper>
           {aboutDB.map((x, index) => (
-            <>
-              <FooterLinkItems key={index}>
+            <div key={index}>
+              <FooterLinkItems >
                 <FooterLinkTitle>{x.title}</FooterLinkTitle>
                 {x.details.map((a, index) => (
-                  <FooterLink2 to={a.route} key={index}>
+                  <FooterLink2 href={a.route} key={index}>
                     {a.des}
                   </FooterLink2>
                 ))}
                 <FooterLink2></FooterLink2>
               </FooterLinkItems>
-            </>
+            </div>
           ))}
         </FooterLinksWrapper>
         <FooterLinksWrapper>
