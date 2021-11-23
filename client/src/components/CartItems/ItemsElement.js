@@ -10,6 +10,7 @@ export const Img = styled.img`
   width: 70px;
   margin-right: 1rem;
   margin-top: 0.5rem;
+  box-shadow: rgb(38 57 77 / 32%) 10px 13px 17px -10px;
 `;
 
 export const CartInfo = styled.div`
