@@ -17,6 +17,7 @@ export const homeObjOne = {
   alt: "",
   start: "",
   route: "/signup",
+  hovered: "",
 };
 
 export const homeObjTwo = {
@@ -29,13 +30,13 @@ export const homeObjTwo = {
   headline: "Never learn alone.",
   description:
     "The best part about learning with friends, is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
-  buttonLabel: "Join our social media",
+  buttonLabel: "Join our courses",
   imgStart: "start",
   img: pic,
   alt: "Vault",
   start: "true",
-
   route: "/signup",
+  hovered: "hovered",
 };
 
 export const homeObjThree = {
@@ -76,6 +77,7 @@ export const homeObjFour = {
   alt: "",
   start: "true",
   route: "/signup",
+  hovered: "hovered",
 };
 
 export const homeObjFive = {

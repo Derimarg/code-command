@@ -1,7 +1,7 @@
 import React from "react";
-import "../../pages/Loading/Load.css";
+import "./Load.css";
 
-function Load() {
+export default function AnimatedLoad() {
   return (
     <div className="logo_wrapper">
       <div className="loading">
@@ -16,5 +16,3 @@ function Load() {
     </div>
   );
 }
-
-export default Load;

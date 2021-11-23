@@ -11,17 +11,18 @@ export const IconWrap = styled.button`
   outline: none;
   background-color: #4b59f7;
   color: white;
-  cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
-  font-size: 25px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 
   &:hover {
-    background-color: #330080;
-    transition: all ease-in-out 0.2s;
+    background-color: rgba(110, 202, 220, 0.78);
+    transform: scale(1.09);
+    transition: all 0.3s ease-out;
   }
 `;
 
 export const TopIcon = styled(FaHandPointUp)`
   color: white;
+  font-size: 1.5rem;
 `;

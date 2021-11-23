@@ -148,18 +148,33 @@ GIVEN I am a user who has completed at least one course:
 - <p><a href="https://www.npmjs.com/">NPM</a></p>
 - <p><a href="https://reactjs.org/">React</a></p>
 - <p><a href="https://www.npmjs.com/package/graphql">NPM GrapghQL</a></p>
-- <p><a href="apollographql.com/docs/react/get-started/">NPM Apollo Clinet</a></p>
+- <p><a href="apollographql.com/docs/react/get-started/">NPM Apollo Client</a></p>
 - <p><a href="https://www.npmjs.com/package/apollo-server-express">NPM Apollo Server Express</a></p>
 - <p><a href="https://www.npmjs.com/package/react-router">NPM React Router</a></p>
+- <p><a href="https://www.npmjs.com/package/react-scripts">NPM React Scripts</a></p>
 - <p><a href="https://www.npmjs.com/package/react-router-dom">NPM React Router DOM</a></p>
 - <p><a href="https://www.npmjs.com/package/concurrently">NPM Concurrently</a></p>
 - <p><a href="https://www.npmjs.com/package/jsonwebtoken">NPM JSON Web Tokens</a></p>
 - <p><a href="https://www.npmjs.com/package/jwt-decode">NPM JWT Decode</a></p>
 - <p><a href="https://www.npmjs.com/package/nodemon">NPM Nodemon</a></p>
 - <p><a href="https://www.npmjs.com/package/if-env">NPM If Env</a></p>
+- <p><a href="https://www.npmjs.com/package/stripe">NPM Stripe</a></p>
+- <p><a href="https://www.npmjs.com/package/styled-components">NPM Syled Components</a></p>
+- <p><a href="https://www.npmjs.com/package/bcrypt">NPM Bcrypt</a></p>
+- <p><a href="https://www.npmjs.com/package/express">NPM Express</a></p>
+- <p><a href="https://www.npmjs.com/package/react-reveal">NPM React Reveal</a></p>
+- <p><a href="https://www.npmjs.com/package/react-icons">NPM React Icons</a></p>
+- <p><a href="https://www.npmjs.com/package/react-cookie-consent">NPM React Cookie Consent</a></p>
+- <p><a href="https://www.npmjs.com/package/graphql-tag">NPM GraphQL Tag</a></p>
+- <p><a href="https://www.npmjs.com/package/glamor">NPM Glamor</a></p>
+- <p><a href="https://www.npmjs.com/package/emailjs">Eamiljs</a></p>
+- <p><a href="https://www.npmjs.com/package/emailjs-com">NPM Emailjs Com</a></p>
+- <p><a href="https://redux.js.org/">NPM Apollo Link Context</a></p>
+- <p><a href="https://www.npmjs.com/package/apollo-boost">NPM Apollo Boost</a></p>
 - <p><a href="https://redux.js.org/">Redux</a></p>
 - <p><a href="https://www.mongodb.com/">MongoDB</a></p>
-- <p><a href="https://www.heroku.com/">Heroku</a></p>
+- <p><a href="https://www.npmjs.com/package/react-column-resizer">react-column-resizer</a></p>
+- <p><a href="https://www.npmjs.com/package/@monaco-editor/react">@monaco-editor/react
 
 [Back To Top](#code-command)
 

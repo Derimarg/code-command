@@ -22,7 +22,7 @@
 // Website related settings
 
 const settings = {
-  useCustomCursor: true, // Change this to false if you want the good'ol cursor
+  useCustomCursor: true,
   googleTrackingID: "UA-174238252-2",
 };
 

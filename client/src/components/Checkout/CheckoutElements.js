@@ -228,14 +228,14 @@ export const CartContainer = styled.div`
   cursor: pointer;
   background-color: #0467fb;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
   padding: 0.5rem;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
 
   &:hover {
     background-color: #4b59f7;
-    transform: scale(1.06);
+    transform: scale(1.09);
     transition: all 0.3s ease-out;
   }
   ${mobile2({ display: "none" })}

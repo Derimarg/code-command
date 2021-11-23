@@ -3,7 +3,6 @@ import NavContainer from "./containers/navbar/NavContainer";
 import Cartbar from "./containers/cart/Cartbar";
 import { Footer } from "./components";
 import Cookies from "./components/Cookies/Cookies";
-import Top from "./containers/topButton/Top";
 
 export const routesData = [
   { route: "/" },
@@ -18,10 +17,10 @@ export const routesData = [
   { route: "/cookies" },
   { route: "/terms" },
   { route: "/testimonials" },
+  { route: "/codeEditor" },
 ];
 
 export const navbarObj = { element: <NavContainer /> };
 export const cartObj = { element: <Cartbar /> };
 export const footerObj = { element: <Footer /> };
 export const cookieObj = { element: <Cookies /> };
-export const topObj = { element: <Top /> };

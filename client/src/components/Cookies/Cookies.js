@@ -7,8 +7,7 @@ export default function Cookies() {
     <>
       <CookieConsent
         debug={true}
-        location="bottom"
-        style={{ background: "#101522", textAlign: "left" }}
+        style={{ background: "rgba(16,21,34,0.78)", textAlign: "left" }}
         buttonStyle={{
           color: "#fff",
           background: "#4B59F7",

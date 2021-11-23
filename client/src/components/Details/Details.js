@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { useSelector, useDispatch } from "react-redux";
 import { Container } from "../../globalStyles";
-import Load from "../Load/index";
+import AnimatedLoad from "../../pages/Loading/AnimatedLoad";
 
 import {
   REMOVE_FROM_CART,
@@ -161,7 +161,7 @@ export default function Details({
           </InfoSec>
         </>
       ) : null}
-      {loading ? <Load /> : null}
+      {loading ? <AnimatedLoad /> : null}
     </>
   );
 }

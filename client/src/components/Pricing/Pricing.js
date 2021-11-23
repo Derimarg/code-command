@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Button } from "../../globalStyles";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { IconContext } from "react-icons/lib";
@@ -21,8 +21,11 @@ import {
   PricingCardFeature,
   Img,
 } from "./Pricing.elements";
+import { MouseContext } from "../../context/mouse-context";
 
 export default function Pricing() {
+  const { cursorChangeHandler } = useContext(MouseContext);
+
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -63,6 +66,8 @@ export default function Pricing() {
                   <PricingCard
                     to={`/products/${product._id}`}
                     key={product._id}
+                    onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}
                   >
                     <PricingCardInfo>
                       <PricingCardIcon>
