@@ -50,12 +50,12 @@ export default function Navbar() {
             <NavLinks to="/">Home</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/codeEditor" onClick={closeMobileMenu}>
+            <NavLinks to="/code-editor" onClick={closeMobileMenu}>
               Code Editor
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/orderHistory" onClick={closeMobileMenu}>
+            <NavLinks to="/order-history" onClick={closeMobileMenu}>
               Order History
             </NavLinks>
           </NavItem>
@@ -100,7 +100,7 @@ export default function Navbar() {
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/codeEditor" onClick={closeMobileMenu}>
+            <NavLinks to="/code-editor" onClick={closeMobileMenu}>
               Code Editor
             </NavLinks>
           </NavItem>
