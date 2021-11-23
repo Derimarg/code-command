@@ -133,6 +133,21 @@ export const NavItem = styled.li`
   }
 `;
 
+export const NavItem2 = styled.li`
+  height: 80px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 4px solid #9ea5fa;
+    color: #9ea5fa;
+  }
+
+  @media screen and (max-width: 980px) {
+    width: 100%;
+    display: none !important;
+  }
+`;
+
 export const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {
     display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
-import { CookieLink } from "../../Global";
+import { CookieLink } from "../../globalStyles";
 
 export default function Cookies() {
   return (

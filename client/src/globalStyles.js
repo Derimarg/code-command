@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,6 +10,13 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Source Sans Pro', sans-serif;
  } 
 `;
+
+export const CookieLink = styled(Link)`
+  color: #4b59f7;
+  font-size: 1rem;
+  font-weight: bold;
+`;
+
 
 export const Container = styled.div`
   z-index: 1;
