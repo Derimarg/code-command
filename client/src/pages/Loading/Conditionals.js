@@ -25,7 +25,7 @@ const Pages = withRouter(({ location }) => {
       return <Checkout />;
     case "/contact":
       return <Contact />;
-    case "/orderHistory":
+    case "/order-history":
       return <OrderHistory />;
     case "/success":
       return <Success />;
@@ -41,7 +41,7 @@ const Pages = withRouter(({ location }) => {
       return <Signup />;
     case "/testimonials":
       return <Testimonials />;
-    case "/codeEditor":
+    case "/code-editor":
       return <CodeEditor />;
     default:
       return <NotFound />;

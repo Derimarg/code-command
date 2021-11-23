@@ -31,11 +31,11 @@ export const ProductCard = styled.div`
   background-color: #f2f2f2;
   margin-bottom:2rem;
   color black;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(38 57 77 / 32%) 10px 13px 17px -10px;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.06);
-    transition: all 0.3s ease-out;
+    transform: scale(1.03);
     color: #1c2237;
   }
 `;

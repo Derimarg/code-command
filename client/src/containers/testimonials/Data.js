@@ -4,7 +4,7 @@ export const review1 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Virgil Smith",
   headline: "Code Command helped me get my dream job in my 80s!",
   description:
@@ -46,7 +46,8 @@ export const review3 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
+
   topLine: "Heather Athens",
   headline: "The winning edge.",
   description:
@@ -88,7 +89,7 @@ export const review5 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Ashley Richardson",
   headline: "No degree, no skills – no problem.",
   description:
@@ -130,7 +131,7 @@ export const review7 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Magdy Halim",
   headline: "Made in America",
   description:
@@ -172,7 +173,7 @@ export const review9 = {
   lightTopLine: false,
   lightTopLine2: false,
   lightText: false,
-  lightTextDesc: true,
+  lightTextDesc: false,
   topLine: "Troy Mihalko",
   headline: "I’m lovin it…",
   description:
