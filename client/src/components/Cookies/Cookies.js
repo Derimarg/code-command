@@ -6,8 +6,9 @@ export default function Cookies() {
   return (
     <>
       <CookieConsent
-        debug={true}
+        // debug={true}
         style={{ background: "rgba(16,21,34,0.78)", textAlign: "left" }}
+        cookieName="myAwesomeCookie"
         buttonStyle={{
           color: "#fff",
           background: "#4B59F7",
@@ -15,8 +16,8 @@ export default function Cookies() {
           borderRadius: "4px",
         }}
         buttonText={"I understand!"}
-        expires={150}
         buttonClasses="btn btn-primary"
+        expires={150}
       >
         This site use cookies. See our{" "}
         <CookieLink to="/cookies">privacy policy</CookieLink> for more.
