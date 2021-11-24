@@ -14,7 +14,7 @@ export const homeObjOne = {
   buttonLabel: "Get Started",
   imgStart: "",
   img: "/images/svg-001.svg",
-  alt: "Get started animation",
+  alt: "image of a man sitting at a desk with six monitors",
   start: "",
   route: "/signup",
 };
@@ -32,7 +32,7 @@ export const homeObjTwo = {
   buttonLabel: "Check Our Courses",
   imgStart: "start",
   img: pic,
-  alt: "social media character",
+  alt: "animation image of a woman sitting atop a building with social media logos flying around her head",
   start: "true",
   route: "/courses",
 };
@@ -51,7 +51,7 @@ export const homeObjFour = {
   buttonLabel: "Check Our Live Code Editor",
   imgStart: "start",
   img: "/images/svg-03.svg",
-  alt: "Database animation",
+  alt: "animation image of a woman standing in front of a giant purple database",
   start: "true",
   route: "/signup",
 };
@@ -97,7 +97,7 @@ export const homeObj7 = {
   buttonLabel: "Check Our Testimonials",
   imgStart: "",
   img: "/images/karen.jpg",
-  alt: "Profile",
+  alt: "Woman wearing gray top and black pants sitiing on a couch working on her laptop",
   start: "",
   route: "/testimonials",
 };
@@ -114,6 +114,6 @@ export const homeObj8 = {
   buttonLabel: "Start Now",
   imgStart: "",
   img: pic1,
-  alt: "Social media marketing",
+  alt: "animation image of four people placing social media icons on a giantic mobile phone",
   route: "/signup",
 };
