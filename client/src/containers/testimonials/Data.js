@@ -14,7 +14,7 @@ export const review1 = {
   buttonLabel: "Start your journey",
   imgStart: "start",
   img: "/images/virgil.jpg",
-  alt: "Profile",
+  alt: "Elderly man smiling infront of a sunrise",
   start: "true",
   routes: "signup",
 };
@@ -35,7 +35,7 @@ export const review2 = {
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/ted.jpg",
-  alt: "Profile",
+  alt: "Man in a black turtleneck and black coat smiling",
   start: "",
   route: "/signup",
 };
@@ -57,7 +57,7 @@ export const review3 = {
   buttonLabel: "Start your journey",
   imgStart: "start",
   img: "/images/heather.jpg",
-  alt: "Profile",
+  alt: "Woman wearing black top and white pants sitting on the couch smiling",
   start: "true",
   route: "/signup",
 };
@@ -78,7 +78,7 @@ export const review4 = {
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/chet.jpg",
-  alt: "Profile",
+  alt: "Successful man wearing white shirt and blue siot getting out of an expensive looking car",
   start: "",
   route: "/signup",
 };
@@ -99,7 +99,7 @@ export const review5 = {
   buttonLabel: "Start your journey",
   imgStart: "start",
   img: "/images/ashley.jpg",
-  alt: "Profile",
+  alt: "Young woman with brown hair wearing a denim jacket sitting next to the ocean",
   start: "true",
   route: "/signup",
 };
@@ -120,7 +120,7 @@ export const review6 = {
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/jason.jpg",
-  alt: "Profile",
+  alt: "Man with dreads and half his head shaved with a beard smiling",
   start: "",
   route: "/signup",
 };
@@ -141,7 +141,7 @@ export const review7 = {
   buttonLabel: "Start your journey",
   imgStart: "start",
   img: "/images/magdy.jpg",
-  alt: "Profile",
+  alt: "Man with black shirt and glasses sitting at a table",
   start: "true",
   route: "/signup",
 };
@@ -162,7 +162,7 @@ export const review8 = {
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/kristen.jpg",
-  alt: "Profile",
+  alt: "Young woman with red hair and tatoos sitting in a coffee shop grinning at her laptop",
   start: "",
   route: "/signup",
 };
@@ -183,7 +183,7 @@ export const review9 = {
   buttonLabel: "Start your journey",
   imgStart: "start",
   img: "/images/troy.jpg",
-  alt: "Profile",
+  alt: "Man with red shirt and clenched fists smiling triumphantly",
   start: "true",
   route: "/signup",
 };
@@ -204,7 +204,7 @@ export const review10 = {
   buttonLabel: "Start your journey",
   imgStart: "",
   img: "/images/anthony.jpg",
-  alt: "Profile",
+  alt: "Suave looking man wearing a dark dray suit",
   start: "",
   route: "/signup",
 };
