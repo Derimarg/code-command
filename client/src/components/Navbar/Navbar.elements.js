@@ -11,10 +11,10 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  // position: sticky;
+  position: sticky;
   top: 0;
-  // z-index: 999;
-  // box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -130,21 +130,6 @@ export const NavItem = styled.li`
     &:hover {
       border: none;
     }
-  }
-`;
-
-export const NavItem2 = styled.li`
-  height: 80px;
-  border-bottom: 2px solid transparent;
-
-  &:hover {
-    border-bottom: 4px solid #9ea5fa;
-    color: #9ea5fa;
-  }
-
-  @media screen and (max-width: 980px) {
-    width: 100%;
-    display: none !important;
   }
 `;
 

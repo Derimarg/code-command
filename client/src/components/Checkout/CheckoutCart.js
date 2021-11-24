@@ -95,7 +95,7 @@ const Cart = () => {
           </Info>
         </Top>
         <Bottom>
-          <ShopLink to="/">
+          <ShopLink to="/courses">
             <TopButton>CONTINUE SHOPPING</TopButton>
           </ShopLink>
 

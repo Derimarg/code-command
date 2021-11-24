@@ -11,7 +11,6 @@ import {
   MobCartLink,
   NavMenu,
   NavItem,
-  NavItem2,
   NavItemBtn,
   NavLinks,
   NavBtnLink,
@@ -45,13 +44,13 @@ export default function Navbar() {
       return (
         <>
           <NavItem>
-            <NavLinks to="/">Home</NavLinks>
+            <NavLinks to="/" onClick={closeMobileMenu}>Home</NavLinks>
           </NavItem>
-          <NavItem2>
+          <NavItem>
             <NavLinks to="/code-editor" onClick={closeMobileMenu}>
               Code Editor
             </NavLinks>
-          </NavItem2>
+          </NavItem>
           <NavItem>
             <NavLinks to="/order-history" onClick={closeMobileMenu}>
               Order History
@@ -97,11 +96,11 @@ export default function Navbar() {
               Courses
             </NavLinks>
           </NavItem>
-          <NavItem2>
+          <NavItem>
             <NavLinks to="/code-editor" onClick={closeMobileMenu}>
               Code Editor
             </NavLinks>
-          </NavItem2>
+          </NavItem>
           <MobCartLink>
             <NavItem>
               <NavLinks to="/checkout" onClick={closeMobileMenu}>
