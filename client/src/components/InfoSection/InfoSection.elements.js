@@ -74,8 +74,9 @@ export const InfoRow2 = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
-
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }

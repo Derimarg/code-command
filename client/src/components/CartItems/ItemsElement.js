@@ -4,6 +4,7 @@ import { FaTrash } from "react-icons/fa";
 export const CartWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
+  
 `;
 
 export const Img = styled.img`
