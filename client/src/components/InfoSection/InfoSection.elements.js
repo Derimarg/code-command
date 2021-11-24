@@ -76,7 +76,7 @@ export const InfoRow2 = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   justify-content: space-between;
-  
+
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
@@ -170,10 +170,17 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
+
+  @media only screen and (max-width: 780px) {
+    height: 250px;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+
+  }
+
   @media only screen and (max-width: 380px) {
     font-size: 1.5rem;
     margin-left: 10rem;
-    width: 100%;
   }
 `;
 

@@ -53,7 +53,7 @@ export const homeObjFour = {
   img: "/images/svg-03.svg",
   alt: "Database animation",
   start: "true",
-  route: "/signup",
+  route: "/code-editor",
 };
 
 export const homeObjFive = {
