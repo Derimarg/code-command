@@ -282,7 +282,6 @@ For additional help or questions about collaboration, contact us at:
 
 - Project Repository Link: https://github.com/Derimarg/code-command
 - Live application Link: https://code-command-team.herokuapp.com/
-- Video demo link:
 
 [Back To Top](#code-command)
 
