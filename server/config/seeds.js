@@ -60,7 +60,7 @@ db.once("open", async () => {
       includedCourses: 1,
     },
     {
-      name: "Beginners guide to C++ and machine code compiling",
+      name: "C++ and machine code compiling",
       category: categories[1]._id,
       description:
         "This challenging course will teach you how to write complex algorithims and programs in C++. You will also learn how to write C++ code that can be compiled into machine code that will control devices like the Raspberry Pi and ATtiny85.",
