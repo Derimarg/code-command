@@ -14,7 +14,7 @@ export const homeObjOne = {
   buttonLabel: "Get Started",
   imgStart: "",
   img: "/images/svg-001.svg",
-  alt: "",
+  alt: "Get started animation",
   start: "",
   route: "/signup",
 };
@@ -29,33 +29,12 @@ export const homeObjTwo = {
   headline: "Never learn alone.",
   description:
     "The best part about learning with friends, is learning with friends. We tightly integrate our learning platform with our Discord community of learners, teachers, and our reward system. Ask questions 24x7, answer questions of others, gain XP, complete the courses and grow together.",
-  buttonLabel: "Join our courses",
+  buttonLabel: "Check Our Courses",
   imgStart: "start",
   img: pic,
-  alt: "Vault",
+  alt: "social media character",
   start: "true",
-  route: "/signup",
-};
-
-export const homeObjThree = {
-  primary: false,
-  lightBg: true,
-  lightTopLine: false,
-  lightTopLine2: true,
-  lightText: false,
-  lightTextDesc: true,
-  topLine: "Karen Humphreys",
-  headline: "First class curriculum and first class support – bargain prices!",
-  description:
-    "I was burnt out at my old job and desperate to make a change, it was clear that I needed to learn a new skill set. I needed high-quality learning materials and support but didn’t have much money. Thankfully, a coworker told me about Code Command. Their rates were less than half of other comparable programs, so I was skeptical at first. Since Code Command offers a 90-day money back guarantee, I decided to give them a try. That was the best decision I ever made, because now I’m living my truth as an iOS app developer earning twice the salary at my old job! ",
-  role: "Application Developer, Apple, Inc",
-  location: "Santa Clara, CA",
-  buttonLabel: "Start your journey",
-  imgStart: "start",
-  img: "/images/karen.jpg",
-  alt: "Profile",
-  start: "true",
-  route: "/signup",
+  route: "/courses",
 };
 
 export const homeObjFour = {
@@ -69,10 +48,10 @@ export const homeObjFour = {
     "All your progress and projects data is stored on our secure server",
   description:
     "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
-  buttonLabel: "Sign Up Now",
+  buttonLabel: "Check Our Live Code Editor",
   imgStart: "start",
   img: "/images/svg-03.svg",
-  alt: "",
+  alt: "Database animation",
   start: "true",
   route: "/signup",
 };
@@ -115,7 +94,7 @@ export const homeObj7 = {
     "I was burnt out at my old job and desperate to make a change, it was clear that I needed to learn a new skill set. I needed high-quality learning materials and support but didn’t have much money. Thankfully, a coworker told me about Code Command. Their rates were less than half of other comparable programs, so I was skeptical at first. Since Code Command offers a 90-day money back guarantee, I decided to give them a try. That was the best decision I ever made, because now I’m living my truth as an iOS app developer earning twice the salary at my old job! ",
   role: "Application Developer, Apple, Inc",
   location: "Santa Clara, CA",
-  buttonLabel: "Check our Testimonials",
+  buttonLabel: "Check Our Testimonials",
   imgStart: "",
   img: "/images/karen.jpg",
   alt: "Profile",
@@ -135,23 +114,6 @@ export const homeObj8 = {
   buttonLabel: "Start Now",
   imgStart: "",
   img: pic1,
-  alt: "Vault",
-  route: "/signup",
-};
-export const whoWeAreObj = {
-  primary: true,
-  lightBg: true,
-  lightTopLine: true,
-  lightText: true,
-  lightTextDesc: false,
-  topLine: "Secure Database",
-  headline: "1",
-  description:
-    "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
-  buttonLabel: "Sign Up Now",
-  imgStart: "start",
-  img: "/images/svg-03.svg",
-  alt: "",
-  start: "true",
+  alt: "Social media marketing",
   route: "/signup",
 };
