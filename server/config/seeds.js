@@ -24,6 +24,7 @@ db.once("open", async () => {
       description:
         "If you think of a web application like a car, the frame would be HTML, the body panels and wheels would be CSS, and the engine would be JavaScript. By themselves, each offers very little utility, but together they are powerful. As an aspiring web developer you will need to master each of these languages, and this course will show you how. We will even introduce you to the Bootstrap library that will help simplify the development process and take your applications to the next level!",
       image: "big3.png",
+      alt: "box with orange HTML shield logo on the upper left, yellow JavaScript sheild logo on the upper right, and blue CSS shield logo on the lower left, and purple Bootstrap logo on the lower right",
       category: categories[0]._id,
       price: 598.87,
       quantity: 40,
@@ -34,6 +35,7 @@ db.once("open", async () => {
       description:
         "We live in a data driven world. As a full stack developer, you will need to build back end databases that can manage and serve data on demand. This course will teach you how to build robust back ends using relational database languages like SQL and MongoDB, as well as show you the differences between the two and in which situations each should be used.",
       image: "sqlmongoo.png",
+      alt: "Blue SQL cylinder logo on upper left, blue and orange MySQL logo with blue dolphin on the upper right, and black and grey mongoDB logo with green leaf on the bottom",
       category: categories[0]._id,
       price: 598.87,
       quantity: 500,
@@ -45,6 +47,7 @@ db.once("open", async () => {
       description:
         "The file count in modern websites can number in the thousands, and users' performance expectations continue to increase. As a successful programmer, you will need experience using methods and frameworks that can organize complex file structures while being able to deliver high quality user experiences - This is where the Model, View, Controller pattern, Progressive Web Application, and MERN (MongoDB, Express, React, Node) stack come in. We will show you how to build several full stack social media style applications using all of these technologies. While extremely challenging, this experience will define your status as a legitimate full stack web developer!",
       image: "mern.png",
+      alt: "blue and yellow logo with MERN acyronym below green mongo leaf logo, gray and white express logo, light blue React atom logo, and green Node.js logo",
       price: 598.87,
       quantity: 20,
       includedCourses: 1,
@@ -55,6 +58,7 @@ db.once("open", async () => {
       description:
         "To be a successful programmer, understanding how, where, and why computer memory is allocated is critical. This course will teach you the priciples of memory allocation, state, and how the stack and heap functions. You will also learn about various sorting algorithms and when to use them, as well as how and when to use regular expressions (regex).",
       image: "computerscience.jpg",
+      alt: "picture of two printed circuit boards laying on top of another circuit board",
       price: 249.99,
       quantity: 50,
       includedCourses: 1,
@@ -65,6 +69,7 @@ db.once("open", async () => {
       description:
         "This challenging course will teach you how to write complex algorithims and programs in C++. You will also learn how to write C++ code that can be compiled into machine code that will control devices like the Raspberry Pi and ATtiny85.",
       image: "cpluslogo.svg",
+      alt: "blue and white C++ logo",
       price: 249.99,
       quantity: 100,
       includedCourses: 1,
@@ -75,6 +80,7 @@ db.once("open", async () => {
       description:
         "Python is a popular, all purpose, versatile programming language that's usage is steadily increasing. We will show you how to use Python for web development, data analysis, automation, and even build chat bots!",
       image: "pythonlogo.png",
+      alt: "blue green and yellow Pyhton logo",
       price: 399.99,
       quantity: 30,
       includedCourses: 1,
@@ -85,6 +91,7 @@ db.once("open", async () => {
       description:
         "Data-driven decision makers are in high demand, this course will teach to how to become one. You will begin learning the basics of data science, and by the end of the course you will be able to create models that can automate data processes, recognize patterns, and even make autonomous decisions.",
       image: "pythonML.jpg",
+      alt: "image of a computer screen with blue, yellow, and purple code",
       price: 199.99,
       quantity: 30,
       includedCourses: 1,
@@ -95,6 +102,7 @@ db.once("open", async () => {
       description:
         "Cybersecurity experts are in high demand. We will equip you with the tools and knowledge to compete in this growing field. In this course you will learn Microsoft security, Linux security, computer networking, cloud security, cyber infrastructure technology, ethical hacking, digital forensics, incident response and threat hunting. At the end of the course you will even have the opportunity to compete against other students for cyber supremacy in a real time attack and defense simulation!",
       image: "cybersecurity.jpg",
+      alt: "image of a laptop with a red screen and an image of the jolly roger flag",
       price: 329.85,
       quantity: 100,
       includedCourses: 1,
@@ -105,6 +113,7 @@ db.once("open", async () => {
       description:
         "You will learn how to create and launch a successful marketing strategy, including business planning, user acquisition, digital advertising, content development, user retention and search engine optimization. You will also gain experience using popular tools like Google Analytics, Google Ads, and WordPress.",
       image: "digitalmarketing.jpg",
+      alt: "image of a man holding a tablet with a screen that says connect and shows six social media logos",
       price: 499.99,
       quantity: 1000,
       includedCourses: 1,
@@ -115,6 +124,7 @@ db.once("open", async () => {
       description:
         "Linux is a stable efficient, and secure open source operating system that is favored by many developers. Linux is used in many applications ranging from servers to mainframes, even automobiles! In this course we will focus on Linux Ubuntu, but by the end of the course you will learn everything you need to know to navigate any Linux version.",
       image: "linuxlogo.png",
+      alt:  "red black and yellow Linux logo with the Tux the penguin",
       price: 195.49,
       quantity: 1000,
       includedCourses: 1,
@@ -125,6 +135,7 @@ db.once("open", async () => {
       description:
         "For penetration testing experts interested in adding to their ethical hacking arsenal, we will explain the features and benefits of using the Tails Linux distribution in conjunction with the TOR network to create a totally secure testing environment. We will teach you how to use applications like Aircrack-ng, Hydra, and Hashcat in conjunction with Tails and TOR to compromise most conventional network security measures.",
       image: "tails.svg",
+      alt: "white and purple Tails logo",
       price: 327.27,
       quantity: 100,
       includedCourses: 1,
@@ -135,6 +146,7 @@ db.once("open", async () => {
       description:
         "No previous Docker experience is needed, we will teach you everything! By the end of the course you will know how to: Build a CI + CD pipeline from scratch, Use the Docker CLI to inspect and debug running containers, and learn the purpose and theory of Kubernetes by building a complex application",
       image: "dockerlogo.svg",
+      alt: "blue and white whale logo with little containers on top",
       price: 249.99,
       quantity: 600,
       includedCourses: 1,
@@ -148,6 +160,7 @@ db.once("open", async () => {
       short: "HTML / CSS / JavaScript",
       months: 12,
       image: "foundation.svg",
+      alt: "image of a light gray castle wall",
       price: 39.99,
       quantity: 600,
       includedCourses: 3,
@@ -161,6 +174,7 @@ db.once("open", async () => {
       short: "Python / C++",
       months: 12,
       image: "engineer.svg",
+      alt: "image of a nicely dressed man in wearing a blue shirt, tan pants, and hardhat pointing at the ground and looking important",
       price: 69.99,
       quantity: 600,
       includedCourses: 4,
@@ -174,6 +188,7 @@ db.once("open", async () => {
       short: "Cybersecurity / Linux",
       months: 12,
       image: "professional.svg",
+      alt: "cartoon image of a faceless man wearing a black suit with blue tie",
       price: 89.99,
       quantity: 600,
       includedCourses: 5,
