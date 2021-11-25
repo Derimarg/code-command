@@ -16,7 +16,7 @@ export const review1 = {
   img: "/images/virgil.jpg",
   alt: "Elderly man smiling infront of a sunrise",
   start: "true",
-  routes: "signup",
+  routes: "/signup",
 };
 
 export const review2 = {
