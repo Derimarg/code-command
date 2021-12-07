@@ -54,7 +54,8 @@ export default function CourseItem(item) {
           <ProductTitle>{name}</ProductTitle>
         </Link>
         <ProductDesc>
-          {quantity} {pluralize("course", quantity)} places available
+          {/* "courses spaces" looked weird so I changed it to "spots available" */}
+          {quantity} {!pluralize("course", quantity)} spots available
         </ProductDesc>
         <ProductPrice>${price}</ProductPrice>
         <ProductButton onClick={addToCart}>Add to cart</ProductButton>
