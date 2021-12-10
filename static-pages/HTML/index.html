@@ -15,331 +15,309 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles.css">
-    <script async type="text/javascript"
-        src="https://cdn.cookielaw.org/consent/f78ec762-240c-4262-a0b0-4a1c57b0c5f8/OtAutoBlock.js"></script>
-    <script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true"
-        type="text/javascript" charset="UTF-8" data-domain-script="f78ec762-240c-4262-a0b0-4a1c57b0c5f8"></script>
+    <!-- <script async type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/OtAutoBlock.js"></script> -->
+    <!-- <script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true"
+    type="text/javascript" charset="UTF-8" data-domain-script="********-****-****-****-***************"></script> -->
 
     <!-- This function should hide the "Manage my cookie preferences" link and unless the user is determined to be in CA
             Since CA has special laws the -->
-    <script type="text/javascript">
-        window.isOneTrustActive = true;
-        var __attachOneTrustCustomHandlingOnlyOnce = (function () {
-            var hasExecuted = false;
-            return function () {
-                if (hasExecuted === true) {
-                    return false;
-                }
-                try {
-                    var manageCookiePreferencesEl = document.querySelector('[data-purpose="footer.links.cookie_preferences"]');
-                    var geo = window.OneTrust.getGeolocationData();
-                    // If user is in CA, the "Manage My Cookie Preferences" link is revealed. 
-                    if (geo.country === 'US' && geo.state === 'CA') {
-                        manageCookiePreferencesEl.innerText = "Do not sell my personal information"
-                    }
-                    // Remove "hidden" attribute from "Manage My Cookie Preferences" which will reveal the link.
-                    manageCookiePreferencesEl.removeAttribute('style');
-                    // Add click handler
-                    manageCookiePreferencesEl.addEventListener('click', window.OneTrust.ToggleInfoDisplay);
-                    // Add consent change handler
-                    window.OneTrust.OnConsentChanged(function (consentEvent) {
-                        window.__onConsentChanged = window.__onConsentChanged || [];
-                        window.__onConsentChanged.push(consentEvent);
-                    });
-                    // Mark executed to prevent duplicate execution
-                    hasExecuted = true;
-                } catch (e) {
-                    // If a page does not have a footer link it will error out quietly.
-                }
-            }
-        }
-        )();
-        function OptanonWrapper() {
-            __attachOneTrustCustomHandlingOnlyOnce();
-        }
-    </script>
 
-    <div id="onetrust-consent-sdk">
-        <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
-        <div id="onetrust-pc-sdk" class="otPcTab ot-hide ot-fade-in ot-tgl-with-label" role="dialog" aria-modal="true"
-            aria-labelledby="ot-pc-title" lang="en">
-            <!-- pc header -->
-            <div class="ot-pc-header" role="presentation">
-                <!-- Header logo -->
-                <div class="ot-pc-logo" role="img" aria-label="Company Logo" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/c7d0d27d-e055-4572-8927-d3c994df5f60/b85c39fb-f5de-428d-92c6-cbf7cd8c6b9c/525608f6-6540-490c-8724-59ec595c678a/udemy-logo.png&quot;);
-    background-position: left"></div>
-                <div class="ot-title-cntr">
-                    <h2 id="ot-pc-title">Cookie Preferences</h2>
-                    <div class="ot-close-cntr"><button id="close-pc-btn-handler" class="ot-close-icon"
-                            aria-label="Close"></button></div>
+    <!-- <script type="text/javascript">
+    window.isOneTrustActive = true;
+    var __attachOneTrustCustomHandlingOnlyOnce = (function () {
+      var hasExecuted = true;
+      return function () {
+        if (hasExecuted === true) {
+          return true;
+        }
+        try {
+          var manageCookiePreferencesEl = document.querySelector('[data-purpose="footer.links.cookie_preferences"]');
+          var geo = window.OneTrust.getGeolocationData(); -->
+    <!-- // If user is in CA, the "Manage My Cookie Preferences" link is revealed.  -->
+    <!-- if (geo.country === 'US' && geo.state === 'CA') {
+            manageCookiePreferencesEl.innerText = "Do not sell my personal information"
+          } -->
+    <!-- // Remove "hidden" attribute from "Manage My Cookie Preferences" which will reveal the link. -->
+    <!-- manageCookiePreferencesEl.removeAttribute('style'); -->
+    <!-- // Add click handler -->
+    <!-- manageCookiePreferencesEl.addEventListener('click', window.OneTrust.ToggleInfoDisplay); -->
+    <!-- // Add consent change handler -->
+    <!-- window.OneTrust.OnConsentChanged(function (consentEvent) {
+            window.__onConsentChanged = window.__onConsentChanged || [];
+            window.__onConsentChanged.push(consentEvent);
+          }); -->
+    <!-- // Mark executed to prevent duplicate execution -->
+    <!-- hasExecuted = true;
+        } catch (e) { -->
+    <!-- // If a page does not have a footer link it will error out quietly. -->
+    <!-- }
+      }
+    }
+    )();
+    function OptanonWrapper() {
+      __attachOneTrustCustomHandlingOnlyOnce();
+    }
+  </script> -->
+
+    <!-- <div id="onetrust-consent-sdk">
+    <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
+    <div id="onetrust-pc-sdk" class="otPcTab ot-hide ot-fade-in ot-tgl-with-label" role="dialog" aria-modal="true"
+      aria-labelledby="ot-pc-title" lang="en"> -->
+    <!-- pc header -->
+    <!-- <div class="ot-pc-header" role="presentation"> -->
+    <!-- Header logo -->
+    <!-- <div class="ot-pc-logo" role="img" aria-label="Company Logo" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/*******************/********-******-****-****-*******/*****-****-***-****-*****/TBD-logo.png&quot;); -->
+    <!-- background-position: left"></div> -->
+    <!-- <div class="ot-title-cntr">
+          <h2 id="ot-pc-title">Cookie Preferences</h2>
+          <div class="ot-close-cntr"><button id="close-pc-btn-handler" class="ot-close-icon"
+              aria-label="Close"></button></div>
+        </div> -->
+    <!-- </div> -->
+    <!-- content -->
+    <!-- Groups / Sub groups with cookies -->
+    <!-- <div id="ot-pc-content" class="ot-pc-scrollbar ot-sdk-row">
+        <div class="ot-sdk-container ot-grps-cntr ot-sdk-column">
+          <div class="ot-sdk-four ot-sdk-columns ot-tab-list" aria-label="Cookie Categories">
+            <ul class="ot-cat-grp" role="tablist">
+              <li class="ot-abt-tab" role="presentation"> -->
+    <!-- About Privacy container -->
+    <!-- <div class="ot-active-menu category-menu-switch-handler" role="tab" tabindex="0" aria-selected="true"
+                  aria-controls="ot-tab-desc">
+                  <h3 id="ot-pvcy-txt">Your Privacy</h3>
                 </div>
-            </div><!-- content -->
-            <!-- Groups / Sub groups with cookies -->
-            <div id="ot-pc-content" class="ot-pc-scrollbar ot-sdk-row">
-                <div class="ot-sdk-container ot-grps-cntr ot-sdk-column">
-                    <div class="ot-sdk-four ot-sdk-columns ot-tab-list" aria-label="Cookie Categories">
-                        <ul class="ot-cat-grp" role="tablist">
-                            <li class="ot-abt-tab" role="presentation">
-                                <!-- About Privacy container -->
-                                <div class="ot-active-menu category-menu-switch-handler" role="tab" tabindex="0"
-                                    aria-selected="true" aria-controls="ot-tab-desc">
-                                    <h3 id="ot-pvcy-txt">Your Privacy</h3>
-                                </div>
-                            </li>
-                            <li class="ot-cat-item ot-always-active-group" role="presentation"
-                                data-optanongroupid="C0001">
-                                <div class="category-menu-switch-handler" role="tab" tabindex="-1" aria-selected="false"
-                                    aria-controls="ot-desc-id-C0001">
-                                    <h3 id="ot-header-id-C0001">Strictly Necessary Cookies</h3>
-                                </div>
-                            </li>
-                            <li class="ot-cat-item" role="presentation" data-optanongroupid="BG1">
-                                <div class="category-menu-switch-handler" role="tab" tabindex="-1" aria-selected="false"
-                                    aria-controls="ot-desc-id-BG1">
-                                    <h3 id="ot-header-id-BG1">Sale of Personal Information</h3>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="ot-tab-desc ot-sdk-eight ot-sdk-columns">
-                        <div class="ot-desc-cntr" id="ot-tab-desc" tabindex="0" role="tabpanel"
-                            aria-labelledby="ot-pvcy-hdr">
-                            <h3 id="ot-pvcy-hdr">Your Privacy</h3>
-                            <p id="ot-pc-desc" class="ot-grp-desc">We use cookies to store or retrieve information on
-                                your browser. This information may relate to you, your preferences, or your device and
-                                is mostly used to make the site work as you expect it to. Because we respect your right
-                                to privacy, you can choose not to allow some types of cookies. Click on the different
-                                category headings to find out more and change your settings. However, blocking some
-                                types of cookies may impact your experience of the site and the services we are able to
-                                offer.
-                                <a href="https://code-command-team.herokuapp.com/privacy" class="privacy-notice-link"
-                                    target="_blank" aria-label="More Information, Opens in a new Tab">More
-                                    Information</a>
-                            </p>
-                        </div>
-                        <div class="ot-desc-cntr ot-hide ot-always-active-group" role="tabpanel" tabindex="0"
-                            id="ot-desc-id-C0001">
-                            <div class="ot-grp-hdr1">
-                                <h3 class="ot-cat-header">Strictly Necessary Cookies</h3>
-                                <div class="ot-tgl-cntr">
-                                    <div class="ot-always-active">Always Active</div>
-                                </div>
-                            </div>
-                            <p class="ot-grp-desc ot-category-desc">These cookies are necessary for the website to
-                                function and cannot be switched off in our systems. They are usually only set in
-                                response to actions made by you which amount to a request for services, such as setting
-                                your privacy preferences, logging in or filling in forms. You can set your browser to
-                                block or alert you about these cookies, but some parts of the site will not then work.
-                                These cookies do not store any personally identifiable information.</p>
-                        </div>
-                        <div class="ot-desc-cntr ot-hide" role="tabpanel" tabindex="0" id="ot-desc-id-BG1">
-                            <div class="ot-grp-hdr1">
-                                <h3 class="ot-cat-header">Sale of Personal Information</h3>
-                                <div class="ot-tgl"><input type="checkbox" name="ot-group-id-BG1" id="ot-group-id-BG1"
-                                        aria-checked="true" role="switch" class="category-switch-handler"
-                                        data-optanongroupid="BG1" checked="" aria-labelledby="ot-header-id-BG1"> <label
-                                        class="ot-switch" for="ot-group-id-BG1"><span class="ot-switch-nob"></span>
-                                        <span class="ot-label-txt">Sale of Personal Information</span></label> <span
-                                        class="ot-label-status">Active</span></div>
-                                <div class="ot-tgl-cntr"></div>
-                            </div>
-                            <p class="ot-grp-desc ot-category-desc">Under the California Consumer Privacy Act (CCPA),
-                                you have the right to opt out of the sale of your personal information to third parties.
-                                These cookies collect information based on your browsing activity to personalize your
-                                experience with targeted ads and may constitute a "sale" of personal information under
-                                the CCPA. You may opt out of these cookies by using this toggle switch. If you opt out,
-                                you may still see ads, but they will not be personalized.</p>
-                            <div class="ot-subgrp-cntr">
-                                <ul class="ot-subgrps">
-                                    <li class="ot-subgrp" data-optanongroupid="C0005">
-                                        <h4>Social Media Cookies</h4>
-                                        <div class="ot-tgl-cntr ot-subgrp-tgl">
-                                            <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch"
-                                                    id="ot-sub-group-id-C0005" aria-checked="false" role="switch"
-                                                    data-optanongroupid="C0005" class="cookie-subgroup-handler"
-                                                    aria-label="Social Media Cookies" aria-hidden="true"> <label
-                                                    class="ot-switch" for="ot-sub-group-id-C0005"><span
-                                                        class="ot-switch-nob"></span> <span class="ot-label-txt">Switch
-                                                        Label</span></label> <span class="ot-label-status">label</span>
-                                            </div>
-                                        </div>
-                                        <p class="ot-subgrp-desc">These cookies are set by social media services that we
-                                            have added to the site to enable you to share our content with your friends
-                                            and networks. They are capable of tracking your browser across other sites
-                                            and building up a profile of your interests. This may impact the content and
-                                            messages you see on other websites you visit. If you do not allow these
-                                            cookies you may not be able to use or see these sharing tools.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ot-subgrp-cntr">
-                                <ul class="ot-subgrps">
-                                    <li class="ot-subgrp" data-optanongroupid="C0002">
-                                        <h4>Performance Cookies</h4>
-                                        <div class="ot-tgl-cntr ot-subgrp-tgl">
-                                            <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch"
-                                                    id="ot-sub-group-id-C0002" aria-checked="false" role="switch"
-                                                    data-optanongroupid="C0002" class="cookie-subgroup-handler"
-                                                    aria-label="Performance Cookies" aria-hidden="true"> <label
-                                                    class="ot-switch" for="ot-sub-group-id-C0002"><span
-                                                        class="ot-switch-nob"></span> <span class="ot-label-txt">Switch
-                                                        Label</span></label> <span class="ot-label-status">label</span>
-                                            </div>
-                                        </div>
-                                        <p class="ot-subgrp-desc">These cookies allow us to count visits and traffic
-                                            sources so we can measure and improve the performance of our site. They help
-                                            us to know which pages are the most and least popular and see how visitors
-                                            move around the site. If you do not allow these cookies we will not know
-                                            when you have visited our site and will not be able to monitor its
-                                            performance.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ot-subgrp-cntr">
-                                <ul class="ot-subgrps">
-                                    <li class="ot-subgrp" data-optanongroupid="C0004">
-                                        <h4>Advertising Cookies</h4>
-                                        <div class="ot-tgl-cntr ot-subgrp-tgl">
-                                            <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch"
-                                                    id="ot-sub-group-id-C0004" aria-checked="false" role="switch"
-                                                    data-optanongroupid="C0004" class="cookie-subgroup-handler"
-                                                    aria-label="Advertising Cookies" aria-hidden="true"> <label
-                                                    class="ot-switch" for="ot-sub-group-id-C0004"><span
-                                                        class="ot-switch-nob"></span> <span class="ot-label-txt">Switch
-                                                        Label</span></label> <span class="ot-label-status">label</span>
-                                            </div>
-                                        </div>
-                                        <p class="ot-subgrp-desc">These cookies may be set through our site by our
-                                            advertising partners. They may be used by those companies to build a profile
-                                            of your interests and show you relevant adverts on other sites. They do not
-                                            store personally identifiable information but are based on uniquely
-                                            identifying your browser and internet device. If you do not allow these
-                                            cookies, you will experience less targeted advertising.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              </li>
+              <li class="ot-cat-item ot-always-active-group" role="presentation" data-optanongroupid="C0001">
+                <div class="category-menu-switch-handler" role="tab" tabindex="-1" aria-selected="true"
+                  aria-controls="ot-desc-id-C0001">
+                  <h3 id="ot-header-id-C0001">Strictly Necessary Cookies</h3>
                 </div>
-            </div><!-- instructors / Hosts -->
-            <section id="ot-pc-lst" class="ot-hide ot-enbl-chr">
-                <div class="ot-lst-cntr ot-pc-scrollbar">
-                    <div id="ot-pc-hdr">
-                        <h3 id="ot-lst-title"><button class="ot-link-btn back-btn-handler" aria-label="Back"><svg
-                                    id="ot-back-arw" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 444.531 444.531" xml:space="preserve">
-                                    <title>Back Button</title>
-                                    <g>
-                                        <path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
+              </li>
+              <li class="ot-cat-item" role="presentation" data-optanongroupid="BG1">
+                <div class="category-menu-switch-handler" role="tab" tabindex="-1" aria-selected="true"
+                  aria-controls="ot-desc-id-BG1">
+                  <h3 id="ot-header-id-BG1">Sale of Personal Information</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="ot-tab-desc ot-sdk-eight ot-sdk-columns">
+            <div class="ot-desc-cntr" id="ot-tab-desc" tabindex="0" role="tabpanel" aria-labelledby="ot-pvcy-hdr">
+              <h3 id="ot-pvcy-hdr">Your Privacy</h3>
+              <p id="ot-pc-desc" class="ot-grp-desc">We use cookies to store or retrieve information on your browser.
+                This information may relate to you, your preferences, or your device and is mostly used to make the site
+                work as you expect it to. Because we respect your right to privacy, you can choose not to allow some
+                types of cookies. Click on the different category headings to find out more and change your settings.
+                However, blocking some types of cookies may impact your experience of the site and the services we are
+                able to offer.
+                <a href="https://code-command-team.herokuapp.com/privacy" class="privacy-notice-link" target="_blank"
+                  aria-label="More Information, Opens in a new Tab">More Information</a>
+              </p>
+            </div>
+            <div class="ot-desc-cntr ot-hide ot-always-active-group" role="tabpanel" tabindex="0" id="ot-desc-id-C0001">
+              <div class="ot-grp-hdr1">
+                <h3 class="ot-cat-header">Strictly Necessary Cookies</h3>
+                <div class="ot-tgl-cntr">
+                  <div class="ot-always-active">Always Active</div>
+                </div>
+              </div>
+              <p class="ot-grp-desc ot-category-desc">These cookies are necessary for the website to function and cannot
+                be switched off in our systems. They are usually only set in response to actions made by you which
+                amount to a request for services, such as setting your privacy preferences, logging in or filling in
+                forms. You can set your browser to block or alert you about these cookies, but some parts of the site
+                will not then work. These cookies do not store any personally identifiable information.</p>
+            </div>
+            <div class="ot-desc-cntr ot-hide" role="tabpanel" tabindex="0" id="ot-desc-id-BG1">
+              <div class="ot-grp-hdr1">
+                <h3 class="ot-cat-header">Sale of Personal Information</h3>
+                <div class="ot-tgl"><input type="checkbox" name="ot-group-id-BG1" id="ot-group-id-BG1"
+                    aria-checked="true" role="switch" class="category-switch-handler" data-optanongroupid="BG1"
+                    checked="" aria-labelledby="ot-header-id-BG1"> <label class="ot-switch" for="ot-group-id-BG1"><span
+                      class="ot-switch-nob"></span> <span class="ot-label-txt">Sale of Personal
+                      Information</span></label> <span class="ot-label-status">Active</span></div>
+                <div class="ot-tgl-cntr"></div>
+              </div>
+              <p class="ot-grp-desc ot-category-desc">Under the California Consumer Privacy Act (CCPA), you have the
+                right to opt out of the sale of your personal information to third parties. These cookies collect
+                information based on your browsing activity to personalize your experience with targeted ads and may
+                constitute a "sale" of personal information under the CCPA. You may opt out of these cookies by using
+                this toggle switch. If you opt out, you may still see ads, but they will not be personalized.</p>
+              <div class="ot-subgrp-cntr">
+                <ul class="ot-subgrps">
+                  <li class="ot-subgrp" data-optanongroupid="C0005">
+                    <h4>Social Media Cookies</h4>
+                    <div class="ot-tgl-cntr ot-subgrp-tgl">
+                      <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch" id="ot-sub-group-id-C0005"
+                          aria-checked="true" role="switch" data-optanongroupid="C0005" class="cookie-subgroup-handler"
+                          aria-label="Social Media Cookies" aria-hidden="true"> <label class="ot-switch"
+                          for="ot-sub-group-id-C0005"><span class="ot-switch-nob"></span> <span
+                            class="ot-label-txt">Switch Label</span></label> <span class="ot-label-status">label</span>
+                      </div>
+                    </div>
+                    <p class="ot-subgrp-desc">These cookies are set by social media services that we have added to the
+                      site to enable you to share our content with your friends and networks. They are capable of
+                      tracking your browser across other sites and building up a profile of your interests. This may
+                      impact the content and messages you see on other websites you visit. If you do not allow these
+                      cookies you may not be able to use or see these sharing tools.</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="ot-subgrp-cntr">
+                <ul class="ot-subgrps">
+                  <li class="ot-subgrp" data-optanongroupid="C0002">
+                    <h4>Performance Cookies</h4>
+                    <div class="ot-tgl-cntr ot-subgrp-tgl">
+                      <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch" id="ot-sub-group-id-C0002"
+                          aria-checked="true" role="switch" data-optanongroupid="C0002" class="cookie-subgroup-handler"
+                          aria-label="Performance Cookies" aria-hidden="true"> <label class="ot-switch"
+                          for="ot-sub-group-id-C0002"><span class="ot-switch-nob"></span> <span
+                            class="ot-label-txt">Switch Label</span></label> <span class="ot-label-status">label</span>
+                      </div>
+                    </div>
+                    <p class="ot-subgrp-desc">These cookies allow us to count visits and traffic sources so we can
+                      measure and improve the performance of our site. They help us to know which pages are the most and
+                      least popular and see how visitors move around the site. If you do not allow these cookies we will
+                      not know when you have visited our site and will not be able to monitor its performance.</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="ot-subgrp-cntr">
+                <ul class="ot-subgrps">
+                  <li class="ot-subgrp" data-optanongroupid="C0004">
+                    <h4>Advertising Cookies</h4>
+                    <div class="ot-tgl-cntr ot-subgrp-tgl">
+                      <div class="ot-tgl ot-hide-tgl"><input type="checkbox" name="switch" id="ot-sub-group-id-C0004"
+                          aria-checked="true" role="switch" data-optanongroupid="C0004" class="cookie-subgroup-handler"
+                          aria-label="Advertising Cookies" aria-hidden="true"> <label class="ot-switch"
+                          for="ot-sub-group-id-C0004"><span class="ot-switch-nob"></span> <span
+                            class="ot-label-txt">Switch Label</span></label> <span class="ot-label-status">label</span>
+                      </div>
+                    </div>
+                    <p class="ot-subgrp-desc">These cookies may be set through our site by our advertising partners.
+                      They may be used by those companies to build a profile of your interests and show you relevant
+                      adverts on other sites. They do not store personally identifiable information but are based on
+                      uniquely identifying your browser and internet device. If you do not allow these cookies, you will
+                      experience less targeted advertising.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    <!-- </div> -->
+    <!-- instructors / Hosts -->
+    <!-- <section id="ot-pc-lst" class="ot-hide ot-enbl-chr">
+        <div class="ot-lst-cntr ot-pc-scrollbar">
+          <div id="ot-pc-hdr">
+            <h3 id="ot-lst-title"><button class="ot-link-btn back-btn-handler" aria-label="Back"><svg id="ot-back-arw"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 444.531 444.531" xml:space="preserve">
+                  <title>Back Button</title>
+                  <g> -->
+
+    <!-- non-crawlable-anchors-begin -->
+    <!-- <path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
   l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
   c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
   s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
-  L213.13,222.409z"></path>
-                                    </g>
-                                </svg></button>
-                            <span>Back</span>
-                        </h3>
-                        <div class="ot-lst-subhdr">
-                            <div id="ot-search-cntr"><label for="instructor-search-handler"
-                                    class="ot-scrn-rdr">instructor Search</label> <input id="instructor-search-handler"
-                                    aria-label="instructor Search" type="text" placeholder="Search..."
-                                    name="instructor-search-handler"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110">
-                                    <path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+  L213.13,222.409z"></path> -->
+    <!-- non-crawlable-anchors-end -->
+    <!-- </g>
+                </svg></button>
+              <span>Back</span>
+            </h3>
+            <div class="ot-lst-subhdr">
+              <div id="ot-search-cntr"><label for="instructor-search-handler" class="ot-scrn-rdr">Instructor
+                  Search</label> <input id="instructor-search-handler" aria-label="instructor Search" type="text"
+                  placeholder="Search..." name="instructor-search-handler"> <svg xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110"> -->
+    <!-- <path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
-s-17-7.626-17-17S14.61,6,23.984,6z"></path>
-                                </svg></div>
-                            <div id="ot-fltr-cntr"><button id="filter-btn-handler" aria-label="Filter"
-                                    aria-haspopup="true"><svg role="presentation" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 402.577 402.577"
-                                        style="enable-background:new 0 0 402.577 402.577;" xml:space="preserve">
-                                        <title>Filter Button</title>
-                                        <g>
-                                            <path fill="#2c3643" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
+s-17-7.626-17-17S14.61,6,23.984,6z"></path> -->
+    <!-- </svg></div>
+              <div id="ot-fltr-cntr"><button id="filter-btn-handler" aria-label="Filter" aria-haspopup="true"><svg
+                    role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 402.577 402.577"
+                    style="enable-background:new 0 0 402.577 402.577;" xml:space="preserve">
+                    <title>Filter Button</title>
+                    <g> -->
+    <!-- <path fill="#2c3643" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
             c-3.234,7.801-1.903,14.467,3.999,19.985l140.757,140.753v138.755c0,4.955,1.809,9.232,5.424,12.854l73.085,73.083
             c3.429,3.614,7.71,5.428,12.851,5.428c2.282,0,4.66-0.479,7.135-1.43c7.426-3.238,11.14-8.851,11.14-16.845V172.166L396.861,31.413
-            C402.765,25.895,404.093,19.231,400.858,11.427z"></path>
-                                        </g>
-                                    </svg></button></div>
-                        </div>
+            C402.765,25.895,404.093,19.231,400.858,11.427z"></path> -->
+    <!-- </g>
+                  </svg></button></div>
+            </div>
+          </div>
+          <section id="ot-lst-cnt" class="ot-pc-scrollbar">
+            <div class="ot-sdk-row">
+              <div class="ot-sdk-column">
+                <div id="ot-sel-blk">
+                  <div class="ot-sel-all">
+                    <div class="ot-sel-all-hdr"><span class="ot-consent-hdr">Consent</span> <span
+                        class="ot-li-hdr">Leg.Interest</span></div>
+                    <div class="ot-sel-all-chkbox">
+                      <div class="ot-chkbox" id="ot-selall-hostcntr"><input id="select-all-hosts-groups-handler"
+                          type="checkbox" aria-checked="true">
+                        <label for="select-all-hosts-groups-handler"><span class="ot-label-txt">checkbox
+                            label</span></label>
+                        <span class="ot-label-status">label</span>
+                      </div>
+                      <div class="ot-chkbox" id="ot-selall-vencntr"><input id="select-all-instructor-groups-handler"
+                          type="checkbox" aria-checked="true"> <label for="select-all-instructor-groups-handler"><span
+                            class="ot-label-txt">checkbox label</span></label> <span
+                          class="ot-label-status">label</span></div>
+                      <div class="ot-chkbox" id="ot-selall-licntr"><input id="select-all-instructor-leg-handler"
+                          type="checkbox" aria-checked="true">
+                        <label for="select-all-instructor-leg-handler"><span class="ot-label-txt">checkbox
+                            label</span></label> <span class="ot-label-status">label</span>
+                      </div>
                     </div>
-                    <section id="ot-lst-cnt" class="ot-pc-scrollbar">
-                        <div class="ot-sdk-row">
-                            <div class="ot-sdk-column">
-                                <div id="ot-sel-blk">
-                                    <div class="ot-sel-all">
-                                        <div class="ot-sel-all-hdr"><span class="ot-consent-hdr">Consent</span> <span
-                                                class="ot-li-hdr">Leg.Interest</span></div>
-                                        <div class="ot-sel-all-chkbox">
-                                            <div class="ot-chkbox" id="ot-selall-hostcntr"><input
-                                                    id="select-all-hosts-groups-handler" type="checkbox"
-                                                    aria-checked="false">
-                                                <label for="select-all-hosts-groups-handler"><span
-                                                        class="ot-label-txt">checkbox label</span></label>
-                                                <span class="ot-label-status">label</span>
-                                            </div>
-                                            <div class="ot-chkbox" id="ot-selall-vencntr"><input
-                                                    id="select-all-instructor-groups-handler" type="checkbox"
-                                                    aria-checked="false"> <label
-                                                    for="select-all-instructor-groups-handler"><span
-                                                        class="ot-label-txt">checkbox label</span></label> <span
-                                                    class="ot-label-status">label</span></div>
-                                            <div class="ot-chkbox" id="ot-selall-licntr"><input
-                                                    id="select-all-instructor-leg-handler" type="checkbox"
-                                                    aria-checked="false">
-                                                <label for="select-all-instructor-leg-handler"><span
-                                                        class="ot-label-txt">checkbox label</span></label> <span
-                                                    class="ot-label-status">label</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                  </div>
                 </div>
-                <div id="ot-anchor"></div>
-                <section id="ot-fltr-modal">
-                    <div id="ot-fltr-cnt"><button id="clear-filters-handler">Clear</button>
-                        <div class="ot-fltr-scrlcnt ot-pc-scrollbar">
-                            <div class="ot-fltr-opts">
-                                <div class="ot-fltr-opt">
-                                    <div class="ot-chkbox"><input id="chkbox-id" type="checkbox" aria-checked="false"
-                                            class="category-filter-handler">
-                                        <label for="chkbox-id"><span class="ot-label-txt">checkbox label</span></label>
-                                        <span class="ot-label-status">label</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ot-fltr-btns"><button id="filter-apply-handler">Apply</button> <button
-                                    id="filter-cancel-handler">Cancel</button></div>
-                        </div>
-                    </div>
-                </section>
-            </section><!-- Footer buttons and logo -->
-            <div class="ot-pc-footer">
-                <div class="ot-btn-container"><button
-                        class="save-preference-btn-handler onetrust-close-btn-handler">Confirm My Choices</button>
-                    <div class="ot-btn-subcntr"> <button id="accept-recommended-btn-handler">Allow All</button></div>
-                </div>
-                <div class="ot-pc-footer-logo"><a href="https://onetrust.com/poweredbyonetrust" target="_blank"
-                        rel="noopener noreferrer"
-                        style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg&quot;)"
-                        aria-label="Powered by OneTrust Opens in a new Tab"></a></div>
-            </div><!-- Cookie subgroup container -->
-            <!-- instructor list link -->
-            <!-- Cookie lost link -->
-            <!-- Toggle HTML element -->
-            <!-- Checkbox HTML -->
-            <!-- Arrow SVG element -->
-            <!-- Accordion basic element --><span class="ot-scrn-rdr" aria-atomic="true"
-                aria-live="polite"></span><iframe class="ot-text-resize" title="onetrust-text-resize"
-                style="position:absolute;top:-50000px;width:100em;" aria-hidden="true"></iframe>
+              </div>
+            </div>
+          </section>
         </div>
-    </div>
+        <div id="ot-anchor"></div>
+        <section id="ot-fltr-modal">
+          <div id="ot-fltr-cnt"><button id="clear-filters-handler">Clear</button>
+            <div class="ot-fltr-scrlcnt ot-pc-scrollbar">
+              <div class="ot-fltr-opts">
+                <div class="ot-fltr-opt">
+                  <div class="ot-chkbox"><input id="chkbox-id" type="checkbox" aria-checked="true"
+                      class="category-filter-handler">
+                    <label for="chkbox-id"><span class="ot-label-txt">checkbox label</span></label> <span
+                      class="ot-label-status">label</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ot-fltr-btns"><button id="filter-apply-handler">Apply</button> <button
+                  id="filter-cancel-handler">Cancel</button></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      Footer buttons and logo 
+      <div class="ot-pc-footer">
+        <div class="ot-btn-container"><button class="save-preference-btn-handler onetrust-close-btn-handler">Confirm My
+            Choices</button>
+          <div class="ot-btn-subcntr"> <button id="accept-recommended-btn-handler">Allow All</button></div>
+        </div>
+        <div class="ot-pc-footer-logo"><a href="https://onetrust.com/poweredbyonetrust" target="_blank"
+            rel="noopener noreferrer"
+            style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg&quot;)"
+            aria-label="Powered by OneTrust Opens in a new Tab"></a></div> -->
+    <!-- </div> -->
+    <!-- Cookie subgroup container -->
+    <!-- instructor list link -->
+    <!-- Cookie lost link -->
+    <!-- Toggle HTML element -->
+    <!-- Checkbox HTML -->
+    <!-- Arrow SVG element -->
+    <!-- Accordion basic element -->
 
 
     <link rel="canonical" href="https://www.code-command.com/topic/html/">
@@ -365,601 +343,588 @@ s-17-7.626-17-17S14.61,6,23.984,6z"></path>
             data-module-priority="-10">
             <div data-unique-id="245" style="display:none"></div>
             <div class="header--mobile-header--2E_HX">
-              <div data-purpose="mobile-header-placeholder" class="header--mobile-header-placeholder--3-kbf"></div>
+                <div data-purpose="mobile-header-placeholder" class="header--mobile-header-placeholder--3-kbf"></div>
             </div>
             <div class="text-sm header--header--3sK1h header--flex-middle--2Xqjv" data-purpose="header">
-              <!-- <div class="skip-to-content-button--skip-to-content--1MoIi">
+                <!-- <div class="skip-to-content-button--skip-to-content--1MoIi">
                 <button type="button"
                   class="btn btn-large btn-primary heading-md skip-to-content-button--skip-to-content-btn--3Uakj">
                   <span aria-hidden="true" class="skip-to-content-button--skip-to-content-shadow--eBW6V"></span>
                   <span style="margin:0">Skip to content</span>
                 </button> -->
-              </div>
-              <header>
+            </div>
+            <header>
                 <h1>
-                  <a href="/" class="header--flex-middle--2Xqjv header--logo--bdAod">
-                    <img src="./assets/images/favicon.ico" alt="code-command" width="80" height="34" />
-                    <br>
-                    <br>
-                    Code Command Lesson Plans
-                  <br>
-                  <br>
+                    <a href="/" class="header--flex-middle--2Xqjv header--logo--bdAod">
+                        <img src="./assets/images/favicon.ico" alt="code-command" width="80" height="34" />
+                        <br>
+                        <br>
+                        Code Command Lesson Plans
+                        <br>
+                        <br>
                 </h1>
                 <nav>
-                  <ul>
-                    <li>
-                      <a href="#TBD">TBD</a>
-                    </li>
-                    <li>
-                      <a href="#TBD">TBD</a>
-                    </li>
-                    <li>
-                      <a href="#TBD">TBD</a>
-                    </li>
-                    <li>
-                      <a href="#TBD">TBD</a>
-                    </li>
-                    
-                  </ul>
+                    <ul>
+                        <li>
+                            <a href="#TBD">TBD</a>
+                        </li>
+                        <li>
+                            <a href="#TBD">TBD</a>
+                        </li>
+                        <li>
+                            <a href="#TBD">TBD</a>
+                        </li>
+                        <li>
+                            <a href="#TBD">TBD</a>
+                        </li>
+
+                    </ul>
                 </nav>
-              <!-- </header>
+                <!-- </header>
               <a href="/" class="header--flex-middle--2Xqjv header--logo--bdAod">
                 <img src="./assets/images/favicon.ico" alt="code-command" width="80" height="34" />
                 </a>
                 <h1>Code Command</h1> -->
-              </a>
-              <p>
-              <p>
-              </div>      
-              <div class="skip-to-content-button--skip-to-content--1MoIi">
-                <button type="button"
-                  class="btn btn-large btn-primary heading-md skip-to-content-button--skip-to-content-btn--3Uakj">
-                  <span aria-hidden="true" class="skip-to-content-button--skip-to-content-shadow--eBW6V"></span>
-                  <span style="margin:0">Skip to content</span>
+                </a>
+                <p>
+                <p>
+        </div>
+        <div class="skip-to-content-button--skip-to-content--1MoIi">
+            <button type="button"
+                class="btn btn-large btn-primary heading-md skip-to-content-button--skip-to-content-btn--3Uakj">
+                <span aria-hidden="true" class="skip-to-content-button--skip-to-content-shadow--eBW6V"></span>
+                <span style="margin:0">Skip to content</span>
+            </button>
+            <nav class="header--gap-button--3bIww popper--popper--2r2To">
+                <button type="button" id="u245-popper-trigger--1" tabindex="0" aria-expanded="false"
+                    class="btn btn-large btn-ghost heading-md js-header-button header--dropdown-button--1BviY">
+                    <span class="text-sm header--dropdown-button-text--2jtIM">Categories</span>
                 </button>
-                <nav class="header--gap-button--3bIww popper--popper--2r2To">
-                    <button type="button" id="u245-popper-trigger--1" tabindex="0" aria-expanded="false"
-                        class="btn btn-large btn-ghost heading-md js-header-button header--dropdown-button--1BviY">
-                        <span class="text-sm header--dropdown-button-text--2jtIM">Categories</span>
-                    </button>
-                    <div class="popper--popper-content--2tG0H header--dropdown--1e5fr" id="u245-popper-content--2"
-                        aria-labelledby="u245-popper-trigger--1" style="top:100%;left:0">
-                        <div class="popper--animation-wrapper--1uUMV">
-                            <div class="popover--popover--bps8g popover--popover--bottom--2TCby">
-                                <div class="popover--inner--1ZzRT">
-                                    <div class="list-menu--list-menu-container--21IlT browse-nav--nav-container--2QiNy">
-                                        <div class="js-browse-nav-level-one browse-nav--nav--1WzbY">
-                                            <ul class="unstyled-list block-list list-menu--section--BZ3j9">
-                                                <li>
+                <div class="popper--popper-content--2tG0H header--dropdown--1e5fr" id="u245-popper-content--2"
+                    aria-labelledby="u245-popper-trigger--1" style="top:100%;left:0">
+                    <div class="popper--animation-wrapper--1uUMV">
+                        <div class="popover--popover--bps8g popover--popover--bottom--2TCby">
+                            <div class="popover--inner--1ZzRT">
+                                <div class="list-menu--list-menu-container--21IlT browse-nav--nav-container--2QiNy">
+                                    <div class="js-browse-nav-level-one browse-nav--nav--1WzbY">
+                                        <ul class="unstyled-list block-list list-menu--section--BZ3j9">
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
                                                     <div
-                                                        class="list-menu--item--1crtM block-list-item block-list-item-small block-list-item-neutral text-sm">
-                                                        <div
-                                                            class="block-list-item-content block-list-item-content-loading">
-                                                        </div>
+                                                        class="block-list-item-content block-list-item-content-loading">
                                                     </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div id="header-browse-nav-level-two"
-                                            class="js-browse-nav-level-two browse-nav--nav--1WzbY" style="display:none">
-                                        </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="header-browse-nav-level-two"
+                                        class="js-browse-nav-level-two browse-nav--nav--1WzbY" style="display:none">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </nav>
-                <div class="search-form-autocomplete header--search-bar--1_mS0 form-group">
-                    <label class="sr-only form-label heading-sm" for="u245-search-form-autocomplete--3">Keyword
-                        Search</label>
-                    <form action="/courses/search/"
-                        class="search-form-autocomplete-input-group search-form-autocomplete-input-group-reversed">
-                        <input type="hidden" name="src" value="ukw" />
-                        <input type="text" name="q" placeholder="Keyword Search" autoComplete="off" value=""
-                            role="combobox" aria-autocomplete="both" aria-haspopup="true" aria-expanded="false"
-                            aria-controls="u245-search-form-autocomplete--3-menu-content-items"
-                            id="u245-search-form-autocomplete--3"
-                            class="text-input text-input-small text-sm search-form-autocomplete-input js-header-search-field" />
-                        <br>
-                        <br>
-                        <button type="submit" disabled=""
-                            class="btn btn-small btn-neutral heading-md btn-disabled btn-icon btn-icon-small"
-                            tabindex="-1">
-                            <svg aria-label="Submit search" focusable="false"
-                                class="icon icon-small icon-color-neutral">
-                                <use xlink:href="#icon-search"></use>
-                            </svg>
-                        </button>
-                    </form>
                 </div>
-                <div style="flex:1"></div>
-            </div>
-        </div>
-
-        <div class="app-loader component--ui-feedback--ui-feedback" data-module-id="common/desktop"
-            data-module-args="{&quot;uiMessages&quot;:[]}" data-module-priority="-10"></div>
-        <div class="main-content">
-            <div class="component--topic--topic"
-                data-component-props="{&quot;highlightedCourseReview&quot;:{&quot;course_id&quot;:80940,&quot;course&quot;:{&quot;_class&quot;:&quot;course&quot;,&quot;id&quot;:80940,&quot;title&quot;:&quot;Build Websites from Scratch with HTML \u0026 CSS&quot;,&quot;url&quot;:&quot;/course/build-website-scratch/&quot;},&quot;course_review_id&quot;:330736,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;text&quot;:&quot;This course was well organized and covered the concepts clearly using fun examples. This course stressed learning by doing - highly recommended!&quot;},&quot;topicTitle&quot;:&quot;HTML Courses&quot;,&quot;topic&quot;:{&quot;id&quot;:6148,&quot;title&quot;:&quot;HTML&quot;,&quot;urlTitle&quot;:&quot;html&quot;},&quot;primaryDescription&quot;:&quot;HTML, or hypertext markup language, is computer code used to create web pages and emails. Web developers, email marketers, web writers, and many others use HTML.&quot;,&quot;secondaryDescription&quot;:&quot;&quot;,&quot;enrollmentStat&quot;:&quot;5,071,917&quot;,&quot;relatedPages&quot;:[{&quot;url&quot;:&quot;/tutorial/step-by-step-html-and-css-for-absolute-beginners/understanding-ftp-file-transfer-protocol/&quot;,&quot;title&quot;:&quot;Understanding FTP: File Transfer Protocol&quot;,&quot;content_length&quot;:635,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:403796,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/73080_7783_6.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/73080_7783_6.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/73080_7783_6.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/73080_7783_6.jpg&quot;,&quot;title&quot;:&quot;Step-by-step HTML and CSS for Absolute Beginners&quot;,&quot;url&quot;:&quot;/course/step-by-step-html-and-css-for-absolute-beginners/&quot;}},{&quot;url&quot;:&quot;/tutorial/step-by-step-html-and-css-for-absolute-beginners/dividing-sections-of-content-using-divs/&quot;,&quot;title&quot;:&quot;Dividing sections of content using DIVs&quot;,&quot;content_length&quot;:501,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:403802,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/73080_7783_6.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/73080_7783_6.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/73080_7783_6.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/73080_7783_6.jpg&quot;,&quot;title&quot;:&quot;Step-by-step HTML and CSS for Absolute Beginners&quot;,&quot;url&quot;:&quot;/course/step-by-step-html-and-css-for-absolute-beginners/&quot;}},{&quot;url&quot;:&quot;/tutorial/web-design-for-beginners-real-world-coding-in-html-css/background-images/&quot;,&quot;title&quot;:&quot;Background Images&quot;,&quot;content_length&quot;:912,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:1509646,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/246154_d8b0_3.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-b.code-commandcdn.com/course/100x100/246154_d8b0_3.jpg?secure=NTGyF0mNiWEx0_XCqwDeTg%3D%3D%2C1638975027&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/246154_d8b0_3.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/246154_d8b0_3.jpg&quot;,&quot;title&quot;:&quot;Web Design for Beginners: Real World Coding in HTML \u0026 CSS&quot;,&quot;url&quot;:&quot;/course/web-design-for-beginners-real-world-coding-in-html-css/&quot;}},{&quot;url&quot;:&quot;/tutorial/css3-responsive-web-design-tutorial-with-flexbox-and-animations/serif-vs-sans-serif/&quot;,&quot;title&quot;:&quot;Serif vs. Sans Serif&quot;,&quot;content_length&quot;:213,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:8282926,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/1399352_6f7a.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/1399352_6f7a.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/1399352_6f7a.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/1399352_6f7a.jpg&quot;,&quot;title&quot;:&quot;Build Responsive Real World Websites with CSS3 v2.0&quot;,&quot;url&quot;:&quot;/course/css3-responsive-web-design-tutorial-with-flexbox-and-animations/&quot;}},{&quot;url&quot;:&quot;/tutorial/html-4-beginners/adding-images/&quot;,&quot;title&quot;:&quot;Adding Images&quot;,&quot;content_length&quot;:939,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:8365820,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/1408282_4d61.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/1408282_4d61.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/1408282_4d61.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-b.code-commandcdn.com/course/480x270/1408282_4d61.jpg?secure=b2fCjsW_Gj7L5IfN1aX3TA%3D%3D%2C1638975027&quot;,&quot;title&quot;:&quot;HTML Programming For Beginners (THE Easy and Fun 3Hr Course)&quot;,&quot;url&quot;:&quot;/course/draft/1408282/&quot;}}],&quot;presetValue&quot;:&quot;all&quot;,&quot;onboardingUrl&quot;:&quot;/onboarding/&quot;,&quot;questionsAndAnswers&quot;:[{&quot;question&quot;:&quot;What is HTML and why is it important?&quot;,&quot;answer&quot;:&quot;HTML stands for hyper-text markup language.\u00a0Whether on a mobile device or a computer, every website that you browse is designed with HTML. HTML isn\u2019t a \u201cprogramming language,\u201d but rather a \u201cformatting language.\u201d It tells a browser how to display text, images, and other media elements. When HTML was first developed, it was fairly simple. For example, the text on a page could be bolded, italicized, or underlined, and images could be resized and aligned. Today, HTML is much more complex and dynamic, allowing front-end developers to create any layout or setup they desire.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Why is CSS and Javascript important for HTML?&quot;,&quot;answer&quot;:&quot;HTML is a formatting language, not a programming language. Javascript is often necessary to make HTML \u201cdynamic.\u201d While HTML can make it so that text is displayed on the screen, Javascript can update this text or make it move. Javascript is used for both front-end and back-end development, hand-in-hand with HTML, to create complex and attractive web designs. Meanwhile, CSS (Cascading Style Sheets) are used to organize the look and feel of a website and make the website easier to update and manipulate. Today, HTML, CSS, and Javascript are frequently used to develop responsive web designs \u2014 designs that react to a user\u2019s environment for a better user experience.&quot;,&quot;link_url&quot;:&quot;https://blog.code-command.com/css-grid-vs-flexbox/&quot;,&quot;link_text&quot;:&quot;Learn more about CSS&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What is an HTML element and why is it important?&quot;,&quot;answer&quot;:&quot;HTML is designed on a modular basis, meaning every part of the web page has a specific \u201cplace.\u201d An HTML element is a part of the page. Common HTML elements incl \u201c\u003cp\u003e\u201d for a \u201cparagraph\u201d and \u201c\u003ctitle\u003e\u201d for the \u201ctitle\u201d of the page. In fact, the entirety of the HTML page is within the \u201c\u003chtml\u003e\u201d element. Elements are begun and ended with tags, so a title would be written: \u201c\u003ctitle\u003eThis is the Title to the page.\u003c/title\u003e\u201d Organizing code this way makes it easier to reference and control. Each element may also have characteristics. For instance, the \u201c\u003cp\u003e\u201d (paragraph) tag can be aligned in a certain direction. These are the basic building blocks of HTML and what most designers should learn first.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Is HTML a programming language?&quot;,&quot;answer&quot;:&quot;HTML is not considered a programming language but rather a markup or formatting language. This is an important distinction. Formatting languages merely control how things are displayed on a visual level, whereas programming languages are more dynamic; they use logic gates to determine the behavior of a program. But there is some crossover. \u201cDHTML,\u201d for instance, refers to Dynamic HTML. It is a type of HTML augmented by Javascript to make it easier to adjust on the fly. Because HTML, Javascript, and CSS are so frequently used together, they can often be folded together, which can contribute to some confusion regarding whether HTML is a programming language.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Is HTML hard to learn?&quot;,&quot;answer&quot;:&quot;HTML is known as one of the easiest languages to learn. It\u2019s also one of the most ubiquitous. Many individuals interested in front-end, back-end, or full-stack development will learn HTML first. While HTML is largely intended for websites as a language, it is also used in many other programs. For example, when you create an email signature, you will usually be using HTML. Emails themselves use a combination of HTML and CSS. An advantage (and an osional double-edged sword) to HTML is that it is very forgiving. You can get some HTML wrong, and your page will still be displayed, if not exactly how you want it to be.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What jobs use HTML?&quot;,&quot;answer&quot;:&quot;Nearly any development or design job will require a cursory understanding of HTML. HTML has also evolved dramatically since it was originally developed; it is far more complex and standardized than before. Because of this, even those who have been experts in HTML during their career may need to undergo an HTML refresher periodically. Most jobs that require HTML will involve web design, web development, or layout and design. For example, someone who manages a content management system such as WordPress may not need to know any other programming languages but should still know HTML basics. Similarly, someone who formats online newsletters or an online magazine in an administrative capacity may not need to be a web designer or web developer but might need to understand the principles of HTML.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What is responsive design?&quot;,&quot;answer&quot;:&quot;Responsive design is a new type of design intended to respond to the platform and environment that a user is on. When HTML was created, most people used PCs. Today, people can browse a website on a PC, phone, tablet, or even a game console. In the past, developers created separate sites for \u201cdesktop\u201d and \u201cmobile.\u201d While it worked, it wasn&#39;t easy to maintain. Rather than creating separate sites, responsive design generates the site based on the environment it detects. This greatly reduces the amount of development and maintenance for the site. Responsive design is generally achieved with a combination of HTML, CSS, and Javascript.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;}],&quot;schema_markup&quot;:{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;FAQPage&quot;,&quot;mainEntity&quot;:[{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is HTML and why is it important?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML stands for hyper-text markup language.\u00a0Whether on a mobile device or a computer, every website that you browse is designed with HTML. HTML isn\u2019t a \u201cprogramming language,\u201d but rather a \u201cformatting language.\u201d It tells a browser how to display text, images, and other media elements. When HTML was first developed, it was fairly simple. For example, the text on a page could be bolded, italicized, or underlined, and images could be resized and aligned. Today, HTML is much more complex and dynamic, allowing front-end developers to create any layout or setup they desire.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Why is CSS and Javascript important for HTML?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is a formatting language, not a programming language. Javascript is often necessary to make HTML \u201cdynamic.\u201d While HTML can make it so that text is displayed on the screen, Javascript can update this text or make it move. Javascript is used for both front-end and back-end development, hand-in-hand with HTML, to create complex and attractive web designs. Meanwhile, CSS (Cascading Style Sheets) are used to organize the look and feel of a website and make the website easier to update and manipulate. Today, HTML, CSS, and Javascript are frequently used to develop responsive web designs \u2014 designs that react to a user\u2019s environment for a better user experience.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is an HTML element and why is it important?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is designed on a modular basis, meaning every part of the web page has a specific \u201cplace.\u201d An HTML element is a part of the page. Common HTML elements incl \u201c\u003cp\u003e\u201d for a \u201cparagraph\u201d and \u201c\u003ctitle\u003e\u201d for the \u201ctitle\u201d of the page. In fact, the entirety of the HTML page is within the \u201c\u003chtml\u003e\u201d element. Elements are begun and ended with tags, so a title would be written: \u201c\u003ctitle\u003eThis is the Title to the page.\u003c/title\u003e\u201d Organizing code this way makes it easier to reference and control. Each element may also have characteristics. For instance, the \u201c\u003cp\u003e\u201d (paragraph) tag can be aligned in a certain direction. These are the basic building blocks of HTML and what most designers should learn first.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Is HTML a programming language?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is not considered a programming language but rather a markup or formatting language. This is an important distinction. Formatting languages merely control how things are displayed on a visual level, whereas programming languages are more dynamic; they use logic gates to determine the behavior of a program. But there is some crossover. \u201cDHTML,\u201d for instance, refers to Dynamic HTML. It is a type of HTML augmented by Javascript to make it easier to adjust on the fly. Because HTML, Javascript, and CSS are so frequently used together, they can often be folded together, which can contribute to some confusion regarding whether HTML is a programming language.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Is HTML hard to learn?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is known as one of the easiest languages to learn. It\u2019s also one of the most ubiquitous. Many individuals interested in front-end, back-end, or full-stack development will learn HTML first. While HTML is largely intended for websites as a language, it is also used in many other programs. For example, when you create an email signature, you will usually be using HTML. Emails themselves use a combination of HTML and CSS. An advantage (and an osional double-edged sword) to HTML is that it is very forgiving. You can get some HTML wrong, and your page will still be displayed, if not exactly how you want it to be.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What jobs use HTML?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;Nearly any development or design job will require a cursory understanding of HTML. HTML has also evolved dramatically since it was originally developed; it is far more complex and standardized than before. Because of this, even those who have been experts in HTML during their career may need to undergo an HTML refresher periodically. Most jobs that require HTML will involve web design, web development, or layout and design. For example, someone who manages a content management system such as WordPress may not need to know any other programming languages but should still know HTML basics. Similarly, someone who formats online newsletters or an online magazine in an administrative capacity may not need to be a web designer or web developer but might need to understand the principles of HTML.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is responsive design?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;Responsive design is a new type of design intended to respond to the platform and environment that a user is on. When HTML was created, most people used PCs. Today, people can browse a website on a PC, phone, tablet, or even a game console. In the past, developers created separate sites for \u201cdesktop\u201d and \u201cmobile.\u201d While it worked, it wasn&#39;t easy to maintain. Rather than creating separate sites, responsive design generates the site based on the environment it detects. This greatly reduces the amount of development and maintenance for the site. Responsive design is generally achieved with a combination of HTML, CSS, and Javascript.&quot;}}]}}">
-                <div data-unique-id="246" style="display:none"></div>
-                <div class="container page-wrapper">
-                    <div class="component-margin">
-                        <div class="alternate-headline--title--1sUQT">
-                            <h1 class="heading-serif-xxl" data-purpose="alternate-headline-title">HTML Courses</h1>
-                        </div>
-                    </div>
-                    <p class="component-margin topic-enrollment-stats--container--23owL">
-                        <svg aria-hidden="true" focusable="false" class="icon icon-small icon-color-neutral">
-                            <use xlink:href="#icon-people"></use>
+            </nav>
+            <div class="search-form-autocomplete header--search-bar--1_mS0 form-group">
+                <label class="sr-only form-label heading-sm" for="u245-search-form-autocomplete--3">Keyword
+                    Search</label>
+                <form action="/courses/search/"
+                    class="search-form-autocomplete-input-group search-form-autocomplete-input-group-reversed">
+                    <input type="hidden" name="src" value="ukw" />
+                    <input type="text" name="q" placeholder="Keyword Search" autoComplete="off" value="" role="combobox"
+                        aria-autocomplete="both" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="u245-search-form-autocomplete--3-menu-content-items"
+                        id="u245-search-form-autocomplete--3"
+                        class="text-input text-input-small text-sm search-form-autocomplete-input js-header-search-field" />
+                    <br>
+                    <br>
+                    <button type="submit" disabled=""
+                        class="btn btn-small btn-neutral heading-md btn-disabled btn-icon btn-icon-small" tabindex="-1">
+                        <svg aria-label="Submit search" focusable="false" class="icon icon-small icon-color-neutral">
+                            <use xlink:href="#icon-search"></use>
                         </svg>
-                        <!-- <span class="text-sm topic-enrollment-stats--text--TIZ5q" data-purpose="Students currently online:">152,027</span> -->
-                    </p>
-                    <div class="component-margin" data-item-index="-3">
-                        <div class="topic--secondary-heading--25J3W">
-                            <div class="alternate-headline--title--1sUQT">
-                                <h2 class="heading-xl" data-purpose="alternate-headline-title">All HTML courses</h2>
-                            </div>
-                        </div>
-                        <div class="topic--refund-notice--3I0nl">
-                            <div
-                                class="alert-banner--alert-banner--3n8c0 alert-banner--alert-banner-information--2uvUK">
-                                <svg aria-hidden="true" focusable="false" class="icon icon-large icon-color-neutral">
-                                    <use xlink:href="#icon-info"></use>
-                                </svg>
-                                <div style="flex:1">
-                                    <div
-                                        class="alert-banner--text-frame--ZMG8W alert-banner--text-frame-with-icon--2t9qp">
-                                        <span class="sr-only">information alert</span>
-                                        <h2 class="heading-md">Not sure? All courses have a 30-day money-back guarantee
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="discovery-list-container--loader-spacing--tSXHb loader-block"
-                            data-purpose="load-spinner-wrapper">
-                            <svg aria-label="Loading" focusable="false"
-                                class="icon icon-medium icon-color-neutral loader">
-                                <use xlink:href="#icon-loading-spinner"></use>
-                            </svg>
+                    </button>
+                </form>
+            </div>
+            <div style="flex:1"></div>
+        </div>
+    </div>
+
+    <div class="app-loader component--ui-feedback--ui-feedback" data-module-id="common/desktop"
+        data-module-args="{&quot;uiMessages&quot;:[]}" data-module-priority="-10"></div>
+    <div class="main-content">
+        <div class="component--topic--topic"
+            data-component-props="{&quot;highlightedCourseReview&quot;:{&quot;course_id&quot;:80940,&quot;course&quot;:{&quot;_class&quot;:&quot;course&quot;,&quot;id&quot;:80940,&quot;title&quot;:&quot;Build Websites from Scratch with HTML \u0026 CSS&quot;,&quot;url&quot;:&quot;/course/build-website-scratch/&quot;},&quot;course_review_id&quot;:330736,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;text&quot;:&quot;This course was well organized and covered the concepts clearly using fun examples. This course stressed learning by doing - highly recommended!&quot;},&quot;topicTitle&quot;:&quot;HTML Courses&quot;,&quot;topic&quot;:{&quot;id&quot;:6148,&quot;title&quot;:&quot;HTML&quot;,&quot;urlTitle&quot;:&quot;html&quot;},&quot;primaryDescription&quot;:&quot;HTML, or hypertext markup language, is computer code used to create web pages and emails. Web developers, email marketers, web writers, and many others use HTML.&quot;,&quot;secondaryDescription&quot;:&quot;&quot;,&quot;enrollmentStat&quot;:&quot;5,071,917&quot;,&quot;relatedPages&quot;:[{&quot;url&quot;:&quot;/tutorial/step-by-step-html-and-css-for-absolute-beginners/understanding-ftp-file-transfer-protocol/&quot;,&quot;title&quot;:&quot;Understanding FTP: File Transfer Protocol&quot;,&quot;content_length&quot;:635,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:403796,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/73080_7783_6.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/73080_7783_6.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/73080_7783_6.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/73080_7783_6.jpg&quot;,&quot;title&quot;:&quot;Step-by-step HTML and CSS for Absolute Beginners&quot;,&quot;url&quot;:&quot;/course/step-by-step-html-and-css-for-absolute-beginners/&quot;}},{&quot;url&quot;:&quot;/tutorial/step-by-step-html-and-css-for-absolute-beginners/dividing-sections-of-content-using-divs/&quot;,&quot;title&quot;:&quot;Dividing sections of content using DIVs&quot;,&quot;content_length&quot;:501,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:403802,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/73080_7783_6.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/73080_7783_6.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/73080_7783_6.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/73080_7783_6.jpg&quot;,&quot;title&quot;:&quot;Step-by-step HTML and CSS for Absolute Beginners&quot;,&quot;url&quot;:&quot;/course/step-by-step-html-and-css-for-absolute-beginners/&quot;}},{&quot;url&quot;:&quot;/tutorial/web-design-for-beginners-real-world-coding-in-html-css/background-images/&quot;,&quot;title&quot;:&quot;Background Images&quot;,&quot;content_length&quot;:912,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:1509646,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/246154_d8b0_3.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-b.code-commandcdn.com/course/100x100/246154_d8b0_3.jpg?secure=NTGyF0mNiWEx0_XCqwDeTg%3D%3D%2C1638975027&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/246154_d8b0_3.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/246154_d8b0_3.jpg&quot;,&quot;title&quot;:&quot;Web Design for Beginners: Real World Coding in HTML \u0026 CSS&quot;,&quot;url&quot;:&quot;/course/web-design-for-beginners-real-world-coding-in-html-css/&quot;}},{&quot;url&quot;:&quot;/tutorial/css3-responsive-web-design-tutorial-with-flexbox-and-animations/serif-vs-sans-serif/&quot;,&quot;title&quot;:&quot;Serif vs. Sans Serif&quot;,&quot;content_length&quot;:213,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:8282926,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/1399352_6f7a.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/1399352_6f7a.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/1399352_6f7a.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-c.code-commandcdn.com/course/480x270/1399352_6f7a.jpg&quot;,&quot;title&quot;:&quot;Build Responsive Real World Websites with CSS3 v2.0&quot;,&quot;url&quot;:&quot;/course/css3-responsive-web-design-tutorial-with-flexbox-and-animations/&quot;}},{&quot;url&quot;:&quot;/tutorial/html-4-beginners/adding-images/&quot;,&quot;title&quot;:&quot;Adding Images&quot;,&quot;content_length&quot;:939,&quot;type&quot;:&quot;lecture&quot;,&quot;lecture_id&quot;:8365820,&quot;tracking_id&quot;:null,&quot;source&quot;:{&quot;image_50x50&quot;:&quot;https://img-c.code-commandcdn.com/course/50x50/1408282_4d61.jpg&quot;,&quot;image_100x100&quot;:&quot;https://img-c.code-commandcdn.com/course/100x100/1408282_4d61.jpg&quot;,&quot;image_240x135&quot;:&quot;https://img-c.code-commandcdn.com/course/240x135/1408282_4d61.jpg&quot;,&quot;image_480x270&quot;:&quot;https://img-b.code-commandcdn.com/course/480x270/1408282_4d61.jpg?secure=b2fCjsW_Gj7L5IfN1aX3TA%3D%3D%2C1638975027&quot;,&quot;title&quot;:&quot;HTML Programming For Beginners (THE Easy and Fun 3Hr Course)&quot;,&quot;url&quot;:&quot;/course/draft/1408282/&quot;}}],&quot;presetValue&quot;:&quot;all&quot;,&quot;onboardingUrl&quot;:&quot;/onboarding/&quot;,&quot;questionsAndAnswers&quot;:[{&quot;question&quot;:&quot;What is HTML and why is it important?&quot;,&quot;answer&quot;:&quot;HTML stands for hyper-text markup language.\u00a0Whether on a mobile device or a computer, every website that you browse is designed with HTML. HTML isn\u2019t a \u201cprogramming language,\u201d but rather a \u201cformatting language.\u201d It tells a browser how to display text, images, and other media elements. When HTML was first developed, it was fairly simple. For example, the text on a page could be bolded, italicized, or underlined, and images could be resized and aligned. Today, HTML is much more complex and dynamic, allowing front-end developers to create any layout or setup they desire.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Why is CSS and Javascript important for HTML?&quot;,&quot;answer&quot;:&quot;HTML is a formatting language, not a programming language. Javascript is often necessary to make HTML \u201cdynamic.\u201d While HTML can make it so that text is displayed on the screen, Javascript can update this text or make it move. Javascript is used for both front-end and back-end development, hand-in-hand with HTML, to create complex and attractive web designs. Meanwhile, CSS (Cascading Style Sheets) are used to organize the look and feel of a website and make the website easier to update and manipulate. Today, HTML, CSS, and Javascript are frequently used to develop responsive web designs \u2014 designs that react to a user\u2019s environment for a better user experience.&quot;,&quot;link_url&quot;:&quot;https://blog.code-command.com/css-grid-vs-flexbox/&quot;,&quot;link_text&quot;:&quot;Learn more about CSS&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What is an HTML element and why is it important?&quot;,&quot;answer&quot;:&quot;HTML is designed on a modular basis, meaning every part of the web page has a specific \u201cplace.\u201d An HTML element is a part of the page. Common HTML elements incl \u201c\u003cp\u003e\u201d for a \u201cparagraph\u201d and \u201c\u003ctitle\u003e\u201d for the \u201ctitle\u201d of the page. In fact, the entirety of the HTML page is within the \u201c\u003chtml\u003e\u201d element. Elements are begun and ended with tags, so a title would be written: \u201c\u003ctitle\u003eThis is the Title to the page.\u003c/title\u003e\u201d Organizing code this way makes it easier to reference and control. Each element may also have characteristics. For instance, the \u201c\u003cp\u003e\u201d (paragraph) tag can be aligned in a certain direction. These are the basic building blocks of HTML and what most designers should learn first.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Is HTML a programming language?&quot;,&quot;answer&quot;:&quot;HTML is not considered a programming language but rather a markup or formatting language. This is an important distinction. Formatting languages merely control how things are displayed on a visual level, whereas programming languages are more dynamic; they use logic gates to determine the behavior of a program. But there is some crossover. \u201cDHTML,\u201d for instance, refers to Dynamic HTML. It is a type of HTML augmented by Javascript to make it easier to adjust on the fly. Because HTML, Javascript, and CSS are so frequently used together, they can often be folded together, which can contribute to some confusion regarding whether HTML is a programming language.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;Is HTML hard to learn?&quot;,&quot;answer&quot;:&quot;HTML is known as one of the easiest languages to learn. It\u2019s also one of the most ubiquitous. Many individuals interested in front-end, back-end, or full-stack development will learn HTML first. While HTML is largely intended for websites as a language, it is also used in many other programs. For example, when you create an email signature, you will usually be using HTML. Emails themselves use a combination of HTML and CSS. An advantage (and an osional double-edged sword) to HTML is that it is very forgiving. You can get some HTML wrong, and your page will still be displayed, if not exactly how you want it to be.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What jobs use HTML?&quot;,&quot;answer&quot;:&quot;Nearly any development or design job will require a cursory understanding of HTML. HTML has also evolved dramatically since it was originally developed; it is far more complex and standardized than before. Because of this, even those who have been experts in HTML during their career may need to undergo an HTML refresher periodically. Most jobs that require HTML will involve web design, web development, or layout and design. For example, someone who manages a content management system such as WordPress may not need to know any other programming languages but should still know HTML basics. Similarly, someone who formats online newsletters or an online magazine in an administrative capacity may not need to be a web designer or web developer but might need to understand the principles of HTML.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;},{&quot;question&quot;:&quot;What is responsive design?&quot;,&quot;answer&quot;:&quot;Responsive design is a new type of design intended to respond to the platform and environment that a user is on. When HTML was created, most people used PCs. Today, people can browse a website on a PC, phone, tablet, or even a game console. In the past, developers created separate sites for \u201cdesktop\u201d and \u201cmobile.\u201d While it worked, it wasn&#39;t easy to maintain. Rather than creating separate sites, responsive design generates the site based on the environment it detects. This greatly reduces the amount of development and maintenance for the site. Responsive design is generally achieved with a combination of HTML, CSS, and Javascript.&quot;,&quot;link_url&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;&quot;,&quot;locale_id&quot;:&quot;en_US&quot;,&quot;page_type&quot;:&quot;paid&quot;}],&quot;schema_markup&quot;:{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;FAQPage&quot;,&quot;mainEntity&quot;:[{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is HTML and why is it important?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML stands for hyper-text markup language.\u00a0Whether on a mobile device or a computer, every website that you browse is designed with HTML. HTML isn\u2019t a \u201cprogramming language,\u201d but rather a \u201cformatting language.\u201d It tells a browser how to display text, images, and other media elements. When HTML was first developed, it was fairly simple. For example, the text on a page could be bolded, italicized, or underlined, and images could be resized and aligned. Today, HTML is much more complex and dynamic, allowing front-end developers to create any layout or setup they desire.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Why is CSS and Javascript important for HTML?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is a formatting language, not a programming language. Javascript is often necessary to make HTML \u201cdynamic.\u201d While HTML can make it so that text is displayed on the screen, Javascript can update this text or make it move. Javascript is used for both front-end and back-end development, hand-in-hand with HTML, to create complex and attractive web designs. Meanwhile, CSS (Cascading Style Sheets) are used to organize the look and feel of a website and make the website easier to update and manipulate. Today, HTML, CSS, and Javascript are frequently used to develop responsive web designs \u2014 designs that react to a user\u2019s environment for a better user experience.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is an HTML element and why is it important?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is designed on a modular basis, meaning every part of the web page has a specific \u201cplace.\u201d An HTML element is a part of the page. Common HTML elements incl \u201c\u003cp\u003e\u201d for a \u201cparagraph\u201d and \u201c\u003ctitle\u003e\u201d for the \u201ctitle\u201d of the page. In fact, the entirety of the HTML page is within the \u201c\u003chtml\u003e\u201d element. Elements are begun and ended with tags, so a title would be written: \u201c\u003ctitle\u003eThis is the Title to the page.\u003c/title\u003e\u201d Organizing code this way makes it easier to reference and control. Each element may also have characteristics. For instance, the \u201c\u003cp\u003e\u201d (paragraph) tag can be aligned in a certain direction. These are the basic building blocks of HTML and what most designers should learn first.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Is HTML a programming language?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is not considered a programming language but rather a markup or formatting language. This is an important distinction. Formatting languages merely control how things are displayed on a visual level, whereas programming languages are more dynamic; they use logic gates to determine the behavior of a program. But there is some crossover. \u201cDHTML,\u201d for instance, refers to Dynamic HTML. It is a type of HTML augmented by Javascript to make it easier to adjust on the fly. Because HTML, Javascript, and CSS are so frequently used together, they can often be folded together, which can contribute to some confusion regarding whether HTML is a programming language.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;Is HTML hard to learn?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;HTML is known as one of the easiest languages to learn. It\u2019s also one of the most ubiquitous. Many individuals interested in front-end, back-end, or full-stack development will learn HTML first. While HTML is largely intended for websites as a language, it is also used in many other programs. For example, when you create an email signature, you will usually be using HTML. Emails themselves use a combination of HTML and CSS. An advantage (and an osional double-edged sword) to HTML is that it is very forgiving. You can get some HTML wrong, and your page will still be displayed, if not exactly how you want it to be.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What jobs use HTML?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;Nearly any development or design job will require a cursory understanding of HTML. HTML has also evolved dramatically since it was originally developed; it is far more complex and standardized than before. Because of this, even those who have been experts in HTML during their career may need to undergo an HTML refresher periodically. Most jobs that require HTML will involve web design, web development, or layout and design. For example, someone who manages a content management system such as WordPress may not need to know any other programming languages but should still know HTML basics. Similarly, someone who formats online newsletters or an online magazine in an administrative capacity may not need to be a web designer or web developer but might need to understand the principles of HTML.&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;What is responsive design?&quot;,&quot;aptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;Responsive design is a new type of design intended to respond to the platform and environment that a user is on. When HTML was created, most people used PCs. Today, people can browse a website on a PC, phone, tablet, or even a game console. In the past, developers created separate sites for \u201cdesktop\u201d and \u201cmobile.\u201d While it worked, it wasn&#39;t easy to maintain. Rather than creating separate sites, responsive design generates the site based on the environment it detects. This greatly reduces the amount of development and maintenance for the site. Responsive design is generally achieved with a combination of HTML, CSS, and Javascript.&quot;}}]}}">
+            <div data-unique-id="246" style="display:none"></div>
+            <div class="container page-wrapper">
+                <div class="component-margin">
+                    <div class="alternate-headline--title--1sUQT">
+                        <h1 class="heading-serif-xxl" data-purpose="alternate-headline-title">HTML Courses</h1>
+                    </div>
+                </div>
+                <p class="component-margin topic-enrollment-stats--container--23owL">
+                    <svg aria-hidden="true" focusable="false" class="icon icon-small icon-color-neutral">
+                        <use xlink:href="#icon-people"></use>
+                    </svg>
+                    <!-- <span class="text-sm topic-enrollment-stats--text--TIZ5q" data-purpose="Students currently online:">152,027</span> -->
+                </p>
+                <div class="component-margin" data-item-index="-3">
+                    <div class="topic--secondary-heading--25J3W">
+                        <div class="alternate-headline--title--1sUQT">
+                            <h2 class="heading-xl" data-purpose="alternate-headline-title">All HTML courses</h2>
                         </div>
                     </div>
-                    <div class="discovery-unit-empty-render"></div>
-                    <div class="topic--learn-more-section-container--1D6vG">
-                        <div class="topic--learn-more-section--2yFPv learn-more-section--container--4OyoU">
+                    <div class="topic--refund-notice--3I0nl">
+                        <div class="alert-banner--alert-banner--3n8c0 alert-banner--alert-banner-information--2uvUK">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-large icon-color-neutral">
+                                <use xlink:href="#icon-info"></use>
+                            </svg>
+                            <div style="flex:1">
+                                <div class="alert-banner--text-frame--ZMG8W alert-banner--text-frame-with-icon--2t9qp">
+                                    <span class="sr-only">information alert</span>
+                                    <h2 class="heading-md">Not sure? All courses have a 30-day money-back guarantee
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discovery-list-container--loader-spacing--tSXHb loader-block"
+                        data-purpose="load-spinner-wrapper">
+                        <svg aria-label="Loading" focusable="false" class="icon icon-medium icon-color-neutral loader">
+                            <use xlink:href="#icon-loading-spinner"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="discovery-unit-empty-render"></div>
+                <div class="topic--learn-more-section-container--1D6vG">
+                    <div class="topic--learn-more-section--2yFPv learn-more-section--container--4OyoU">
+                        <div>
+                            <h2 class="heading-xxl learn-more-section--title--3u9Ly" data-purpose="title">Learn
+                                About HTML</h2>
+                            <p class="text-md learn-more-section--primary-description--2aVSW"
+                                data-purpose="primary-description">Raclette heirloom tofu, selfies activated
+                                charcoal meditation drinking vinegar kombucha
+                                marfa whatever franzen hell of shabby chic. Pok pok bicycle rights four loko pickled
+                                raw denim irony la croix vinyl.</p>
+                        </div>
+                        <div class="questions-and-answers--question-and-answer-container--2xzTm">
+                            <div class="heading-xl questions-and-answers--header--1c2tO" data-purpose="faq-heading">
+                                Frequently asked questions</div>
                             <div>
-                                <h2 class="heading-xxl learn-more-section--title--3u9Ly" data-purpose="title">Learn
-                                    About HTML</h2>
-                                <p class="text-md learn-more-section--primary-description--2aVSW"
-                                    data-purpose="primary-description">Raclette heirloom tofu, selfies activated
-                                    charcoal meditation drinking vinegar kombucha
-                                    marfa whatever franzen hell of shabby chic. Pok pok bicycle rights four loko pickled
-                                    raw denim irony la croix vinyl.</p>
-                            </div>
-                            <div class="questions-and-answers--question-and-answer-container--2xzTm">
-                                <div class="heading-xl questions-and-answers--header--1c2tO" data-purpose="faq-heading">
-                                    Frequently asked questions</div>
-                                <div>
-                                    <div class="panel--panel--3H">
-                                        <span id="u246-ardion-panel--2" data-type="checkbox" data-checked="checked"
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--2">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="true"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--3">
-                                                    <span class="ardion-panel-title">What is HTML and why should you
-                                                        learn it?</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--3" aria-hidden="false"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">I'm baby vinyl
-                                                    waistcoat lo-fi, scenester sriracha occupy slow-carb heirloom
-                                                    poutine cardigan.
-                                                    Truffaut ugh occupy, fashion axe flexitarian unicorn pork belly
-                                                    synth disrupt farm-to-table raw denim irony williamsburg edison
-                                                    bulb. Banh mi raclette cloud bread meh trust fund, scenester four
-                                                    loko.
-                                                    Master cleanse echo park air plant put a bird on it, disrupt woke
-                                                    coloring book polaroid organic poutine farm-to-table mlkshk cronut
-                                                    fashion axe yuccie.
-                                                    Intelligentsia tote bag raw denim health goth asymmetrical.</div>
-                                            </div>
+                                <div class="panel--panel--3H">
+                                    <span id="u246-ardion-panel--2" data-type="checkbox" data-checked="checked"
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--2">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="true"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--3">
+                                                <span class="ardion-panel-title">What is HTML and why should you
+                                                    learn it?</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--3" aria-hidden="false" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">I'm baby vinyl
+                                                waistcoat lo-fi, scenester sriracha occupy slow-carb heirloom
+                                                poutine cardigan.
+                                                Truffaut ugh occupy, fashion axe flexitarian unicorn pork belly
+                                                synth disrupt farm-to-table raw denim irony williamsburg edison
+                                                bulb. Banh mi raclette cloud bread meh trust fund, scenester four
+                                                loko.
+                                                Master cleanse echo park air plant put a bird on it, disrupt woke
+                                                coloring book polaroid organic poutine farm-to-table mlkshk cronut
+                                                fashion axe yuccie.
+                                                Intelligentsia tote bag raw denim health goth asymmetrical.</div>
                                         </div>
                                     </div>
-                                    <div class="panel--panel--3H">
-                                        <span id="u246-ardion-panel--4" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--4">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--5">
-                                                    <span class="ardion-panel-title">HTML, CSS, and JavaScript are one
-                                                        big happy familiy.</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--5" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">Master cleanse
-                                                    kale chips adaptogen lyft ethical, brooklyn wayfarers kombucha.
-                                                    Woke bushwick enamel pin lomo echo park mixtape meditation vice
-                                                    seitan wayfarers chia plaid brooklyn mustache. +1 glossier
-                                                    shoreditch readymade.
-                                                    Four dollar toast banjo photo booth everyday carry humblebrag
-                                                    stumptown pinterest, kickstarter kitsch raw denim organic PBR&B
-                                                    iPhone vaporware.</div>
-                                                <div class="heading-md questions-and-answers--link--11XUK">
-                                                    <a href="https://blog.code-command.com/css-styles/" target="_blank"
-                                                        rel="noopener noreferrer">Learn more about CSS</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="panel--panel--3H">
+                                    <span id="u246-ardion-panel--4" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--4">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--5">
+                                                <span class="ardion-panel-title">HTML, CSS, and JavaScript are one
+                                                    big happy familiy.</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
                                     </div>
-                                    <div class="panel--panel--3H">
-                                        <span id="u246-ardion-panel--6" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--6">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--7">
-                                                    <span class="ardion-panel-title">Debugging HTML</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--7" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">Readymade
-                                                    wayfarers bushwick disrupt chicharrones hella hoodie occupy.
-                                                    Vexillologist mlkshk poutine palo santo flannel, blog polaroid cloud
-                                                    bread post-ironic lo-fi etsy pour-over bushwick.
-                                                    Small batch pour-over chia affogato tumeric. Truffaut gochujang
-                                                    helvetica unicorn aesthetic portland sriracha echo park knausgaard
-                                                    williamsburg.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
-                                        <span id="u246-ardion-panel--8" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--8">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--9">
-                                                    <span class="ardion-panel-title">Is HTML a programming
-                                                        language?</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--9" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">
-                                                    Lorem ipsum dolor sit amet, consectetur adip. Cum sociosqu ad minim
-                                                    veniam et aliqueterior sint occaecat cupidatat non proident,
-                                                    sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
-                                        <span id="u246-ardion-panel--10" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--10">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--11">
-                                                    <span class="ardion-panel-title">How difficult is HTML to
-                                                        learn?</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--11" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">Lorem ipsum
-                                                    dolor sit amet, consectetur adip. Lorem ipsum dolor sit amet,
-                                                    consectetur adip</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
-                                        <span id="u246-ardion-panel--12" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--12">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--13">
-                                                    <span class="ardion-panel-title">Will I use HTML in my
-                                                        career?</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--13" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">Lorem ipsum
-                                                    dolor sit amet, consectetur adip. Cum sociosqu ad minim veniam</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
-                                        <span id="u246-ardion-panel--14" data-type="checkbox" data-checked=""
-                                            style="display:none"></span>
-                                        <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
-                                            data-css-toggle-id="u246-ardion-panel--14">
-                                            <h3 class="ardion-panel-heading">
-                                                <button type="button" aria-expanded="false"
-                                                    class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
-                                                    id="u246-ardion-panel-title--15">
-                                                    <span class="ardion-panel-title">Can I have multiple verions of my
-                                                        website so it looks great on PC and mobile devices?</span>
-                                                </button>
-                                            </h3>
-                                            <svg aria-hidden="true" focusable="false"
-                                                class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
-                                                <use xlink:href="#icon-expand"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="panel--content-wrapper--1g5eE"
-                                            aria-labelledby="u246-ardion-panel-title--15" aria-hidden="true"
-                                            role="region">
-                                            <div class="ardion-panel-content panel--content--2q9WW">
-                                                <div class="text-sm questions-and-answers--answer--2PMFk">I'm baby vinyl
-                                                    waistcoat lo-fi, scenester sriracha occupy slow-carb heirloom
-                                                    poutine cardigan.
-                                                    Lorem ipsum
-                                                    dolor sit amet, consectetur adip. Cum sociosqu ad minim veniam.
-                                                </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--5" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">Master cleanse
+                                                kale chips adaptogen lyft ethical, brooklyn wayfarers kombucha.
+                                                Woke bushwick enamel pin lomo echo park mixtape meditation vice
+                                                seitan wayfarers chia plaid brooklyn mustache. +1 glossier
+                                                shoreditch readymade.
+                                                Four dollar toast banjo photo booth everyday carry humblebrag
+                                                stumptown pinterest, kickstarter kitsch raw denim organic PBR&B
+                                                iPhone vaporware.</div>
+                                            <div class="heading-md questions-and-answers--link--11XUK">
+                                                <a href="https://blog.code-command.com/css-styles/" target="_blank"
+                                                    rel="noopener noreferrer">Learn more about CSS</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button"
-                                    class="btn btn-medium btn-secondary heading-sm questions-and-answers--show-more--2xipb"
-                                    data-purpose="toggle-button">
-                                    <span>Bonus Material</span>
-                                </button>
-                            </div>
-                            <div data-purpose="related-pages">
-                                <div class="topic--section-container--3fUMl">
-                                    <div class="alternate-headline--title--1sUQT">
-                                        <h2 class="heading-xl" data-purpose="alternate-headline-title">Complimentary
-                                            lessons</h2>
+                                <div class="panel--panel--3H">
+                                    <span id="u246-ardion-panel--6" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--6">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--7">
+                                                <span class="ardion-panel-title">Debugging HTML</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
                                     </div>
-                                    <p class="text-md alternate-headline--secondary-text--yJqPe">In a hurry? Learn
-                                        valuable skills in a snap with these fun size lessons!</p>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--7" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">Readymade
+                                                wayfarers bushwick disrupt chicharrones hella hoodie occupy.
+                                                Vexillologist mlkshk poutine palo santo flannel, blog polaroid cloud
+                                                bread post-ironic lo-fi etsy pour-over bushwick.
+                                                Small batch pour-over chia affogato tumeric. Truffaut gochujang
+                                                helvetica unicorn aesthetic portland sriracha echo park knausgaard
+                                                williamsburg.</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="carousel--container--37Pr-">
-                                    <div id="u246-scroll-port--16" aria-live="polite"
-                                        class="carousel--scroll-port--EKRiq carousel--grid--35Xll carousel--scroll-lock--38Od9">
-                                        <div data-index="0" class="carousel--scroll-item--1O-L9">
-                                            <a href="/tutorial/getting-started-with-metadata/"
-                                                class="video-card--wrapper--13uW2" data-purpose="card-url">
-                                                <svg aria-hidden="true" focusable="false"
-                                                    class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
-                                                    <use xlink:href="#icon-play"></use>
-                                                </svg>
-                                                <div class="heading-sm video-card--title--2o" data-purpose="card-title">
-                                                    What goes in the HTML head? </div>
-                                                <div class="text-xs video-card--bottom-info-container--YZbNo">
-                                                    <span data-purpose="video-duration">
-                                                        <span>5min</span>
-                                                        video
-                                                    </span>
-                                                </div>
-                                            </a>
+                                <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
+                                    <span id="u246-ardion-panel--8" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--8">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--9">
+                                                <span class="ardion-panel-title">Is HTML a programming
+                                                    language?</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--9" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">
+                                                Lorem ipsum dolor sit amet, consectetur adip. Cum sociosqu ad minim
+                                                veniam et aliqueterior sint occaecat cupidatat non proident,
+                                                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </div>
                                         </div>
-                                        <div data-index="1" class="carousel--scroll-item--1O-L9">
-                                            <a href="/tutorial/dividing-sections-of-content-using-markup-tags/"
-                                                class="video-card--wrapper--13uW2" data-purpose="card-url">
-                                                <svg aria-hidden="true" focusable="false"
-                                                    class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
-                                                    <use xlink:href="#icon-play"></use>
-                                                </svg>
-                                                <div class="heading-sm video-card--title--2o" data-purpose="card-title">
-                                                    Dividing sections of content using markup tags</div>
-                                                <div class="text-xs video-card--bottom-info-container--YZbNo">
-                                                    <span data-purpose="video-duration">
-                                                        <span>5min</span>
-                                                        video
-                                                    </span>
-                                                </div>
-                                            </a>
+                                    </div>
+                                </div>
+                                <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
+                                    <span id="u246-ardion-panel--10" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--10">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--11">
+                                                <span class="ardion-panel-title">How difficult is HTML to
+                                                    learn?</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--11" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">Lorem ipsum
+                                                dolor sit amet, consectetur adip. Lorem ipsum dolor sit amet,
+                                                consectetur adip</div>
                                         </div>
-                                        <div data-index="2" class="carousel--scroll-item--1O-L9">
-                                            <a href="/tutorial/headers-footers-backgrounds/"
-                                                class="video-card--wrapper--13uW2" data-purpose="card-url">
-                                                <svg aria-hidden="true" focusable="false"
-                                                    class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
-                                                    <use xlink:href="#icon-play"></use>
-                                                </svg>
-                                                <div class="heading-sm video-card--title--2o" data-purpose="card-title">
-                                                    How to add Headers, Footers, and Background Images</div>
-                                                <div class="text-xs video-card--bottom-info-container--YZbNo">
-                                                    <span data-purpose="video-duration">
-                                                        <span>15min</span>
-                                                        video
-                                                    </span>
-                                                </div>
-                                            </a>
+                                    </div>
+                                </div>
+                                <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
+                                    <span id="u246-ardion-panel--12" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--12">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--13">
+                                                <span class="ardion-panel-title">Will I use HTML in my
+                                                    career?</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--13" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">Lorem ipsum
+                                                dolor sit amet, consectetur adip. Cum sociosqu ad minim veniam</div>
                                         </div>
-                                        <div data-index="3" class="carousel--scroll-item--1O-L9">
-                                            <a href="/tutorial/flexbox/" class="video-card--wrapper--13uW2"
-                                                data-purpose="card-url">
-                                                <svg aria-hidden="true" focusable="false"
-                                                    class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
-                                                    <use xlink:href="#icon-play"></use>
-                                                </svg>
-                                                <div class="heading-sm video-card--title--2o" data-purpose="card-title">
-                                                    Creating responsive websites with flexbox</div>
-                                                <div class="text-xs video-card--bottom-info-container--YZbNo">
-                                                    <span data-purpose="video-duration">
-                                                        <span>5min</span>
-                                                        video
-                                                    </span>
-                                                </div>
-                                            </a>
+                                    </div>
+                                </div>
+                                <div class="questions-and-answers--hidden--3bUio panel--panel--3H">
+                                    <span id="u246-ardion-panel--14" data-type="checkbox" data-checked=""
+                                        style="display:none"></span>
+                                    <div class="btn btn-large btn-link heading-lg ardion-panel-toggler panel--panel-toggler--30J_B panel--outer-panel-toggler--3I6w6"
+                                        data-css-toggle-id="u246-ardion-panel--14">
+                                        <h3 class="ardion-panel-heading">
+                                            <button type="button" aria-expanded="false"
+                                                class="btn btn-large btn-link heading-lg js-panel-toggler panel--panel-toggler--30J_B"
+                                                id="u246-ardion-panel-title--15">
+                                                <span class="ardion-panel-title">Can I have multiple verions of my
+                                                    website so it looks great on PC and mobile devices?</span>
+                                            </button>
+                                        </h3>
+                                        <svg aria-hidden="true" focusable="false"
+                                            class="icon icon-small icon-color-neutral panel--expand-icon--1ZzXo">
+                                            <use xlink:href="#icon-expand"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="panel--content-wrapper--1g5eE"
+                                        aria-labelledby="u246-ardion-panel-title--15" aria-hidden="true" role="region">
+                                        <div class="ardion-panel-content panel--content--2q9WW">
+                                            <div class="text-sm questions-and-answers--answer--2PMFk">I'm baby vinyl
+                                                waistcoat lo-fi, scenester sriracha occupy slow-carb heirloom
+                                                poutine cardigan.
+                                                Lorem ipsum
+                                                dolor sit amet, consectetur adip. Cum sociosqu ad minim veniam.
+                                            </div>
                                         </div>
-                                        <div data-index="4" class="carousel--scroll-item--1O-L9">
-                                            <a href="/tutorial/adding-images/" class="video-card--wrapper--13uW2"
-                                                data-purpose="card-url">
-                                                <svg aria-hidden="true" focusable="false"
-                                                    class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
-                                                    <use xlink:href="#icon-play"></use>
-                                                </svg>
-                                                <div class="heading-sm video-card--title--2o" data-purpose="card-title">
-                                                    Adding Images and Video</div>
-                                                <div class="text-xs video-card--bottom-info-container--YZbNo">
-                                                    <span data-purpose="video-duration">
-                                                        <span>5min</span>
-                                                        video
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button"
+                                class="btn btn-medium btn-secondary heading-sm questions-and-answers--show-more--2xipb"
+                                data-purpose="toggle-button">
+                                <span>Bonus Material</span>
+                            </button>
+                        </div>
+                        <div data-purpose="related-pages">
+                            <div class="topic--section-container--3fUMl">
+                                <div class="alternate-headline--title--1sUQT">
+                                    <h2 class="heading-xl" data-purpose="alternate-headline-title">Complimentary
+                                        lessons</h2>
+                                </div>
+                                <p class="text-md alternate-headline--secondary-text--yJqPe">In a hurry? Learn
+                                    valuable skills in a snap with these fun size lessons!</p>
+                            </div>
+                            <div class="carousel--container--37Pr-">
+                                <div id="u246-scroll-port--16" aria-live="polite"
+                                    class="carousel--scroll-port--EKRiq carousel--grid--35Xll carousel--scroll-lock--38Od9">
+                                    <div data-index="0" class="carousel--scroll-item--1O-L9">
+                                        <a href="/tutorial/getting-started-with-metadata/"
+                                            class="video-card--wrapper--13uW2" data-purpose="card-url">
+                                            <svg aria-hidden="true" focusable="false"
+                                                class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <div class="heading-sm video-card--title--2o" data-purpose="card-title">
+                                                What goes in the HTML head? </div>
+                                            <div class="text-xs video-card--bottom-info-container--YZbNo">
+                                                <span data-purpose="video-duration">
+                                                    <span>5min</span>
+                                                    video
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-index="1" class="carousel--scroll-item--1O-L9">
+                                        <a href="/tutorial/dividing-sections-of-content-using-markup-tags/"
+                                            class="video-card--wrapper--13uW2" data-purpose="card-url">
+                                            <svg aria-hidden="true" focusable="false"
+                                                class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <div class="heading-sm video-card--title--2o" data-purpose="card-title">
+                                                Dividing sections of content using markup tags</div>
+                                            <div class="text-xs video-card--bottom-info-container--YZbNo">
+                                                <span data-purpose="video-duration">
+                                                    <span>5min</span>
+                                                    video
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-index="2" class="carousel--scroll-item--1O-L9">
+                                        <a href="/tutorial/headers-footers-backgrounds/"
+                                            class="video-card--wrapper--13uW2" data-purpose="card-url">
+                                            <svg aria-hidden="true" focusable="false"
+                                                class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <div class="heading-sm video-card--title--2o" data-purpose="card-title">
+                                                How to add Headers, Footers, and Background Images</div>
+                                            <div class="text-xs video-card--bottom-info-container--YZbNo">
+                                                <span data-purpose="video-duration">
+                                                    <span>15min</span>
+                                                    video
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-index="3" class="carousel--scroll-item--1O-L9">
+                                        <a href="/tutorial/flexbox/" class="video-card--wrapper--13uW2"
+                                            data-purpose="card-url">
+                                            <svg aria-hidden="true" focusable="false"
+                                                class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <div class="heading-sm video-card--title--2o" data-purpose="card-title">
+                                                Creating responsive websites with flexbox</div>
+                                            <div class="text-xs video-card--bottom-info-container--YZbNo">
+                                                <span data-purpose="video-duration">
+                                                    <span>5min</span>
+                                                    video
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-index="4" class="carousel--scroll-item--1O-L9">
+                                        <a href="/tutorial/adding-images/" class="video-card--wrapper--13uW2"
+                                            data-purpose="card-url">
+                                            <svg aria-hidden="true" focusable="false"
+                                                class="icon icon-xlarge icon-color-neutral video-card--play-icon--HxDKu">
+                                                <use xlink:href="#icon-play"></use>
+                                            </svg>
+                                            <div class="heading-sm video-card--title--2o" data-purpose="card-title">
+                                                Adding Images and Video</div>
+                                            <div class="text-xs video-card--bottom-info-container--YZbNo">
+                                                <span data-purpose="video-duration">
+                                                    <span>5min</span>
+                                                    video
+                                                </span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -968,42 +933,43 @@ s-17-7.626-17-17S14.61,6,23.984,6z"></path>
                 </div>
             </div>
         </div>
-        <footer class="footer app-loader  " data-module-id="common/desktop"
-            data-module-args="{&quot;localeSelect&quot;:{&quot;currentLanguageId&quot;:&quot;en_US&quot;}}"
-            data-module-priority="-10">
-            <!-- <div class="component--footer--bai-banner"></div>
+    </div>
+    <footer class="footer app-loader  " data-module-id="common/desktop"
+        data-module-args="{&quot;localeSelect&quot;:{&quot;currentLanguageId&quot;:&quot;en_US&quot;}}"
+        data-module-priority="-10">
+        <!-- <div class="component--footer--bai-banner"></div>
                 <div class="component--footer--ufb-notice"></div>
                 <div class="footer-section footer-section-main"> -->
-            <!-- <div class="links-and-language-selector"> -->
-            <!-- <div class="language-selector-container component--footer--language-selector"></div> -->
-            <ul class="unstyled-list link-column ">
-                <!-- <li> -->
-                <!-- <a class="link white-link text-sm ufb-notice-click-event" href="/code-command-business/?locale=en_US&amp;mx_pg=topic-page&amp;path=%2F&amp;ref=footer" target="_blank" rel="noopener" data-placement="footer">code-command Business -->
-                <li>
-                    <a class="link white-link text-sm" href="/contact" class="sc-jObWnj gMgULE">Contact Us</>
-                </li>
+        <!-- <div class="links-and-language-selector"> -->
+        <!-- <div class="language-selector-container component--footer--language-selector"></div> -->
+        <ul class="unstyled-list link-column ">
+            <!-- <li> -->
+            <!-- <a class="link white-link text-sm ufb-notice-click-event" href="/code-command-business/?locale=en_US&amp;mx_pg=topic-page&amp;path=%2F&amp;ref=footer" target="_blank" rel="noopener" data-placement="footer">code-command Business -->
+            <li>
+                <a class="link white-link text-sm" href="/contact" class="sc-jObWnj gMgULE">Contact Us</>
+            </li>
 
-                <li>
-                    <a class="link white-link text-sm" href="/privacy" class="sc-jObWnj gMgULE">Privacy Policy</a>
-                </li>
-                <li>
-                    <a class="link white-link text-sm" href="/terms" class="sc-jObWnj gMgULE">Terms of Service</>
-                </li>
-                <li>
-                    <a class="link white-link text-sm" href="/cookies" class="sc-jObWnj gMgULE">Cookies Policy</a>
-                </li>
-            </ul>
-    </div>
-    <div class="logo-and-copyright">
-        <div class="logo-container">
-            <a href="/" style="display:block">
-                <img style="display:block" src="./assets/images/favicon.ico" alt="code-command" width="91"
-                    height="34" />
-            </a>
+            <li>
+                <a class="link white-link text-sm" href="/privacy" class="sc-jObWnj gMgULE">Privacy Policy</a>
+            </li>
+            <li>
+                <a class="link white-link text-sm" href="/terms" class="sc-jObWnj gMgULE">Terms of Service</>
+            </li>
+            <li>
+                <a class="link white-link text-sm" href="/cookies" class="sc-jObWnj gMgULE">Cookies Policy</a>
+            </li>
+        </ul>
         </div>
-        <div class="copyright-container text-xs">&copy;2021 Code Command, Inc.
+        <div class="logo-and-copyright">
+            <div class="logo-container">
+                <a href="/" style="display:block">
+                    <img style="display:block" src="./assets/images/favicon.ico" alt="code-command" width="91"
+                        height="34" />
+                </a>
+            </div>
+            <div class="copyright-container text-xs">&copy;2021 Code Command, Inc.
+            </div>
         </div>
-    </div>
     </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

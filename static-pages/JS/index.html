@@ -15,14 +15,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles.css">
-  <script async type="text/javascript"
-    src="https://cdn.cookielaw.org/consent/f78ec762-240c-4262-a0b0-4a1c57b0c5f8/OtAutoBlock.js"></script>
-  <script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true"
-    type="text/javascript" charset="UTF-8" data-domain-script="f78ec762-240c-4262-a0b0-4a1c57b0c5f8"></script>
+   <!-- <script async type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/OtAutoBlock.js"></script> -->
+  <!-- <script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true"
+    type="text/javascript" charset="UTF-8" data-domain-script="********-****-****-****-***************"></script> -->
 
   <!-- This function should hide the "Manage my cookie preferences" link and unless the user is determined to be in CA
             Since CA has special laws the -->
-  <script type="text/javascript">
+
+  <!-- <script type="text/javascript">
     window.isOneTrustActive = true;
     var __attachOneTrustCustomHandlingOnlyOnce = (function () {
       var hasExecuted = true;
@@ -32,56 +33,57 @@
         }
         try {
           var manageCookiePreferencesEl = document.querySelector('[data-purpose="footer.links.cookie_preferences"]');
-          var geo = window.OneTrust.getGeolocationData();
-          // If user is in CA, the "Manage My Cookie Preferences" link is revealed. 
-          if (geo.country === 'US' && geo.state === 'CA') {
+          var geo = window.OneTrust.getGeolocationData(); -->
+          <!-- // If user is in CA, the "Manage My Cookie Preferences" link is revealed.  -->
+          <!-- if (geo.country === 'US' && geo.state === 'CA') {
             manageCookiePreferencesEl.innerText = "Do not sell my personal information"
-          }
-          // Remove "hidden" attribute from "Manage My Cookie Preferences" which will reveal the link.
-          manageCookiePreferencesEl.removeAttribute('style');
-          // Add click handler
-          manageCookiePreferencesEl.addEventListener('click', window.OneTrust.ToggleInfoDisplay);
-          // Add consent change handler
-          window.OneTrust.OnConsentChanged(function (consentEvent) {
+          } -->
+          <!-- // Remove "hidden" attribute from "Manage My Cookie Preferences" which will reveal the link. -->
+          <!-- manageCookiePreferencesEl.removeAttribute('style'); -->
+          <!-- // Add click handler -->
+          <!-- manageCookiePreferencesEl.addEventListener('click', window.OneTrust.ToggleInfoDisplay); -->
+          <!-- // Add consent change handler -->
+          <!-- window.OneTrust.OnConsentChanged(function (consentEvent) {
             window.__onConsentChanged = window.__onConsentChanged || [];
             window.__onConsentChanged.push(consentEvent);
-          });
-          // Mark executed to prevent duplicate execution
-          hasExecuted = true;
-        } catch (e) {
-          // If a page does not have a footer link it will error out quietly.
-        }
+          }); -->
+          <!-- // Mark executed to prevent duplicate execution -->
+          <!-- hasExecuted = true;
+        } catch (e) { -->
+          <!-- // If a page does not have a footer link it will error out quietly. -->
+        <!-- }
       }
     }
     )();
     function OptanonWrapper() {
       __attachOneTrustCustomHandlingOnlyOnce();
     }
-  </script>
+  </script> -->
 
-  <div id="onetrust-consent-sdk">
+  <!-- <div id="onetrust-consent-sdk">
     <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
     <div id="onetrust-pc-sdk" class="otPcTab ot-hide ot-fade-in ot-tgl-with-label" role="dialog" aria-modal="true"
-      aria-labelledby="ot-pc-title" lang="en">
+      aria-labelledby="ot-pc-title" lang="en"> -->
       <!-- pc header -->
-      <div class="ot-pc-header" role="presentation">
+      <!-- <div class="ot-pc-header" role="presentation"> -->
         <!-- Header logo -->
-        <div class="ot-pc-logo" role="img" aria-label="Company Logo" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/c7d0d27d-e055-4572-8927-d3c994df5f60/b85c39fb-f5de-428d-92c6-cbf7cd8c6b9c/525608f6-6540-490c-8724-59ec595c678a/udemy-logo.png&quot;);
-    background-position: left"></div>
-        <div class="ot-title-cntr">
+        <!-- <div class="ot-pc-logo" role="img" aria-label="Company Logo" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/*******************/********-******-****-****-*******/*****-****-***-****-*****/TBD-logo.png&quot;); -->
+    <!-- background-position: left"></div> -->
+        <!-- <div class="ot-title-cntr">
           <h2 id="ot-pc-title">Cookie Preferences</h2>
           <div class="ot-close-cntr"><button id="close-pc-btn-handler" class="ot-close-icon"
               aria-label="Close"></button></div>
-        </div>
-      </div><!-- content -->
+        </div> -->
+      <!-- </div> -->
+      <!-- content -->
       <!-- Groups / Sub groups with cookies -->
-      <div id="ot-pc-content" class="ot-pc-scrollbar ot-sdk-row">
+      <!-- <div id="ot-pc-content" class="ot-pc-scrollbar ot-sdk-row">
         <div class="ot-sdk-container ot-grps-cntr ot-sdk-column">
           <div class="ot-sdk-four ot-sdk-columns ot-tab-list" aria-label="Cookie Categories">
             <ul class="ot-cat-grp" role="tablist">
-              <li class="ot-abt-tab" role="presentation">
+              <li class="ot-abt-tab" role="presentation"> -->
                 <!-- About Privacy container -->
-                <div class="ot-active-menu category-menu-switch-handler" role="tab" tabindex="0" aria-selected="true"
+                <!-- <div class="ot-active-menu category-menu-switch-handler" role="tab" tabindex="0" aria-selected="true"
                   aria-controls="ot-tab-desc">
                   <h3 id="ot-pvcy-txt">Your Privacy</h3>
                 </div>
@@ -202,22 +204,26 @@
               </div>
             </div>
           </div>
-        </div>
-      </div><!-- instructors / Hosts -->
-      <section id="ot-pc-lst" class="ot-hide ot-enbl-chr">
+        </div> -->
+      <!-- </div> -->
+      <!-- instructors / Hosts -->
+      <!-- <section id="ot-pc-lst" class="ot-hide ot-enbl-chr">
         <div class="ot-lst-cntr ot-pc-scrollbar">
           <div id="ot-pc-hdr">
             <h3 id="ot-lst-title"><button class="ot-link-btn back-btn-handler" aria-label="Back"><svg id="ot-back-arw"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 444.531 444.531" xml:space="preserve">
                   <title>Back Button</title>
-                  <g>
-                    <path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
+                  <g> -->
+
+                    <!-- non-crawlable-anchors-begin -->
+                    <!-- <path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
   l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
   c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
   s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
-  L213.13,222.409z"></path>
-                  </g>
+  L213.13,222.409z"></path> -->
+                    <!-- non-crawlable-anchors-end -->
+                  <!-- </g>
                 </svg></button>
               <span>Back</span>
             </h3>
@@ -225,23 +231,23 @@
               <div id="ot-search-cntr"><label for="instructor-search-handler" class="ot-scrn-rdr">Instructor
                   Search</label> <input id="instructor-search-handler" aria-label="instructor Search" type="text"
                   placeholder="Search..." name="instructor-search-handler"> <svg xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110">
-                  <path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110"> -->
+                  <!-- <path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
-s-17-7.626-17-17S14.61,6,23.984,6z"></path>
-                </svg></div>
+s-17-7.626-17-17S14.61,6,23.984,6z"></path> -->
+                <!-- </svg></div>
               <div id="ot-fltr-cntr"><button id="filter-btn-handler" aria-label="Filter" aria-haspopup="true"><svg
                     role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 402.577 402.577"
                     style="enable-background:new 0 0 402.577 402.577;" xml:space="preserve">
                     <title>Filter Button</title>
-                    <g>
-                      <path fill="#2c3643" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
+                    <g> -->
+                      <!-- <path fill="#2c3643" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
             c-3.234,7.801-1.903,14.467,3.999,19.985l140.757,140.753v138.755c0,4.955,1.809,9.232,5.424,12.854l73.085,73.083
             c3.429,3.614,7.71,5.428,12.851,5.428c2.282,0,4.66-0.479,7.135-1.43c7.426-3.238,11.14-8.851,11.14-16.845V172.166L396.861,31.413
-            C402.765,25.895,404.093,19.231,400.858,11.427z"></path>
-                    </g>
+            C402.765,25.895,404.093,19.231,400.858,11.427z"></path> -->
+                    <!-- </g>
                   </svg></button></div>
             </div>
           </div>
@@ -293,7 +299,8 @@ s-17-7.626-17-17S14.61,6,23.984,6z"></path>
             </div>
           </div>
         </section>
-      </section><!-- Footer buttons and logo -->
+      </section>
+      Footer buttons and logo 
       <div class="ot-pc-footer">
         <div class="ot-btn-container"><button class="save-preference-btn-handler onetrust-close-btn-handler">Confirm My
             Choices</button>
@@ -302,18 +309,15 @@ s-17-7.626-17-17S14.61,6,23.984,6z"></path>
         <div class="ot-pc-footer-logo"><a href="https://onetrust.com/poweredbyonetrust" target="_blank"
             rel="noopener noreferrer"
             style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg&quot;)"
-            aria-label="Powered by OneTrust Opens in a new Tab"></a></div>
-      </div><!-- Cookie subgroup container -->
+            aria-label="Powered by OneTrust Opens in a new Tab"></a></div> -->
+      <!-- </div> -->
+      <!-- Cookie subgroup container -->
       <!-- instructor list link -->
       <!-- Cookie lost link -->
       <!-- Toggle HTML element -->
       <!-- Checkbox HTML -->
       <!-- Arrow SVG element -->
-      <!-- Accordion basic element --><span class="ot-scrn-rdr" aria-atomic="true" aria-live="polite"></span><iframe
-        class="ot-text-resize" title="onetrust-text-resize" style="position:absolute;top:-50000px;width:100em;"
-        aria-hidden="true"></iframe>
-    </div>
-  </div>
+      <!-- Accordion basic element -->
 
 
   <link rel="canonical" href="https://www.code-command.com/topic/javascript/">
