@@ -2,9 +2,18 @@ body {
     min-width: 60rem;
 }
 body, .main-content-wrapper {
-    display: flex;
+    /* display: flex; */
     min-height: 100vh;
-    flex-direction: column;
+    /* flex-direction: column; */
+    margin-left: 3rem;
+    /* text-align: center; */
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
 }
 body {
     font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
@@ -21,6 +30,7 @@ img, svg {
     color: white;
     border-block: solid 1px #fff;
     border-radius: 3em; 
+    margin: left 3rem;
 }
 
 .btn-primary {
@@ -36,6 +46,7 @@ img, svg {
     font-weight: 200;
     line-height: 1.5;
     color: periwinkle;
+    margin-top: 3rem;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -46,7 +57,7 @@ img, svg {
     background-color: transparent;
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -89,16 +100,24 @@ form.search-form-autocomplete-input-group.search-form-autocomplete-input-group-r
     margin-left: 4rem;
     background-color: #fff;
     border-radius: 3em;
-    max-width: .01rem;
-    max-height: .01rem;
+    
 }
 
 svg.icon.icon-small.icon-color-neutral {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     margin-left: 4rem;
     background-color: #fff;
     border-radius: 3em;
+    max-width: 15rem !important;
+    max-height: 15rem !important;
+    align-items: center;
+}
+
+span.ardion-panel-title {
+    margin-top: 1rem;
+    font-size: 2rem;
+    align-self: center;
 }
 
 svg.icon.icon-large.icon-color-neutral {
@@ -186,3 +205,6 @@ div {
     display: block;
 }
 
+.logo-and-copyright {
+    margin-top:3rem;
+}
